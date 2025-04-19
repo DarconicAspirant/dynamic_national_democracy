@@ -60,7 +60,7 @@ on-arrival: popcon_dissent -= 8; popcon_strength += 8;
 Vorwärts prints editorials in support of the reformist policies.
 
 @support_neorev
-view-if: neorevisionism
+view-if: paramilitarism
 on-arrival: paramilitarist_dissent -= 8; paramilitarist_strength += 8
 
 Vorwärts prints editorials in support of neorevisionist ideas.

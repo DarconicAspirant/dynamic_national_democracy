@@ -1,7 +1,7 @@
 title: Party Disunity
 new-page: true
 is-card: true
-view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (popcon_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not agrarians_resign) or (right_dissent > 30 and not sapd_formed) or (christsoc_dissent > 30 and not christsoc_split) or (paramilitarist_dissent > 30 and neorevisionism))
+view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (popcon_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not agrarians_resign) or (right_dissent > 30 and not sapd_formed) or (christsoc_dissent > 30 and not christsoc_split) or (paramilitarist_dissent > 30 and paramilitarism))
 on-arrival: month_actions += 1; party_disunity_timer = 4
 card-image: img/Reichstagsfraktion_der_SPD.jpg
 frequency: 200
@@ -16,7 +16,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if center_dissent > 30 : The centrists are displeased with the direction of our party. ?]
 [? if christsoc_dissent > 30 : The trade unions disagree with our present course of action. ?]
 [? if right_dissent > 30: Leftists are making noises about another party split. ?]
-[? if paramilitarist_dissent > 30 and neorevisionism = 1 : Neorevisionists are in disagreement about our political direction. ?]
+[? if paramilitarist_dissent > 30 and paramilitarism = 1 : Neorevisionists are in disagreement about our political direction. ?]
 
 Something must be done to reinforce party unity.
 
@@ -69,7 +69,7 @@ The trade unions will be granted more influence in party decision making. This u
 
 @concessions_neorevisionists
 title: Give concessions to the neorevisionists.
-view-if: paramilitarist_dissent > 30 and neorevisionism = 1
+view-if: paramilitarist_dissent > 30 and paramilitarism = 1
 on-arrival: paramilitarist_dissent -= 15; center_dissent += 10;
 
 Giving the neorevisionists more influence will cause increased dissent from the centrists.

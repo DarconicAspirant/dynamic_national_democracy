@@ -76,7 +76,7 @@ Q.unions_disaffiliated = 0;
 Q.center_resigned = 0;
 
 // have we discovered neorevisionism?
-Q.neorevisionism = 0;
+Q.paramilitarism = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
