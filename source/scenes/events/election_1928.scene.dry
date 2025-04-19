@@ -193,7 +193,7 @@ if (new_party_sum > 0) {
     }    
     
 Q.cnblp_r = Math.round(Q.cnblp_votes * Q.adjustmentFactors_other * 10) / 10;
-Q.wp_r = Math.round(Q.wp_votes * Q.adjustmentFactors_other * 10) / 10;
+Q.wp_r = Math.round(Q.dvp_votes * Q.adjustmentFactors_other * 10) / 10;
 Q.csvd_r = Math.round(Q.csvd_votes * Q.adjustmentFactors_other * 10) / 10;
 
 if (!Q.bavaria_spd) Q.bvp_votes = Q.z_votes*0.2;

@@ -297,7 +297,7 @@ go-to: menu
 
 [? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]% ?]
 # 1928: 9, 1930: 5
-[? if not lvp_formed and dvp_exist: <span style="color: #CCAA7A;">**DVP**</span>: [+ wp_votes +]% ?]
+[? if not lvp_formed and dvp_exist: <span style="color: #CCAA7A;">**DVP**</span>: [+ dvp_votes +]% ?]
 
 [? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>: [+ kvp_votes +]% ?]
 
