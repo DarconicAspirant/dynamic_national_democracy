@@ -140,8 +140,8 @@ subtitle: [? if (bourgeois_parliament and not lvp_formed) or liberal_parliament 
 view-if: spd_toleration
 on-arrival: {!
 Q.kpd_relation -= 5;
-Q.left_dissent += 15;
-Q.labor_dissent += 5;
+Q.right_dissent += 15;
+Q.christsoc_dissent += 5;
 Q.new_middle_spd -= 4;
 Q.new_middle_nsdap += 4;
 Q.old_middle_spd -= 2;

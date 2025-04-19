@@ -29,7 +29,7 @@ if (Q.capital_strike_progress >= 6) {
 }
 if (Q.reformists_resign) {
     Q.lemmer_points += 3;
-} else if (Q.reformist_dissent >= 31) {
+} else if (Q.popcon_dissent >= 31) {
     Q.lemmer_points += 1;
 }
 if (Q.major_curriculum == "humanist") {

@@ -44,8 +44,8 @@ New elections have been set for [+ next_election_month : month +] [+ next_electi
 title: Vote in favor of the Second Brüning cabinet, continuing the toleration agreement.
 subtitle: Currently, [+ bruning_coalition +]% of the Reichstag supports Brüning, but subject to change.
 on-arrival: {!
-Q.left_dissent += 20;
-Q.labor_dissent += 5;
+Q.right_dissent += 20;
+Q.christsoc_dissent += 5;
 Q.unemployed_nsdap += Q.unemployed_spd*0.05;
 Q.unemployed_kpd += Q.unemployed_spd*0.05;
 Q.workers_nsdap += Q.workers_spd*0.05;

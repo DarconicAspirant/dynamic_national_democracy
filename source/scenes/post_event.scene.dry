@@ -149,31 +149,31 @@ if (Q.unemployed <= 1) {
 
 // re-calculate dissent.
 if (Q.left_split) {
-    Q.left_strength = 0;
-    Q.left_dissent = 0;
+    Q.right_strength = 0;
+    Q.right_dissent = 0;
 }
 if (Q.reformists_resigned) {
-    Q.reformist_strength = 0;
-    Q.reformist_dissent = 0;
+    Q.popcon_strength = 0;
+    Q.popcon_dissent = 0;
 }
 if (Q.center_resigned) {
-    Q.center_strength = 0;
+    Q.agrarian_strength = 0;
     Q.center_dissent = 0;
 }
 if (Q.unions_independent) {
-    Q.labor_strength = 0;
-    Q.labor_dissent = 0;
+    Q.christsoc_strength = 0;
+    Q.christsoc_dissent = 0;
 }
-var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
+var total_strength = Q.right_strength + Q.agrarian_strength + Q.christsoc_strength + Q.popcon_strength + Q.paramilitarist_strength;
 
 // normalize strength for the different factions
-Q.left_strength = 100*Q.left_strength/total_strength;
-Q.center_strength = 100*Q.center_strength/total_strength;
-Q.labor_strength = 100*Q.labor_strength/total_strength;
-Q.reformist_strength = 100*Q.reformist_strength/total_strength;
-Q.neorevisionist_strength = 100*Q.neorevisionist_strength/total_strength;
+Q.right_strength = 100*Q.right_strength/total_strength;
+Q.agrarian_strength = 100*Q.agrarian_strength/total_strength;
+Q.christsoc_strength = 100*Q.christsoc_strength/total_strength;
+Q.popcon_strength = 100*Q.popcon_strength/total_strength;
+Q.paramilitarist_strength = 100*Q.paramilitarist_strength/total_strength;
 
-var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.reformist_strength*Q.reformist_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
+var total_dissent = Q.right_strength*Q.right_dissent + Q.agrarian_strength*Q.center_dissent + Q.christsoc_strength*Q.christsoc_dissent + Q.popcon_strength*Q.popcon_dissent + Q.paramilitarist_strength*Q.paramilitarist_dissent;
 
 
 Q.dissent = 0.01*total_dissent/total_strength;
@@ -537,7 +537,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.rfb_militancy = 0;
     }
     if (Q.sapd_formed == 1 && Q.centrists_resign == 1) {
-        Q.labor_dissent += 5/12;
+        Q.christsoc_dissent += 5/12;
     }
     if (Q.sapd_formed == 1 && Q.unions_independent == 1) {
         Q.center_dissent += 5/12;
@@ -1635,10 +1635,10 @@ if (Q.far_right_paramilitary && Q.year >= 1930) {
 
 if (!Q.wtb_adopted && Q.black_thursday_seen) {
     Q.wtb_points_gain = 0;
-    if (Q.labor_strength >= (Q.center_strength + Q.left_strength)) Q.wtb_points_gain += 3
-    Q.wtb_points_gain += Q.labor_strength/50;
+    if (Q.christsoc_strength >= (Q.agrarian_strength + Q.right_strength)) Q.wtb_points_gain += 3
+    Q.wtb_points_gain += Q.christsoc_strength/50;
     if (Q.woytinsky_advisor) {
-        Q.wtb_points_gain += Q.labor_strength/100;
+        Q.wtb_points_gain += Q.christsoc_strength/100;
     }
     Q.wtb_points_gain += Q.leipart_advisor + Q.baade_advisor;
     if (Q.inflation < -2) Q.wtb_points_gain += ((Q.inflation/8)*-1);
@@ -2839,8 +2839,8 @@ if (Q.spd_government_burden_timer == 0 && Q.spd_government_burden_seen == 1 && Q
         Q.workers_spd *= 0.9;
         Q.unemployed_spd *= 0.9;
         Q.new_middle_spd *= 0.95;
-        Q.left_dissent += 5;
-        Q.labor_dissent += 5;
+        Q.right_dissent += 5;
+        Q.christsoc_dissent += 5;
     }
     Q.welfare_goal_spd = 0;
     Q.economy_goal_spd = 0;
@@ -2887,7 +2887,7 @@ if (Q.spd_government_burden_timer == 0 && Q.spd_government_burden_seen == 1 && Q
         Q.new_middle_spd *= 0.8;
         Q.rural_spd *= 0.8;
         Q.catholics_spd *= 0.95;
-        Q.reformist_dissent += 5;
+        Q.popcon_dissent += 5;
     }
     Q.economy_goal_spd_peoples = 0;
     Q.labor_goal_spd_peoples = 0;
@@ -3054,8 +3054,8 @@ if (Q.spd_in_government_time >= 6) {
     if (((Q.z_relation + Q.ddp_relation) / 2) < 40) {
         Q.hindenburg_angry += 1;
     }
-    if (Q.left_strength >= Q.reformist_strength) {
-        Q.hindenburg_angry += Q.left_strength / 50;
+    if (Q.right_strength >= Q.popcon_strength) {
+        Q.hindenburg_angry += Q.right_strength / 50;
     }
     if (Q.nationalization_adopted) {
         Q.hindenburg_angry += 1;
@@ -3095,7 +3095,7 @@ if (Q.president == "Hindenburg" && Q.chancellor == "Brüning" && !Q.spd_in_gover
     if (Q.spd_toleration) {
         Q.bruning_toleration_time += 1; 
         Q.total_bruning_toleration_time += 1; 
-        Q.left_dissent += 0.5;
+        Q.right_dissent += 0.5;
         Q.ddp_cohesion -= 0.25;
     } else if (!Q.spd_toleration) {
         Q.bruning_toleration_time = 0;

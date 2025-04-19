@@ -28,7 +28,7 @@ Are we sure about this? A vote of no confidence would trigger new elections, and
 - @stay_course: No, we should stay the course.
 
 @vonc
-on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; left_dissent -= 5; dvp_relation -= 4; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 2; spd_break_toleration += 1
+on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; right_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; popcon_dissent += 5; right_dissent -= 5; dvp_relation -= 4; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 2; spd_break_toleration += 1
 go-to: new_prussia_election if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and ((center_right_coalition_prussia < 50 and dnvp_ideology == "Moderate") or dnvp_ideology == "Radical"); center_right_coalition_prussia if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and center_right_coalition_prussia >= 50 and dnvp_ideology == "Moderate"
 
 We have called for a vote of no confidence, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.
@@ -59,7 +59,7 @@ unavailable-subtitle: This can only happen with a budget surplus.
 go-to: urge_success if z_relation >= 45 and ((ddp_relation >= 40 and not lvp_formed) or (lvp_relation >= 40 and lvp_formed)); urge_failure if z_relation < 45 or ((ddp_relation < 40 and not lvp_formed) or (lvp_relation < 40 and lvp_formed))
 
 @urge_success
-on-arrival: welfare += 1; budget -= 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); new_middle_ddp += 1; old_middle_ddp += 1; new_middle_dvp += 1.5; old_middle_dvp += 1.5; new_middle_other += 1.5; old_middle_other += 1.5; new_middle_lvp += 3; old_middle_lvp += 3; z_relation -= 3; dvp_relation -= 3; ddp_relation -= 3; lvp_relation -= 3; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry_bruning += 10; economic_growth += 0.2; unemployed -= 0.2
+on-arrival: welfare += 1; budget -= 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); new_middle_ddp += 1; old_middle_ddp += 1; new_middle_dvp += 1.5; old_middle_dvp += 1.5; new_middle_other += 1.5; old_middle_other += 1.5; new_middle_lvp += 3; old_middle_lvp += 3; z_relation -= 3; dvp_relation -= 3; ddp_relation -= 3; lvp_relation -= 3; popcon_dissent -= 5; center_dissent -= 5; christsoc_dissent -= 5; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry_bruning += 10; economic_growth += 0.2; unemployed -= 0.2
 
 We have successfully urged the coalition parties to increase social spending! Unfortunately, the center-right parties increasingly see us as a nuisance, and might not wish to continue these negotiations. [? if president == "Hindenburg": President Hindenburg is also losing patience with Brüning for yielding to our demands.?]
 
@@ -73,7 +73,7 @@ title: Attempt to pressure Brüning to curb the worse excesses of his austerity 
 go-to: urge_success_limited if z_relation >= 35; urge_failure if z_relation < 35
 
 @urge_success_limited
-on-arrival: bruning_austerity_limited += 1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent) if bruning_austerity_limited >= 3; new_middle_ddp += 1; old_middle_ddp += 1; new_middle_dvp += 1; old_middle_dvp += 1; new_middle_other += 1; old_middle_other += 1; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_lvp += 2; old_middle_lvp += 2; z_relation -= 3; reformist_dissent -= 3; center_dissent -= 3; labor_dissent -= 3; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry_bruning += 5; economic_growth += 0.1; unemployed -= 0.1
+on-arrival: bruning_austerity_limited += 1; workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent) if bruning_austerity_limited >= 3; new_middle_ddp += 1; old_middle_ddp += 1; new_middle_dvp += 1; old_middle_dvp += 1; new_middle_other += 1; old_middle_other += 1; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_lvp += 2; old_middle_lvp += 2; z_relation -= 3; popcon_dissent -= 3; center_dissent -= 3; christsoc_dissent -= 3; dvp_right += 1; ddp_right += 0.5; lvp_right += 1; hindenburg_angry_bruning += 5; economic_growth += 0.1; unemployed -= 0.1
 
 We have successfully pressured Brüning to tone down the severity of his austerity policies in his emergency decrees. Unfortunately, the center-right parties increasingly see us as a nuisance, and will attempt to force Brüning to form a majority coalition with the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> instead. [? if president == "Hindenburg": President Hindenburg is also losing patience with Brüning for yielding to our demands.?]
 
@@ -92,7 +92,7 @@ As a result, several <span style="color: #7A3C00;">Nazi</span> and <span style="
 
 @improve_relations
 title: Improve relations with the parties of the coalition.
-on-arrival: z_relation += 5*(1-dissent); dvp_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); lvp_relation += 4*(1-dissent); left_dissent += 5; dvp_left += 1; ddp_left += 0.5; ddp_cohesion -= 0.5; lvp_left += 1
+on-arrival: z_relation += 5*(1-dissent); dvp_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); lvp_relation += 4*(1-dissent); right_dissent += 5; dvp_left += 1; ddp_left += 0.5; ddp_cohesion -= 0.5; lvp_left += 1
 
 We have increased our level of contact and discussions with the parties of the coalition, primarily the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] [? if not lvp_formed and dvp_exist:and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:and <span style="color: #FFCC00;">**LVP**</span>?].
 

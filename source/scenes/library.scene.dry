@@ -541,15 +541,15 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 Many leftists are former members of the <span style="color: #D47B9B;">**USPD**</span> (the left-wing, anti-war <span style="color: #D47B9B;">Independent Social Democratic Party</span>), or are young radicals. Many are interested in closer cooperation with the <span style="color: #700000;">**KPD**</span>, and some support extra-parliamentary action.
 
-Strength: [+ left_strength : strength +]
+Strength: [+ right_strength : strength +]
 
-Dissent: [+ left_dissent : dissent +]
+Dissent: [+ right_dissent : dissent +]
 
 **Centrists**
 
 Centrists in the <span style="color: #c00000;">**SPD**</span> are followers of the doctrine of orthodox <span style="color: #9B0000;">Marxism</span> as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
 
-Strength: [+ center_strength : strength +]
+Strength: [+ agrarian_strength : strength +]
 
 Dissent: [+ center_dissent : dissent +]
 
@@ -557,17 +557,17 @@ Dissent: [+ center_dissent : dissent +]
 
 Many <span style="color: #c00000;">**SPD**</span> members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
 
-Strength: [+ labor_strength : strength +]
+Strength: [+ christsoc_strength : strength +]
 
-Dissent: [+ labor_dissent : dissent +]
+Dissent: [+ christsoc_dissent : dissent +]
 
 **Reformists**
 
 Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #700000;">left</span>. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
 
-Strength: [+ reformist_strength : strength +]
+Strength: [+ popcon_strength : strength +]
 
-Dissent: [+ reformist_dissent : dissent +]
+Dissent: [+ popcon_dissent : dissent +]
 
 @neorevisionists
 go-to: menu
@@ -576,9 +576,9 @@ go-to: menu
 
 Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extra-parliamentary action in defense of the republic.
 
-Strength: [+ neorevisionist_strength : strength +]
+Strength: [+ paramilitarist_strength : strength +]
 
-Dissent: [+ neorevisionist_dissent : dissent +]
+Dissent: [+ paramilitarist_dissent : dissent +]
 
 
 @figures

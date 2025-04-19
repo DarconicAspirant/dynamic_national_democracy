@@ -169,15 +169,15 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 = Internal Factions of the <span style="color: #3e88b3;">**DNVP**</span>
 
-{!<span class="tooltip-text" title="The Right is a faction of pan-German nationalists and racists accepting of nothing less than total opposition to the republic, and believes in cooperation with the extreme right.">Right</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Right is a faction of pan-German nationalists and racists accepting of nothing less than total opposition to the republic, and believes in cooperation with the extreme right.">Right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Agrarians believe the party should focus on representing the interest of its rural base, including the interests of both small and large landowners.">Agrarian</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Agrarians believe the party should focus on representing the interest of its rural base, including the interests of both small and large landowners.">Agrarian</span>!} strength: [+ agrarian_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Christian-Socials believe in bringing together labor and capital in a cooperative relation under the umbrella of the National Community.">Christian-Social</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="The Christian-Socials believe in bringing together labor and capital in a cooperative relation under the umbrella of the National Community.">Christian-Social</span>!} strength: [+ christsoc_strength : strength +], dissent: [+ christsoc_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Popular Conservatives believe the party should work within the institutions of the republic as a constructive force of the right.">Popular Consevative</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="Popular Conservatives believe the party should work within the institutions of the republic as a constructive force of the right.">Popular Consevative</span>!} strength: [+ popcon_strength : strength +], dissent: [+ popcon_dissent : dissent +]
 
-[? if neorevisionism > 0 : {!<span class="tooltip-text" title="Paramilitarists are leaders within one or more of the various right-wing paramilitaries and represent the fighting force of the German right.">Paramilitarist</span>!} strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+[? if neorevisionism > 0 : {!<span class="tooltip-text" title="Paramilitarists are leaders within one or more of the various right-wing paramilitaries and represent the fighting force of the German right.">Paramilitarist</span>!} strength: [+ paramilitarist_strength : strength +], dissent: [+ paramilitarist_dissent : dissent +] ?]
 
 @paramilitaries
 on-arrival: {!

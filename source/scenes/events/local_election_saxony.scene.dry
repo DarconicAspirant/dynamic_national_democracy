@@ -547,9 +547,9 @@ With the <span style="color: #fe9e00;">**ASPD**</span>’s disastrous result of 
 
 @toleration_saxony
 title: We will enter a toleration agreement with the incumbent government.
-choose-if: toleration_possible_saxony and left_strength < 30
-unavailable-subtitle: [? if not toleration_possible_saxony: The bourgeois parties won't even accept our toleration. ?][? if left_strength >= 30: Our Saxon organization is too left-wing to even consider this as an option. With the reformists having largely split into the <span style="color: #fe9e00;">ASPD</span>, the left wing is dominant. ?]
-on-arrival: saxony_toleration = 1; old_middle_nsdap -= 1; rural_nsdap -= 1; workers_spd += 1; workers_kpd += 2; left_dissent += 10
+choose-if: toleration_possible_saxony and right_strength < 30
+unavailable-subtitle: [? if not toleration_possible_saxony: The bourgeois parties won't even accept our toleration. ?][? if right_strength >= 30: Our Saxon organization is too left-wing to even consider this as an option. With the reformists having largely split into the <span style="color: #fe9e00;">ASPD</span>, the left wing is dominant. ?]
+on-arrival: saxony_toleration = 1; old_middle_nsdap -= 1; rural_nsdap -= 1; workers_spd += 1; workers_kpd += 2; right_dissent += 10
 
 We have entered a toleration agreement with the bourgeois cabinet, and have made it unnecessary for them to cooperate with the <span style="color: #7A3C00;">**NSDAP**</span>. As part of our agreement, the bourgeois parties have allowed Max Heldt to retain his Minister-President position, and for the <span style="color: #fe9e00;">**ASPD**</span> to occupy the Work and Welfare	ministry. 
 
@@ -576,10 +576,10 @@ Despite the exclusion of many supporting parties from the cabinet in favor of no
 @grand_coalition_saxony
 title: A [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition is formed!
 subtitle: We have somehow reconciled with the bourgeois parties, that they're willing to govern with us again.
-unavailable-subtitle: [? if z_relation < 50 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if left_strength >= 15: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
+unavailable-subtitle: [? if z_relation < 50 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if right_strength >= 15: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
 view-if: spd_coalition_saxony >= 50
-choose-if: spd_coalition_possible_saxony and left_strength < 15
-on-arrival: saxony_spd = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; reformist_dissent -= 15; reformist_strength += 10; aspd_dead = 1
+choose-if: spd_coalition_possible_saxony and right_strength < 15
+on-arrival: saxony_spd = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; popcon_dissent -= 15; popcon_strength += 10; aspd_dead = 1
 
 Somehow, the bourgeois parties are willing to form a [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition with us, rather than continuing their current government with Max Heldt and the right-wing parties.
 
@@ -609,8 +609,8 @@ As one of the most left-wing and industrial states in Germany, we will use our l
 
 @no_majority
 title: No majority can be found!
-subtitle: [? if bourgeois_coalition_saxony < 50 and spd_coalition_saxony < 50: All possible coalitions lack a majority. ?][? if spd_coalition_saxony >= 50 and not spd_coalition_possible_saxony: The bourgeois parties are antagonistic to our Saxon organization. ?][? if spd_coalition_saxony >= 50 and left_strength >= 15: Our party itself rejects the possibility of a majority coalition with the liberals. ?]
-view-if: bourgeois_coalition_saxony < 50 and (not spd_coalition_possible_saxony or left_strength >= 15)
+subtitle: [? if bourgeois_coalition_saxony < 50 and spd_coalition_saxony < 50: All possible coalitions lack a majority. ?][? if spd_coalition_saxony >= 50 and not spd_coalition_possible_saxony: The bourgeois parties are antagonistic to our Saxon organization. ?][? if spd_coalition_saxony >= 50 and right_strength >= 15: Our party itself rejects the possibility of a majority coalition with the liberals. ?]
+view-if: bourgeois_coalition_saxony < 50 and (not spd_coalition_possible_saxony or right_strength >= 15)
 on-arrival: {!
 let dvp_toleration_threshold = 30;
 let lvp_toleration_threshold = 40;

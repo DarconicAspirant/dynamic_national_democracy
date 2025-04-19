@@ -39,7 +39,7 @@ This all but confirms our suspicions that General Schleicher is conspiring with 
 @schleicher_2
 title: Von Schleicher offers to meet with the unions, and to ease their fears.
 subtitle: The unions are independent of the party, and have agreed to participate.
-on-arrival: schleicher_spd_r += 1; schleicher_spd_support += 1; labor_dissent += 5
+on-arrival: schleicher_spd_r += 1; schleicher_spd_support += 1; christsoc_dissent += 5
 
 The invitation for a direct meeting between Theodor Leipart, leader of the ADGB, and von Schleicher is declined. Instead, a larger meeting is held, including Papen, his Interior Minister, and the ADGB’s co-chairs.
 

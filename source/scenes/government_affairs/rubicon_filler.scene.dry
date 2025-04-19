@@ -24,7 +24,7 @@ We have gained one additional resource.
 
 @dissent
 subtitle: We mustn't be divided, not in a time like this.
-on-arrival: left_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; reformist_dissent -= 5
+on-arrival: right_dissent -= 5; center_dissent -= 5; christsoc_dissent -= 5; popcon_dissent -= 5
 
 We have reduced dissent across all factions.
 

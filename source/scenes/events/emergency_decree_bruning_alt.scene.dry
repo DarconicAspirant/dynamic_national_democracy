@@ -138,7 +138,7 @@ title: Vote in favor of this measure to continue the toleration agreement.
 subtitle: [? if (bourgeois_parliament and not lvp_formed) or liberal_parliament or lvp_formed: The liberal parties will attempt to mitigate the disastrous effects. ?]
 view-if: spd_toleration
 on-arrival: {!
-Q.left_dissent += 10;
+Q.right_dissent += 10;
 Q.new_middle_spd -= 2;
 Q.old_middle_spd -= 2;
 Q.kpd_relation -= 3;

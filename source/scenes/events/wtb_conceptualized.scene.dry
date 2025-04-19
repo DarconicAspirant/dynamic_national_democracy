@@ -30,26 +30,26 @@ We can either support their attempts to craft a formal plan, committing to an ac
 - @left_plan: The WTB plan is simply a bandage over capitalism; we should use this crisis as an opportunity to end it through mass nationalizations.
 
 @reformist_plan
-view-if: reformist_strength >= left_strength and reformist_strength >= labor_strength and reformist_strength >= center_strength
-on-arrival: left_dissent += 5; left_strength -= 5; reformist_strength += 10; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 2; moderate_plan_support += 1
+view-if: popcon_strength >= right_strength and popcon_strength >= christsoc_strength and popcon_strength >= agrarian_strength
+on-arrival: right_dissent += 5; right_strength -= 5; popcon_strength += 10; popcon_dissent -= 5; center_dissent -= 5; christsoc_dissent -= 2; moderate_plan_support += 1
 
 Job creation and stimulus are necessary, but deficit spending, especially with hyperinflation still fresh in memory, is simply unrealistic and reckless. The reformists argue that this plan is most likely to receive support from the bourgeois parties and is the most practical in the immediate term. Opponents in the Left and Labor factions criticize the plan for being inadequate in its ambition.
 
 @left_plan
-view-if: left_strength >= reformist_strength and left_strength >= center_strength and left_strength >= labor_strength
-on-arrival: left_strength += 10; reformist_dissent += 5; labor_dissent += 5; nationalization_support += 2
+view-if: right_strength >= popcon_strength and right_strength >= agrarian_strength and right_strength >= christsoc_strength
+on-arrival: right_strength += 10; popcon_dissent += 5; christsoc_dissent += 5; nationalization_support += 2
 
 We should use this economic crisis to transform Germany toward actual <span style="color: #9b0000;">socialism</span>, in accordance with our long-standing <span style="color: #c00000;">socialist</span> platform. Reformists and the Woytinsky group argue that the plan is unrealistic and that we need to focus on more immediate improvements to workers' lives.
 
 @center_plan
-on-arrival: center_strength += 10; center_dissent -= 10; labor_dissent += 10
+on-arrival: agrarian_strength += 10; center_dissent -= 10; christsoc_dissent += 10
 
 Woytinsky is promising the workers false hope; nothing can be done to alleviate the depression. We also express concern about the fear of another round of hyperinflation that may result from deficit spending.
 
 @wtb_plan
-view-if: labor_strength >= left_strength and labor_strength >= center_strength
-choose-if: labor_strength >= left_strength and labor_strength >= center_strength
-on-arrival: center_dissent += 20; left_dissent += 10; labor_strength += 15; labor_dissent -= 20; wtb_support += 3; wtb_points += 25
+view-if: christsoc_strength >= right_strength and christsoc_strength >= agrarian_strength
+choose-if: christsoc_strength >= right_strength and christsoc_strength >= agrarian_strength
+on-arrival: center_dissent += 20; right_dissent += 10; christsoc_strength += 15; christsoc_dissent -= 20; wtb_support += 3; wtb_points += 25
 
 We cannot, as the party for the workers, stand idly by as they suffer. *Something* must be done, and it must happen soon. With our encouragement, Woytinsky will present an official plan in the next few months.
 

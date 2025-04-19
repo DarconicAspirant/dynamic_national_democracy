@@ -120,7 +120,7 @@ We have a plethora of campaign options at our disposal.
 @iron_front
 title: Rally the full strength of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> to support Braun.
 view-if: iron_front_formed
-on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 3; new_middle_spd += radicalization + 2; unemployed_spd += radicalization + 2; pro_republic += 3; nationalism -= 3; neorevisionist_dissent -= 10; neorevisionist_strength += 10; left_dissent -= 10; rb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
+on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 3; new_middle_spd += radicalization + 2; unemployed_spd += radicalization + 2; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; right_dissent -= 10; rb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
 max-visits: 1
 face-image: img/iron_front_poster.png
 go-to: campaigning_spd
@@ -329,7 +329,7 @@ We have a plethora of campaign options at our disposal.
 @iron_front_hindenburg
 title: Rally the full strength of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> to support Hindenburg.
 view-if: iron_front_formed
-on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 2; new_middle_spd += radicalization + 1; unemployed_spd += radicalization + 1; pro_republic += 3; nationalism -= 3; neorevisionist_dissent -= 10; neorevisionist_strength += 10; rb_strength += 100; workers_nsdap -= 2 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 2 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 2 if strife >= 5 and far_right_paramilitary
+on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 2; new_middle_spd += radicalization + 1; unemployed_spd += radicalization + 1; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; rb_strength += 100; workers_nsdap -= 2 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 2 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 2 if strife >= 5 and far_right_paramilitary
 max-visits: 1
 face-image: img/iron_front_poster.png
 go-to: campaigning_hindenburg_2
@@ -353,7 +353,7 @@ title: Rally in favor of democracy, and the <span style="color: #000000;">We</sp
 subtitle: We might alienate some of Hindenburg's more <span style="color: #808080;">reactionary</span> supporters. -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; labor_dissent -= 5; neorevisionist_dissent -= 5; reformist_dissent -= 5; left_dissent -= 5; workers_spd += 3*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 2*(1 - dissent) if democratization >= 3; new_middle_spd += 3*(1-dissent) if democratization >= 3; hindenburg_angry += 10; hindenburg_angry_bruning += 10; z_relation += 3; ddp_relation += 3; lvp_relation += 3
+on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; christsoc_dissent -= 5; paramilitarist_dissent -= 5; popcon_dissent -= 5; right_dissent -= 5; workers_spd += 3*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 2*(1 - dissent) if democratization >= 3; new_middle_spd += 3*(1-dissent) if democratization >= 3; hindenburg_angry += 10; hindenburg_angry_bruning += 10; z_relation += 3; ddp_relation += 3; lvp_relation += 3
 face-image: img/weimar_coalition.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -365,7 +365,7 @@ title: Focus our campaign against the <span style="color: #700000;">**Communist*
 subtitle: He has gained a significant amount of support by positioning himself as the "only left candidate." -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; left_dissent -= 10; workers_spd += 3; workers_kpd -= 3; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
+on-arrival: resources -= 1; right_dissent -= 10; workers_spd += 3; workers_kpd -= 3; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
 face-image: img/social_fascist.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -548,7 +548,7 @@ We have a plethora of campaign options at our disposal.
 @paramilitary
 title: Ally with the <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> on the streets, to fight against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
 subtitle: This will permanently alienate the bourgeois parties!
-on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; neorevisionist_dissent += 10; reformist_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
+on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
 face-image: img/reichsbanner_2.jpg
 max-visits: 1
 go-to: campaigning_thalmann

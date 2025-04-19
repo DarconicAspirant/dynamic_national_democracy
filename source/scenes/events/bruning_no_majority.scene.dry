@@ -30,8 +30,8 @@ title: Oppose the vote of no confidence, voting in favor of the government.
 subtitle: Currently, [+ bruning_coalition +]% of the Reichstag supports Brüning, but subject to change.
 on-arrival: {!
 Q.bruning_joever = 1;
-Q.left_dissent += 15;
-Q.labor_dissent += 5;
+Q.right_dissent += 15;
+Q.christsoc_dissent += 5;
 Q.unemployed_nsdap += Q.unemployed_spd*0.04;
 Q.unemployed_kpd += Q.unemployed_spd*0.04;
 Q.workers_nsdap += Q.workers_spd*0.04;

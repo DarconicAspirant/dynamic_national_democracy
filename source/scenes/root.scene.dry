@@ -53,16 +53,16 @@ Q.dissent_percent = 5;
 // factions
 Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
+Q.right_strength = 15;
+Q.right_dissent = 20;
+Q.agrarian_strength = 30;
 Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.christsoc_strength = 25;
+Q.christsoc_dissent = 5;
+Q.popcon_strength = 25;
+Q.popcon_dissent = 5;
+Q.paramilitarist_strength = 5;
+Q.paramilitarist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
@@ -914,7 +914,7 @@ on-arrival: difficulty = -1; resources = 4; dues = 6; base_dues = 6; rb_strength
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 4; base_dues = 4; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; ddp_relation = 50; budget = 3
+on-arrival: difficulty = 1; resources = 0; dues = 4; base_dues = 4; rb_strength = 1000; popcon_dissent = 25; right_dissent = 30; christsoc_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; ddp_relation = 50; budget = 3
 go-to: 1928_main
 
 @1928_historical
@@ -926,9 +926,9 @@ Q.resources = 2;
 Q.dues = 3;
 Q.base_dues = 3;
 Q.rb_strength = 2000;
-Q.reformist_dissent = 25;
-Q.left_dissent = 30;
-Q.labor_dissent = 25;
+Q.popcon_dissent = 25;
+Q.right_dissent = 30;
+Q.christsoc_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpd_relation = 16;
