@@ -6,26 +6,18 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= National Democracy: An Alternate History
 
 @start_menu_2
 
 - @start_1: Start game
 - @modinfo: Mod Info
 - @credits: Credits
+- @election_simulation: Election simulation
 - @game_over.achievements
 
 @start_1
-on-arrival: player_beg = 1 if not achievement_game_completed
-go-to: start if achievement_game_completed; pls_player if not achievement_game_completed
-
-
-@pls_player
-
-Read.
-
-- @modinfo.infotext: Mod Info
-
+go-to: start
 
 @start
 on-arrival: {!
@@ -248,59 +240,59 @@ Q.cvp_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 22;
+Q.workers_spd = 25;
+Q.workers_kpd = 55;
 Q.workers_z = 5;
-Q.workers_ddp = 2;
+Q.workers_ddp = 5;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 6;
+Q.workers_dnvp = 9;
 Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_other = 1;
 
 Q.new_middle_spd = 8;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp = 23;
-Q.new_middle_dvp = 22;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 4;
-Q.new_middle_other = 22;
+Q.new_middle_kpd = 3;
+Q.new_middle_z = 11;
+Q.new_middle_ddp = 41;
+Q.new_middle_dvp = 10;
+Q.new_middle_dnvp = 20;
+Q.new_middle_nsdap = 3;
+Q.new_middle_other = 4;
 
 Q.old_middle_spd = 4;
 Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
-Q.old_middle_ddp = 9;
-Q.old_middle_dvp = 24;
-Q.old_middle_dnvp = 22;
-Q.old_middle_nsdap = 8;
-Q.old_middle_other = 18;
+Q.old_middle_ddp = 21;
+Q.old_middle_dvp = 15;
+Q.old_middle_dnvp = 48;
+Q.old_middle_nsdap = 5;
+Q.old_middle_other = 2;
 
 Q.rural_spd = 8;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp = 4;
-Q.rural_dvp = 14;
-Q.rural_dnvp = 42;
-Q.rural_nsdap = 3;
-Q.rural_other = 15;
+Q.rural_kpd = 1;
+Q.rural_z = 7;
+Q.rural_ddp = 14;
+Q.rural_dvp = 6;
+Q.rural_dnvp = 53;
+Q.rural_nsdap = 4;
+Q.rural_other = 7;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
+Q.unemployed_spd = 15;
+Q.unemployed_kpd = 66;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.unemployed_dnvp = 7;
+Q.unemployed_nsdap = 9;
+Q.unemployed_other = 2;
 
-Q.catholics_spd = 20;
-Q.catholics_kpd = 2;
-Q.catholics_z = 46;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
+Q.catholics_spd = 16;
+Q.catholics_kpd = 6;
+Q.catholics_z = 52;
+Q.catholics_ddp = 8;
+Q.catholics_dvp = 3;
+Q.catholics_dnvp = 13;
 Q.catholics_nsdap = 0;
-Q.catholics_other = 15;
+Q.catholics_other = 2;
 
 Q.workers_spd_old = 60;
 Q.new_middle_spd_old = 8;
@@ -315,37 +307,37 @@ Q.catholics_spd_old = 20;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26.5;
-Q.kpd_r = 9.1;
-Q.z_r = 17.8;
-Q.ddp_r = 6.5;
-Q.dvp_r = 10.3;
-Q.dnvp_r = 20.9;
-Q.nsdap_r = 3;
-Q.other_r = 5.9;
-Q.bvp_r = 3.9;
+Q.spd_r = 18.1;
+Q.kpd_r = 24.9;
+Q.z_r = 17.1;
+Q.ddp_r = 15.2;
+Q.dvp_r = 1.9;
+Q.dnvp_r = 16.3;
+Q.nsdap_r = 3.6;
+Q.other_r = 2.9;
+Q.bvp_r = 3.3;
 
 // diff from prev
-Q.old_spd_r = 26.5;
-Q.old_kpd_r = 9.1;
-Q.old_z_r = 13.9;
-Q.old_ddp_r = 6.5;
-Q.old_dvp_r = 10.3;
-Q.old_dnvp_r = 20.9;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 5.9;
-Q.old_bvp_r = 3.9;
+Q.old_spd_r = 18.1;
+Q.old_kpd_r = 24.9;
+Q.old_z_r = 17.1;
+Q.old_ddp_r = 15.2;
+Q.old_dvp_r = 1.9;
+Q.old_dnvp_r = 16.3;
+Q.old_nsdap_r = 3.6;
+Q.old_other_r = 2.9;
+Q.old_bvp_r = 3.3;
 
 // old election votes
-Q.previous_spd_last_election_votes = 26;
-Q.previous_kpd_last_election_votes = 9;
-Q.previous_z_last_election_votes = 17.3;
-Q.previous_ddp_last_election_votes = 6.3;
-Q.previous_dvp_last_election_votes = 10.1;
-Q.previous_dnvp_last_election_votes = 20.5;
-Q.previous_nsdap_last_election_votes = 3;
-Q.previous_other_last_election_votes = 7.8;
-Q.previous_bvp_last_election_votes = 3.7;
+Q.previous_spd_last_election_votes = 18.1;
+Q.previous_kpd_last_election_votes = 24.9;
+Q.previous_z_last_election_votes = 17.1;
+Q.previous_ddp_last_election_votes = 15.2;
+Q.previous_dvp_last_election_votes = 1.9;
+Q.previous_dnvp_last_election_votes = 16.3;
+Q.previous_nsdap_last_election_votes = 3.6;
+Q.previous_other_last_election_votes = 2.9;
+Q.previous_bvp_last_election_votes = 3.3;
 
 // prussian gov right now
 Q.spd_r_prussia = 25.3;
@@ -377,14 +369,14 @@ Q.previous_dnvp_last_election_votes_prussia = 23.7;
 Q.previous_nsdap_last_election_votes_prussia = 2.5;
 Q.previous_other_last_election_votes_prussia = 6.0;
 
-Q.spd_votes = 28.5;
-Q.kpd_votes = 10.6;
-Q.z_votes = 15.1;
-Q.ddp_votes = 4.8;
-Q.dvp_votes = 8.7;
-Q.dnvp_votes = 15;
-Q.nsdap_votes = 2.7;
-Q.other_votes = 14.6;
+Q.spd_votes = 15.6;
+Q.kpd_votes = 25.0;
+Q.z_votes = 15.9;
+Q.ddp_votes = 12.1;
+Q.wp_votes = 4.1;
+Q.dnvp_votes = 22.4;
+Q.nsdap_votes = 2.1;
+Q.other_votes = 2.8;
 Q.bvp_votes = 0;
 
 // sapd isn't formed yet, but it may be formed
@@ -656,7 +648,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
     'dnf_decay', 'march_on_berlin', 'prussian_reichsexekution',
     'bruning_event', 'lvp_merger', 'lvp_merger_1', 'lvp_merger_2', 'bourgeois_merger',
     'bourgeois_negotiations_1930', 'bourgeois_negotiations_1930_aftermath',
-    'bourgeois_negotiations_elections_1930', 'nazi_decay', 'stegerwald_transformation', 'emergency_fundraising', 'red_general', 'weimar_rally'];
+    'bourgeois_negotiations_elections_1930', 'nazi_decay', 'stegerwald_transformation', 'emergency_fundraising', 'red_general_timer'];
 Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
@@ -682,7 +674,6 @@ Q.n_elections = 0;
 Q.n_elections_prussia = 0;
 // number of elections without a clear majority.
 Q.no_majority_elections = 0;
-Q.no_majority_papen_elections = 0;
 Q.no_majority_elections_prussia = 0;
 Q.prussian_reichsexekution_timer = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
@@ -734,7 +725,6 @@ Q.papen_chancellor_timer = 0;
 Q.schleicher_chancellor_timer = 0;
 Q.nazi_decay_timer = 0;
 Q.red_general_timer = 0;
-Q.weimar_rally_timer = 0;
 Q.z_party_name = "Z";
 Q.dnvp_leader = "Westarp";
 Q.dnvp_ideology = "Radical";
@@ -820,7 +810,6 @@ Q.banking_crisis_fallout_time = 0;
 Q.reformist_plan_time = 0;
 Q.cvp_economy_accepted_time = 0;
 Q.public_works_name = "Lautenbach";
-Q.hitler_right_coalition_time = 0;
 
 // rubicon
 Q.hindenburg_schleicher_r = 5;
@@ -902,9 +891,13 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"A quote from a nationalist theorist/historian about the contradictions between the DNVP's program and democracy (national democracy) that contains exposition about what happened in the historical path (socialist revolution) and some hints about the state of the world in the mid 30s."*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Nationalist Historian/Theorist, *Bolshevism and National Democracy*, 1934
+
+This is a WIP Mod based on Dynamic Social Democracy.
+
+This mod takes place in a world where world socialism did not experience the intense schism it did during the WW1 years. The majority of the SPD remained opposed to the war, and once it ended, found itself in a far better position to shape the new German Republic. And so, with the terminal crisis of the Republic on the horizon, the German bourgeois and right will find themselves facing the political oblivion German socialism and democracy faced in our world. 
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
