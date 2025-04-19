@@ -13,7 +13,7 @@ Q.catholics_sapd = 0;
 
 Q.workers_other -= 5;
 
-if (Q.unions_independent) {
+if (Q.christsoc_split) {
     Q.workers_sapd += 8;
 }
 

@@ -5,7 +5,7 @@ on-arrival: {!
 
 if (Q.in_social_catholic_coalition) Q.cvp_left += 5;
 if (Q.peoples_party) Q.cvp_left += 3;
-if (Q.left_split) Q.cvp_left += 1;
+if (Q.right_secedes) Q.cvp_left += 1;
 if (Q.sapd_formed) Q.cvp_left += 2;
 if (Q.popcon_strength >= Q.right_strength + Q.agrarian_strength) {
     Q.cvp_left += 2;
@@ -96,7 +96,7 @@ if (Q.welfare <= 0) {
     Q.labor_right_points += 3;
 }
 
-if (Q.unions_independent) {
+if (Q.christsoc_split) {
     Q.labor_right_points += 5;
     Q.labor_left_points += 5;
 }

@@ -47,28 +47,33 @@ Q.dues = 5;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
-Q.dissent = 0.05;
-Q.dissent_percent = 5;
+Q.dissent = 0.1575;
+Q.dissent_percent = 15.75;
 
 // factions
 Q.factions = ['right', 'agrarian', 'christsoc', 'popcon', 'paramilitarist'];
 // should this be normalized to 100%?
-Q.right_strength = 15;
-Q.right_dissent = 20;
+Q.right_strength = 22.5;
+Q.right_dissent = 25;
 Q.agrarian_strength = 30;
-Q.center_dissent = 0;
-Q.christsoc_strength = 25;
-Q.christsoc_dissent = 5;
-Q.popcon_strength = 25;
-Q.popcon_dissent = 5;
-Q.paramilitarist_strength = 5;
-Q.paramilitarist_dissent = 10;
+Q.center_dissent = 10;
+Q.christsoc_strength = 20;
+Q.christsoc_dissent = 15;
+Q.popcon_strength = 20;
+Q.popcon_dissent = 15;
+Q.paramilitarist_strength = 7.5;
+Q.paramilitarist_dissent = 15;
 
 // secret events...
-Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
+Q.christsoc_split = 0;
+Q.agrarians_resign = 0;
+Q.right_secedes = 0;
+Q.popcon_resigned = 0;
+// christian unions/dhv can disaffiliate in an event influenced by christsoc split and dissent but separate from it
+Q.unions_disaffiliated = 0;
+// center (westarp gang) can resign if the party leans too heavily in one direction and at least one faction has split
+// following event depending on whether he went to the kvp or resigned from politics (some of his gang may join dnf still)
+Q.center_resigned = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;

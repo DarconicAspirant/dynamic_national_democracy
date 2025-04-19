@@ -235,7 +235,7 @@ let spd_share = 0.98;
 let aspd_share = 0.02;
 
 if (Q.reformists_resign) aspd_share += 0.03;
-if (Q.unions_independent) aspd_share += 0.06;
+if (Q.christsoc_split) aspd_share += 0.06;
 
 let total_spd_share = aspd_share + spd_share;
 
