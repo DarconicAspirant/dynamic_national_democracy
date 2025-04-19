@@ -1,13 +1,13 @@
-title: Martin Schiele
+title: Magnus von Braun
 is-pinned-card: true
 tags: advisor, reformist
-card-image: img/portraits/SchieleMartin.jpg
+card-image: img/portraits/VonBraunMagnus.jpg
 view-if: baade_advisor = 1
 new-page: true 
 
-= Martin Schiele
+= Magnus von Braun
 
-Schiele is the default option for agriculture minister
+Magnus von Braun is the right's option for agriculture minister
 
 - @agriculture
 - @rural_campaign
