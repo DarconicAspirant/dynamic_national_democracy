@@ -1,13 +1,13 @@
-title: Walter von Keudell
+title: Wilhelm von Gayl
 is-pinned-card: true
 tags: advisor, reformist
-card-image: img/portraits/VonKeudellWalter.jpg
+card-image: img/portraits/VonGaylWilhelmFreiherr.jpg
 view-if: severing_advisor = 1
 new-page: true 
 
-= Walter von Keudell
+= Wilhelm von Gayl
 
-Von Keudell will be the center's option for interior minister
+Von Gayl will be the right's option for interior minister
 
 - @prussian_bulwark
 - @police_affairs

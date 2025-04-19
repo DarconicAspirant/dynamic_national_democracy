@@ -369,8 +369,8 @@ Q.previous_dnvp_last_election_votes_prussia = 23.7;
 Q.previous_nsdap_last_election_votes_prussia = 2.5;
 Q.previous_other_last_election_votes_prussia = 6.0;
 
-Q.spd_votes = 15.6;
-Q.kpd_votes = 25.0;
+Q.spd_votes = 15.7;
+Q.kpd_votes = 24.9;
 Q.z_votes = 15.9;
 Q.ddp_votes = 12.1;
 Q.wp_votes = 4.1;
