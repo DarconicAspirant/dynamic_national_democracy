@@ -61,7 +61,7 @@ subtitle: -1 resource
 view-if: not radio_campaign_landtag
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += campaign_media; unemployed_spd += campaign_media; new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= campaign_media; unemployed_nsdap -= campaign_media; socialism += 3; nationalism -= 1; nationalism -= 2 if pacifism > 1; pro_republic += (radio + commercialized_media); radio_campaign_landtag = 1
+on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += campaign_media; unemployed_spd += campaign_media; new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= campaign_media; unemployed_nsdap -= campaign_media; socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media); radio_campaign_landtag = 1
 face-image: img/vorwarts_2.jpg
 go-to: do_campaign
 

@@ -1647,10 +1647,10 @@ if (!Q.wtb_adopted && Q.black_thursday_seen) {
     if (Q.banking_crisis_seen) Q.wtb_points_gain += 2;
     if (Q.nsdap_votes + Q.kpd_votes >= 35) Q.wtb_points += (Q.nsdap_votes + Q.kpd_votes) / 20
     if (Q.christsoc_split) Q.wtb_points_gain -= 3;
-    if (Q.wtb_support) Q.wtb_points_gain += Q.wtb_support;
+    if (Q.worksplans_support) Q.wtb_points_gain += Q.worksplans_support;
     if (Q.year >= 1931) Q.wtb_points_gain += 1;
     Q.wtb_points_gain += Q.budget;
-    Q.wtb_points_gain += Q.crisis_urgency + (Q.nazi_urgency / 2);
+    Q.wtb_points_gain += Q.crisis_urgency + (Q.revolutionary_urgency / 2);
     if (Q.spd_in_government) Q.wtb_points_gain += 1;
     if (Q.spd_in_government && Q.labor_minister_party == "SPD") {
         Q.wtb_points_gain += 1;
@@ -1866,7 +1866,7 @@ if (Q.year == 1928 && Q.month == 9 && Q.spd_in_government == 0) {
     Q.ddp_right += 1
     Q.ddp_cohesion -= 1
     Q.lvp_right += 1
-    Q.pacifism += 1
+    Q.militarism += 1
     Q.workers_spd += 3
     Q.panzerkreuser_right_seen = 1
 }

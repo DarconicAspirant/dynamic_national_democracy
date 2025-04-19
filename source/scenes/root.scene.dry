@@ -75,19 +75,19 @@ Q.unions_disaffiliated = 0;
 // following event depending on whether he went to the kvp or resigned from politics (some of his gang may join dnf still)
 Q.center_resigned = 0;
 
-// have we discovered neorevisionism?
+// have we deepened our ties with the right wing paramilitaries?
 Q.paramilitarism = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
+// crisis_urgency indicates how seriously the DNVP is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
+// revolutionary_urgency indicates how seriously the DNVP takes the revolutionary left - scale from 0 to 10.
+Q.revolutionary_urgency = 0;
+// radicalization indicates how radical the DNVP's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
-// Support for the WTB plan and proto-Keynesian works creation plans in general
-Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
-Q.pacifism = 0;
+// Support for the works creation plans in general
+Q.worksplans_support = 0;
+// Support for warmongering within the DNVP relative to 1928
+Q.militarism = 0;
 // Support for democratic reform within the SPD relative to 1928
 Q.democratization = 0;
 // Support for a communist coalition relative to 1928

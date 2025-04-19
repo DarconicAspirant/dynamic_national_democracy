@@ -140,10 +140,10 @@ if (!Q.spd_in_government && Q.international_socialist_support) {
     }
 }
 
-if (Q.pacifism >= 3 && Q.spd_in_government) {
-    france_adjustment_factors.sfio += (Q.pacifism / 50);
-    france_adjustment_factors.prs += (Q.pacifism / 100);
-    france_adjustment_factors.rad += (Q.pacifism / 100);
+if (Q.militarism >= 3 && Q.spd_in_government) {
+    france_adjustment_factors.sfio += (Q.militarism / 50);
+    france_adjustment_factors.prs += (Q.militarism / 100);
+    france_adjustment_factors.rad += (Q.militarism / 100);
     if (Q.kpd_relation >= 50) {
         france_adjustment_factors.pcf += (Q.kpd_relation / 400);
         france_adjustment_factors.pup += (Q.kpd_relation / 400);

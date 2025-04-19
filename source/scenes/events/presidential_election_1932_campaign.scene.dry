@@ -132,7 +132,7 @@ title: Use our radio stations to broadcast in favor of Braun.
 subtitle: -1 resource
 choose-if: radio >= 2 and resources >= 1
 unavailable-subtitle: [? if radio < 2: We haven't sufficiently built up our radio infrastructure yet. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= (campaign_media + radio - 2); unemployed_nsdap -= (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if pacifism > 1; pro_republic += (radio + commercialized_media)
+on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= (campaign_media + radio - 2); unemployed_nsdap -= (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media)
 face-image: img/poster_0.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -341,7 +341,7 @@ title: Use our radio stations to broadcast in favor of Hindenburg.
 subtitle: -1 resource
 choose-if: radio >= 2 and resources >= 1
 unavailable-subtitle: [? if radio < 2: We haven't sufficiently built up our radio infrastructure yet. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if pacifism > 1; pro_republic += (radio + commercialized_media)
+on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media)
 face-image: img/poster_0.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2

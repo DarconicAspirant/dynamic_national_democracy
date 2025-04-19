@@ -47,7 +47,7 @@ We can combat the <span style="color: #7A3C00;">Nazis</span> by adopting a "Peop
 
 
 @p3
-on-arrival: paramilitarist_strength += 10; nazi_urgency += 1; paramilitarism += 1;
+on-arrival: paramilitarist_strength += 10; revolutionary_urgency += 1; paramilitarism += 1;
 
 Working together with other "neorevisionists" such as Sergei Chakhotin, Mierendorff has developed new propaganda methods to fight the rise of the Nazis. They focus on visually striking symbols and repetitious slogans. Time will tell how effective they are.
 

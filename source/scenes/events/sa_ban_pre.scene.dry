@@ -4,7 +4,7 @@ view-if: year == 1932 and month == 4 and not hindenburg_term_extended and spd_pr
 priority: 3
 tags: event
 new-page: true
-on-arrival: nazi_urgency += 1
+on-arrival: revolutionary_urgency += 1
 max-visits: 1
 on-display: {!  
     var cardEl = document.createElement('div');  

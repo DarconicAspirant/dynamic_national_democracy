@@ -28,7 +28,7 @@ Meanwhile, moderates and reformists draw up proposals for a limited plan of job 
 
 @support_centrist
 subtitle: Let the depression play itself out.
-on-arrival: agrarian_strength += 5; center_dissent -= 5; christsoc_dissent += 10; wtb_support -= 1; right_dissent += 10;
+on-arrival: agrarian_strength += 5; center_dissent -= 5; christsoc_dissent += 10; worksplans_support -= 1; right_dissent += 10;
 
 Woytinsky and the trade unions vehemently criticize the centrists for their policy. The workers are starving; are we going to callously abandon them and side with bourgeois austerity? On the other hand, the centrists criticize Woytinsky for promising the workers false hope; their position is that nothing can be done to alleviate the depression. They also speak of the fear of another round of hyperinflation that may result from deficit spending.
 
@@ -39,7 +39,7 @@ subtitle: Call for increased public works and fiscal stimulus.
 unavailable-subtitle: The Labor faction is not strong enough.
 choose-if: christsoc_strength >= right_strength and christsoc_strength >= agrarian_strength
 view-if: wtb_concept
-on-arrival: center_dissent += 10; right_dissent += 5; christsoc_strength += 5; wtb_support += 1; wtb_points += 10
+on-arrival: center_dissent += 10; right_dissent += 5; christsoc_strength += 5; worksplans_support += 1; wtb_points += 10
 
 Our support of the WTB plan alienates the orthodox Marxists of the Centrist faction, and faces both opposition and support from a variety of sources across the spectrum. Leftists argue that the plan is flawed because it leaves capitalism intact, while some reformists are cautiously optimistic.
 
@@ -48,7 +48,7 @@ We have not yet convinced the party to formally adopt the plan. More work needs 
 @support_labor_pre
 subtitle: Call for welfare spending and emergency relief for the workers.
 view-if: not wtb_concept
-on-arrival: center_dissent += 5; right_dissent += 5; christsoc_strength += 5; christsoc_dissent -= 5; wtb_support += 1
+on-arrival: center_dissent += 5; right_dissent += 5; christsoc_strength += 5; christsoc_dissent -= 5; worksplans_support += 1
 
 The Labor faction hasn't come up with a concrete solution to our economic woes yet, but has called for increased welfare spending in light of the rise in unemployment. Perhaps supporting their efforts will encourage a real solution to the crisis to be introduced.
 
