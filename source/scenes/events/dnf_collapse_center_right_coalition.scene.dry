@@ -19,7 +19,7 @@ We can either vote to bring down the government and hold new elections, or "tole
 title: Support the vote of no confidence, voting against the government.
 subtitle: The government will collapse, and there will be new elections.
 view-if: cordon_sanitaire >= 50 and center_right_coalition < 50
-on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 2; wp_relation -= 4; z_relation -= 4; uspd_relation -= 4; ddp_relation -= 4; ddp_cohesion -= 1; ddp_right += 1; old_middle_dnf += 3; rural_dnf += 3
+on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 2; wp_relation -= 4; z_relation -= 4; uspd_relation -= 4; lvp_relation -= 4; ddp_cohesion -= 1; ddp_right += 1; old_middle_dnf += 3; rural_dnf += 3
 call: set_next_election_time
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 

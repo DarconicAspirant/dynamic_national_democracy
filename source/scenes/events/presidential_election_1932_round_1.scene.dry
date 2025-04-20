@@ -426,7 +426,7 @@ view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and kpd_leader == "Concili
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -434,7 +434,7 @@ The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presi
 @r2_kpd_relations
 view-if: nsdap_relation >= 70 or (kpd_leader == "Conciliators" and nsdap_relation >= 50)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; ddp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
@@ -442,12 +442,12 @@ The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presi
 @round2_convince_ddp
 view-if: not lvp_formed and spd_campaign > 0 and ddp_support_spd != 1 
 max-visits: 1
-go-to: convince_ddp_success if (((ddp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((ddp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg); convince_ddp_fail if not ((((ddp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((ddp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (ddp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg))
+go-to: convince_ddp_success if (((lvp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((lvp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg); convince_ddp_fail if not ((((lvp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((lvp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg))
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has always been the most friendly of the bourgeois parties, hopefully reminding them of our successes in <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalitions will help convince them. [? if hitler_support_hindenburg: Furthermore, the withdrawal of [+ nsdap_candidate_1932 +] in favor of Hindenburg has led them to distance themselves from him. ?]
 
 @convince_ddp_success
-on-arrival: ddp_support_spd = 1; ddp_left += 2; ddp_cohesion -= 1; ddp_relation += 4
+on-arrival: ddp_support_spd = 1; ddp_left += 2; ddp_cohesion -= 1; lvp_relation += 4
 go-to: round2_menu
 
 Thanks to our friendly relations and connections with their left wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is now campaigning for Braun in the election.
@@ -517,7 +517,7 @@ Supporting Thälmann is rather unpopular in our party, even if the <span style="
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; lvp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the <span style="color: #700000;">**KPD**</span> to the dismay of our bourgeois allies.

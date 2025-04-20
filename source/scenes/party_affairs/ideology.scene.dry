@@ -27,7 +27,7 @@ if (Q.ideology && Q.ideology != "left") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; right_strength += 10; bernburg_coalition += 1; right_dissent -= 5; z_relation -= 3; wp_relation -= 5; ddp_relation -= 3; lvp_old_relation -= 3; ddp_cohesion -= 0.5; neoliberal_plan_support += 1; nsdap_relation += 3; ddp_right += 1; dvp_right += 1.5; lvp_right += 1
+on-departure: ideology = "left"; right_strength += 10; bernburg_coalition += 1; right_dissent -= 5; z_relation -= 3; wp_relation -= 5; lvp_relation -= 3; lvp_old_relation -= 3; ddp_cohesion -= 0.5; neoliberal_plan_support += 1; nsdap_relation += 3; ddp_right += 1; dvp_right += 1.5; lvp_right += 1
 
 The radical left of the party supports a course of class struggle, and potentially a reconciliation with the <span style="color: #700000;">**Communists**</span>.
 
@@ -60,7 +60,7 @@ if (Q.ideology && Q.ideology != "reformist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; popcon_strength += 10; antimocratization += 1; popcon_dissent -= 5; z_relation += 5; wp_relation += 5; ddp_relation += 5; lvp_old_relation += 5; nsdap_relation -= 8; moderate_plan_support += 1; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
+on-departure: ideology = "reformist"; popcon_strength += 10; antimocratization += 1; popcon_dissent -= 5; z_relation += 5; wp_relation += 5; lvp_relation += 5; lvp_old_relation += 5; nsdap_relation -= 8; moderate_plan_support += 1; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
 
 The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
 

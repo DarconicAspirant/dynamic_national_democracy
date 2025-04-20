@@ -29,7 +29,7 @@ on-arrival: resources -= 1; kpd_inter_party_seen += 1
 go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (nsdap_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if nsdap_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1
 
 @kpd_1
-on-arrival: nsdap_relation += 6*(1 - dissent); bernburg_coalition += 1 if kpd_inter_party_seen <= 1; popcon_dissent += 2; z_relation -= 2 if z_ideology == "Right"; wp_relation -= 3; ddp_relation -= 2; lvp_old_relation -= 3
+on-arrival: nsdap_relation += 6*(1 - dissent); bernburg_coalition += 1 if kpd_inter_party_seen <= 1; popcon_dissent += 2; z_relation -= 2 if z_ideology == "Right"; wp_relation -= 3; lvp_relation -= 2; lvp_old_relation -= 3
 
 The <span style="color: #700000;">communists</span> are suspicious of our overtures, especially the <span style="color: #8B0000;">Stalinist</span> leadership, who persist in calling us "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascists</span>". However, connections are made at the grassroots and local levels.
 
@@ -43,7 +43,7 @@ For further improvements in <span style="color: #700000;">**KPD**</span> relatio
 - @no_history: No, we have no need to apologize.
 
 @yes_history
-on-arrival: popcon_dissent += 12; popcon_strength -= 2; paramilitarist_dissent += 5; right_dissent -= 6; right_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; wp_relation -= 6; lvp_old_relation -= 6; ddp_relation -= 4; nsdap_relation += 8*(1-dissent); coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2
+on-arrival: popcon_dissent += 12; popcon_strength -= 2; paramilitarist_dissent += 5; right_dissent -= 6; right_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; wp_relation -= 6; lvp_old_relation -= 6; lvp_relation -= 4; nsdap_relation += 8*(1-dissent); coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2
 
 As part of normalizing relations with the <span style="color: #700000;">**KPD**</span>, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
 
@@ -56,7 +56,7 @@ We have no need to apologize for the actions of Ebert and Noske; it is the <span
 
 
 @kpd_2
-on-arrival: nsdap_relation += 8*(1 - dissent); bernburg_coalition += 1 if kpd_inter_party_seen <= 1; popcon_dissent += 2; z_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; ddp_relation -= 3
+on-arrival: nsdap_relation += 8*(1 - dissent); bernburg_coalition += 1 if kpd_inter_party_seen <= 1; popcon_dissent += 2; z_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; lvp_relation -= 3
 
 After the success of the coalition government with the <span style="color: #700000;">**KPD**</span>, they are much more amenable to us.
 
@@ -102,7 +102,7 @@ view-if: not lvp_formed and not dvp_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 8*(1 - dissent); ddp_left += 1; ddp_cohesion += 0.5
+on-arrival: resources -= 1; lvp_relation += 8*(1 - dissent); ddp_left += 1; ddp_cohesion += 0.5
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of our closest allies throughout the course of the Republic. Now, as they are the only remaining liberal party, strengthening ties with them should be our top priority.
 
@@ -111,7 +111,7 @@ view-if: not lvp_formed and dvp_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent); ddp_left += 0.5; ddp_cohesion += 0.25; wp_relation += 2 if in_grand_coalition_prussia
+on-arrival: resources -= 1; lvp_relation += 5*(1 - dissent); ddp_left += 0.5; ddp_cohesion += 0.25; wp_relation += 2 if in_grand_coalition_prussia
 go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and dvp_votes >= 5; dvp_moribund if stresemann_dead = 1 and dvp_votes < 5
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of our closest allies through the course of the Republic. [? if year >= 1929: Although the national shift to the right is having them question our cooperation. ?]

@@ -58,7 +58,7 @@ Q.z_relation -= 20;
 Q.z_relation += (Q.pro_republic / 10);
 
 Q.ddp_right += 3;
-Q.ddp_relation -= 5;
+Q.lvp_relation -= 5;
 
 Q.dvp_right += 3;
 Q.wp_relation -= 5;

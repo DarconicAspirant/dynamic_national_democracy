@@ -23,7 +23,7 @@ Q.old_middle_lvp += 4
 Q.rural_lvp += 4
 
 Q.lvp_r = Math.round((Q.ddp_r + Q.dvp_r) * 10) / 10;
-Q.lvp_old_relation = Math.round((Q.ddp_relation + Q.wp_relation) / 2)
+Q.lvp_old_relation = Math.round((Q.lvp_relation + Q.wp_relation) / 2)
 Q.lvp_left = Q.ddp_left + Q.dvp_left;
 Q.lvp_right = Q.ddp_right + Q.dvp_right;
 Q.lvp_left *= 0.5;

@@ -9,10 +9,10 @@ if (Q.wp_relation >= 35) {
 if (Q.wp_relation < 20) {
     Q.lvp_formation_points += 1;
 }
-if (Q.ddp_relation < 40) {
+if (Q.lvp_relation < 40) {
     Q.lvp_formation_points += 1;
 }
-if (Q.ddp_relation + Q.wp_relation >= 100) {
+if (Q.lvp_relation + Q.wp_relation >= 100) {
     Q.lvp_formation_points += 1;
 }
 if (Q.liberal_vote < 7) {
