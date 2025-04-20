@@ -32,7 +32,7 @@ go-to: what_do
 This is a gift to the <span style="color: #700000;">Communists</span>, a boost to their theory that parliamentary democracy will never benefit the working class.
 
 @what_do
-on-arrival: dvp_relation += 3 if chancellor = "Braun"; lvp_relation += 3 if chancellor = "Braun"; dvp_relation += 3 if in_grand_coalition_prussia
+on-arrival: wp_relation += 3 if chancellor = "Braun"; lvp_old_relation += 3 if chancellor = "Braun"; wp_relation += 3 if in_grand_coalition_prussia
 
 But the crux of the matter is, what can we do?
 
@@ -42,7 +42,7 @@ But the crux of the matter is, what can we do?
 - @prolong: Postpone the issue as long as possible.
 
 @destroy
-on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; z_relation -= 8; dvp_relation -= 10; ddp_relation -= 6; chancellor = "Brüning"; chancellor_party = "Z"; welfare -= 2; budget += 1; inflation -= 2; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; spd_no_confidence = 1; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 2; unemployment_insurance_gov_destroyed = 1; dvp_right += 3; ddp_right += 2; ddp_cohesion -= 1; grand_coalition_collapsed = 1; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930; economic_growth -= 0.6
+on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; z_relation -= 8; wp_relation -= 10; ddp_relation -= 6; chancellor = "Brüning"; chancellor_party = "Z"; welfare -= 2; budget += 1; inflation -= 2; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; spd_no_confidence = 1; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; rural_spd -= 2; catholics_spd -= 2; unemployment_insurance_gov_destroyed = 1; dvp_right += 3; ddp_right += 2; ddp_cohesion -= 1; grand_coalition_collapsed = 1; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930; economic_growth -= 0.6
 go-to: elections if bruning_event_seen or year < 1930
 
 Fine. If the bourgeoisie wish to blow up the government, let them do so. <span style="color: #c00000;">Socialists</span> will not be complicit in the destruction of the working class.
@@ -73,8 +73,8 @@ on-arrival: workers_spd -= 0.1*workers_spd; unemployed_spd -= 0.15*unemployed_sp
 A compromise put forward by Heinrich Brüning is put into place and the issue is delayed until the autumn. A fixed amount is loaned to the program in the meantime, although not nearly enough for the millions of unemployed. The Left and Labor factions view this as a betrayal of our duty to support unemployment insurance during a crisis.
 
 @compromise
-unavailable-subtitle: [? if dvp_relation < 30 or ddp_relation < 30 or (z_relation < 30 or (z_relation < 25 and z_leader == "Joos") or (z_relation < 20 and z_leader == "Kaiser")): We do not have good enough relations with the right-wing parties. ?]
-choose-if: dvp_relation >= 30 and ddp_relation >= 30 and (z_relation >= 30 or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser"))
+unavailable-subtitle: [? if wp_relation < 30 or ddp_relation < 30 or (z_relation < 30 or (z_relation < 25 and z_leader == "Joos") or (z_relation < 20 and z_leader == "Kaiser")): We do not have good enough relations with the right-wing parties. ?]
+choose-if: wp_relation >= 30 and ddp_relation >= 30 and (z_relation >= 30 or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser"))
 
 The <span style="color: #C0A054;">**DVP**</span> ministers in the cabinet have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Reformists and Centrists support maintaining our government to keep the <span style="color: #7A3C00;">fascists</span> and <span style="color: #700000;">communists</span> out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
 
@@ -85,7 +85,7 @@ The <span style="color: #C0A054;">**DVP**</span> themselves are split about this
 - @prolong: Decide this at a later date.
 
 @accept_compromise
-go-to: compromised_failed if (dvp_ideology == "Moderate" and dvp_relation < 55) or dvp_ideology == "Right"; compromise_success if dvp_ideology == "Left" or (dvp_ideology == "Moderate" and dvp_relation >= 55)
+go-to: compromised_failed if (dvp_ideology == "Moderate" and wp_relation < 55) or dvp_ideology == "Right"; compromise_success if dvp_ideology == "Left" or (dvp_ideology == "Moderate" and wp_relation >= 55)
 
 
 @compromised_failed

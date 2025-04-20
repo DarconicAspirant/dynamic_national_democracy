@@ -113,7 +113,7 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 = Inter-party Relations
 
-[? if dvp_exist: <span class="tooltip-text" title="Economic Party of the German Middle Class" style="color: #CCAA7A;">**WP**</span><span class="tooltip-text" title="Others" style="color: #909090;">**/Others**</span>: [+ dvp_relation : relationships +] ?]
+[? if dvp_exist: <span class="tooltip-text" title="Economic Party of the German Middle Class" style="color: #CCAA7A;">**WP**</span><span class="tooltip-text" title="Others" style="color: #909090;">**/Others**</span>: [+ wp_relation : relationships +] ?]
 
 [? if z_party_name != "CVP": <span class="tooltip-text" title="Center Party" style="color: #000000;">**[+ z_party_name +]**</span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**[+ z_party_name +]**</span>?]: [+ z_relation : relationships +]
 
@@ -121,13 +121,13 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 [? if kvp_formed : <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_relation : relationships +] ?]
 
-<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ spd_relation : relationships +]
+<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_relation : relationships +]
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
-<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ dnvp_relation : relationships +]
+<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ uspd_relation : relationships +]
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ nsdap_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ spd_relation : relationships +]
 
 = Party Leadership
 

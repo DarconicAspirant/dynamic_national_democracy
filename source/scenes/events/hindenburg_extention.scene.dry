@@ -31,7 +31,7 @@ We are forced to impose party discipline, greatly angering the Left and Center o
 @oppose_resolution
 choose-if: not schleicher_spd
 unavailable-subtitle: As part of our deal with Schleicher, we are now forced to support the resolution.
-on-arrival: popcon_dissent += 5; right_dissent -= 10; old_middle_spd -= 3; lvp_relation -= 3; dvp_relation -= 5; dvp_right += 3
+on-arrival: popcon_dissent += 5; right_dissent -= 10; old_middle_spd -= 3; lvp_old_relation -= 3; wp_relation -= 5; dvp_right += 3
 
 Of course, we will oppose this undemocratic act—the people should decide whether Hindenburg receives another term or not. 
 

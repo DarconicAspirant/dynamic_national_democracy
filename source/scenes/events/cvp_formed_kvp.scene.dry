@@ -51,7 +51,7 @@ Q.ddp_right += 3;
 Q.ddp_relation -= 5;
 
 Q.dvp_right += 3;
-Q.dvp_relation -= 5;
+Q.wp_relation -= 5;
 
 Q.dnvp_r = 0;
 Q.dnvp_votes = 0;

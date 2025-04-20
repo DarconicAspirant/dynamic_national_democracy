@@ -26,7 +26,7 @@ The Reichsbanner has increasingly militarized, acquiring arms, conducting parami
 - @keep_them: Can we convince them that a militant Reichsbanner is necessary for defending the Republic?
 
 @let_go
-on-arrival: rb_strength *= 0.95; z_relation -= 3; lvp_relation -= 5; lvp_right += 3; pro_republic -= 3; lvp_leave_reichsbanner = 1
+on-arrival: rb_strength *= 0.95; z_relation -= 3; lvp_old_relation -= 5; lvp_right += 3; pro_republic -= 3; lvp_leave_reichsbanner = 1
 
 We have judged that the Reichsbanner's militancy is more important than maintaining a coalition with the <span style="color: #FFCC00;">**LVP**</span>. The Reichsbanner members affiliated with the <span style="color: #FFCC00;">liberals</span> leave, and this may inspire the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to follow suit.
 
@@ -41,7 +41,7 @@ Bowing to the <span style="color: #FFCC00;">**LVP**</span>'s demands, we reduce 
 
 @keep_them
 unavailable-subtitle: They are unable to be convinced at this time.
-choose-if: strife >= 3 and lvp_relation >= 55 and lvp_ideology != "Right"
-on-arrival: lvp_left += 3; lvp_relation += 3; old_middle_dnvp += 3; old_middle_lvp -= 3; pro_republic += 3
+choose-if: strife >= 3 and lvp_old_relation >= 55 and lvp_ideology != "Right"
+on-arrival: lvp_left += 3; lvp_old_relation += 3; old_middle_dnvp += 3; old_middle_lvp -= 3; pro_republic += 3
 
 Seeing the strife that has filled Germany's streets, the <span style="color: #FFCC00;">**LVP**</span> seem to be convinced that it is necessary for the Reichsbanner to be militarized, and will not leave the organization. Unfortunately, many die-hard <span style="color: #3E88B3;">**Stahlhelm**</span> members within the party are constantly pressing for a reversal of this policy.
