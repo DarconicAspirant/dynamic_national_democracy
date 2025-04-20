@@ -29,7 +29,7 @@ title: Cooperation with the <span style="color: #700000;">**KPD**</span>
 subtitle: Push the party to be more friendly towards the <span style="color: #700000;">**KPD**</span>.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; right_strength += 5; kpd_relation += 4*(1-dissent); popcon_dissent += 2; communist_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
+on-arrival: advisor_action_timer = 6; right_strength += 5; kpd_relation += 4*(1-dissent); popcon_dissent += 2; harzburg_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
 
 Through his work, Rosenfeld has defended individual <span style="color: #700000;">**KPD**</span> members; this should make some connections possible.
 

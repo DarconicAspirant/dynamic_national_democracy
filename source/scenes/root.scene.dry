@@ -88,10 +88,11 @@ Q.radicalization = 0;
 Q.worksplans_support = 0;
 // Support for warmongering within the DNVP relative to 1928
 Q.militarism = 0;
-// Support for democratic reform within the SPD relative to 1928
-Q.democratization = 0;
-// Support for a communist coalition relative to 1928
-Q.communist_coalition = 0;
+// Support for anti-demoratic reform within the DNVP relative to 1928
+// Related to but not the same as support for a monarchial restoration, more about de-democratizing the republic
+Q.antimocratization = 0;
+// Support for a Harzburg coalition relative to 1928
+Q.harzburg_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
 Q.economic_plan = 0;

@@ -16,10 +16,10 @@ Due to the formation of the <span style="color: #000000;">**[+ z_party_name +]**
 - @let_it_happen: Let the vote happen.
 
 @support_kpd
-choose-if: ((in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r and not lvp_formed) or (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and communist_coalition >= 3)
+choose-if: ((in_grand_coalition and harzburg_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r and not lvp_formed) or (in_grand_coalition and harzburg_coalition >= 3 and kpd_relation >= 50 and kpd_r >= (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and harzburg_coalition >= 3)
 view-if: tried_supporting_kpd = 0
 on-arrival: tried_supporting_kpd = 1
-unavailable-subtitle: [? if communist_coalition < 3 : The <span style="color: #700000;">KPD</span> won't take part in parliamentary government. ?] [? if kpd_relation < 50 : The <span style="color: #700000;">KPD</span> is not friendly enough with us. ?] [? if ((in_grand_coalition and kpd_r < dvp_r and not lvp_formed) or (in_grand_coalition and kpd_r < (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_r < z_r): The <span style="color: #700000;">KPD</span> does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the <span style="color: #700000;">KPD</span>. ?]
+unavailable-subtitle: [? if harzburg_coalition < 3 : The <span style="color: #700000;">KPD</span> won't take part in parliamentary government. ?] [? if kpd_relation < 50 : The <span style="color: #700000;">KPD</span> is not friendly enough with us. ?] [? if ((in_grand_coalition and kpd_r < dvp_r and not lvp_formed) or (in_grand_coalition and kpd_r < (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_r < z_r): The <span style="color: #700000;">KPD</span> does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the <span style="color: #700000;">KPD</span>. ?]
 
 If the <span style="color: #700000;">**Communists**</span> abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the <span style="color: #700000;">**KPD**</span>. This could lead to broader cooperation in the future, for better or for worse.
 
@@ -27,7 +27,7 @@ If the <span style="color: #700000;">**Communists**</span> abstain, then we esse
 - @let_it_happen: Never mind. Let the vote happen.
 
 @support_kpd_2
-on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
+on-arrival: harzburg_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
 

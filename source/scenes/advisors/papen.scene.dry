@@ -21,7 +21,7 @@ title: Rally for democracy
 subtitle: Rally our party and the German people to defend democracy and freedom.
 choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; pro_republic += 8; democratization += 1; paramilitarist_strength += 5; popcon_strength += 5; workers_spd += 3*(1-dissent) if democratization >= 4; new_middle_spd += 2*(1-dissent) if democratization >= 4; catholics_spd += 4*(1-dissent) if democratization >= 3
+on-arrival: advisor_action_timer = 6; pro_republic += 8; antimocratization += 1; paramilitarist_strength += 5; popcon_strength += 5; workers_spd += 3*(1-dissent) if antimocratization >= 4; new_middle_spd += 2*(1-dissent) if antimocratization >= 4; catholics_spd += 4*(1-dissent) if antimocratization >= 3
 
 Wirth helps us to rally the people in defense of the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> system.
 

@@ -49,7 +49,7 @@ We also aim to improve relations with our eastern neighbors, <span style="color:
 title: Expand our exports to the <span style="color: #750e0e;">**Soviet Union**</span>.
 subtitle: A win for our economy and for our relationship with the <span style="color: #700000;">**KPD**</span>.
 view-if: year >= 1930
-on-arrival: soviet_relation += 1; economic_growth += 0.5; unemployed -= 0.5; foreign_goal_completed += 1; kpd_relation += 6; communist_coalition += 1; hindenburg_angry += 15; z_relation -= 3; ddp_relation -= 3; dvp_relation -= 3; lvp_relation -= 3; dvp_right += 1; lvp_right += 1; ddp_right += 1
+on-arrival: soviet_relation += 1; economic_growth += 0.5; unemployed -= 0.5; foreign_goal_completed += 1; kpd_relation += 6; harzburg_coalition += 1; hindenburg_angry += 15; z_relation -= 3; ddp_relation -= 3; dvp_relation -= 3; lvp_relation -= 3; dvp_right += 1; lvp_right += 1; ddp_right += 1
 max-visits: 1
 
 The <span style="color: #750e0e;">Soviet Union</span>, with its centrally planned economy and isolation from global markets, has insulated itself from the effects of the Great Depression. They have since been rapidly industrializing in accordance with their Five-Year Plan, making them a prime partner for exports, especially as tariffs from our nominal trading partners in the West have increased, along with their general isolation from international markets.
@@ -92,7 +92,7 @@ The <span style="color: #940000;">Soviets</span> are slightly upset, but they se
 
 
 @kpd
-on-arrival: kpd_relation += 8*(1-dissent); communist_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
+on-arrival: kpd_relation += 8*(1-dissent); harzburg_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
 
 We also mention the <span style="color: #700000;">**KPD**</span> in our conversations with the <span style="color: #940000;">Soviet</span> ambassador. They claim that the <span style="color: #700000;">**KPD**</span> is entirely independent of the <span style="color: #940000;">Soviet</span> government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the <span style="color: #700000;">**KPD**</span>.
 

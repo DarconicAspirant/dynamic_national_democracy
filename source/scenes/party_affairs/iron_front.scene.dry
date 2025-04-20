@@ -47,7 +47,7 @@ on-arrival: militarism += 1; nationalism -= 5 if militarism >= 3; workers_spd +=
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies against nationalism and war.
 
 @republic
-on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*(1-dissent) if democratization >= 4; unemployed_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 4*(1-dissent) if democratization >= 4; ddp_left += 0.5 if democratization >= 4; lvp_left += 0.5 if democratization >= 4
+on-arrival: pro_republic += 5*(1-dissent); antimocratization += 1; workers_spd += 5*(1-dissent) if antimocratization >= 4; unemployed_spd += 4*(1-dissent) if antimocratization >= 4; new_middle_spd += 4*(1-dissent) if antimocratization >= 4; ddp_left += 0.5 if antimocratization >= 4; lvp_left += 0.5 if antimocratization >= 4
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of the democratic republic and against <span style="color: #7A3C00;">dictatorship</span>.
 

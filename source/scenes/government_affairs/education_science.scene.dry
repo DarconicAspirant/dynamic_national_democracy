@@ -10,9 +10,9 @@ tags: govt_affairs
 # options:
 # - fund research (basic science research at the KWI, medical research, applied and industrial research to benefit Germany's economy)
 # - change the educational curriculum (only once per 3 years) - will have a "major" and "minor" option:
-# - democratic education - focus on critical thinking and democratic values rather than authoritarian teaching. (+ democratization, pro_republic)
+# - democratic education - focus on critical thinking and democratic values rather than authoritarian teaching. (+ antimocratization, pro_republic)
 # - scientific education - focus on the sciences, mathematics, and technical skills (+ NMC, science)
-# - humanistic education - focus on literature, history, and philosophy. (+ NMC, pro_republic if democratization is high)
+# - humanistic education - focus on literature, history, and philosophy. (+ NMC, pro_republic if antimocratization is high)
 # - traditional education (reduces relations with DDP)
 
 # - increase educational opportunities for working-class families.
@@ -167,7 +167,7 @@ What should be the major focus of our new curriculum?
 @dem_major
 title: Democratic curriculum
 subtitle: Critical thinking, democratic citizenship, and collaboration
-on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); democratization += 1; z_relation -= 3; ddp_relation += 3; lvp_relation += 3 if lvp_ideology != "Right"; lvp_relation -= 3 if lvp_ideology == "Right"; dvp_relation -= 5; ddp_left += 2; ddp_cohesion += 1; dvp_right += 2; lvp_left += 1; coalition_dissent += 1 if in_grand_coalition; militarism += 1; education_science += 0.3
+on-arrival: curriculum_timer = 50; major_curriculum = "democratic"; pro_republic += 5*(1-dissent); workers_spd += 3*(1-dissent); antimocratization += 1; z_relation -= 3; ddp_relation += 3; lvp_relation += 3 if lvp_ideology != "Right"; lvp_relation -= 3 if lvp_ideology == "Right"; dvp_relation -= 5; ddp_left += 2; ddp_cohesion += 1; dvp_right += 2; lvp_left += 1; coalition_dissent += 1 if in_grand_coalition; militarism += 1; education_science += 0.3
 go-to: curriculum_minor
 
 We should teach students how to be citizens of a democratic republic, by teaching them to critically evaluate politics and current events, to exercise their rights and to respect the rights of other citizens. Traditionalists of all stripes are critical of this curriculum.
@@ -220,7 +220,7 @@ And what should be a secondary focus of the curriculum?
 title: Democratic curriculum
 subtitle: Critical thinking, democratic citizenship, and collaboration
 view-if: major_curriculum != "democratic"
-on-arrival: minor_curriculum = "democratic"; pro_republic += 3*(1-dissent); workers_spd += 2*(1-dissent); democratization += 1; z_relation -= 2; dvp_relation -= 3; ddp_relation += 2; lvp_relation += 3 if lvp_ideology != "Right"; lvp_relation -= 3 if lvp_ideology == "Right"; ddp_left += 1; ddp_cohesion += 0.5; lvp_left += 0.5
+on-arrival: minor_curriculum = "democratic"; pro_republic += 3*(1-dissent); workers_spd += 2*(1-dissent); antimocratization += 1; z_relation -= 2; dvp_relation -= 3; ddp_relation += 2; lvp_relation += 3 if lvp_ideology != "Right"; lvp_relation -= 3 if lvp_ideology == "Right"; ddp_left += 1; ddp_cohesion += 0.5; lvp_left += 0.5
 
 We should teach students how to be citizens of a democratic republic, by teaching them to critically evaluate politics and current events, to exercise their rights and to respect the rights of other citizens. Traditionalists of all stripes are critical of this curriculum.
 
