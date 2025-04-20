@@ -2935,7 +2935,7 @@ if (Q.spd_in_government_time >= 6) {
     if (Q.coup_progress > 0) {
         Q.hindenburg_angry += Q.coup_progress / 2;
     }
-    if (Q.kpd_relation >= 50 || Q.harzburg_coalition >= 3) {
+    if (Q.kpd_relation >= 50 || Q.bernburg_coalition >= 3) {
         Q.hindenburg_angry += Q.kpd_relation / 100;
     } else if (Q.kpd_relation < 25) {
         Q.hindenburg_angry -= 1;

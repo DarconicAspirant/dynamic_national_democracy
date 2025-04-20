@@ -107,7 +107,7 @@ if (Q.spd_local_elections_vote >= 30) {
 
 if (Q.kpd_local_elections_vote >= 20) {
     Q.kpd_relation += 20;
-    Q.harzburg_coalition += 1;
+    Q.bernburg_coalition += 1;
     Q.workers_kpd += 3;
     Q.unemployed_kpd += 3;
     Q.workers_sapd += 3;
