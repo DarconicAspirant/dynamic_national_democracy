@@ -224,7 +224,7 @@ As expected, the incumbent Hindenburg wins the presidency. Let's hope he continu
 [? if spd_support_hindenburg and bruning_time: The fact that [+ reactionary_candidate_1932 +] owed his reelection to the parties who opposed him in 1925 rather than those with whom he felt the closest natural affinity with is a source of great personal anguish to the aging president and severely strained his relations with Brüning and the conservatives who had orchestrated his reelection campaign. ?]
 
 @thalmann_wins
-on-arrival: president = "Thälmann"; kpd_relation = 80;
+on-arrival: president = "Thälmann"; nsdap_relation = 80;
 
 Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> has won the presidency. Immediately, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> launches a coup attempt against the government. We have no choice but to unite with the <span style="color: #700000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
 

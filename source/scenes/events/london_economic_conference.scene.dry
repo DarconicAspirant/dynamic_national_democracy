@@ -16,8 +16,8 @@ The <span style="color: #10069f;">League</span> of <span style="color: #10069f;"
 
 @economic_recovery
 
-[? if wtb_adopted or budget <= 0: Germany has largely recovered from the crisis, owing in large part to the same sorts of economic policies that Roosevelt is pursuing. ?]
-[? if not wtb_adopted and budget > 0: Germany has largely recovered from the crisis, without having to resort to budget deficits or devaluing the currency. ?]
+[? if worksplan_adopted or budget <= 0: Germany has largely recovered from the crisis, owing in large part to the same sorts of economic policies that Roosevelt is pursuing. ?]
+[? if not worksplan_adopted and budget > 0: Germany has largely recovered from the crisis, without having to resort to budget deficits or devaluing the currency. ?]
 
 - @support_roosevelt
 - @support_france

@@ -19,7 +19,7 @@ People are calling Chancellor [+ chancellor +] the Hunger Chancellor because of 
 @maintain_toleration
 subtitle: It is necessary to preserve democracy.
 view-if: spd_toleration == 1
-on-arrival: workers_nsdap += 2; workers_kpd += 2; unemployed_nsdap += 2; workers_spd -= 2; pro_republic -= 2; kpd_relation -= 2; ddp_left += 0.5
+on-arrival: workers_nsdap += 2; workers_kpd += 2; unemployed_nsdap += 2; workers_spd -= 2; pro_republic -= 2; nsdap_relation -= 2; ddp_left += 0.5
 
 Our policy of toleration continues.
 

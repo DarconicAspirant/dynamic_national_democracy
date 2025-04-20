@@ -38,7 +38,7 @@ We have increased training and purchased more armaments for the Reichsbanner.
 [? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] decries the militarization of the Reichsbanner, and its members are leaving the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization. ?][? if strife >= 5: Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and mute their criticisms. ?] ?]
 
 @if_training
-view-if: iron_front_formed == 1
+view-if: bernburg_front_formed == 1
 on-arrival: rb_militancy += 0.03; rb_strength += 200; sa_strength += 50; 
 max-visits: 2
 
@@ -57,9 +57,9 @@ By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the pa
 
 @truce_rfb
 subtitle: The <span style="color: #8B0000;">RFB</span> will be added to the balance of power.
-choose-if: kpd_relation >= 45
+choose-if: nsdap_relation >= 45
 view-if: kpd_truce == 0
 unavailable-subtitle: The <span style="color: #700000;">KPD</span> is not interested.
-on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
+on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
 
 We have made at least a temporary truce with the <span style="color: #700000;">**KPD**</span>, so that our respective paramilitaries will stop fighting.

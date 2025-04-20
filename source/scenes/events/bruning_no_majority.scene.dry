@@ -38,7 +38,7 @@ Q.workers_nsdap += Q.workers_spd*0.04;
 Q.workers_kpd += Q.workers_spd*0.04;
 Q.workers_spd *= 0.96;
 Q.unemployed_spd *= 0.96;
-Q.kpd_relation -= 5;
+Q.nsdap_relation -= 5;
 Q.bruning_coalition = Q.neo_weimar_coalition;
 if (Q.dnvp_ideology == "Moderate") Q.bruning_coalition = Q.cordon_sanitaire;
 Q.bruning_coalition = Math.round((Q.bruning_coalition - Q.bruning_coalition_loss) * 10) / 10;

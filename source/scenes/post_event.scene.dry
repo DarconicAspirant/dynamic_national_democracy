@@ -847,7 +847,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.new_middle_dnvp -= 2/12;
         Q.rural_dnvp -= 2/12;
         if (!Q.works_program) {
-            if (!Q.wtb_adopted) {
+            if (!Q.worksplan_adopted) {
                 Q.workers_kpd += 3/12;
                 Q.workers_spd -= 3/12;
             }
@@ -1633,7 +1633,7 @@ if (Q.far_right_paramilitary && Q.year >= 1930) {
     if (Q.democracy_force >= Q.pro_republic) Q.pro_republic += 1;
 }
 
-if (!Q.wtb_adopted && Q.black_thursday_seen) {
+if (!Q.worksplan_adopted && Q.black_thursday_seen) {
     Q.wtb_points_gain = 0;
     if (Q.christsoc_strength >= (Q.agrarian_strength + Q.right_strength)) Q.wtb_points_gain += 3
     Q.wtb_points_gain += Q.christsoc_strength/50;
@@ -1647,7 +1647,7 @@ if (!Q.wtb_adopted && Q.black_thursday_seen) {
     if (Q.banking_crisis_seen) Q.wtb_points_gain += 2;
     if (Q.nsdap_votes + Q.kpd_votes >= 35) Q.wtb_points += (Q.nsdap_votes + Q.kpd_votes) / 20
     if (Q.christsoc_split) Q.wtb_points_gain -= 3;
-    if (Q.worksplans_support) Q.wtb_points_gain += Q.worksplans_support;
+    if (Q.worksplan_support) Q.wtb_points_gain += Q.worksplan_support;
     if (Q.year >= 1931) Q.wtb_points_gain += 1;
     Q.wtb_points_gain += Q.budget;
     Q.wtb_points_gain += Q.crisis_urgency + (Q.revolutionary_urgency / 2);
@@ -2935,9 +2935,9 @@ if (Q.spd_in_government_time >= 6) {
     if (Q.coup_progress > 0) {
         Q.hindenburg_angry += Q.coup_progress / 2;
     }
-    if (Q.kpd_relation >= 50 || Q.bernburg_coalition >= 3) {
-        Q.hindenburg_angry += Q.kpd_relation / 100;
-    } else if (Q.kpd_relation < 25) {
+    if (Q.nsdap_relation >= 50 || Q.bernburg_coalition >= 3) {
+        Q.hindenburg_angry += Q.nsdap_relation / 100;
+    } else if (Q.nsdap_relation < 25) {
         Q.hindenburg_angry -= 1;
     }
     if (Q.far_right_coalition >= 25) {
@@ -3015,7 +3015,7 @@ if (Q.spd_in_government_time >= 6) {
     }
     if (Q.inflation >= 5) {
         Q.hindenburg_angry += Q.inflation / 3;
-    } else if (Q.inflation < 0 && Q.wtb_adopted && Q.black_thursday_seen) {
+    } else if (Q.inflation < 0 && Q.worksplan_adopted && Q.black_thursday_seen) {
         Q.hindenburg_angry -= 3;
     }
     if (Q.economic_growth < 0) {
@@ -3057,7 +3057,7 @@ if (Q.spd_in_government_time >= 6) {
     if (Q.right_strength >= Q.popcon_strength) {
         Q.hindenburg_angry += Q.right_strength / 50;
     }
-    if (Q.nationalization_adopted) {
+    if (Q.neoliberal_plan_adopted) {
         Q.hindenburg_angry += 1;
     }
     if (Q.moderate_plan_adopted) {

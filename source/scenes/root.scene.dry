@@ -85,7 +85,7 @@ Q.revolutionary_urgency = 0;
 // radicalization indicates how radical the DNVP's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the works creation plans in general
-Q.worksplans_support = 0;
+Q.worksplan_support = 0;
 // Support for warmongering within the DNVP relative to 1928
 Q.militarism = 0;
 // Support for anti-demoratic reform within the DNVP relative to 1928
@@ -98,19 +98,19 @@ Q.antimocratization = 0;
 // It will be mentioned in flavor events in apr 1928 that you gain Anhalt in coalition w Z/LVP because of USPD local corruption and the coalitions infighting unless you and your coalition partners extremely low in voteshare at which point the bernburg front event will give a funni congrats player message and the be like theres nowhere to go!!! and thereby cause the event to not give you a boost from the rally effect but a pop reduction because you toom the time away from politics to manage to cooperate the whole tjinh remotely and in various small meetings in a variety of locations
 Q.bernburg_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
-// 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
+// 1 - Works creation plan, 2 - Austerity, 3 - neoliberal plan (improving conditions for and subsidizing private industry, breaking of proletarian power)
 Q.economic_plan = 0;
-// have we officially adopted the WTB plan?
-Q.wtb_adopted = 0;
-// have we formed the iron front?
-Q.iron_front_formed = 0;
-// people's party support
+// have we officially adopted a works creation plan?
+Q.worksplan_adopted = 0;
+// have we formed the bernburg front?
+Q.bernburg_front_formed = 0;
+// people's party support - opening to catholics and republicans
 Q.peoples_party_support = 0;
 Q.peoples_party = 0;
-// support for nationalizations
-Q.nationalization_support = 0;
-Q.nationalization_adopted = 0;
-// moderate economic plan
+// support for neoliberal plan
+Q.neoliberal_plan_support = 0;
+Q.neoliberal_plan_adopted = 0;
+// support for austerity/bruningite approach
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 
@@ -118,13 +118,14 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.z_relation = 50;
-Q.kpd_relation = 25;
+Q.nsdap_relation = 25;
 Q.ddp_relation = 60;
 Q.dvp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.dnvp_relation = 5;
-Q.nsdap_relation = 0;
 Q.lvp_relation = 0;
+// SPD is invariably hostile
+Q.spd_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 Q.z_leader = "Marx";
@@ -907,7 +908,7 @@ new-page: true
 
 This is a WIP Mod based on Dynamic Social Democracy.
 
-This mod takes place in a world where world socialism did not experience the intense schism it did during the WW1 years. The majority of the SPD remained opposed to the war, and once it ended, found itself in a far better position to shape the new German Republic. And so, with the terminal crisis of the Republic on the horizon, the German bourgeois and right will find themselves facing the political oblivion German socialism and democracy faced in our world. 
+This mod takes place in a world where world socialism did not experience the intense schism it did during the WW1 years. The majority of the SPD remained opposed to the war, and once it ended, found itself in a far better position to shape the new German Republic. And so, with a potentially terminal crisis of the Republic on the horizon, the German bourgeois and right will find themselves facing a sort of political oblivion distinct but reminiscent of what German socialism and democracy faced in our world. 
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
@@ -930,7 +931,7 @@ Q.right_dissent = 40;
 Q.christsoc_dissent = 30;
 Q.center_dissent = 25;
 Q.z_relation = 41;
-Q.kpd_relation = 16;
+Q.nsdap_relation = 16;
 Q.dvp_relation = 31;
 Q.ddp_relation = 55;
 Q.budget = 2;
@@ -947,7 +948,7 @@ Q.dues = 4;
 Q.base_dues = 4;
 Q.stahlhelm_strength = 450;
 Q.z_relation = 46;
-Q.kpd_relation = 21;
+Q.nsdap_relation = 21;
 Q.dvp_relation = 31;
 Q.ddp_relation = 55;
 Q.budget = 2;

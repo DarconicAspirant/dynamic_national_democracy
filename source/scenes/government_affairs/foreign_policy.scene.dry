@@ -49,7 +49,7 @@ We also aim to improve relations with our eastern neighbors, <span style="color:
 title: Expand our exports to the <span style="color: #750e0e;">**Soviet Union**</span>.
 subtitle: A win for our economy and for our relationship with the <span style="color: #700000;">**KPD**</span>.
 view-if: year >= 1930
-on-arrival: soviet_relation += 1; economic_growth += 0.5; unemployed -= 0.5; foreign_goal_completed += 1; kpd_relation += 6; bernburg_coalition += 1; hindenburg_angry += 15; z_relation -= 3; ddp_relation -= 3; dvp_relation -= 3; lvp_relation -= 3; dvp_right += 1; lvp_right += 1; ddp_right += 1
+on-arrival: soviet_relation += 1; economic_growth += 0.5; unemployed -= 0.5; foreign_goal_completed += 1; nsdap_relation += 6; bernburg_coalition += 1; hindenburg_angry += 15; z_relation -= 3; ddp_relation -= 3; dvp_relation -= 3; lvp_relation -= 3; dvp_right += 1; lvp_right += 1; ddp_right += 1
 max-visits: 1
 
 The <span style="color: #750e0e;">Soviet Union</span>, with its centrally planned economy and isolation from global markets, has insulated itself from the effects of the Great Depression. They have since been rapidly industrializing in accordance with their Five-Year Plan, making them a prime partner for exports, especially as tariffs from our nominal trading partners in the West have increased, along with their general isolation from international markets.
@@ -92,14 +92,14 @@ The <span style="color: #940000;">Soviets</span> are slightly upset, but they se
 
 
 @kpd
-on-arrival: kpd_relation += 8*(1-dissent); bernburg_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
+on-arrival: nsdap_relation += 8*(1-dissent); bernburg_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
 
 We also mention the <span style="color: #700000;">**KPD**</span> in our conversations with the <span style="color: #940000;">Soviet</span> ambassador. They claim that the <span style="color: #700000;">**KPD**</span> is entirely independent of the <span style="color: #940000;">Soviet</span> government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the <span style="color: #700000;">**KPD**</span>.
 
 @wittorf
 view-if: wittorf_secret = 1 and ((year = 1929 and month < 6) or year = 1928) and wittorf_soviet_union = 0
 unavailable-subtitle: It is impossible that <span style="color: #8B0000;">Stalin</span> and the <span style="color: #D50000;">Comintern</span> could be moved on their policy.
-on-arrival: wittorf_soviet_union = 1; kpd_relation += 6*(1-dissent); kpd_foreign_seen = 1
+on-arrival: wittorf_soviet_union = 1; nsdap_relation += 6*(1-dissent); kpd_foreign_seen = 1
 max-visits: 1
 
 Of course <span style="color: #8B0000;">Stalin</span> and the various leaders of the <span style="color: #D50000;">Comintern</span> know about the Wittorf Affair, but they do not seem to know that we know as well. The <span style="color: #D50000;">Comintern</span> was planning to build a narrative around the affair that absolves Thälmann, but perhaps now they will be less inclined to defend him.
@@ -169,7 +169,7 @@ In the end, Germany is required to make only a final payment of three billion ma
 view-if: schleicher_spd and president == "Hindenburg"
 title: But of course, Schleicher stipulates that we demand military parity.
 subtitle: This will be a severe betrayal of our values!
-on-arrival: military_parity = 1 if eu or (west_relation >= 8 and popcon_strength >= right_strength + agrarian_strength and soviet_relation == 0 and kpd_relation < 30); reichswehr_strength += 300 if military_parity; sh_strength -= 100 if military_parity; sa_strength -= 50 if military_parity; rb_strength -= 150 if military_parity; nationalism += 5; nationalism += 15 if military_parity; militarism -= 3; reichswehr_loyalty += 0.5 if military_parity; reichswehr_militancy += 2 if military_parity; workers_spd -= 6; old_middle_spd -= 2; new_middle_spd -= 4; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 4; workers_kpd += 6; old_middle_ddp += 2; new_middle_ddp += 4; rural_ddp += 2; catholics_kpd += 2; unemployed_kpd += 4; old_middle_spd += 20 if military_parity; workers_nsdap -= 3 if military_parity; unemployed_nsdap -= 4 if military_parity; new_middle_nsdap -= 3 if military_parity; old_middle_nsdap -= 15 if military_parity; rural_nsdap -= 3 if military_parity; catholics_nsdap -= 3 if military_parity; right_dissent += 50; center_dissent += 40; christsoc_dissent += 30; popcon_dissent += 20; paramilitarist_dissent += 20; right_strength -= 20; agrarian_strength -= 10; ddp_relation -= 5; dvp_relation += 15; dvp_left += 5; ddp_left += 10; ddp_cohesion += 5; lvp_relation += 5; new_middle_ddp += 10 if ddp_leader == "Lüders"; new_middle_spd -= 10 if ddp_leader == "Lüders"; workers_ddp += 5 if ddp_leader == "Lüders"; workers_spd -= 5 if ddp_leader == "Lüders"; west_relation -= 4; eu_progress -= 2
+on-arrival: military_parity = 1 if eu or (west_relation >= 8 and popcon_strength >= right_strength + agrarian_strength and soviet_relation == 0 and nsdap_relation < 30); reichswehr_strength += 300 if military_parity; sh_strength -= 100 if military_parity; sa_strength -= 50 if military_parity; rb_strength -= 150 if military_parity; nationalism += 5; nationalism += 15 if military_parity; militarism -= 3; reichswehr_loyalty += 0.5 if military_parity; reichswehr_militancy += 2 if military_parity; workers_spd -= 6; old_middle_spd -= 2; new_middle_spd -= 4; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 4; workers_kpd += 6; old_middle_ddp += 2; new_middle_ddp += 4; rural_ddp += 2; catholics_kpd += 2; unemployed_kpd += 4; old_middle_spd += 20 if military_parity; workers_nsdap -= 3 if military_parity; unemployed_nsdap -= 4 if military_parity; new_middle_nsdap -= 3 if military_parity; old_middle_nsdap -= 15 if military_parity; rural_nsdap -= 3 if military_parity; catholics_nsdap -= 3 if military_parity; right_dissent += 50; center_dissent += 40; christsoc_dissent += 30; popcon_dissent += 20; paramilitarist_dissent += 20; right_strength -= 20; agrarian_strength -= 10; ddp_relation -= 5; dvp_relation += 15; dvp_left += 5; ddp_left += 10; ddp_cohesion += 5; lvp_relation += 5; new_middle_ddp += 10 if ddp_leader == "Lüders"; new_middle_spd -= 10 if ddp_leader == "Lüders"; workers_ddp += 5 if ddp_leader == "Lüders"; workers_spd -= 5 if ddp_leader == "Lüders"; west_relation -= 4; eu_progress -= 2
 
 General Schleicher has demanded that we raise the issue of rearmament, which remains restricted under the Treaty of Versailles. However, <span style="color: #002654;">French</span> Premier Édouard Herriot seized on this as an admission that Germany is, in fact, capable of paying its reparations and would simply redirect freed-up funds toward rearmament.
 

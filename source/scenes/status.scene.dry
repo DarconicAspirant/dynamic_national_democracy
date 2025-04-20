@@ -121,13 +121,13 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 [? if kvp_formed : <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_relation : relationships +] ?]
 
-<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_relation : relationships +]
+<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ spd_relation : relationships +]
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
 <span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ dnvp_relation : relationships +]
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ kpd_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ nsdap_relation : relationships +]
 
 = Party Leadership
 

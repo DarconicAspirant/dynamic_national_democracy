@@ -1,7 +1,7 @@
 title: The Iron Front
 new-page: true
 is-card: true
-view-if: iron_front_formed == 1 and iron_front_timer = 0
+view-if: bernburg_front_formed == 1 and iron_front_timer = 0
 on-arrival: iron_front_timer = 7; month_actions += 1; month_actions -= 1 if bernburg_front_time = time; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
 card-image: img/iron_front.png
 frequency: 200
@@ -52,7 +52,7 @@ on-arrival: pro_republic += 5*(1-dissent); antimocratization += 1; workers_spd +
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of the democratic republic and against <span style="color: #7A3C00;">dictatorship</span>.
 
 @wtb
-view-if: wtb_adopted == 1
+view-if: worksplan_adopted == 1
 choose-if: return_to_normalcy = 0 and (wtb_implemented >= wtb_rally or (not spd_in_government and not spd_toleration))
 unavailable-subtitle: [? if return_to_normalcy == 1: The economic crisis is largely over now, and the public is no longer interested in hearing about it. ?] [? if wtb_rally > wtb_implemented: Rhetoric alone has its limits; further implementation of the WTB plan is necessary to continue an effective campaign. ?]
 on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 2*(1-dissent); old_middle_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); workers_spd += 4*(1-dissent) if wtb_implemented; unemployed_spd += 4*(1-dissent) if wtb_implemented; rural_spd += 2*(1-dissent) if wtb_implemented; new_middle_spd += 3*(1-dissent) if wtb_implemented; old_middle_spd += 2*(1-dissent) if wtb_implemented; wtb_rally += 1

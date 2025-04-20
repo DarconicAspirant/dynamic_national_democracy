@@ -119,7 +119,7 @@ We have a plethora of campaign options at our disposal.
 
 @iron_front
 title: Rally the full strength of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> to support Braun.
-view-if: iron_front_formed
+view-if: bernburg_front_formed
 on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 3; new_middle_spd += radicalization + 2; unemployed_spd += radicalization + 2; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; right_dissent -= 10; rb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
 max-visits: 1
 face-image: img/iron_front_poster.png
@@ -154,8 +154,8 @@ The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</spa
 @communist_glaze
 title: We persuade the <span style="color: #700000;">**Communists**</span> to take a more active role in our campaign efforts.
 subtitle: This will alienate bourgeois voters! -2 resources
-choose-if: kpd_support_spd == 1 and (kpd_relation >= 70 or (kpd_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
-unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (kpd_relation < 70 or (kpd_relation < 55 and kpd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
+choose-if: kpd_support_spd == 1 and (nsdap_relation >= 70 or (nsdap_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
+unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (nsdap_relation < 70 or (nsdap_relation < 55 and kpd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
 on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 10; ddp_relation -= 10; dvp_relation -= 10; lvp_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
@@ -328,7 +328,7 @@ We have a plethora of campaign options at our disposal.
 
 @iron_front_hindenburg
 title: Rally the full strength of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> to support Hindenburg.
-view-if: iron_front_formed
+view-if: bernburg_front_formed
 on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 2; new_middle_spd += radicalization + 1; unemployed_spd += radicalization + 1; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; rb_strength += 100; workers_nsdap -= 2 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 2 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 2 if strife >= 5 and far_right_paramilitary
 max-visits: 1
 face-image: img/iron_front_poster.png
@@ -365,7 +365,7 @@ title: Focus our campaign against the <span style="color: #700000;">**Communist*
 subtitle: He has gained a significant amount of support by positioning himself as the "only left candidate." -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; right_dissent -= 10; workers_spd += 3; workers_kpd -= 3; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
+on-arrival: resources -= 1; right_dissent -= 10; workers_spd += 3; workers_kpd -= 3; nsdap_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
 face-image: img/social_fascist.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -548,7 +548,7 @@ We have a plethora of campaign options at our disposal.
 @paramilitary
 title: Ally with the <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> on the streets, to fight against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
 subtitle: This will permanently alienate the bourgeois parties!
-on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
+on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
 face-image: img/reichsbanner_2.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -570,8 +570,8 @@ Let's face it, the middle class is never going to support someone like [+ commun
 @united_left
 title: We persuade the <span style="color: #700000;">**Communists**</span> to let us take a more active role in their campaign efforts.
 subtitle: They have been putting themselves at the forefront. -1 resources
-choose-if: (kpd_relation >= 70 or (kpd_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
-unavailable-subtitle: [? if (kpd_relation < 70 or (kpd_relation < 55 and kpd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
+choose-if: (nsdap_relation >= 70 or (nsdap_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
+unavailable-subtitle: [? if (nsdap_relation < 70 or (nsdap_relation < 55 and kpd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
 on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_spd += 3; workers_kpd += 3; workers_nsdap -= 3; unemployed_spd += 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; dvp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_kpd = 1
 face-image: img/kpd_poster.jpg
 max-visits: 1

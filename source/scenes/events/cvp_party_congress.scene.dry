@@ -12,7 +12,7 @@ if (Q.popcon_strength >= Q.right_strength + Q.agrarian_strength) {
 } else {
     Q.cvp_right += 2;
 }
-if (Q.nationalization_adopted || Q.economic_democracy) {
+if (Q.neoliberal_plan_adopted || Q.economic_democracy) {
     Q.cvp_right += 3;
     Q.cvp_right += Q.economic_democracy*2;
 }
