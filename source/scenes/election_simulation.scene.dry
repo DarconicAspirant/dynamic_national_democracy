@@ -69,10 +69,10 @@ Q.unemployed_other = 2;
 
 Q.catholics_spd = 16;
 Q.catholics_kpd = 6;
-Q.catholics_z = 52;
+Q.catholics_z = 51;
 Q.catholics_ddp = 8;
 Q.catholics_dvp = 3;
-Q.catholics_dnvp = 13;
+Q.catholics_dnvp = 14;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 2;
 !}
