@@ -14,11 +14,12 @@ In our media and campaign materials, who should we consider as our main opponent
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
 //TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
+//TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
 
 - @extreme: The extremist and socialist parties of the left and the far-right
 - @left: The socialist and marxist parties of the left
 - @nsdap: The NSDAP
-- @spd: The SPD
+- @spd: The SPD and revolutionary left
 - @bourgeois: The bourgeois republican parties - The Center and LVP
 - @easy_discard
 
@@ -37,16 +38,16 @@ Attacking socialism is popular among the entire party, although the right consid
 @nsdap
 on-arrival: enemies = "NSDAP"; paramilitarist_strength += 5; revolutionary_urgency += 1; workers_nsdap -= 4; unemployed_nsdap -= 4;
 
-[? if revolutionary_urgency == 0 or nsdap_r < 10 : The <span style="color: #7A3C00;">**NSDAP**</span> is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if revolutionary_urgency > 0 and nsdap_r >= 10 : The <span style="color: #7A3C00;">Nazis</span> are the most urgent problem for us to deal with. ?]
+The NSDAP has been a thorn in our side for a while, but it is a tiny party right now and attacking them is of limited electoral gain. Our right faction seems disappointed by our choice as it considers far-right unity a desirable outcome. Our prospective moderate coalition partners are however pleased.
 
 //TODO: Better effect if either lambach chairman or christsoc dominance
 
 @spd
-on-arrival: enemies = "SPD"; popcon_strength += 5; right_dissent += 8; popcon_dissent -= 5; nsdap_relation -= 15; wp_relation += 5; lvp_relation += 3; z_relation += 5; lvp_old_relation += 5; workers_kpd -= 3; unemployed_kpd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
+on-arrival: enemies = "SPD and the revolutionary left"; popcon_strength += 5; right_dissent += 8; popcon_dissent -= 5; nsdap_relation -= 15; wp_relation += 5; lvp_relation += 3; z_relation += 5; lvp_old_relation += 5; workers_kpd -= 3; unemployed_kpd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
 
-Attacking the <span style="color: #700000;">**KPD**</span> is supported by all but the most left-wing <span style="color: #c00000;">socialists</span>, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the <span style="color: #700000;">**KPD**</span>, this may not be the best choice.
+Attacking the SPD and the minor far-left parties and organizations is a safe choice approved by all of our factions and potential coalition partners. However, our very low standing among potential supporters of these parties severely blunts the impact of our attacks.
 
 @bourgeois
 on-arrival: enemies = "bourgeois republican parties"; right_strength += 8; right_dissent -= 5; wp_relation -= 5; z_relation -= 5; lvp_relation -= 3; lvp_old_relation -= 3; nsdap_relation += 5; popcon_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1
 
-Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+Our rhetoric against the "September Traitors" who sold out the monarchy and signed the humiliation of Versailles is popular among the right and center of our party and most of the voter base, but the more concilliatory factions disapprove, as it may make it harder to build the coalitions that are necessary for government in the future.
