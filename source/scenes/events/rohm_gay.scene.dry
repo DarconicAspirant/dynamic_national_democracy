@@ -1,6 +1,6 @@
 title: <span style="color: #7A3C00;">**SA**</span> Leader Ernst Röhm's <span style="color: red;">Ho</span><span style="color: orange;">mo</span><span style="color: yellow;">se</span><span style="color: green;">xu</span><span style="color: blue;">al</span><span style="color: purple;">ity</span> Exposed
 subtitle: The Prussian Ministry of the Interior uncovers shocking revelations about the <span style="color: #7A3C00;">Nazi</span> leader...
-view-if: year == 1932 and month == 3 and not hindenburg_term_extended and spd_prussia and not repealed_175
+view-if: year == 1932 and month == 3 and not hindenburg_term_extended and dnvp_prussia and not repealed_175
 priority: 3
 max-visits: 1
 tags: event

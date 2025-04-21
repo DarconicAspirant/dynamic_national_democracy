@@ -148,7 +148,7 @@ We have created local elected school boards, and delegated some of the decision-
 @curriculum
 title: Change the educational curriculum.
 choose-if: curriculum_timer = 0
-unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?][? if prussia_leader != "Braun" and prussia_leader != "Rosenfeld" and spd_prussia: We don't have enough control of the Prussian state government. ?][? if not spd_prussia: We are not in control of the Prussian state government. ?]
+unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?][? if prussia_leader != "Braun" and prussia_leader != "Rosenfeld" and dnvp_prussia: We don't have enough control of the Prussian state government. ?][? if not dnvp_prussia: We are not in control of the Prussian state government. ?]
 
 Many <span style="color: #c00000;">socialists</span> believe that education in Germany is not fit for the modern era. Much of the educational system still follows imperial-era traditions of militaristic discipline, and <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> professors and students rule the universities. Nevertheless, there have been strides in bringing working-class children into the schools.
 

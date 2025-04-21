@@ -136,10 +136,12 @@ Q.nsdap_chancellor = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.braun_relation = 25;
+//Rename later, causes problems
 Q.hindenburg_angry = 0;
 
 // prussian activities lol
-Q.spd_prussia = 1;
+Q.dnvp_prussia = 1;
+// prussian coalition has 2 options, one with dnvp M-P, one with Stegerwald. Naturally option 1 is harder to negotiate but gives the affairs card
 Q.right_prussia = 0;
 Q.prussia_leader = "Braun"
 
@@ -436,7 +438,7 @@ Q.adjustmentFactors_dnf = 1.0;
 Q.adjustmentFactors_kvp = 1.0;
 Q.adjustmentFactors_other = 0.75;
 
-Q.adjustmentFactors_spd_prussia = 1.0;
+Q.adjustmentFactors_dnvp_prussia = 1.0;
 Q.adjustmentFactors_sapd_prussia = 1.0;
 Q.adjustmentFactors_kpd_prussia = 1.0;
 Q.adjustmentFactors_z_prussia = 1.0;
@@ -471,7 +473,7 @@ Q.dnvp_in_government = 1;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
-Q.spd_prussia_time = 0;
+Q.dnvp_prussia_time = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
