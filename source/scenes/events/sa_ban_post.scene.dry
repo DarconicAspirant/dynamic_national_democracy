@@ -21,7 +21,7 @@ We strongly suspect that Schleicher is in contact with the <span style="color: #
 - @bruning_explode: The Brüning government is critically weakened and is set to become the next victim of Schleicher's schemes.
 
 @bruning_explode
-on-arrival: groener_dead = 1; braun_angry_bruning += 35
+on-arrival: groener_dead = 1; hindenburg_angry_bruning += 35
 
 Groener, one of Brüning’s longest-standing and most loyal allies, is now out of the equation. Brüning, deeply loyal to him, was fully prepared to resign the chancellorship if Groener was forced out of the cabinet. However, unwilling to let Brüning risk his own position on his behalf, Groener chose to step down.
 
