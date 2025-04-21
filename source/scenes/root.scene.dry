@@ -140,10 +140,11 @@ Q.braun_relation = 25;
 Q.hindenburg_angry = 0;
 
 // prussian activities lol
-Q.dnvp_prussia = 1;
 // prussian coalition has 2 options, one with dnvp M-P, one with Stegerwald. Naturally option 1 is harder to negotiate but gives the affairs card
-Q.right_prussia = 0;
-Q.prussia_leader = "Braun"
+Q.dnvp_prussia = 0;
+Q.left_prussia = 0;
+Q.democratic_prussia = 1;
+Q.prussia_leader = "Stegerwald"
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
