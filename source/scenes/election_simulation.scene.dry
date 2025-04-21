@@ -271,6 +271,7 @@ Q.constitutional_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
+Q.national_liberal_coalition = Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r + 3;
 Q.hard_right_coalition = Q.dvp_r + Q.other_r + Q.dnvp_r + 3;
 Q.national_coalition = Q.dvp_r + Q.other_r + Q.dnvp_r + Q.nsdap_r + 3;
 Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
@@ -296,7 +297,7 @@ Other: [+ other_r +]
 # 1928: 4, 1930: 3, 1932: 2
 WP: [+ dvp_r +]
 
-# 1928: 16, 1930: 14, 1932: 14
+# 1928: 15, 1930: 14, 1932: 14
 Z + BVP: [+ z_r +]
 
 # 1928: 12, 1930: 9, 1932: 7
@@ -317,6 +318,8 @@ National Front (DNVP + NSDAP + Others + WP + BVP): [+ national_coalition+]
 Right Coalition (DNVP + Others + WP + BVP): [+ hard_right_coalition+]
 
 Conservative Coalition (DNVP + Others + WP + BVP + Z): [+ right_coalition +]
+
+National-Liberal Coalition (DNVP + Others + WP + BVP + LVP): [+ national_liberal_coalition +]
 
 Center-right Coalition (DNVP + Others + WP + BVP + Z + LVP): [+ center_right_coalition +]
 
