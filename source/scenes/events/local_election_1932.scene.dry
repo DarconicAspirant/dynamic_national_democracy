@@ -115,7 +115,7 @@ if (Q.kpd_local_elections_vote >= 20) {
     Q.pro_republic -= 3;
     Q.sa_strength += 100;
     Q.sh_strength += 50;
-    Q.coup_progress += 3;
+    Q.uprising_progress += 3;
     Q.z_relation -= 3;
     Q.lvp_relation -= 3;
     Q.wp_relation -= 3;
@@ -671,7 +671,7 @@ Somehow, we have brought the [? if not lvp_formed and ddp_r_bavaria: <span style
 title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #700000;">**KPD**</span>?
 subtitle: History will repeat itself.
 view-if: left_coalition_bavaria >= 50 and (nsdap_relation >= 60 and spd_leader == "Conciliators") or (nsdap_relation >= 80 and spd_leader != "Conciliators")
-on-arrival: bavaria_spd = 1; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; coup_progress += 10
+on-arrival: bavaria_spd = 1; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; uprising_progress += 10
 go-to: election_menu
 
 Yup. That's crazy.
@@ -1135,7 +1135,7 @@ Kurt Schumacher is elected as Minister-President.
 title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #700000;">**KPD**</span>?
 subtitle: History will repeat itself.
 view-if: left_coalition_wurttemberg >= 50 and (nsdap_relation >= 50 and spd_leader == "Conciliators") or (nsdap_relation >= 70 and spd_leader != "Conciliators")
-on-arrival: wurttemberg_spd = 1; z_relation -= 3; lvp_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; coup_progress += 3
+on-arrival: wurttemberg_spd = 1; z_relation -= 3; lvp_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; uprising_progress += 3
 go-to: election_menu
 
 Yup. That's crazy. I don't know what to write here.

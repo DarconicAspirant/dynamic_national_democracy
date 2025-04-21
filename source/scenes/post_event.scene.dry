@@ -416,13 +416,13 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.economic_growth += 0.1;
     }
     if (Q.economic_growth >= 3 && Q.unemployed < 20 && Q.black_thursday_seen) {
-        Q.capital_strike_progress -= 0.25;
+        Q.general_strike_progress -= 0.25;
     }
     if (!Q.economic_democracy && !Q.nationalization_progress && Q.spd_in_government) {
-        Q.capital_strike_progress -= 0.1;
+        Q.general_strike_progress -= 0.1;
     }
     if (Q.budget > 0 && Q.black_thursday_seen && Q.spd_in_government) {
-        Q.capital_strike_progress += ((Q.upper_tax_rates - 5) / 25);
+        Q.general_strike_progress += ((Q.upper_tax_rates - 5) / 25);
     }
 
     //////////////////////////////// Education & Science support/economic changes
@@ -1807,9 +1807,9 @@ if (Q.landtag_ref_signatures < 20 && Q.landtag_ref_signatures_collected && !Q.la
 }
 
 if (Q.in_grand_coalition == 1 && Q.wp_relation >= 50 && !Q.lvp_formed) {
-    Q.capital_strike_progress -= 0.25
+    Q.general_strike_progress -= 0.25
 } else if (Q.in_grand_coalition == 1 && Q.lvp_old_relation >= 50 && Q.lvp_formed) {
-    Q.capital_strike_progress -= 0.25
+    Q.general_strike_progress -= 0.25
 }
 
 if (
@@ -2929,11 +2929,11 @@ if (Q.spd_in_government_time >= 6) {
     } else if (Q.coalition_dissent == 3) {
         Q.hindenburg_angry += 3;
     }
-    if (Q.capital_strike_progress > 0) {
-        Q.hindenburg_angry += Q.capital_strike_progress / 2;
+    if (Q.general_strike_progress > 0) {
+        Q.hindenburg_angry += Q.general_strike_progress / 2;
     }
-    if (Q.coup_progress > 0) {
-        Q.hindenburg_angry += Q.coup_progress / 2;
+    if (Q.uprising_progress > 0) {
+        Q.hindenburg_angry += Q.uprising_progress / 2;
     }
     if (Q.nsdap_relation >= 50 || Q.bernburg_coalition >= 3) {
         Q.hindenburg_angry += Q.nsdap_relation / 100;
@@ -3226,7 +3226,7 @@ if (Q.nsdap_votes >= Q.nazi_peak && !Q.nazi_peak_triggered && Q.nsdap_votes >= 2
     Q.nazi_peak_triggered = 1;
     Q.nazi_peak_votes = Q.nsdap_votes;
     Q.nazi_decay_timer = 24;
-    Q.coup_progress += 4;
+    Q.uprising_progress += 4;
 }
 
 if (Q.nazi_decay_timer > 0 && Q.nsdap_votes >= Q.nazi_peak_votes - 10) {

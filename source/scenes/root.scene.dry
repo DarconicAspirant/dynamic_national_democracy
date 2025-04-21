@@ -164,6 +164,7 @@ Q.sa_banned_prussia = 0;
 Q.rfb_strength = 60;
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
+//Any non left prussia will ban the rfb in 1928/29 depending on where I put the pretext (so any feasible prussia at that point in the game)
 Q.rfb_banned_prussia = 0;
 
 Q.interior_police_strength = 50;
@@ -172,12 +173,12 @@ Q.interior_police_loyalty = 0.45;
 
 Q.prussian_police_strength = 90;
 Q.prussian_police_militancy = 2;
-Q.prussian_police_loyalty = 0.5;
+Q.prussian_police_loyalty = 0.4;
 
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
 Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.reichswehr_loyalty = 0.55;
 
 // The state of the country
 
@@ -202,13 +203,15 @@ Q.constructive_vonc = 0;
 Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
+//rename this to the far-left party's name
 Q.kpd_banned = 0;
 Q.nsdap_banned = 0;
 
-// coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
-// when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
-Q.coup_progress = 0;
-Q.capital_strike_progress = 0;
+// uprisings and general strikes happen when you upset the left or the unions/workers too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
+// when uprising_progress reaches 10 or general_strike_progress reaches 10, there's a special event that launches the coup.
+// general strikes are somewhat more common than base game capital strikes but have different and overall somewhat weaker effects
+Q.uprising_progress = 0;
+Q.general_strike_progress = 0;
 
 Q.budget = 4;
 
@@ -220,7 +223,7 @@ Q.old_middle = 13; // "old mittelstand"
 Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
+Q.unemployed = 5.6;
 Q.catholics = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)

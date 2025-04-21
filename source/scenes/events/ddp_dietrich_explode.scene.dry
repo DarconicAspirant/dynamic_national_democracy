@@ -22,7 +22,7 @@ if (Q.nationalization_progress) {
     Q.stolper_points += 1;
     Q.maier_points += 1;
 }
-if (Q.capital_strike_progress >= 6) {
+if (Q.general_strike_progress >= 6) {
     Q.maier_points += 3;
 }
 if (Q.pro_republic >= 70) {
