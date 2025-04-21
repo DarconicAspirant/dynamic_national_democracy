@@ -185,11 +185,11 @@ Q.reichswehr_loyalty = 0.55;
 // popular opinion
 // national ideology - on a binary scale
 // nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 57;
+Q.nationalism = 56;
 // socialism vs capitalism
-Q.socialism = 43;
+Q.socialism = 44;
 // pro-republic vs anti-republic
-Q.pro_republic = 55;
+Q.pro_republic = 56;
 
 Q.emergency_rule = 0;
 
@@ -310,12 +310,12 @@ Q.catholics_dnvp = 14;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 2;
 
-Q.workers_spd_old = 60;
-Q.new_middle_spd_old = 8;
-Q.old_middle_spd_old = 4;
-Q.rural_spd_old = 8;
-Q.unemployed_spd_old = 25;
-Q.catholics_spd_old = 20;
+Q.workers_dnvp_old = 60;
+Q.new_middle_dnvp_old = 8;
+Q.old_middle_dnvp_old = 4;
+Q.rural_dnvp_old = 8;
+Q.unemployed_dnvp_old = 25;
+Q.catholics_dnvp_old = 20;
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
@@ -387,10 +387,10 @@ Q.previous_other_last_election_votes_prussia = 6.0;
 
 Q.spd_votes = 15.7;
 Q.kpd_votes = 25.4;
-Q.z_votes = 15.9;
+Q.z_votes = 15.6;
 Q.ddp_votes = 11.9;
 Q.dvp_votes = 4.2;
-Q.dnvp_votes = 21.9;
+Q.dnvp_votes = 22.1;
 Q.nsdap_votes = 1.9;
 Q.other_votes = 3.1;
 Q.bvp_votes = 0;
