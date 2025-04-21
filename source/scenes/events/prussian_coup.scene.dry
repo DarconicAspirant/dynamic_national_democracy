@@ -36,7 +36,7 @@ on-arrival: {!
 
 Q.sa_force_prussia = Q.sa_strength*Q.sa_militancy;
 Q.sh_force_prussia = Q.sh_strength*Q.sh_militancy;
-Q.rb_force_prussia = Q.rb_strength*Q.rb_militancy;
+Q.rb_force_prussia = Q.vb_strength*Q.vb_militancy;
 Q.rfb_force_prussia = Q.rfb_strength*Q.rfb_militancy;
 Q.prussia_force_prussia = Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
 Q.army_force_prussia = Q.reichswehr_strength*Q.reichswehr_militancy*(1-Q.reichswehr_loyalty);
@@ -88,7 +88,7 @@ Our forces confront the government troops and their supporters on the streets of
 @surrender
 title: Give up on the Prussian government.
 subtitle: We will attempt to fight this out legally.
-on-arrival: prussia_coup_lose = 1; in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; dnvp_prussia = 0; prussia_leader = "Papen"; workers_spd -= 5; new_middle_spd -= 5; new_middle_ddp -= 3; unemployed_spd -= 3; right_dissent += 10; christsoc_dissent += 10; rb_militancy *= 0.8; rb_strength -= 200; prussian_police_loyalty -= 0.3; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4; papen_strength += 1
+on-arrival: prussia_coup_lose = 1; in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; dnvp_prussia = 0; prussia_leader = "Papen"; workers_spd -= 5; new_middle_spd -= 5; new_middle_ddp -= 3; unemployed_spd -= 3; right_dissent += 10; christsoc_dissent += 10; vb_militancy *= 0.8; vb_strength -= 200; prussian_police_loyalty -= 0.3; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4; papen_strength += 1
 
 On the morning of the coup, the decree is presented to the Prussian government. Despite fierce objections to its constitutionality—and Severing’s vow to yield only to force—a hundred thousand Reichswehr troops occupy key government buildings in Berlin. One by one, Severing and the police chiefs allow themselves to be removed without resistance.
 

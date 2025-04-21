@@ -1,6 +1,6 @@
 title: Exodus from the Reichsbanner
 subtitle: Owing to its militarization, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] are leaving the Reichsbanner.
-view-if: rb_militancy >= 0.2 and not rb_exit and not rb_stay and not lvp_leave and not cvp_formed
+view-if: vb_militancy >= 0.2 and not rb_exit and not rb_stay and not lvp_leave and not cvp_formed
 new-page: true
 tags: event
 on-display: {!  
@@ -25,7 +25,7 @@ The Reichsbanner has become increasingly militarized as of late, with ever-great
 - @keep_them: Can we convince them that a militant Reichsbanner is necessary for defending the Republic?
 
 @let_go
-on-arrival: rb_strength *= 0.9; z_relation -= 5; lvp_relation -= 5; lvp_old_relation -= 5; rb_exit = 1; right_strength += 5*(1-dissent); ddp_right += 3; lvp_right += 3
+on-arrival: vb_strength *= 0.9; z_relation -= 5; lvp_relation -= 5; lvp_old_relation -= 5; rb_exit = 1; right_strength += 5*(1-dissent); ddp_right += 3; lvp_right += 3
 
 We have judged that the Reichsbanner's militancy is more important than maintaining a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]. The Reichsbanner members affiliated with these parties leave, while the left of the <span style="color: #c00000;">**SPD**</span> is strengthened.
 
@@ -33,7 +33,7 @@ We have judged that the Reichsbanner's militancy is more important than maintain
 
 
 @lower_militancy
-on-arrival: rb_militancy *= 0.5
+on-arrival: vb_militancy *= 0.5
 
 Bowing to the other parties' demands, we reduce the Reichsbanner's military training, thus inducing them to stay.
 

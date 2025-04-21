@@ -1799,8 +1799,8 @@ choose-if: cvp_negotiations_points >= cvp_negotiations_min
 unavailable-subtitle: The <span style="color: #000000;">[+ z_party_name +]</span> is not satisfied with our current promises.
 on-arrival: {!
 if (Q.cvp_reichsbanner_accepted) {
-    Q.rb_militancy = 0.02;
-    if (Q.rb_strength > 2000) Q.rb_strength = 2000;
+    Q.vb_militancy = 0.02;
+    if (Q.vb_strength > 2000) Q.vb_strength = 2000;
     Q.prussian_police_strength += 40;
 }
 if (Q.cvp_economy_accepted && Q.budget < 0) {

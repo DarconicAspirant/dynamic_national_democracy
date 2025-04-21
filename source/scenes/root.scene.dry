@@ -149,10 +149,10 @@ Q.prussia_leader = "Stegerwald"
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Volksbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 1200;
-Q.rb_militancy = 0.15;
-Q.women_in_rb = 0;
-Q.rb_banned = 0;
+Q.vb_strength = 1200;
+Q.vb_militancy = 0.15;
+Q.women_in_vb = 0;
+Q.vb_banned = 0;
 Q.sh_strength = 450;
 Q.sh_militancy = 0.3;
 Q.sh_banned = 0;

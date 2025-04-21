@@ -181,8 +181,8 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 @paramilitaries
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.vb_strength) {
+    Q.vb_strength_2 = Q.vb_strength.toFixed(1);
 }
 if (Q.rfb_strength) {
     Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
@@ -197,9 +197,9 @@ if (Q.sa_strength) {
 
 = Paramilitaries
 
-<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD." style="color: #c00000;">**Reichsbanner**</span> Strength: [+ rb_strength_2 +] thousand
+<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD." style="color: #c00000;">**Reichsbanner**</span> Strength: [+ vb_strength_2 +] thousand
 
-<span style="color: #c00000;">**Reichsbanner**</span> Militarization: [+ rb_militancy : militancy +]
+<span style="color: #c00000;">**Reichsbanner**</span> Militarization: [+ vb_militancy : militancy +]
 
 <span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD." style="color: #8B0000;">**RFB**</span> Strength: [+ rfb_strength_2 +] thousand
 

@@ -485,7 +485,7 @@ Current relations: [+ spd_relation : relationships +]
 
 @paramilitaries
 on-arrival: {!
-Q.rb_strength = Math.round(Q.rb_strength);
+Q.vb_strength = Math.round(Q.vb_strength);
 Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength); 
 Q.rfb_strength = Math.round(Q.rfb_strength); 
@@ -496,9 +496,9 @@ go-to: menu
 
 **Reichsbanner** <span style="color: #000000;"><b>Schwarz</b></span>-<span style="color: #DD0000;"><b>Rot</b></span>-<span style="color: #FFCC00;"><b>Gold</b></span>: The Reichsbanner is an organization affiliated with all of the democratic parties - the <span style="color: #c00000;">**SPD**</span>, <span style="color: #000000;">**[+ z_party_name +]**</span>, and [? if lvp_formed: the former ?]<span style="color: #FFCC00;">**[+ ddp_name +]**</span>, but primarily with the <span style="color: #c00000;">**SPD**</span>. Historically, this has been an unarmed organization.
 
-Strength: [+ rb_strength +] thousand
+Strength: [+ vb_strength +] thousand
 
-Militarization: [+ rb_militancy : militancy +]
+Militarization: [+ vb_militancy : militancy +]
 
 **Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the <span style="color: #700000;">**KPD**</span>.
 

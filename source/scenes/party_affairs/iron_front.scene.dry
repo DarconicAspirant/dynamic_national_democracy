@@ -2,7 +2,7 @@ title: The Iron Front
 new-page: true
 is-card: true
 view-if: bernburg_front_formed == 1 and iron_front_timer = 0
-on-arrival: iron_front_timer = 7; month_actions += 1; month_actions -= 1 if bernburg_front_time = time; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
+on-arrival: iron_front_timer = 7; month_actions += 1; month_actions -= 1 if bernburg_front_time = time; rb_militarization_cost = 2 if vb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if vb_militancy > 0.25
 card-image: img/iron_front.png
 frequency: 200
 tags: party_affairs, antifascism
@@ -35,7 +35,7 @@ The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">
 @defense
 subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 3 if strife < 5; lvp_relation -= 3 if strife < 5; lvp_old_relation -= 3 if strife < 5
+on-arrival: resources -= rb_militarization_cost; vb_strength += 50; vb_militancy += 0.05; z_relation -= 3 if strife < 5; lvp_relation -= 3 if strife < 5; lvp_old_relation -= 3 if strife < 5
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies for the militant defense of the republic against the <span style="color: #7A3C00;">fascists</span> paramilitaries, strengthening the Reichsbanner.
 

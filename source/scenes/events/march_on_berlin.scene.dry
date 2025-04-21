@@ -56,16 +56,16 @@ President [+ president +] has asked our government to resign.
 
 @fight
 title: Deploy the Reichsbanner and call a general strike to resist the <span style="color: #7A3C00;">fascists</span>!
-on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if dnvp_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and spd_in_government
+on-arrival: defense_strength = vb_strength*vb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if dnvp_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and spd_in_government
 go-to: fight_2_win if defense_strength >= enemy_strength and march_on_berlin_seen <= 1; fight_2_win_2 if defense_strength >= enemy_strength and march_on_berlin_seen > 1; fight_2_pre_civil_war if defense_strength < enemy_strength
 
-The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the <span style="color: #7A3C00;">fascist</span> demonstration.
+The Reichsbanner number at [+ vb_strength +] thousand; many are in Berlin to counter the <span style="color: #7A3C00;">fascist</span> demonstration.
 
 [? if dnvp_prussia: The Prussian police has been deployed against the <span style="color: #7A3C00;">fascists</span>. ?] [? if spd_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
 
 
 @fight_2_win
-on-arrival: coup_progress = 0; sa_strength *= 0.7; sh_strength *= 0.7; rb_strength *= 0.9; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 15
+on-arrival: coup_progress = 0; sa_strength *= 0.7; sh_strength *= 0.7; vb_strength *= 0.9; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 15
 achievement: drei_pfeile
 
 Our forces confront the <span style="color: #7A3C00;">fascists</span>, and somehow, the <span style="color: #7A3C00;">fascists</span> retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
@@ -73,7 +73,7 @@ Our forces confront the <span style="color: #7A3C00;">fascists</span>, and someh
 The show of force has reinvigorated support for the republic and for the <span style="color: #c00000;">**SPD**</span>, and has weakened the <span style="color: #7A3C00;">fascists</span>.
 
 @fight_2_win_2
-on-arrival: coup_progress = 0; pro_republic += 5; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); rb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
+on-arrival: coup_progress = 0; pro_republic += 5; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); vb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
 
 # if march on Berlin has already been seen
 

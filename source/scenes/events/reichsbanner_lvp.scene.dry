@@ -1,6 +1,6 @@
 title: The <span style="color: #FFCC00;">**LVP**</span> and the Reichsbanner
 subtitle: Due to its militarization, the <span style="color: #FFCC00;">liberals</span> are leaving the Reichsbanner.
-view-if: rb_militancy >= 0.04 and not rb_exit and not rb_stay and lvp_formed and lvp_ideology != "Left"
+view-if: vb_militancy >= 0.04 and not rb_exit and not rb_stay and lvp_formed and lvp_ideology != "Left"
 new-page: true
 tags: event
 on-display: {!  
@@ -26,7 +26,7 @@ The Reichsbanner has increasingly militarized, acquiring arms, conducting parami
 - @keep_them: Can we convince them that a militant Reichsbanner is necessary for defending the Republic?
 
 @let_go
-on-arrival: rb_strength *= 0.95; z_relation -= 3; lvp_old_relation -= 5; lvp_right += 3; pro_republic -= 3; lvp_leave_reichsbanner = 1
+on-arrival: vb_strength *= 0.95; z_relation -= 3; lvp_old_relation -= 5; lvp_right += 3; pro_republic -= 3; lvp_leave_reichsbanner = 1
 
 We have judged that the Reichsbanner's militancy is more important than maintaining a coalition with the <span style="color: #FFCC00;">**LVP**</span>. The Reichsbanner members affiliated with the <span style="color: #FFCC00;">liberals</span> leave, and this may inspire the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to follow suit.
 
@@ -34,7 +34,7 @@ We have judged that the Reichsbanner's militancy is more important than maintain
 
 
 @lower_militancy
-on-arrival: rb_militancy *= 0.5
+on-arrival: vb_militancy *= 0.5
 
 Bowing to the <span style="color: #FFCC00;">**LVP**</span>'s demands, we reduce the Reichsbanner's military training, thus inducing them to stay.
 
