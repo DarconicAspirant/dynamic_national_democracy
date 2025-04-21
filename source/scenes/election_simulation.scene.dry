@@ -22,12 +22,12 @@ Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 26;
+Q.workers_spd = 25;
 Q.workers_kpd = 58;
 Q.workers_z = 4;
 Q.workers_ddp = 4;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 6;
+Q.workers_dnvp = 7;
 Q.workers_nsdap = 0;
 Q.workers_other = 2;
 
