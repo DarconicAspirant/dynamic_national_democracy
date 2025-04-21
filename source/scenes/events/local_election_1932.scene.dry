@@ -72,7 +72,7 @@ if (Q.nsdap_local_elections_vote >= 20) {
     Q.old_middle_nsdap += 3;
     Q.rural_nsdap += 3;
     Q.pro_republic -= 3;
-    Q.hindenburg_angry_bruning += 30;
+    Q.braun_angry_bruning += 30;
     Q.z_relation -= 5;
 }
 if (Q.nsdap_bavaria_elections_vote >= 25) {
@@ -84,7 +84,7 @@ if (Q.nsdap_wurttemberg_elections_vote >= 15) {
 if (Q.nsdap_local_elections_vote >= 34) {
     Q.workers_nsdap += 3;
     Q.unemployed_nsdap += 3;
-    Q.hindenburg_angry_bruning += 50;
+    Q.braun_angry_bruning += 50;
     Q.pro_republic -= 3;
     Q.z_relation -= 3;
 }
@@ -102,7 +102,7 @@ if (Q.spd_local_elections_vote >= 30) {
     Q.lvp_left += 3;
     Q.new_middle_spd += 2;
     Q.workers_spd += 2;
-    Q.hindenburg_angry += 30;
+    Q.braun_angry += 30;
 }
 
 if (Q.kpd_local_elections_vote >= 20) {
@@ -123,13 +123,13 @@ if (Q.kpd_local_elections_vote >= 20) {
     Q.ddp_right += 2;
     Q.dvp_right += 2;
     Q.lvp_right += 2;
-    Q.hindenburg_angry += 30;
-    Q.hindenburg_angry_bruning += 50;
+    Q.braun_angry += 30;
+    Q.braun_angry_bruning += 50;
 }
 
 if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Radical" && !Q.cvp_formed) {
     Q.pro_republic += 3;
-    Q.hindenburg_angry_bruning -= 50;
+    Q.braun_angry_bruning -= 50;
     Q.new_middle_ddp *= 1.2;
     Q.old_middle_ddp *= 1.2;
     Q.new_middle_dvp *= 1.2;
@@ -149,7 +149,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.bourgeois_local_win = 1;
 } else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.dnvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Moderate" && !Q.cvp_formed) {
     Q.pro_republic += 5;
-    Q.hindenburg_angry_bruning -= 50;
+    Q.braun_angry_bruning -= 50;
     Q.new_middle_ddp *= 1.2;
     Q.old_middle_ddp *= 1.2;
     Q.new_middle_dvp *= 1.2;
@@ -169,7 +169,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.bourgeois_local_win = 1;
 } else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.cvp_formed) {
     Q.pro_republic += 5;
-    Q.hindenburg_angry_bruning -= 50;
+    Q.braun_angry_bruning -= 50;
     Q.new_middle_ddp *= 1.2;
     Q.old_middle_ddp *= 1.2;
     Q.new_middle_dvp *= 1.2;

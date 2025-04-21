@@ -426,7 +426,7 @@ view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and spd_leader == "Concili
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -434,7 +434,7 @@ The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presi
 @r2_kpd_relations
 view-if: nsdap_relation >= 70 or (spd_leader == "Conciliators" and nsdap_relation >= 50)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
@@ -528,7 +528,7 @@ Fine. We have thrown our support to Chairman Thälmann of the <span style="color
 
 @round2_hindenburg
 view-if: spd_campaign > 0 or spd_support_thalmann > 0
-on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_hindenburg = 1; right_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_hindenburg = 1; right_dissent += 10; braun_angry_bruning += 25; braun_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
 We have switched our support to Hindenburg. [? if bruning_time: Hindenburg is reportedly dissatisfied with having been elected with the support of <span style="color: #c00000;">socialists</span>, blaming Brüning and his unpopular cabinet for this outcome. ?]
 
