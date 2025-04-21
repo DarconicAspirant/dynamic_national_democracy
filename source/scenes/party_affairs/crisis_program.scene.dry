@@ -74,8 +74,8 @@ With our hard work, we have convinced the majority of the party to adopt the <sp
 subtitle: Call for a limited program of job creation without deficit spending.
 unavailable-subtitle: The Reformist faction is not strong enough.
 choose-if: popcon_strength >= right_strength and popcon_strength >= agrarian_strength
-on-arrival: moderate_plan_support += 1; popcon_strength += 8; popcon_dissent -= 5; right_dissent += 6; christsoc_dissent += 5
-go-to: adopt_moderate if moderate_plan_support >= 3; support_moderate_progress if moderate_plan_support < 3
+on-arrival: austerity_support += 1; popcon_strength += 8; popcon_dissent -= 5; right_dissent += 6; christsoc_dissent += 5
+go-to: adopt_moderate if austerity_support >= 3; support_moderate_progress if austerity_support < 3
 
 @support_moderate_progress
 
@@ -84,7 +84,7 @@ We attempt to convince the party to support a moderate program of job creation w
 We have not yet adopted the plan. More work needs to be done.
 
 @adopt_moderate
-on-arrival: reformst_strength += 10; popcon_dissent -= 10; right_dissent += 8; christsoc_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if unemployed > 15; z_relation += 5;
+on-arrival: reformst_strength += 10; popcon_dissent -= 10; right_dissent += 8; christsoc_dissent += 6; austerity_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if unemployed > 15; z_relation += 5;
 
 With our hard work, we have convinced the majority of the party to adopt the moderate job creation plan! [? if spd_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic or Finance ministries. ?]
 

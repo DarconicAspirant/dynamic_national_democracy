@@ -154,8 +154,8 @@ The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</spa
 @communist_glaze
 title: We persuade the <span style="color: #700000;">**Communists**</span> to take a more active role in our campaign efforts.
 subtitle: This will alienate bourgeois voters! -2 resources
-choose-if: kpd_support_spd == 1 and (nsdap_relation >= 70 or (nsdap_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
-unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (nsdap_relation < 70 or (nsdap_relation < 55 and kpd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
+choose-if: kpd_support_spd == 1 and (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
+unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
 on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
@@ -570,8 +570,8 @@ Let's face it, the middle class is never going to support someone like [+ commun
 @united_left
 title: We persuade the <span style="color: #700000;">**Communists**</span> to let us take a more active role in their campaign efforts.
 subtitle: They have been putting themselves at the forefront. -1 resources
-choose-if: (nsdap_relation >= 70 or (nsdap_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
-unavailable-subtitle: [? if (nsdap_relation < 70 or (nsdap_relation < 55 and kpd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
+choose-if: (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
+unavailable-subtitle: [? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
 on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_spd += 3; workers_kpd += 3; workers_nsdap -= 3; unemployed_spd += 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; dvp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_kpd = 1
 face-image: img/kpd_poster.jpg
 max-visits: 1

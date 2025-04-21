@@ -60,7 +60,7 @@ if (Q.ideology && Q.ideology != "reformist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; popcon_strength += 10; antimocratization += 1; popcon_dissent -= 5; z_relation += 5; wp_relation += 5; lvp_relation += 5; lvp_old_relation += 5; nsdap_relation -= 8; moderate_plan_support += 1; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
+on-departure: ideology = "reformist"; popcon_strength += 10; antimocratization += 1; popcon_dissent -= 5; z_relation += 5; wp_relation += 5; lvp_relation += 5; lvp_old_relation += 5; nsdap_relation -= 8; austerity_support += 1; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
 
 The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
 

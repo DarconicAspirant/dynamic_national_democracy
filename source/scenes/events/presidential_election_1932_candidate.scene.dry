@@ -16,7 +16,7 @@ if (Q.hindenburg_run) {
     // angry that he is running in the first place
     Q.hindenburg_angry_bruning += 20;
 }
-Q.communist_candidate_1932 = "Thälmann";
+Q.communist_candidate_1932 = "Levi";
 
 Q.spd_candidate_1932_disp = "Otto Braun";
 if (Q.hindenburg_run) Q.reactionary_candidate_1932_disp = "Paul von Hindenburg";
@@ -444,14 +444,14 @@ choose-if: spd_votes >= kpd_votes
 unavailable-subtitle: The <span style="color: #700000;">KPD</span> knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
 
-The <span style="color: #700000;">**KPD**</span> is supporting their own candidate, [+ communist_candidate_1932_disp +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Braun; how do we convince them? ?][? if nsdap_relation < 50 or kpd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
+The <span style="color: #700000;">**KPD**</span> is supporting their own candidate, [+ communist_candidate_1932_disp +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Braun; how do we convince them? ?][? if nsdap_relation < 50 or spd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
 
 - @kpd_resources: Use our resources.
 - @kpd_relations: Use our good relations.
 - @endorsements_braun: Forget about the <span style="color: #700000;">KPD</span>.
 
 @kpd_resources
-view-if: nsdap_relation >= 60 or nsdap_relation >= 45 and kpd_leader == "Conciliators"
+view-if: nsdap_relation >= 60 or nsdap_relation >= 45 and spd_leader == "Conciliators"
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
@@ -461,7 +461,7 @@ go-to: endorsements_braun
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @kpd_relations
-view-if: nsdap_relation >= 75 or (kpd_leader == "Conciliators" and nsdap_relation >= 55)
+view-if: nsdap_relation >= 75 or (spd_leader == "Conciliators" and nsdap_relation >= 55)
 unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun

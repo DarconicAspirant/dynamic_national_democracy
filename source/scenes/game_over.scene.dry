@@ -51,7 +51,7 @@ if ((Q.womens_work && Q.womens_rights >= 5) || (Q.abortion_rights && Q.womens_ri
 }
 
 // Sohn seiner Klasse - elect Ernst Thälmann as president or chancellor.
-if (Q.chancellor == "Thälmann" || Q.president == "Thälmann") {
+if (Q.chancellor == "Levi" || Q.president == "Levi") {
     this.achieve('sohn_seiner_klasse');
 }
 
@@ -243,7 +243,7 @@ Was it really worth it?
 
 @communist_victory
 title: <span style="color: #700000;">**Communist**</span> victory
-view-if: chancellor_party == "KPD" or president == "Thälmann" and total_defeat == 0 and long_war == 0
+view-if: chancellor_party == "KPD" or president == "Levi" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 

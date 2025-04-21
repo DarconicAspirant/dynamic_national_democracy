@@ -415,14 +415,14 @@ unavailable-subtitle: The <span style="color: #700000;">**KPD**</span> knows tha
 view-if: spd_campaign > 0 and kpd_support_spd == 0 
 max-visits: 1
 
-The <span style="color: #700000;">**KPD**</span> is committed to supporting Ernst Thälmann. [? if (nsdap_relation >= 55 and kpd_leader != "Conciliators" or nsdap_relation >= 40 and kpd_leader == "Conciliators") : However, the <span style="color: #7A3C00;">Nazi</span>-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if (nsdap_relation < 55 and kpd_leader != "Conciliators" or nsdap_relation < 40 and kpd_leader == "Conciliators") : They do not seem willing to be convinced. ?]
+The <span style="color: #700000;">**KPD**</span> is committed to supporting Ernst Thälmann. [? if (nsdap_relation >= 55 and spd_leader != "Conciliators" or nsdap_relation >= 40 and spd_leader == "Conciliators") : However, the <span style="color: #7A3C00;">Nazi</span>-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if (nsdap_relation < 55 and spd_leader != "Conciliators" or nsdap_relation < 40 and spd_leader == "Conciliators") : They do not seem willing to be convinced. ?]
 
 - @r2_kpd_resources: Use our resources.
 - @r2_kpd_relations: Use our good relations.
 - @round2_menu: Forget about the <span style="color: #700000;">KPD</span>.
 
 @r2_kpd_resources
-view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and kpd_leader == "Conciliators"
+view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and spd_leader == "Conciliators"
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
@@ -432,7 +432,7 @@ go-to: round2_menu
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @r2_kpd_relations
-view-if: nsdap_relation >= 70 or (kpd_leader == "Conciliators" and nsdap_relation >= 50)
+view-if: nsdap_relation >= 70 or (spd_leader == "Conciliators" and nsdap_relation >= 50)
 unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
@@ -546,7 +546,7 @@ on-arrival: president = "Hindenburg"
 As expected, the incumbent Hindenburg wins the presidency. Let's hope he continues to keep the <span style="color: #7A3C00;">Nazis</span> out of power.
 
 @thalmann_wins
-on-arrival: president = "Thälmann"; nsdap_relation = 80;
+on-arrival: president = "Levi"; nsdap_relation = 80;
 
 Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> has won the presidency. Immediately, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> launches a coup attempt against the government. We have no choice but to unite with the <span style="color: #700000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
 

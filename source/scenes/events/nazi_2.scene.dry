@@ -1,6 +1,6 @@
 title: Transport Strike in Berlin
 subtitle: The <span style="color: #700000;">**Communists**</span> and <span style="color: #7A3C00;">**Nazis**</span> unite to bring the capital to a standstill.
-view-if: chancellor = "Papen" and papen_post and ((year = next_election_year and month >= next_election_month and (next_election_week == week or not rubicon)) or (year > next_election_year)) and nsdap_relation < 50 and kpd_leader == "Thälmann"
+view-if: chancellor = "Papen" and papen_post and ((year = next_election_year and month >= next_election_month and (next_election_week == week or not rubicon)) or (year > next_election_year)) and nsdap_relation < 50 and spd_leader == "Levi"
 new-page: true
 tags: event
 max-visits: 1

@@ -111,8 +111,8 @@ Q.peoples_party = 0;
 Q.neoliberal_plan_support = 0;
 Q.neoliberal_plan_adopted = 0;
 // support for austerity/bruningite approach
-Q.moderate_plan_support = 0;
-Q.moderate_plan_adopted = 0;
+Q.austerity_support = 0;
+Q.austerity_adopted = 0;
 
 // organizations
 
@@ -126,7 +126,7 @@ Q.uspd_relation = 10;
 Q.spd_relation = 0;
 Q.lvp_old_relation = 0;
 
-Q.kpd_leader = "Thälmann";
+Q.spd_leader = "Levi";
 Q.z_leader = "Marx";
 Q.z_ideology = "Right";
 Q.cvp_ideology = "Moderate";

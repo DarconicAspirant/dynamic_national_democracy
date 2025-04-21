@@ -28,7 +28,7 @@ How do we assuage the <span style="color: #700000;">**KPD**</span>?
 choose-if: president == "Braun"
 subtitle: This would be pretext for a right-wing coup.
 unavailable-subtitle: [? if president == "Hindenburg" : President Hindenburg would never allow this. ?]
-on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"
+on-arrival: chancellor = "Levi"; chancellor_party = "KPD"
 
 With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
 

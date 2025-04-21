@@ -2,7 +2,7 @@ title: The Death of Hindenburg
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Hindenburg"
-on-arrival: round = 0; hindenburg_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Thälmann"; kpd_candidate = "Münzenberg" if kpd_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; lvp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; dvp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate; kvp_candidate = dnvp_candidate; dnf_candidate = dnvp_candidate
+on-arrival: round = 0; hindenburg_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Levi"; kpd_candidate = "Münzenberg" if spd_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; lvp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; dvp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate; kvp_candidate = dnvp_candidate; dnf_candidate = dnvp_candidate
 max-visits: 1
 on-display: {!  
     var cardEl = document.createElement('div');  
@@ -39,8 +39,8 @@ This might be the <span style="color: #7A3C00;">Nazis</span>' last hurrah; the p
 
 The <span style="color: #3E88B3;">**DNVP**</span> will nominate Franz Seldte, leader of the <span style="color: #3E88B3;">**Stahlhelm**</span> paramilitary group. He will be endorsed by many of Hindenburg's most right-wing supporters. They are working more closely with the <span style="color: #7A3C00;">Nazis</span> than before, and in the second round, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> parties are expected to consolidate into a single anti-<span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> front.
 
-[? if kpd_leader = "Conciliators" : Given the failure of Thälmann's previous runs for president, and his declining stature in the party, the <span style="color: #700000;">**KPD**</span> will be running Willi Münzenberg, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of <span style="color: #700000;">**Communist**</span> front organizations. ?]
-[? if kpd_leader != "Conciliators" : This will be Ernst Thälmann's third run for president as leader of the <span style="color: #700000;">**KPD**</span>. Despite his previous electoral defeats, he retains the loyalty of the party as well as <span style="color: #8B0000;">Stalin</span>'s <span style="color: #750e0e;">Soviet Union</span>. ?]
+[? if spd_leader = "Conciliators" : Given the failure of Thälmann's previous runs for president, and his declining stature in the party, the <span style="color: #700000;">**KPD**</span> will be running Willi Münzenberg, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of <span style="color: #700000;">**Communist**</span> front organizations. ?]
+[? if spd_leader != "Conciliators" : This will be Ernst Thälmann's third run for president as leader of the <span style="color: #700000;">**KPD**</span>. Despite his previous electoral defeats, he retains the loyalty of the party as well as <span style="color: #8B0000;">Stalin</span>'s <span style="color: #750e0e;">Soviet Union</span>. ?]
 
 Many <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">icans</span> of the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #c00000;">**SPD**</span> float the idea of running Hugo Eckener, a nationally renowed Zeppelin captain, as a unity candidate. While he has some nationalistic views, he is also ardently opposed to <span style="color: #7A3C00;">Nazism</span>.
 
@@ -98,7 +98,7 @@ We have endorsed Otto Gessler, independent formerly of the DDP.
 [? if wp_relation < 40 : With our support of Gessler, the <span style="color: #C0A054;">**DVP**</span> components supporting him have broken away and are now shifting their support to Seldte. ?]
 
 @thalmann_r1
-view-if: kpd_candidate = "Thälmann" 
+view-if: kpd_candidate = "Levi" 
 choose-if: nsdap_relation >= 50 and popcon_strength < right_strength
 unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?]
 
@@ -108,7 +108,7 @@ Supporting Thälmann is rather unpopular in our party, even if the <span style="
 - @candidate_menu: Who else can we support?
 
 @support_thalmann_2
-on-arrival: spd_candidate = "Thälmann"; nsdap_relation += 5; popcon_dissent += 10; center_dissent += 6; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_spd -= 5; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; lvp_relation -= 8; wp_relation -= 15; z_relation -= 10; bernburg_coalition += 2; is_unity_candidate = 0
+on-arrival: spd_candidate = "Levi"; nsdap_relation += 5; popcon_dissent += 10; center_dissent += 6; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_spd -= 5; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; lvp_relation -= 8; wp_relation -= 15; z_relation -= 10; bernburg_coalition += 2; is_unity_candidate = 0
 go-to: r1_menu
 
 Fine. We have endorsed Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> for president.
@@ -328,7 +328,7 @@ choose-if: spd_votes >= kpd_votes
 unavailable-subtitle: The <span style="color: #700000;">**KPD**</span> knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
 
-The <span style="color: #700000;">**KPD**</span> is supporting their own candidate, [+ kpd_candidate +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support [+ spd_candidate +]; how do we convince them? ?][? if nsdap_relation < 50 or kpd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
+The <span style="color: #700000;">**KPD**</span> is supporting their own candidate, [+ kpd_candidate +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support [+ spd_candidate +]; how do we convince them? ?][? if nsdap_relation < 50 or spd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
 
 - @kpd_resources: Use our resources.
 - @kpd_relations: Use our good relations.
@@ -346,7 +346,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 The <span style="color: #700000;">**KPD**</span> now endorses [+ spd_candidate +] in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @kpd_relations
-view-if: nsdap_relation >= 60 or (kpd_leader == "Conciliators" and nsdap_relation >= 45)
+view-if: nsdap_relation >= 60 or (spd_leader == "Conciliators" and nsdap_relation >= 45)
 unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_candidate = spd_candidate; sapd_candidate = spd_candidate;
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
@@ -554,11 +554,11 @@ What should we do?
 @r2_endorse_thalmann
 title: Switch our support to Thälmann of the <span style="color: #700000;">**KPD**</span>.
 subtitle: This will hurt our party's support.
-view-if: spd_candidate != "Thälmann" and kpd_candidate = "Thälmann"
+view-if: spd_candidate != "Levi" and kpd_candidate = "Levi"
 choose-if: nsdap_relation >= 50 and right_strength > popcon_strength
 unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; lvp_relation -= 12
-on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Thälmann"; 
+on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Levi"; 
 max-visits: 1
 
 We have switched our endorsement to Ernst Thälmann of the <span style="color: #700000;">**KPD**</span>. [? if z_candidate = spd_candidate : Our former allies in the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will switch their support to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The <span style="color: #C0A054;">**DVP**</span> will also support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?]
@@ -583,7 +583,7 @@ We have switched our endorsement to Willi Münzenberg of the <span style="color:
 @r2_endorse_adenauer
 title: Switch our support to Konrad Adenauer of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
 view-if: z_candidate = "Adenauer" and spd_candidate != z_candidate
-on-departure: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Adenauer"; z_relation += 4; Adenauer_bonus -= 2.5 if z_relation < 40; Seldte_bonus += 2.5 if z_relation < 40; is_unity_candidate = 1
+on-departure: kpd_candidate = "Levi" if kpd_candidate == spd_candidate and spd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and spd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Adenauer"; z_relation += 4; Adenauer_bonus -= 2.5 if z_relation < 40; Seldte_bonus += 2.5 if z_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have endorsed Konrad Adenauer of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
@@ -595,7 +595,7 @@ We have endorsed Konrad Adenauer of the [? if z_party_name != "CVP": <span style
 @r2_endorse_gessler
 title: Switch our support to Otto Gessler.
 view-if: ddp_candidate = "Gessler" and spd_candidate != ddp_candidate
-on-departure: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Gessler"; lvp_relation += 4; dvp_candidate = "Seldte" if wp_relation < 40; is_unity_candidate = 1
+on-departure: kpd_candidate = "Levi" if kpd_candidate == spd_candidate and spd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and spd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Gessler"; lvp_relation += 4; dvp_candidate = "Seldte" if wp_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have endorsed Otto Gessler, independent formerly of the <span style="color: #D3C24D;">**DDP**</span>.
@@ -610,7 +610,7 @@ subtitle: -2 resources
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2 and ((z_relation >= 50 and z_ideology == "Right") or (z_relation >= 30 and z_ideology = "Left")) and lvp_relation >= 40
 view-if: z_candidate = "Adenauer" and ddp_candidate = "Gessler" and spd_candidate != "Eckener"
-on-arrival: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Eckener"; z_candidate = "Eckener"; ddp_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1
+on-arrival: kpd_candidate = "Levi" if kpd_candidate == spd_candidate and spd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and spd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Eckener"; z_candidate = "Eckener"; ddp_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have successfully united all of the parties of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition behind Hugo Eckener!
@@ -698,8 +698,8 @@ Despite the <span style="color: #7A3C00;">Nazi</span> threats, supporters of the
 
 
 @election_end
-go-to: eckener_win if winner = "Eckener"; juchacz_win if winner = "Juchacz"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; hitler_victory if winner = "Hitler" or winner = "Göring" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; thalmann_victory if winner = "Thalmann" or winner = "Thälmann"; nazis_lose if winner = "Braun" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
-on-arrival: president = winner; president = "Thälmann" if president == "Thalmann"; president = "Münzenberg" if president = "Munzenberg"; president = "Göring" if president = "Goring"
+go-to: eckener_win if winner = "Eckener"; juchacz_win if winner = "Juchacz"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; hitler_victory if winner = "Hitler" or winner = "Göring" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; thalmann_victory if winner = "Thalmann" or winner = "Levi"; nazis_lose if winner = "Braun" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
+on-arrival: president = winner; president = "Levi" if president == "Thalmann"; president = "Münzenberg" if president = "Munzenberg"; president = "Göring" if president = "Goring"
 
 The election has been won by [+ winner_desc +].
 

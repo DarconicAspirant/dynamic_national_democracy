@@ -31,7 +31,7 @@ We can either support their attempts to craft a formal plan, committing to an ac
 
 @reformist_plan
 view-if: popcon_strength >= right_strength and popcon_strength >= christsoc_strength and popcon_strength >= agrarian_strength
-on-arrival: right_dissent += 5; right_strength -= 5; popcon_strength += 10; popcon_dissent -= 5; center_dissent -= 5; christsoc_dissent -= 2; moderate_plan_support += 1
+on-arrival: right_dissent += 5; right_strength -= 5; popcon_strength += 10; popcon_dissent -= 5; center_dissent -= 5; christsoc_dissent -= 2; austerity_support += 1
 
 Job creation and stimulus are necessary, but deficit spending, especially with hyperinflation still fresh in memory, is simply unrealistic and reckless. The reformists argue that this plan is most likely to receive support from the bourgeois parties and is the most practical in the immediate term. Opponents in the Left and Labor factions criticize the plan for being inadequate in its ambition.
 
