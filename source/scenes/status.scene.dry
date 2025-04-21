@@ -25,7 +25,7 @@ Resources available: [+ resources +]
 
 [? if bruning_time and spd_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
 
-[? if bruning_time and president == "Hindenburg": Hindenburg's approval: [+ hindenburg_angry_bruning : hindenburg_angry_bruning +] ?]
+[? if bruning_time and president == "Hindenburg": Hindenburg's approval: [+ braun_angry_bruning : braun_angry_bruning +] ?]
 
 [? if spd_government_burden_seen: Government Goals: [? if goal_spd_cancel == 0: [+ goal_spd_total +]?][? if goal_spd_cancel >= 1: Failed?] / 2 completed, due in [+ spd_government_burden_timer +] months ?]
 
@@ -36,7 +36,7 @@ Prussian government: [? if spd_prussia : in government - ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and president == "Hindenburg" : Hindenburg's approval: [+ hindenburg_angry : hindenburg_angry +] ?]
+[? if spd_in_government and president == "Hindenburg" : Hindenburg's approval: [+ braun_angry : braun_angry +] ?]
 
 [? if spd_in_government and (in_left_front or in_popular_front): <span style="color: #700000;">**KPD**</span> coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 

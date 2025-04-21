@@ -5,8 +5,8 @@ on-arrival: {!
 Q.reparations = -2;
 Q.budget += 1;
 Q.pro_republic += 8;
-Q.hindenburg_angry -= 30;
-Q.hindenburg_angry_bruning -= 75;
+Q.braun_angry -= 30;
+Q.braun_angry_bruning -= 75;
 Q.lausanne_seen = 1;
 Q.reparations_resolved = 1;
 Q.dvp_left += 3;
