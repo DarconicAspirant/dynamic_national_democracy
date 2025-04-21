@@ -353,7 +353,7 @@ title: Rally in favor of democracy, and the <span style="color: #000000;">We</sp
 subtitle: We might alienate some of Hindenburg's more <span style="color: #808080;">reactionary</span> supporters. -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; christsoc_dissent -= 5; paramilitarist_dissent -= 5; popcon_dissent -= 5; right_dissent -= 5; workers_spd += 3*(1-dissent) if antimocratization >= 3; unemployed_spd += 3*(1-dissent) if antimocratization >= 3; pro_republic += 2*(1 - dissent) if antimocratization >= 3; new_middle_spd += 3*(1-dissent) if antimocratization >= 3; braun_angry += 10; braun_angry_bruning += 10; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3
+on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; christsoc_dissent -= 5; paramilitarist_dissent -= 5; popcon_dissent -= 5; right_dissent -= 5; workers_spd += 3*(1-dissent) if antimocratization >= 3; unemployed_spd += 3*(1-dissent) if antimocratization >= 3; pro_republic += 2*(1 - dissent) if antimocratization >= 3; new_middle_spd += 3*(1-dissent) if antimocratization >= 3; hindenburg_angry += 10; hindenburg_angry_bruning += 10; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3
 face-image: img/weimar_coalition.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -365,7 +365,7 @@ title: Focus our campaign against the <span style="color: #700000;">**Communist*
 subtitle: He has gained a significant amount of support by positioning himself as the "only left candidate." -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; right_dissent -= 10; workers_spd += 3; workers_kpd -= 3; nsdap_relation -= 10; braun_angry -= 10; braun_angry_bruning -= 10
+on-arrival: resources -= 1; right_dissent -= 10; workers_spd += 3; workers_kpd -= 3; nsdap_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
 face-image: img/social_fascist.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -375,7 +375,7 @@ We have lost an alarming number of voters to the <span style="color: #700000;">*
 @bourgeois_campaign
 on-arrival: {!
 Q.hindenburg_unity = 10;
-if (Q.braun_angry_bruning >= 75) Q.hindenburg_unity -= 1;
+if (Q.hindenburg_angry_bruning >= 75) Q.hindenburg_unity -= 1;
 if (Q.dvp_defect) Q.hindenburg_unity -= 1;
 if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
 if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
@@ -548,7 +548,7 @@ We have a plethora of campaign options at our disposal.
 @paramilitary
 title: Ally with the <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> on the streets, to fight against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
 subtitle: This will permanently alienate the bourgeois parties!
-on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; braun_angry += 150; z_relation -= 20; lvp_relation -= 20; wp_relation -= 20; lvp_old_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
+on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; hindenburg_angry += 150; z_relation -= 20; lvp_relation -= 20; wp_relation -= 20; lvp_old_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
 face-image: img/reichsbanner_2.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -641,7 +641,7 @@ if (Q.hindenburg_funds >= 5 && !Q.industrial_hindenburg) {
 Q.industrial_hindenburg = 1;
 
 Q.hindenburg_unity = 10;
-if (Q.braun_angry_bruning >= 75) Q.hindenburg_unity -= 1;
+if (Q.hindenburg_angry_bruning >= 75) Q.hindenburg_unity -= 1;
 if (Q.dvp_defect) Q.hindenburg_unity -= 1;
 if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
 if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;

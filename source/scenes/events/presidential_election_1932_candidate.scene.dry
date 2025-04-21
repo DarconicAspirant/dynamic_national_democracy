@@ -14,7 +14,7 @@ Q.spd_candidate_1932 = "Braun";
 if (Q.hindenburg_run) {
     Q.reactionary_candidate_1932 = "Hindenburg";
     // angry that he is running in the first place
-    Q.braun_angry_bruning += 20;
+    Q.hindenburg_angry_bruning += 20;
 }
 Q.communist_candidate_1932 = "Levi";
 
@@ -237,7 +237,7 @@ if (Q.hindenburg_funds >= 5) {
 }
 
 Q.hindenburg_unity = 10;
-if (Q.braun_angry_bruning >= 75) Q.hindenburg_unity -= 1;
+if (Q.hindenburg_angry_bruning >= 75) Q.hindenburg_unity -= 1;
 if (Q.dvp_defect) Q.hindenburg_unity -= 1;
 if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
 if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
@@ -312,7 +312,7 @@ It takes effort to run a somewhat unexpected campaign. First, Braun has to be co
 
 @support_hindenburg
 subtitle: This is the default option.
-on-arrival: spd_support_hindenburg = 1; right_dissent += 15; christsoc_dissent += 10; braun_angry_bruning += 25; braun_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
+on-arrival: spd_support_hindenburg = 1; right_dissent += 15; christsoc_dissent += 10; hindenburg_angry_bruning += 25; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
 Despite his known <span style="color: #808080;">reactionary</span> nature, Hindenburg has at least been keeping the <span style="color: #7A3C00;">Nazis</span> at bay. Thus, we must support him. [? if bruning_time: Hindenburg is reportedly dissatisfied with having been elected with the support of <span style="color: #c00000;">socialists</span>, blaming Brüning and his unpopular cabinet for this outcome. ?]
 
@@ -455,7 +455,7 @@ view-if: nsdap_relation >= 60 or nsdap_relation >= 45 and spd_leader == "Concili
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -463,7 +463,7 @@ The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presi
 @kpd_relations
 view-if: nsdap_relation >= 75 or (spd_leader == "Conciliators" and nsdap_relation >= 55)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; hindenburg_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.

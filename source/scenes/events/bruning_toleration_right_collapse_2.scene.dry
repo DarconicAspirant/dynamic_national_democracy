@@ -3,7 +3,7 @@ new-page: true
 subtitle: They're finally made up their mind.
 tags: event
 view-if: total_bruning_time >= 6 and spd_toleration_right and dnf_votes + nsdap_votes + dnvp_angry >= (dnvp_votes * 5) and moderate_dnvp_hitler and bruning_time >= 3 and not cvp_formed
-on-arrival: pro_republic -= dnvp_votes / 2; braun_angry_bruning += 10
+on-arrival: pro_republic -= dnvp_votes / 2; hindenburg_angry_bruning += 10
 max-visits: 1
 on-display: {!  
     var cardEl = document.createElement('div');  
@@ -33,7 +33,7 @@ Q.bruning_coalition_loss += Q.dnvp_r;
 Q.dnvp_defect = 1;
 Q.bruning_coalition = Math.round((Q.bruning_coalition - Q.bruning_coalition_loss) * 10) / 10;
 !}
-go-to: election_set if braun_angry_bruning >= 100 or bruning_coalition < 50; spd_toleration if braun_angry_bruning < 100 and bruning_coalition >= 50
+go-to: election_set if hindenburg_angry_bruning >= 100 or bruning_coalition < 50; spd_toleration if hindenburg_angry_bruning < 100 and bruning_coalition >= 50
 
 @spd_toleration
 on-arrival: spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 1; spd_toleration_right = 0

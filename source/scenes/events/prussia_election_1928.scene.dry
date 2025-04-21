@@ -382,11 +382,11 @@ if (Q.nsdap_relation >= 30 && Q.sapd_formed == 1) {
 }
 
 if ((Q.nsdap_votes + Q.dnf_votes >= 30 && Q.dnvp_ideology == "Moderate" || Q.nsdap_votes + Q.dnvp_votes >= 30 && Q.dnvp_ideology == "Radical") && Q.weimar_coalition_prussia < 45 && Q.president == "Hindenburg") {
-    Q.braun_angry_bruning += 45;
-    Q.braun_angry += 20;
-    Q.braun_angry_prussia = 1;
+    Q.hindenburg_angry_bruning += 45;
+    Q.hindenburg_angry += 20;
+    Q.hindenburg_angry_prussia = 1;
 } else {
-    Q.braun_angry_prussia = 0;
+    Q.hindenburg_angry_prussia = 0;
 }
 !}
 on-display: {!
@@ -563,7 +563,7 @@ go-to: coalition_menu
 
 [? if anti_democratic_coalition_prussia >= 50 and dnvp_ideology == "Moderate": Together, the anti-democratic <span style="color: #700000;">**KPD**</span>, <span style="color: #003755;">**DNF**</span>, and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Landtag. A stable governing majority will be almost impossible. ?]
 
-[? if braun_angry_prussia : The rapid rise of the <span style="color: #7A3C00;">**NSDAP**</span> in Prussia, traditionally a democratic stronghold, has significantly shifted the national mood. To conservative elites, including President Hindenburg, this surge has reinforced the belief that the <span style="color: #7A3C00;">**NSDAP**</span> must be incorporated into the federal government. With [+ nsdap_votes +]% of the population now backing the movement, it cannot be ignored much longer.  ?]
+[? if hindenburg_angry_prussia : The rapid rise of the <span style="color: #7A3C00;">**NSDAP**</span> in Prussia, traditionally a democratic stronghold, has significantly shifted the national mood. To conservative elites, including President Hindenburg, this surge has reinforced the belief that the <span style="color: #7A3C00;">**NSDAP**</span> must be incorporated into the federal government. With [+ nsdap_votes +]% of the population now backing the movement, it cannot be ignored much longer.  ?]
 
 @coalition_menu
 
