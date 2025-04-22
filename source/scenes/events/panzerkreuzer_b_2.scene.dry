@@ -18,7 +18,7 @@ Much of our party is deeply opposed to rearmament, while the center and right pa
 - @ministry: Use the Reichswehr Ministry to prevent the construction.
 
 @vote_yes
-on-arrival: right_dissent += 10; christsoc_dissent += 10; center_dissent += 5; popcon_dissent += 5; paramilitarist_dissent += 5; panzerkreuzer_b_funded = 1; kpd_coalition_dissent += 1; nsdap_relation -= 6; workers_spd -= 6; dvp_left += 2; lvp_left += 1; braun_angry -= 5
+on-arrival: right_dissent += 10; christsoc_dissent += 10; center_dissent += 5; popcon_dissent += 5; paramilitarist_dissent += 5; panzerkreuzer_b_funded = 1; nazi_coalition_dissent += 1; nsdap_relation -= 6; workers_spd -= 6; dvp_left += 2; lvp_left += 1; braun_angry -= 5
 
 Our grassroots party members are highly critical of our decision. Many party branches have increased their agitation against our parliamentary fraction, especially after we opposed the construction of the first ship in favor of food for children.
 

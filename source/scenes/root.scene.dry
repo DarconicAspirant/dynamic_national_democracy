@@ -500,7 +500,10 @@ Q.in_national_liberal_coalition = 0;
 Q.in_constitutional_coalition = 0;
 Q.in_hard_right_coalition = 0;
 Q.in_national_liberal_coalition = 0;
-// probs delete
+Q.in_far_right_coalition = 0;
+Q.in_national_front = 0;
+Q.in_bourgeois_coalition = 0;
+// delete/replace eventually
 Q.in_social_catholic_coalition = 0;
 Q.in_social_liberal_coalition = 0;
 
@@ -511,46 +514,47 @@ Q.in_popular_front_prussia = 0;
 Q.in_left_front_prussia = 0;
 Q.in_dnvp_majority_prussia = 0;
 Q.in_center_right_coalition_prussia = 0;
-Q.in_minority_weimar_coalition_prussia = 0;
-Q.in_minority_grand_coalition_prussia = 0;
-Q.dvp_prussia_asked = 0;
+Q.in_minority_conservative_coalition_prussia = 0;
+Q.in_minority_center_right_coalition_prussia = 0;
+Q.lvp_prussia_asked = 0;
 Q.in_far_right_coalition_prussia = 0;
+// delete/eplace eventually
 Q.ddp_in_popular_front_prussia = 0;
-Q.kpd_goals_seen_prussia = 0;
+Q.nazi_goals_seen_prussia = 0;
 Q.reichsexekution = 0;
 Q.bruning_coalition_loss = 0;
 
-Q.spd_government_burden_seen = 0;
-Q.spd_government_burden_trigger = 0;
-Q.welfare_goal_spd = 0;
-Q.economy_goal_spd = 0;
-Q.finance_goal_spd = 0;
-Q.labor_goal_spd = 0;
-Q.unemployment_goal_spd = 0;
-Q.women_goal_spd = 0;
-Q.education_goal_spd = 0;
-Q.economic_plan_goal_spd = 0;
-Q.agriculture_goal_spd = 0;
-Q.reichswehr_goal_spd = 0;
-Q.goal_spd_cancel = 0;
-Q.goal_spd_total = 0;
+Q.dnvp_government_burden_seen = 0;
+Q.dnvp_government_burden_trigger = 0;
+Q.welfare_goal_dnvp = 0;
+Q.economy_goal_dnvp = 0;
+Q.finance_goal_dnvp = 0;
+Q.labor_goal_dnvp = 0;
+Q.unemployment_goal_dnvp = 0;
+Q.women_goal_dnvp = 0;
+Q.education_goal_dnvp = 0;
+Q.economic_plan_goal_dnvp = 0;
+Q.agriculture_goal_dnvp = 0;
+Q.reichswehr_goal_dnvp = 0;
+Q.goal_dnvp_cancel = 0;
+Q.goal_dnvp_total = 0;
 
-Q.economy_goal_spd_peoples = 0;
-Q.finance_goal_spd_peoples = 0;
-Q.tariff_goal_spd_peoples = 0;
-Q.education_goal_spd_peoples = 0;
-Q.labor_goal_spd_peoples = 0;
-Q.agriculture_goal_spd_peoples = 0;
-Q.foreign_goal_spd_peoples = 0;
-Q.goal_spd_cancel_peoples = 0;
-Q.goal_spd_total_peoples = 0;
+Q.economy_goal_dnvp_peoples = 0;
+Q.finance_goal_dnvp_peoples = 0;
+Q.tariff_goal_dnvp_peoples = 0;
+Q.education_goal_dnvp_peoples = 0;
+Q.labor_goal_dnvp_peoples = 0;
+Q.agriculture_goal_dnvp_peoples = 0;
+Q.foreign_goal_dnvp_peoples = 0;
+Q.goal_dnvp_cancel_peoples = 0;
+Q.goal_dnvp_total_peoples = 0;
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
+// dissent from the Nazis, in a national front or far-right government
+Q.nazi_coalition_dissent = 0;
 
-// does the SPD tolerate the government even if it is not a participant?
+// does the DNVP tolerate the government even if it is not a participant?
 Q.spd_toleration = 0;
 Q.spd_toleration_right = 0;
 
@@ -658,7 +662,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
     'homosexual_rights', 'economic_policy', 'coalition_affairs',
     'war_guilt', 'womens_rights', 'economic_democracy',
     'dealing_with_toleration',
-    'constitutional_reform', 'labor_rights', 'spd_government_burden',
+    'constitutional_reform', 'labor_rights', 'dnvp_government_burden',
     'education_science', 'curriculum',
     // events
     'emergency_cuts', 'unemployment_insurance',
@@ -706,7 +710,7 @@ Q.next_election_year = 1928;
 Q.next_election_month = 12;
 Q.next_election_time = 12;
 // government affairs timers
-Q.spd_government_burden_timer = 0;
+Q.dnvp_government_burden_timer = 0;
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;
 Q.economic_policy_timer = 0;

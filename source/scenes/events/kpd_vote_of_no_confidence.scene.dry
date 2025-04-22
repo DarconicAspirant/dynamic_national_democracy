@@ -1,7 +1,7 @@
 title: The <span style="color: #700000;">**KPD**</span> calls a vote of no confidence against the current government!
 subtitle: We have angered the <span style="color: #700000;">**KPD**</span> too much...
 new-page: true
-view-if: dnvp_in_government = 1 and ((in_popular_front = 1 and kpd_coalition_dissent >= 3) or (in_left_front = 1 and kpd_coalition_dissent >= 4)) and spd_r < 50 and not constructive_vonc
+view-if: dnvp_in_government = 1 and ((in_popular_front = 1 and nazi_coalition_dissent >= 3) or (in_left_front = 1 and nazi_coalition_dissent >= 4)) and spd_r < 50 and not constructive_vonc
 tags: event
 go-to: menu
 
@@ -43,7 +43,7 @@ In response to [+ chancellor +] being appointed Chancellor, the right-wing force
 choose-if: resources >= 3 and kpd_ultimatum_seen = 0
 unavailable-subtitle: -3 resources - [? if resources < 3 : We do not have enough resources. ?][? if kpd_ultimatum_seen : This is beyond the point when resources could fix. ?]
 subtitle: -3 resources
-on-arrival: resources -= 3; kpd_coalition_dissent -= 1;
+on-arrival: resources -= 3; nazi_coalition_dissent -= 1;
 
 By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
 
