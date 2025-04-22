@@ -1172,7 +1172,7 @@ on-arrival: dnvp_in_government = 0; spd_toleration = 0; spd_toleration_right = 0
 
 [? if liberal_parliament == 1: The liberal parliamentary group has been broken apart due to the <span style="color: #C0A054;">**DVP**</span> acting on its own accord. ?]
 
-@center_conservative_coalition
+@center_right_coalition
 title: Refuse to form a government, so that a center-right coalition may be formed.
 unavailable-subtitle: The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
 subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?] + **Others** +[? if not cvp_formed:&nbsp;<span style="color: #3E88B3;">**DNVP**</span>?] ([+ center_right_coalition +]%)
