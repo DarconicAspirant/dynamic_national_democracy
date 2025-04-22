@@ -464,9 +464,9 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Braun";
-// starting chancellor: Hermann Müller
+// starting chancellor: Hermann Müller, switch party to USPD once that works
 Q.chancellor = "Müller";
-Q.chancellor_party = 'USPD';
+Q.chancellor_party = 'SPD';
 Q.dnvp_in_government = 0;
 Q.z_in_government = 1;
 Q.lvp_in_government = 0;
@@ -562,6 +562,7 @@ Q.dnvp_toleration_uspd = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
+// TODO: If you cant justify Noske in the tl, switch him to Gessler (and one ministry from lvp to Z or USPD)
 Q.foreign_minister = 'Stresemann';
 Q.foreign_minister_party = 'LVP';
 Q.interior_minister = 'Severing';
