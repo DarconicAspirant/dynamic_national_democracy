@@ -1347,7 +1347,7 @@ if (Q.lautenbach_adopted && Q.lautenbach_plan_time >= Q.time && !Q.dnvp_in_gover
             Q.new_middle_lvp += 6/12;
         }
     }
-    if (Q.spd_toleration_right || Q.in_conservative_coalition || Q.in_center_right_coalition) {
+    if (Q.dnvp_toleration_uspd || Q.in_conservative_coalition || Q.in_center_right_coalition) {
         Q.workers_dnvp += 4/12;
         if (Q.dnvp_leader == "Lambach") Q.workers_dnvp += 12/12;
         Q.new_middle_dnvp += 6/12;
@@ -1421,7 +1421,7 @@ if (Q.lautenbach_adopted && Q.lautenbach_plan_time >= Q.time && !Q.dnvp_in_gover
             Q.new_middle_lvp += 4/12;
         }
     }
-    if (Q.spd_toleration_right || Q.in_conservative_coalition || Q.in_center_right_coalition) {
+    if (Q.dnvp_toleration_uspd || Q.in_conservative_coalition || Q.in_center_right_coalition) {
         Q.workers_dnvp += 3/12;
         if (Q.dnvp_leader == "Lambach") Q.workers_dnvp += 6/12;
         Q.new_middle_dnvp += 4/12;
@@ -2112,12 +2112,12 @@ if (Q.total_bruning_time >= 12 && !Q.in_center_right_coalition && !Q.in_conserva
     Q.bruning_austerity_seen = 1;
 }
 
-if (Q.year >= 1930 && Q.total_bruning_time >= 8 && !Q.kvp_cnblp_sister && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.spd_toleration_right && !Q.cnblp_defect && !Q.eastern_aid) {
+if (Q.year >= 1930 && Q.total_bruning_time >= 8 && !Q.kvp_cnblp_sister && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.dnvp_toleration_uspd && !Q.cnblp_defect && !Q.eastern_aid) {
     Q.bruning_coalition_loss += Q.cnblp_r;
     Q.bourgeois_cooperation -= 2;
     Q.cnblp_defect = 1;
     Q.cnblp_defect_pt2_time = Q.time + 4;
-} else if (Q.year >= 1930 && Q.total_bruning_time >= 8 && (Q.kvp_cnblp_sister || Q.in_center_right_coalition || Q.in_conservative_coalition || Q.bourgeois_parliament || Q.spd_toleration_right || Q.bourgeois_parliament_no_liberals || Q.spd_toleration_right) && !Q.cnblp_defect && !Q.eastern_aid) {
+} else if (Q.year >= 1930 && Q.total_bruning_time >= 8 && (Q.kvp_cnblp_sister || Q.in_center_right_coalition || Q.in_conservative_coalition || Q.bourgeois_parliament || Q.dnvp_toleration_uspd || Q.bourgeois_parliament_no_liberals || Q.dnvp_toleration_uspd) && !Q.cnblp_defect && !Q.eastern_aid) {
     Q.eastern_aid = 1;
     if (Q.budget < 0 && Q.reparations > -2) Q.eastern_aid_deficit = 1;
     if (Q.budget < 0 && Q.reparations > -2) Q.bruning_coalition_dissent += 1;
@@ -2157,7 +2157,7 @@ if (Q.cnblp_defect_pt2_time == Q.time && Q.cnblp_defect == 1) {
     Q.bourgeois_cooperation -= 3;
 }
 
-if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.spd_toleration_right && Q.year >= 1930 && !Q.kvp_cnblp_sister && Q.dnvp_ideology == "Radical" && Q.chancellor == "Brüning") {
+if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.dnvp_toleration_uspd && Q.year >= 1930 && !Q.kvp_cnblp_sister && Q.dnvp_ideology == "Radical" && Q.chancellor == "Brüning") {
     Q.rlb_nazi = 1;
     Q.rural_other *= 0.85;
 }
@@ -2224,12 +2224,12 @@ if (Q.emergency_decree_seen && !Q.in_center_right_coalition && !Q.conservative_c
     Q.old_middle_dvp -= 2;
 }
 
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && !Q.dnvp_conflict_time) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && !Q.dnvp_conflict_time) {
     Q.dnvp_conflict_time = Q.time + 1;
     Q.curtius_resign = Q.time + 3;
 }
 
-if (Q.dnvp_conflict_time == Q.time && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && !Q.cvp_formed) {
+if (Q.dnvp_conflict_time == Q.time && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && !Q.cvp_formed) {
     Q.bruning_coalition_dissent += 1;
     Q.new_middle_dnf += 2;
     Q.old_middle_dnf += 3;
@@ -2244,7 +2244,7 @@ if (Q.time >= Q.dnvp_scared_hitler_time && (Q.in_center_right_coalition || Q.in_
     Q.bruning_coalition_dissent += 1;
 }
 
-if (Q.curtius_resign && !Q.curtius_resign_seen && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right)) {
+if (Q.curtius_resign && !Q.curtius_resign_seen && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd)) {
     Q.bruning_coalition_dissent += 1;
     if (!Q.dvp_exist && !Q.lvp_formed) {
         Q.new_middle_ddp -= 2;
@@ -3092,12 +3092,12 @@ if (Q.braun_angry_pause_time >= Q.time) {
 }
 
 if (Q.president == "Hindenburg" && Q.chancellor == "Brüning" && !Q.dnvp_in_government && Q.year >= 1930) {
-    if (Q.spd_toleration) {
+    if (Q.dnvp_toleration) {
         Q.bruning_toleration_time += 1; 
         Q.total_bruning_toleration_time += 1; 
         Q.right_dissent += 0.5;
         Q.ddp_cohesion -= 0.25;
-    } else if (!Q.spd_toleration) {
+    } else if (!Q.dnvp_toleration) {
         Q.bruning_toleration_time = 0;
     }
     Q.bruning_time += 1;
@@ -3110,11 +3110,11 @@ if (Q.president == "Hindenburg" && Q.chancellor == "Brüning" && !Q.dnvp_in_gove
     Q.bruning_time = 0;
 }
 
-if (!Q.spd_toleration) {
+if (!Q.dnvp_toleration) {
     Q.bruning_toleration_time = 0;
 }
 
-if (!Q.spd_toleration_right) {
+if (!Q.dnvp_toleration_uspd) {
     Q.dnvp_angry = 0;
 }
 
@@ -3146,7 +3146,7 @@ if (Q.bruning_time > 1) {
     }
     if (Q.in_center_right_coalition || Q.in_conservative_coalition) {
         Q.braun_angry_bruning -= 3;
-    } else if (Q.spd_toleration) {
+    } else if (Q.dnvp_toleration) {
         Q.braun_angry_bruning += 1;
     }
     if (Q.bourgeois_parliament) {
@@ -3588,7 +3588,7 @@ Q.rural_nsdap_difference = Q.rural_nsdap - Q.rural_nsdap_old;
 Q.unemployed_nsdap_difference = Q.unemployed_nsdap - Q.unemployed_nsdap_old;
 Q.catholics_nsdap_difference = Q.catholics_nsdap - Q.catholics_nsdap_old;
 
-if (Q.spd_toleration) {
+if (Q.dnvp_toleration) {
     if (Q.workers_spd_difference > 0) {
         Q.workers_spd -= Q.workers_spd_difference / 3;
     }

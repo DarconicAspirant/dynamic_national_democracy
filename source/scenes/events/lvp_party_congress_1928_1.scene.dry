@@ -33,7 +33,7 @@ if (Q.chancellor == "Brüning") {
     Q.dietrich_points += 1;
 }
 
-if (Q.chancellor == "Brüning" && Q.spd_toleration) {
+if (Q.chancellor == "Brüning" && Q.dnvp_toleration) {
     Q.dietrich_points += 1;
     Q.curtius_points -= 1;
     Q.luther_points -= 1;

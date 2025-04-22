@@ -101,10 +101,10 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 **Others**: [+ other_r +]%
 
-<span style="color: #c00000;">**SPD**</span> position: [? if spd_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if spd_toleration == 0 and dnvp_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+<span style="color: #c00000;">**SPD**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
 [? if in_weimar_coalition and not in_social_catholic_coalition and not in_social_liberal_coalition and dnvp_in_government: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ?][? if in_social_catholic_coalition and dnvp_in_government: <span style="color: #c00000;">Social</span>-[? if not stegerwald_path: <span style="color: #000000;">Catholic</span>?][? if stegerwald_path: <span style="color: #000000;">Christian</span>?] Coalition ?][? if in_social_liberal_coalition and dnvp_in_government: <span style="color: #c00000;">Ketchup</span> and [? if not lvp_formed: <span style="color: #FFCC00;">Mustard</span>?][? if lvp_formed: <span style="color: #FFCC00;">Mustard</span>?] Coalition ?][? if in_grand_coalition and dnvp_in_government: Grand Coalition ?][? if in_popular_front and dnvp_in_government: Popular Front ?][? if in_left_front and dnvp_in_government: Left Front ?][? if in_dnvp_majority and dnvp_in_government: <span style="color: #c00000;">**SPD**</span> majority ?][? if in_minority_government and dnvp_in_government: minority government ?][? if in_emergency_government and dnvp_in_government: emergency government ?]
 
-[? if bruning_time and spd_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
+[? if bruning_time and dnvp_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
 
 [? if bruning_time and president == "Hindenburg": Hindenburg's approval: [+ braun_angry_bruning : braun_angry_bruning +] ?]
 

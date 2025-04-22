@@ -58,7 +58,7 @@ if (Q.bourgeois_parliament_ddp || Q.liberal_parliament || Q.liberal_cooperation 
 if (Q.bourgeois_list) {
     Q.dietrich_points += 1;
 }
-if (Q.chancellor == "Brüning" && Q.spd_toleration) {
+if (Q.chancellor == "Brüning" && Q.dnvp_toleration) {
     Q.dietrich_points += 1;
     Q.ddp_right += 2;
 }

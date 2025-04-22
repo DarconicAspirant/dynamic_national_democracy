@@ -100,7 +100,7 @@ if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp 
     }
 }
 // initial spd toleration message
-if (Q.bruning_toleration_time == 1 && Q.spd_toleration && Q.year >= 1930 && Q.time !== Q.last_time_updated) {
+if (Q.bruning_toleration_time == 1 && Q.dnvp_toleration && Q.year >= 1930 && Q.time !== Q.last_time_updated) {
     Q.flavour_12_trigger += 1;
     if (Q.flavour_12_trigger && !Q.flavour_12_trigger_shown) {
         Q.flavour_12_trigger_time = Q.time;
@@ -124,7 +124,7 @@ if (Q.total_bruning_time >= 12 && (Q.in_center_right_coalition || Q.in_conservat
     }
 }
 // cnblp pt 1
-if (Q.year >= 1930 && Q.total_bruning_time >= 8 && !Q.kvp_cnblp_sister && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.spd_toleration_right && !Q.bourgeois_parliament_no_liberals && Q.time !== Q.last_time_updated) {
+if (Q.year >= 1930 && Q.total_bruning_time >= 8 && !Q.kvp_cnblp_sister && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.dnvp_toleration_uspd && !Q.bourgeois_parliament_no_liberals && Q.time !== Q.last_time_updated) {
     Q.flavour_15_trigger += 1;
     if (Q.flavour_15_trigger && !Q.flavour_15_trigger_shown) {
         Q.flavour_15_trigger_time = Q.time;
@@ -188,7 +188,7 @@ if (Q.emergency_decree_seen && !Q.in_center_right_coalition && !Q.in_conservativ
     }
 }
 // dingeldey schemes to remove curtius, wirth, dietrich, but postponed
-if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_23_trigger += 1; 
     if (Q.flavour_23_trigger == 1 && !Q.flavour_23_trigger_shown) {
         Q.flavour_23_trigger_time = Q.time;
@@ -196,7 +196,7 @@ if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // dingeldey complains about banking crisis, precursor to curtius resigning
-if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_24_trigger += 1; 
     if (Q.flavour_24_trigger == 1 && !Q.flavour_24_trigger_shown) {
         Q.flavour_24_trigger_time = Q.time;
@@ -204,7 +204,7 @@ if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservati
     }
 }
 // cnblp eastern aid pt 1, when they have power over bruning
-if (Q.year >= 1930 && Q.total_bruning_time >= 8 && (Q.kvp_cnblp_sister || Q.in_center_right_coalition || Q.in_conservative_coalition || Q.bourgeois_parliament || Q.bourgeois_parliament_no_liberals || Q.spd_toleration_right) && !Q.eastern_aid && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.year >= 1930 && Q.total_bruning_time >= 8 && (Q.kvp_cnblp_sister || Q.in_center_right_coalition || Q.in_conservative_coalition || Q.bourgeois_parliament || Q.bourgeois_parliament_no_liberals || Q.dnvp_toleration_uspd) && !Q.eastern_aid && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_25_trigger += 1;
     if (Q.flavour_25_trigger && !Q.flavour_25_trigger_shown) {
         Q.flavour_25_trigger_time = Q.time;
@@ -284,7 +284,7 @@ if (Q.emergency_decree_alt_seen && !Q.in_center_right_coalition && !Q.in_conserv
     }
 }
 // dingeldey schemes to remove curtius, dietrich, alt his
-if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_35_trigger += 1; 
     if (Q.flavour_35_trigger == 1 && !Q.flavour_35_trigger_shown) {
         Q.flavour_35_trigger_time = Q.time;
@@ -292,7 +292,7 @@ if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservati
     }
 }
 // dingeldey complains about banking crisis, precursor to curtius resigning, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_36_trigger += 1; 
     if (Q.flavour_36_trigger == 1 && !Q.flavour_36_trigger_shown) {
         Q.flavour_36_trigger_time = Q.time;
@@ -300,7 +300,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // center-right coalition complains about banking crisis, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_37_trigger += 1; 
     if (Q.flavour_37_trigger == 1 && !Q.flavour_37_trigger_shown) {
         Q.flavour_37_trigger_time = Q.time + 1;
@@ -308,7 +308,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // lvp complains bout emergency decree
-if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && !Q.in_center_right_coalition && !Q.in_conservative_coalition  && !Q.spd_toleration_right && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && !Q.in_center_right_coalition && !Q.in_conservative_coalition  && !Q.dnvp_toleration_uspd && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_38_trigger += 1; 
     if (Q.flavour_38_trigger == 1 && !Q.flavour_38_trigger_shown) {
         Q.flavour_38_trigger_time = Q.time;
@@ -316,7 +316,7 @@ if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && !Q.in_center_rig
     }
 }
 // lvp gets mad over bruning
-if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_39_trigger += 1; 
     if (Q.flavour_39_trigger == 1 && !Q.flavour_39_trigger_shown) {
         Q.flavour_39_trigger_time = Q.time;
@@ -324,7 +324,7 @@ if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // lvp complains about banking crisis, precursor to curtius resigning
-if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_40_trigger += 1; 
     if (Q.flavour_40_trigger == 1 && !Q.flavour_40_trigger_shown) {
         Q.flavour_40_trigger_time = Q.time;
@@ -332,7 +332,7 @@ if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservati
     }
 }
 // curtius resigns, dnvp in coalition
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time >= Q.flavour_37_trigger_time + 2 && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time >= Q.flavour_37_trigger_time + 2 && Q.time !== Q.last_time_updated) {
     Q.flavour_41_trigger += 1; 
     if (Q.flavour_41_trigger == 1 && !Q.flavour_41_trigger_shown) {
         Q.flavour_41_trigger_time = Q.time;
@@ -340,7 +340,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // lvp complains bout emergency decree, alt his
-if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_42_trigger += 1; 
     if (Q.flavour_42_trigger == 1 && !Q.flavour_42_trigger_shown) {
         Q.flavour_42_trigger_time = Q.time;
@@ -348,7 +348,7 @@ if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_rig
     }
 }
 // lvp gets mad over bruning, alt his
-if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_43_trigger += 1; 
     if (Q.flavour_43_trigger == 1 && !Q.flavour_43_trigger_shown) {
         Q.flavour_43_trigger_time = Q.time;
@@ -356,7 +356,7 @@ if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservati
     }
 }
 // lvp complains about banking crisis, precursor to curtius resigning, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_44_trigger += 1; 
     if (Q.flavour_44_trigger == 1 && !Q.flavour_44_trigger_shown) {
         Q.flavour_44_trigger_time = Q.time;
@@ -364,7 +364,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // lvp complains bout emergency decree, no dingeldey, alt his
-if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_45_trigger += 1; 
     if (Q.flavour_45_trigger == 1 && !Q.flavour_45_trigger_shown) {
         Q.flavour_45_trigger_time = Q.time;
@@ -372,7 +372,7 @@ if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_rig
     }
 }
 // lvp complains about banking crisis, precursor to curtius resigning, no dingeldey, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_46_trigger += 1; 
     if (Q.flavour_46_trigger == 1 && !Q.flavour_46_trigger_shown) {
         Q.flavour_46_trigger_time = Q.time;
@@ -453,7 +453,7 @@ if (Q.emergency_decree_seen && !Q.in_center_right_coalition && !Q.in_conservativ
     }
 }
 // non-dingeldey schemes to remove curtius, wirth, dietrich
-if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_56_trigger += 1; 
     if (Q.flavour_56_trigger == 1 && !Q.flavour_56_trigger_shown) {
         Q.flavour_56_trigger_time = Q.time;
@@ -461,7 +461,7 @@ if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // non-dingeldey complains about banking crisis, precursor to curtius resigning
-if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.banking_crisis_seen && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.banking_crisis_seen && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_57_trigger += 1; 
     if (Q.flavour_57_trigger == 1 && !Q.flavour_57_trigger_shown) {
         Q.flavour_57_trigger_time = Q.time;
@@ -469,7 +469,7 @@ if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservati
     }
 }
 // rlb takeover by extremists
-if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.spd_toleration_right && Q.year >= 1930 && !Q.kvp_cnblp_sister && Q.dnvp_ideology == "Radical" && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.dnvp_toleration_uspd && Q.year >= 1930 && !Q.kvp_cnblp_sister && Q.dnvp_ideology == "Radical" && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_58_trigger += 1;
     if (Q.flavour_58_trigger && !Q.flavour_58_trigger_shown) {
         Q.flavour_58_trigger_time = Q.time;
@@ -477,7 +477,7 @@ if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // bruning hitler coalition
-if (Q.total_bruning_time >= 21 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time >= 21 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_59_trigger += 1;
     if (Q.flavour_59_trigger && !Q.flavour_59_trigger_shown) {
         Q.flavour_59_trigger_time = Q.time;
@@ -907,7 +907,7 @@ go-to: bg if rubicon and bg_change; bg_2 if not rubicon and bg_change
 
 {!<p class="dnvp">!}[? if flavour_18_trigger and flavour_18_trigger_time == time: The <span style="color: #b8996f;">**WP**</span>, once an enthusiastic supporter of Brüning's bourgeois government—and the only special interest party to secure a cabinet position—is now scrambling to extricate itself from government following its electoral defeat. While the party reports gains from expanding its electoral base into new states, these are more than offset by disproportionately heavy losses in the regions where it first found success. The same trend can also be observed with the <span style="color: #7FCEB1;">**CNBLP**</span>. Currently, a divisive internal struggle has emerged between chairman Hermann Drewitz and the party’s anti-Brüning faction on the right. The latter seeks to compel the resignation of their sole minister from the government, aiming to pressure Brüning into abandoning his reliance on our votes and instead forming a coalition with the <span style="color: #7A3C00;">**NSDAP**</span>. ?]{!</p>!}
 
-{!<p class="dnvp">!}[? if flavour_29_trigger and flavour_29_trigger_time == time: The <span style="color: #b8996f;">**WP**</span>, once an enthusiastic supporter of Brüning's bourgeois government, is now scrambling to distance itself following its electoral defeat. While the party has gained from expanding into new states, these are more than outweighed by steep losses in its original strongholds. A similar trend can be seen with the <span style="color: #7FCEB1;">**CNBLP**</span>. An internal power struggle has emerged between the pro-Brüning faction—led by party chairman Hermann Drewitz and Justice Minister Johann Bredt—and increasingly anti-Brüning district organizations. These anti-Brüning factions are demanding that the party pressure Brüning into forming a coalition with the <span style="color: #7A3C00;">**NSDAP**</span>[? if spd_toleration:&nbsp;to reduce his dependence on our votes?], or they threaten to dissolve or even break away from the party. ?]{!</p>!}
+{!<p class="dnvp">!}[? if flavour_29_trigger and flavour_29_trigger_time == time: The <span style="color: #b8996f;">**WP**</span>, once an enthusiastic supporter of Brüning's bourgeois government, is now scrambling to distance itself following its electoral defeat. While the party has gained from expanding into new states, these are more than outweighed by steep losses in its original strongholds. A similar trend can be seen with the <span style="color: #7FCEB1;">**CNBLP**</span>. An internal power struggle has emerged between the pro-Brüning faction—led by party chairman Hermann Drewitz and Justice Minister Johann Bredt—and increasingly anti-Brüning district organizations. These anti-Brüning factions are demanding that the party pressure Brüning into forming a coalition with the <span style="color: #7A3C00;">**NSDAP**</span>[? if dnvp_toleration:&nbsp;to reduce his dependence on our votes?], or they threaten to dissolve or even break away from the party. ?]{!</p>!}
 
 {!<p class="other">!}[? if year = 1930 and month = 10 and dnvp_prussia: The <span style="color: #3E88B3;">**Stahlhelm**</span> is once again attempting to destabilize and polarize Germany amidst the economic depression following the failed Young Plan referendum. At their annual congress, the <span style="color: #3E88B3;">**Stahlhelm**</span> announced plans for a referendum to prematurely dissolve the Prussian Landtag. Frustrated by the dominant position the <span style="color: #c00000;">socialists</span> have held in Prussia since the founding of the Weimar Republic, they seek to force new elections that would better reflect the national shift to the right. [? if dnvp_ideology == "Radical":Despite strong enthusiasm from other right-wing parties,?][? if dnvp_ideology == "Moderate":This is met with skepticism from the right-wing parties, and?] Hitler himself has shown little interest in the initiative and has refused to commit the <span style="color: #7A3C00;">**NSDAP**</span>, even as some <span style="color: #7A3C00;">Nazi</span> leaders express strong support. [? if dvp_ideology == "Right" and not in_grand_coalition_prussia and (dvp_leader == "Scholz" or dvp_leader == "Dingeldey"): The <span style="color: #C0A054;">**DVP**</span> was also invited to join the "national front," but its leadership has refused to commit as long as the <span style="color: #7A3C00;">Nazis</span> remain undecided. The fact that they haven’t outright rejected the offer, is a testament to how far they have strayed from democracy.?] At this stage, the success of the plan appears to hinge on Hitler’s support. ?]{!</p>!}
 
@@ -1011,9 +1011,9 @@ go-to: bg if rubicon and bg_change; bg_2 if not rubicon and bg_change
 
 {!<p class="other">!}[? if flavour_38_trigger and flavour_38_trigger_time == time: [? if lvp_leader == "Dingeldey": Dingeldey and the right wing of the <span style="color: #FFCC00;">**LVP**</span> are disappointed by Brüning's emergency decree, criticizing the new taxes and cuts to civil servant salaries. Dingeldey has personally urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> to end his reliance on our votes. However, it would be impossible for him to convince the majority of his own party to oppose Brüning, so he is unable to act on his plans—at least for now. ?][? if lvp_leader != "Dingeldey": The <span style="color: #FFCC00;">**LVP**</span> is disappointed by Brüning's emergency decrees, criticizing the new taxes and cuts to civil servant salaries. Some on the party's right wing have urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> to end his reliance on our votes. However, [+ lvp_leader +] and the wider party remains broadly supportive of his government and will continue working to steer him away from policies that harm the middle class. ?] ?]{!</p>!}
 
-{!<p class="other">!}[? if flavour_42_trigger and flavour_42_trigger_time == time: Dingeldey and the right wing of the <span style="color: #FFCC00;">**LVP**</span> are disappointed by Brüning's emergency decree, criticizing the new taxes and cuts to civil servant salaries. Dingeldey has personally urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if spd_toleration_right:&nbsp;to end his reliance on our votes?]. However, he is largely satisfied with his government, due to the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>. ?]{!</p>!}
+{!<p class="other">!}[? if flavour_42_trigger and flavour_42_trigger_time == time: Dingeldey and the right wing of the <span style="color: #FFCC00;">**LVP**</span> are disappointed by Brüning's emergency decree, criticizing the new taxes and cuts to civil servant salaries. Dingeldey has personally urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if dnvp_toleration_uspd:&nbsp;to end his reliance on our votes?]. However, he is largely satisfied with his government, due to the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>. ?]{!</p>!}
 
-{!<p class="other">!}[? if flavour_45_trigger and flavour_45_trigger_time == time: The <span style="color: #FFCC00;">**LVP**</span> is disappointed by Brüning's emergency decrees thus far, criticizing the new taxes and cuts to civil servant salaries. There is a growing call within the right of the party for Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if spd_toleration_right:&nbsp;to end his reliance on our votes?]. However, the party is still largely satisfied with his government, especially with the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>[? if not spd_toleration_right:, effectively locking us into opposition?]. ?]{!</p>!}
+{!<p class="other">!}[? if flavour_45_trigger and flavour_45_trigger_time == time: The <span style="color: #FFCC00;">**LVP**</span> is disappointed by Brüning's emergency decrees thus far, criticizing the new taxes and cuts to civil servant salaries. There is a growing call within the right of the party for Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if dnvp_toleration_uspd:&nbsp;to end his reliance on our votes?]. However, the party is still largely satisfied with his government, especially with the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>[? if not dnvp_toleration_uspd:, effectively locking us into opposition?]. ?]{!</p>!}
 
 {!<p class="dnvp">!}[? if flavour_51_trigger and flavour_51_trigger_time == time: Kurt von Schleicher, who initially convinced Hindenburg to appoint Brüning, is now skeptical—especially in the aftermath of the Banking Crisis—that Brüning can carry out the far-reaching reforms needed to restore Germany’s great power status. As a result, Schleicher is now seeking to establish connections with the anti-parliamentary right. ?]{!</p>!}
 
@@ -1233,7 +1233,7 @@ if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp 
     }
 }
 // initial spd toleration message
-if (Q.bruning_toleration_time == 1 && Q.spd_toleration && Q.year >= 1930 && Q.time !== Q.last_time_updated) {
+if (Q.bruning_toleration_time == 1 && Q.dnvp_toleration && Q.year >= 1930 && Q.time !== Q.last_time_updated) {
     Q.flavour_12_trigger += 1;
     if (Q.flavour_12_trigger && !Q.flavour_12_trigger_shown) {
         Q.flavour_12_trigger_time = Q.time;
@@ -1257,7 +1257,7 @@ if (Q.total_bruning_time >= 12 && (Q.in_center_right_coalition || Q.in_conservat
     }
 }
 // cnblp pt 1
-if (Q.year >= 1930 && Q.total_bruning_time >= 8 && !Q.kvp_cnblp_sister && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.spd_toleration_right && !Q.bourgeois_parliament_no_liberals && Q.time !== Q.last_time_updated) {
+if (Q.year >= 1930 && Q.total_bruning_time >= 8 && !Q.kvp_cnblp_sister && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.dnvp_toleration_uspd && !Q.bourgeois_parliament_no_liberals && Q.time !== Q.last_time_updated) {
     Q.flavour_15_trigger += 1;
     if (Q.flavour_15_trigger && !Q.flavour_15_trigger_shown) {
         Q.flavour_15_trigger_time = Q.time;
@@ -1321,7 +1321,7 @@ if (Q.emergency_decree_seen && !Q.in_center_right_coalition && !Q.in_conservativ
     }
 }
 // dingeldey schemes to remove curtius, wirth, dietrich, but postponed
-if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_23_trigger += 1; 
     if (Q.flavour_23_trigger == 1 && !Q.flavour_23_trigger_shown) {
         Q.flavour_23_trigger_time = Q.time;
@@ -1329,7 +1329,7 @@ if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // dingeldey complains about banking crisis, precursor to curtius resigning
-if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_24_trigger += 1; 
     if (Q.flavour_24_trigger == 1 && !Q.flavour_24_trigger_shown) {
         Q.flavour_24_trigger_time = Q.time;
@@ -1337,7 +1337,7 @@ if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservati
     }
 }
 // cnblp eastern aid pt 1, when they have power over bruning
-if (Q.year >= 1930 && Q.total_bruning_time >= 8 && (Q.kvp_cnblp_sister || Q.in_center_right_coalition || Q.in_conservative_coalition || Q.bourgeois_parliament || Q.bourgeois_parliament_no_liberals || Q.spd_toleration_right) && !Q.eastern_aid && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.year >= 1930 && Q.total_bruning_time >= 8 && (Q.kvp_cnblp_sister || Q.in_center_right_coalition || Q.in_conservative_coalition || Q.bourgeois_parliament || Q.bourgeois_parliament_no_liberals || Q.dnvp_toleration_uspd) && !Q.eastern_aid && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_25_trigger += 1;
     if (Q.flavour_25_trigger && !Q.flavour_25_trigger_shown) {
         Q.flavour_25_trigger_time = Q.time;
@@ -1417,7 +1417,7 @@ if (Q.emergency_decree_alt_seen && !Q.in_center_right_coalition && !Q.in_conserv
     }
 }
 // dingeldey schemes to remove curtius, dietrich, alt his
-if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_35_trigger += 1; 
     if (Q.flavour_35_trigger == 1 && !Q.flavour_35_trigger_shown) {
         Q.flavour_35_trigger_time = Q.time;
@@ -1425,7 +1425,7 @@ if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservati
     }
 }
 // dingeldey complains about banking crisis, precursor to curtius resigning, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && (Q.dvp_leader == "Dingeldey" || Q.dvp_leader == "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_36_trigger += 1; 
     if (Q.flavour_36_trigger == 1 && !Q.flavour_36_trigger_shown) {
         Q.flavour_36_trigger_time = Q.time;
@@ -1433,7 +1433,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // center-right coalition complains about banking crisis, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_37_trigger += 1; 
     if (Q.flavour_37_trigger == 1 && !Q.flavour_37_trigger_shown) {
         Q.flavour_37_trigger_time = Q.time + 1;
@@ -1441,7 +1441,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // lvp complains bout emergency decree
-if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && !Q.in_center_right_coalition && !Q.in_conservative_coalition  && !Q.spd_toleration_right && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && !Q.in_center_right_coalition && !Q.in_conservative_coalition  && !Q.dnvp_toleration_uspd && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_38_trigger += 1; 
     if (Q.flavour_38_trigger == 1 && !Q.flavour_38_trigger_shown) {
         Q.flavour_38_trigger_time = Q.time;
@@ -1449,7 +1449,7 @@ if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && !Q.in_center_rig
     }
 }
 // lvp gets mad over bruning
-if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_39_trigger += 1; 
     if (Q.flavour_39_trigger == 1 && !Q.flavour_39_trigger_shown) {
         Q.flavour_39_trigger_time = Q.time;
@@ -1457,7 +1457,7 @@ if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // lvp complains about banking crisis, precursor to curtius resigning
-if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_40_trigger += 1; 
     if (Q.flavour_40_trigger == 1 && !Q.flavour_40_trigger_shown) {
         Q.flavour_40_trigger_time = Q.time;
@@ -1465,7 +1465,7 @@ if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservati
     }
 }
 // curtius resigns, dnvp in coalition
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time >= Q.flavour_37_trigger_time + 2 && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time >= Q.flavour_37_trigger_time + 2 && Q.time !== Q.last_time_updated) {
     Q.flavour_41_trigger += 1; 
     if (Q.flavour_41_trigger == 1 && !Q.flavour_41_trigger_shown) {
         Q.flavour_41_trigger_time = Q.time;
@@ -1473,7 +1473,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // lvp complains bout emergency decree, alt his
-if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_42_trigger += 1; 
     if (Q.flavour_42_trigger == 1 && !Q.flavour_42_trigger_shown) {
         Q.flavour_42_trigger_time = Q.time;
@@ -1481,7 +1481,7 @@ if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_rig
     }
 }
 // lvp gets mad over bruning, alt his
-if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_43_trigger += 1; 
     if (Q.flavour_43_trigger == 1 && !Q.flavour_43_trigger_shown) {
         Q.flavour_43_trigger_time = Q.time;
@@ -1489,7 +1489,7 @@ if (Q.total_bruning_time == 9 && (Q.in_center_right_coalition || Q.in_conservati
     }
 }
 // lvp complains about banking crisis, precursor to curtius resigning, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.lvp_leader == "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_44_trigger += 1; 
     if (Q.flavour_44_trigger == 1 && !Q.flavour_44_trigger_shown) {
         Q.flavour_44_trigger_time = Q.time;
@@ -1497,7 +1497,7 @@ if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservativ
     }
 }
 // lvp complains bout emergency decree, no dingeldey, alt his
-if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_45_trigger += 1; 
     if (Q.flavour_45_trigger == 1 && !Q.flavour_45_trigger_shown) {
         Q.flavour_45_trigger_time = Q.time;
@@ -1505,7 +1505,7 @@ if ((Q.emergency_decree_seen || Q.emergency_decree_alt_seen) && (Q.in_center_rig
     }
 }
 // lvp complains about banking crisis, precursor to curtius resigning, no dingeldey, alt his
-if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.spd_toleration_right) && Q.banking_crisis_seen && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && (Q.in_center_right_coalition || Q.in_conservative_coalition || Q.dnvp_toleration_uspd) && Q.banking_crisis_seen && Q.lvp_leader != "Dingeldey" && Q.lvp_formed && Q.chancellor == "Brüning" && !Q.cvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_46_trigger += 1; 
     if (Q.flavour_46_trigger == 1 && !Q.flavour_46_trigger_shown) {
         Q.flavour_46_trigger_time = Q.time;
@@ -1586,7 +1586,7 @@ if (Q.emergency_decree_seen && !Q.in_center_right_coalition && !Q.in_conservativ
     }
 }
 // non-dingeldey schemes to remove curtius, wirth, dietrich
-if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.dvp_defect && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_56_trigger += 1; 
     if (Q.flavour_56_trigger == 1 && !Q.flavour_56_trigger_shown) {
         Q.flavour_56_trigger_time = Q.time;
@@ -1594,7 +1594,7 @@ if (Q.total_bruning_time == 9 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // non-dingeldey complains about banking crisis, precursor to curtius resigning
-if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.banking_crisis_seen && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.banking_crisis_seen && (Q.dvp_leader != "Dingeldey" && Q.dvp_leader != "Scholz") && !Q.lvp_formed && Q.dvp_exist && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_57_trigger += 1; 
     if (Q.flavour_57_trigger == 1 && !Q.flavour_57_trigger_shown) {
         Q.flavour_57_trigger_time = Q.time;
@@ -1602,7 +1602,7 @@ if (Q.total_bruning_time > 0 && !Q.in_center_right_coalition && !Q.in_conservati
     }
 }
 // rlb takeover by extremists
-if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.spd_toleration_right && Q.year >= 1930 && !Q.kvp_cnblp_sister && Q.dnvp_ideology == "Radical" && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.bourgeois_parliament && !Q.bourgeois_parliament_no_liberals && !Q.dnvp_toleration_uspd && Q.year >= 1930 && !Q.kvp_cnblp_sister && Q.dnvp_ideology == "Radical" && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_58_trigger += 1;
     if (Q.flavour_58_trigger && !Q.flavour_58_trigger_shown) {
         Q.flavour_58_trigger_time = Q.time;
@@ -1610,7 +1610,7 @@ if (Q.total_bruning_time >= 7 && !Q.in_center_right_coalition && !Q.in_conservat
     }
 }
 // bruning hitler coalition
-if (Q.total_bruning_time >= 21 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.spd_toleration_right && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
+if (Q.total_bruning_time >= 21 && !Q.in_center_right_coalition && !Q.in_conservative_coalition && !Q.dnvp_toleration_uspd && Q.chancellor == "Brüning" && Q.time !== Q.last_time_updated) {
     Q.flavour_59_trigger += 1;
     if (Q.flavour_59_trigger && !Q.flavour_59_trigger_shown) {
         Q.flavour_59_trigger_time = Q.time;
@@ -2040,7 +2040,7 @@ go-to: bg if rubicon and bg_change; bg_2 if not rubicon and bg_change
 
 {!<p class="dnvp">!}[? if flavour_18_trigger and flavour_18_trigger_time == time: The <span style="color: #b8996f;">**WP**</span>, once an enthusiastic supporter of Brüning's bourgeois government—and the only special interest party to secure a cabinet position—is now scrambling to extricate itself from government following its electoral defeat. While the party reports gains from expanding its electoral base into new states, these are more than offset by disproportionately heavy losses in the regions where it first found success. The same trend can also be observed with the <span style="color: #7FCEB1;">**CNBLP**</span>. Currently, a divisive internal struggle has emerged between chairman Hermann Drewitz and the party’s anti-Brüning faction on the right. The latter seeks to compel the resignation of their sole minister from the government, aiming to pressure Brüning into abandoning his reliance on our votes and instead forming a coalition with the <span style="color: #7A3C00;">**NSDAP**</span>. ?]{!</p>!}
 
-{!<p class="dnvp">!}[? if flavour_29_trigger and flavour_29_trigger_time == time: The <span style="color: #b8996f;">**WP**</span>, once an enthusiastic supporter of Brüning's bourgeois government, is now scrambling to distance itself following its electoral defeat. While the party has gained from expanding into new states, these are more than outweighed by steep losses in its original strongholds. A similar trend can be seen with the <span style="color: #7FCEB1;">**CNBLP**</span>. An internal power struggle has emerged between the pro-Brüning faction—led by party chairman Hermann Drewitz and Justice Minister Johann Bredt—and increasingly anti-Brüning district organizations. These anti-Brüning factions are demanding that the party pressure Brüning into forming a coalition with the <span style="color: #7A3C00;">**NSDAP**</span>[? if spd_toleration:&nbsp;to reduce his dependence on our votes?], or they threaten to dissolve or even break away from the party. ?]{!</p>!}
+{!<p class="dnvp">!}[? if flavour_29_trigger and flavour_29_trigger_time == time: The <span style="color: #b8996f;">**WP**</span>, once an enthusiastic supporter of Brüning's bourgeois government, is now scrambling to distance itself following its electoral defeat. While the party has gained from expanding into new states, these are more than outweighed by steep losses in its original strongholds. A similar trend can be seen with the <span style="color: #7FCEB1;">**CNBLP**</span>. An internal power struggle has emerged between the pro-Brüning faction—led by party chairman Hermann Drewitz and Justice Minister Johann Bredt—and increasingly anti-Brüning district organizations. These anti-Brüning factions are demanding that the party pressure Brüning into forming a coalition with the <span style="color: #7A3C00;">**NSDAP**</span>[? if dnvp_toleration:&nbsp;to reduce his dependence on our votes?], or they threaten to dissolve or even break away from the party. ?]{!</p>!}
 
 {!<p class="other">!}[? if year = 1930 and month = 10 and dnvp_prussia: The <span style="color: #3E88B3;">**Stahlhelm**</span> is once again attempting to destabilize and polarize Germany amidst the economic depression following the failed Young Plan referendum. At their annual congress, the <span style="color: #3E88B3;">**Stahlhelm**</span> announced plans for a referendum to prematurely dissolve the Prussian Landtag. Frustrated by the dominant position the <span style="color: #c00000;">socialists</span> have held in Prussia since the founding of the Weimar Republic, they seek to force new elections that would better reflect the national shift to the right. [? if dnvp_ideology == "Radical":Despite strong enthusiasm from other right-wing parties,?][? if dnvp_ideology == "Moderate":This is met with skepticism from the right-wing parties, and?] Hitler himself has shown little interest in the initiative and has refused to commit the <span style="color: #7A3C00;">**NSDAP**</span>, even as some <span style="color: #7A3C00;">Nazi</span> leaders express strong support. [? if dvp_ideology == "Right" and not in_grand_coalition_prussia and (dvp_leader == "Scholz" or dvp_leader == "Dingeldey"): The <span style="color: #C0A054;">**DVP**</span> was also invited to join the "national front," but its leadership has refused to commit as long as the <span style="color: #7A3C00;">Nazis</span> remain undecided. The fact that they haven’t outright rejected the offer, is a testament to how far they have strayed from democracy.?] At this stage, the success of the plan appears to hinge on Hitler’s support. ?]{!</p>!}
 
@@ -2144,9 +2144,9 @@ go-to: bg if rubicon and bg_change; bg_2 if not rubicon and bg_change
 
 {!<p class="other">!}[? if flavour_38_trigger and flavour_38_trigger_time == time: [? if lvp_leader == "Dingeldey": Dingeldey and the right wing of the <span style="color: #FFCC00;">**LVP**</span> are disappointed by Brüning's emergency decree, criticizing the new taxes and cuts to civil servant salaries. Dingeldey has personally urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> to end his reliance on our votes. However, it would be impossible for him to convince the majority of his own party to oppose Brüning, so he is unable to act on his plans—at least for now. ?][? if lvp_leader != "Dingeldey": The <span style="color: #FFCC00;">**LVP**</span> is disappointed by Brüning's emergency decrees, criticizing the new taxes and cuts to civil servant salaries. Some on the party's right wing have urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> to end his reliance on our votes. However, [+ lvp_leader +] and the wider party remains broadly supportive of his government and will continue working to steer him away from policies that harm the middle class. ?] ?]{!</p>!}
 
-{!<p class="other">!}[? if flavour_42_trigger and flavour_42_trigger_time == time: Dingeldey and the right wing of the <span style="color: #FFCC00;">**LVP**</span> are disappointed by Brüning's emergency decree, criticizing the new taxes and cuts to civil servant salaries. Dingeldey has personally urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if spd_toleration_right:&nbsp;to end his reliance on our votes?]. However, he is largely satisfied with his government, due to the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>. ?]{!</p>!}
+{!<p class="other">!}[? if flavour_42_trigger and flavour_42_trigger_time == time: Dingeldey and the right wing of the <span style="color: #FFCC00;">**LVP**</span> are disappointed by Brüning's emergency decree, criticizing the new taxes and cuts to civil servant salaries. Dingeldey has personally urged Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if dnvp_toleration_uspd:&nbsp;to end his reliance on our votes?]. However, he is largely satisfied with his government, due to the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>. ?]{!</p>!}
 
-{!<p class="other">!}[? if flavour_45_trigger and flavour_45_trigger_time == time: The <span style="color: #FFCC00;">**LVP**</span> is disappointed by Brüning's emergency decrees thus far, criticizing the new taxes and cuts to civil servant salaries. There is a growing call within the right of the party for Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if spd_toleration_right:&nbsp;to end his reliance on our votes?]. However, the party is still largely satisfied with his government, especially with the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>[? if not spd_toleration_right:, effectively locking us into opposition?]. ?]{!</p>!}
+{!<p class="other">!}[? if flavour_45_trigger and flavour_45_trigger_time == time: The <span style="color: #FFCC00;">**LVP**</span> is disappointed by Brüning's emergency decrees thus far, criticizing the new taxes and cuts to civil servant salaries. There is a growing call within the right of the party for Brüning to form a coalition with the <span style="color: #7A3C00;">national</span> <span style="color: #003755;">opposition</span>[? if dnvp_toleration_uspd:&nbsp;to end his reliance on our votes?]. However, the party is still largely satisfied with his government, especially with the inclusion of the <span style="color: #3E88B3;">**DNVP**</span>[? if not dnvp_toleration_uspd:, effectively locking us into opposition?]. ?]{!</p>!}
 
 {!<p class="dnvp">!}[? if flavour_51_trigger and flavour_51_trigger_time == time: Kurt von Schleicher, who initially convinced Hindenburg to appoint Brüning, is now skeptical—especially in the aftermath of the Banking Crisis—that Brüning can carry out the far-reaching reforms needed to restore Germany’s great power status. As a result, Schleicher is now seeking to establish connections with the anti-parliamentary right. ?]{!</p>!}
 

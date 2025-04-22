@@ -28,8 +28,8 @@ We have improved our relations with the [? if z_party_name != "CVP": <span style
 @toleration
 title: Defending Toleration
 subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The <span style="color: #c00000;">SPD</span> is not in toleration. ?]
-choose-if: dnvp_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not dnvp_toleration: The <span style="color: #c00000;">SPD</span> is not in toleration. ?]
+choose-if: dnvp_in_government = 0 and dnvp_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; right_dissent -= 8; paramilitarist_dissent -= 8; center_dissent -= 5;
 
 We have reduced dissent among the anti-toleration factions. 
