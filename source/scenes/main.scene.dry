@@ -39,7 +39,7 @@ if (Q.year >= 1930 && Q.year < 1933 && Q.next_election_time - Q.time == 1 && !Q.
         Q.flavour_3_trigger_shown = 1;
     }
 }
-if (Q.spd_in_government && Q.hindenburg_angry >= 100 && Q.president == "Hindenburg" && Q.time !== Q.last_time_updated) {
+if (Q.spd_in_government && Q.braun_angry >= 100 && Q.president == "Hindenburg" && Q.time !== Q.last_time_updated) {
     Q.flavour_4_trigger += 1;
     if (Q.flavour_4_trigger == 1) {
         Q.flavour_4_trigger_time = Q.time;
@@ -1172,7 +1172,7 @@ if (Q.year >= 1930 && Q.year < 1933 && Q.next_election_time - Q.time == 1 && !Q.
         Q.flavour_3_trigger_shown = 1;
     }
 }
-if (Q.spd_in_government && Q.hindenburg_angry >= 100 && Q.president == "Hindenburg" && Q.time !== Q.last_time_updated) {
+if (Q.spd_in_government && Q.braun_angry >= 100 && Q.president == "Hindenburg" && Q.time !== Q.last_time_updated) {
     Q.flavour_4_trigger += 1;
     if (Q.flavour_4_trigger == 1) {
         Q.flavour_4_trigger_time = Q.time;

@@ -137,7 +137,7 @@ Q.nsdap_chancellor = "Hitler";
 // hmm... maybe we can play nice with Hindenburg???
 Q.braun_relation = 25;
 //Rename later, causes problems
-Q.hindenburg_angry = 0;
+Q.braun_angry = 0;
 
 // prussian activities lol
 // TODO: prussian coalition has 2 options, one with dnvp M-P, one with Stegerwald. Naturally option 1 is harder to negotiate but gives the affairs card
@@ -797,7 +797,7 @@ Q.bourgeois_negotiations_election_soon = 0;
 Q.dnvp_split_2 = 0
 Q.bourgeois_merger_trigger = 0;
 Q.bourgeois_list = 0;
-Q.hindenburg_angry_bruning = 0;
+Q.braun_angry_bruning = 0;
 Q.bruning_time = 0;
 Q.bruning_toleration_time = 0;
 Q.total_bruning_time = 0;
@@ -818,7 +818,7 @@ Q.dvp_exist = 1;
 Q.reichsbanner_unpopularity_time = 0;
 Q.wtb_points = 0;
 Q.hindenburg_grr_time = 0;
-Q.hindenburg_angry_pause_time = 0;
+Q.braun_angry_pause_time = 0;
 Q.reichsbank_policy_time = 0;
 Q.dnvp_scared_hitler_time = 0;
 Q.international_socialist_support = 0;
