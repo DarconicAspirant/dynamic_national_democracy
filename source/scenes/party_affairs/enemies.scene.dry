@@ -7,14 +7,14 @@ is-card: true
 card-image: img/poster_1.png
 tags: party_affairs
 
+//TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
+//TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
+
 = Choosing our enemies
 
 In our media and campaign materials, who should we consider as our main opponents?
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
-
-//TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
-//TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
 
 - @extreme: The extremist and socialist parties of the left and the far-right
 - @left: The socialist and marxist parties of the left
