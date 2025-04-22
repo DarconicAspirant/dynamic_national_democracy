@@ -233,8 +233,15 @@ Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> has won the 
 @hitler_wins
 on-arrival: president = nsdap_candidate_1932; chancellor = "Hitler"; chancellor_party = "NSDAP"
 
-[? if nsdap_candidate_1932 == "Hitler" : Adolf Hitler of the <span style="color: #7A3C00;">**NSDAP**</span> has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate_1932 != "Hitler" : The <span style="color: #7A3C00;">**NSDAP**</span> candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The <span style="color: #7A3C00;">Nazis</span> waste no time in consolidating power. ?]
+// TODO: Consider chancellor other than levi
+// TODO: Uprising program
+Karl Liebknecht of the SPD has won the presidency. He immediately dismissed the current government and appointed Paul Levi as the chancellor of a "Provisional Revolutionary Government". Meanwhile, he calls on the left-wing paramilitaries to organize worker uprisings and form revolutionary councils all across Germany. We have no choice but to unite with both republican loyalists and the far-right to resist the overthrow of the republic...
+//Following variants if SPD-USPD majority. If not, new elections are called with the ProvRevGov as caretaker. If USPD-SPD majority, the post-election outcome is the same. If not:TBD
+// TODO: Government program
+Karl Liebknecht of the SPD has won the presidency. He immediately dismissed the current government and appointed Paul Levi as the chancellor of a "Provisional Revolutionary Government". The new government is composed almost entirely by the SPD, with the inclusion of some USPD dissidents. It immediately proceeds to announce a program of mass nationalizations and expropriations as well as complete restructuring of the military and police force. As the left-wing paramilitaries pressure USPD deputies to tolerate the new government, it becomes clear that the situation will soon escalate to civil war. What are our options in the meantime?
+//TODO: Variant if USPD-SPD have reconciled
+Karl Liebknecht of the SPD has won the presidency. He immediately dismissed the current government and appointed Paul Levi as the chancellor of a "Provisional Revolutionary Government". The new government is a united front between the SPD and USPD. It immediately proceeds to announce a program of mass nationalizations and expropriations as well as complete restructuring of the military and police force. It becomes clear that the situation will soon escalate to civil war. What are our options in the meantime?
+
 
 - @hitler_takes_power: What do we do now?
 
