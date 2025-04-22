@@ -11,5 +11,5 @@ max-visits: 1
 
 In light of the [? if not emergency_decree_seen: current economic situation?][? if emergency_decree_seen: Brüning's appeal for relief?], and the German banking crisis, President Herbert Hoover of the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span> has issued a moratorium on war debt payments from the Great War, including Germany's. Our budget situation should improve somewhat.
 
-[? if spd_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not spd_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
+[? if dnvp_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not dnvp_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
 

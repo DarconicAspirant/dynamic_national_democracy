@@ -15,7 +15,7 @@ Q.ddp_left += 2;
 Q.ddp_cohesion += 2;
 Q.coalition_dissent -= 2;
 
-if (Q.spd_in_government) {
+if (Q.dnvp_in_government) {
     if (foreign_minister_party === "DVP") {
         Q.new_middle_dvp += 3;
         Q.old_middle_dvp += 3;
@@ -121,7 +121,7 @@ tags: event
 
 At the Lausanne Conference, the Allies met with German representatives to resolve the issue of war reparations once and for all. Given the ongoing economic crisis, they concluded that Germany would be unable to resume payments after the moratorium ends.
 
-Therefore, our reparations have been reduced by 90%! In the end, Germany is required to make only a final payment of three billion marks, effectively ending future reparation obligations. This has greatly boosted investor confidence and sparked a new wave of capital inflows to Germany. This should reduce the strain on our budget. [? if spd_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not spd_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
+Therefore, our reparations have been reduced by 90%! In the end, Germany is required to make only a final payment of three billion marks, effectively ending future reparation obligations. This has greatly boosted investor confidence and sparked a new wave of capital inflows to Germany. This should reduce the strain on our budget. [? if dnvp_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not dnvp_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
 
 [? if bruning_time: Brüning, having skillfully leveraged the issues of foreign policy and reparations, stands to gain significantly. He has long argued that his austerity and deflationary measures were justified if they led to the abolition of reparations—and now, that vision has been realized. President Hindenburg is ecstatic at this outcome, lauding Brüning’s diplomatic prowess alongside his inner circle. Meanwhile, the urgency to bring the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> into government has waned, with many believing their support has reached their peak. ?]
 

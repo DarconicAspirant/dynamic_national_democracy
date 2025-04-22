@@ -10,40 +10,40 @@ The weight of governance now falls upon our shoulders. It is our responsibility 
 
 **Primary Goals**
 
-[? if spd_in_government : - Expand social welfare programs. ?]
+[? if dnvp_in_government : - Expand social welfare programs. ?]
 
-[? if spd_in_government : - Promote worker ownership of industries. ?]
+[? if dnvp_in_government : - Promote worker ownership of industries. ?]
 
-[? if spd_in_government : - Lower taxes or shift the tax burden to the wealthy. ?]
+[? if dnvp_in_government : - Lower taxes or shift the tax burden to the wealthy. ?]
 
-[? if spd_in_government : - Support workers in labor disputes. ?]
+[? if dnvp_in_government : - Support workers in labor disputes. ?]
 
-[? if spd_in_government : - Fund unemployment insurance through employers. ?]
+[? if dnvp_in_government : - Fund unemployment insurance through employers. ?]
 
-[? if spd_in_government: - Advance women's rights. ?]
+[? if dnvp_in_government: - Advance women's rights. ?]
 
-[? if spd_in_government: - Reform or expand education for workers. ?]
+[? if dnvp_in_government: - Reform or expand education for workers. ?]
 
-[? if spd_in_government and black_thursday_seen : - Institute an economic plan. ?]
+[? if dnvp_in_government and black_thursday_seen : - Institute an economic plan. ?]
 
-[? if spd_in_government : - Secure low food prices for workers. ?]
+[? if dnvp_in_government : - Secure low food prices for workers. ?]
 
-[? if spd_in_government : - Reduce funding for the Reichswehr. ?]
+[? if dnvp_in_government : - Reduce funding for the Reichswehr. ?]
 
 **Secondary Goals**
 
-[? if spd_in_government and black_thursday_seen : - Promote the moderate reformist plan. ?]
+[? if dnvp_in_government and black_thursday_seen : - Promote the moderate reformist plan. ?]
 
-[? if spd_in_government : - Cut taxes. ?]
+[? if dnvp_in_government : - Cut taxes. ?]
 
-[? if spd_in_government : - Be neutral in labor affairs. ?]
+[? if dnvp_in_government : - Be neutral in labor affairs. ?]
 
-[? if spd_in_government : - Raise tariffs. ?]
+[? if dnvp_in_government : - Raise tariffs. ?]
 
-[? if spd_in_government : - Increase science funding. ?]
+[? if dnvp_in_government : - Increase science funding. ?]
 
-[? if spd_in_government : - Take steps towards the <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span> or national concordat. ?]
+[? if dnvp_in_government : - Take steps towards the <span style="color: #001489;">European</span> <span style="color: #FFDD00;">Union</span> or national concordat. ?]
 
-[? if spd_in_government : - Assist the rural working class. ?]
+[? if dnvp_in_government : - Assist the rural working class. ?]
 
 They will expect to see at least two primary and one secondary goal fulfilled every six months, or we will lose some of their support. Committing to austerity or conservative policies will automatically fail the primary goal. Committing to radical left-wing policies will automatically fail the secondary goal.

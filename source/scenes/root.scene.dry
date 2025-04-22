@@ -463,32 +463,32 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
-Q.spd_in_government_time = 0;
+Q.president = "Braun";
+// starting chancellor: Hermann Müller
+Q.chancellor = "Müller";
+Q.chancellor_party = 'USPD';
+Q.dnvp_in_government = 0;
 Q.z_in_government = 1;
-Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
+Q.lvp_in_government = 0;
+Q.wp_in_government = 1;
+Q.uspd_in_government = 1;
+Q.dnvp_in_government_time = 0;
+Q.spd_in_government = 0;
 Q.nsdap_in_government = 0;
 
 Q.dnvp_prussia_time = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
+// Weimar coalition = USPD + Z + LVP
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
+// Grand coalition = USPD + Z + BVP + LVP
+// also includes the "constitutional coalition" of USPD + Z + BVP + LVP + WP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
+// Popular front = USPD + SPD + Z
 Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
+// left coalition = SPD + SPD + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
+// emergency government containing the SPD: only the DNVP president can do this.
 Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
 Q.grand_coalition_failed = 0;

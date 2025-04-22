@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: govt_affairs
 on-arrival: month_actions += 1; coalition_affairs_timer = 5
-view-if: spd_in_government = 1 and coalition_dissent >= 1 and coalition_affairs_timer = 0 and (in_grand_coalition or in_weimar_coalition or in_popular_front)
+view-if: dnvp_in_government = 1 and coalition_dissent >= 1 and coalition_affairs_timer = 0 and (in_grand_coalition or in_weimar_coalition or in_popular_front)
 card-image: img/muller_cabinet.jpg
 #subtitle: There is dissent within our coalition.
 
@@ -60,7 +60,7 @@ No. We will not do this.
 
 @bring_down
 subtitle: Bring down this government before our opponents do.
-on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_toleration = 0; spd_toleration_right = 0; right_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; popcon_dissent += 5; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
+on-arrival: dnvp_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_toleration = 0; spd_toleration_right = 0; right_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; popcon_dissent += 5; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
 go-to: elections if bruning_event_seen or year < 1930
 
 We have called for a vote of no confidence in ourselves, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.

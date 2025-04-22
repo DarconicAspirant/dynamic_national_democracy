@@ -216,7 +216,7 @@ if (Q.industrial_total_backing) {
     Q.hindenburg_funds += Q.industrial_dvp_backing;
     Q.hindenburg_funds += Q.industrial_dnvp_backing;
     Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
-    if (Q.spd_in_government) Q.hindenburg_funds += ((100 - Q.kpd_votes) / 10);
+    if (Q.dnvp_in_government) Q.hindenburg_funds += ((100 - Q.kpd_votes) / 10);
 }
 
 if (Q.hindenburg_funds >= 5) {
