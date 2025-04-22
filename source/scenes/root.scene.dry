@@ -92,7 +92,7 @@ Q.militarism = 0;
 // Related to but not the same as support for a monarchial restoration, more about de-democratizing the republic
 Q.antimocratization = 0;
 // Support for a Bernburg coalition relative to 1928 - Bernburg will be unavailable due to the USPD controlled state gov, while Anhalt will be Center-right coalition
-// TODO: There will be more disruptions than in Bad Harzurg as to show how sadder things are for the far-right
+// TODO:There will be more disruptions than in Bad Harzurg as to show how sadder things are for the far-right
 // TODO:Unless you control Prussia, in which case you can just chill in another city and clear it out of disruptors
 // TODO:It will be mentioned in flavor events that you lose Brunswick when it happens
 // TODO:It will be mentioned in flavor events in apr 1928 that you gain Anhalt in coalition w Z/LVP because of USPD local corruption and the coalitions infighting unless you and your coalition partners extremely low in voteshare at which point the bernburg front event will give a funni congrats player message and the be like theres nowhere to go!!! and thereby cause the event to not give you a boost from the rally effect but a pop reduction because you toom the time away from politics to manage to cooperate the whole tjinh remotely and in various small meetings in a variety of locations

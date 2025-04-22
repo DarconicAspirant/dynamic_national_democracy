@@ -7,8 +7,8 @@ is-card: true
 card-image: img/poster_1.png
 tags: party_affairs
 
-//TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
-//TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
+// TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
+// TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
 
 = Choosing our enemies
 
@@ -28,7 +28,7 @@ on-arrival: enemies = "extremist and socialist parties of the left and the far-r
 
 Attacking socialism and the extremist spoilers to our right is acceptable to all but the strongly anti-republican right wing of our party, who consider our strategy an implicit reinforcement of the republican center. This might also hamper our ability to ally the far-right in the future.
 
-//TODO: Better effect if either lambach chairman or christsoc dominance
+// TODO: Better effect if either lambach chairman or christsoc dominance
 
 @left
 on-arrival: enemies = "socialist and marxist parties of the left"; right_strength += 5; right_dissent -= 5; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_dnvp -= 2 if dnvp_ideology == "Radical"; workers_dnf -= 2
@@ -40,7 +40,7 @@ on-arrival: enemies = "NSDAP"; paramilitarist_strength += 5; revolutionary_urgen
 
 The NSDAP has been a thorn in our side for a while, but it is a tiny party right now and attacking them is of limited electoral gain. Our right faction seems disappointed by our choice as it considers far-right unity a desirable outcome. Our prospective moderate coalition partners are however pleased.
 
-//TODO: Better effect if either lambach chairman or christsoc dominance
+// TODO: Better effect if either lambach chairman or christsoc dominance
 
 @spd
 on-arrival: enemies = "SPD and the revolutionary left"; popcon_strength += 5; right_dissent += 8; popcon_dissent -= 5; nsdap_relation -= 15; wp_relation += 5; lvp_relation += 3; z_relation += 5; lvp_old_relation += 5; workers_kpd -= 3; unemployed_kpd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
