@@ -71,7 +71,7 @@ view-if: conservative_coalition >= 50 and bourgeois_coalition < 50
 choose-if: (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)
 on-arrival: center_dissent += 5; popcon_dissent += 5; dnvp_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0
 unavailable-subtitle: The <span style="color: #3E88B3;">DNVP</span> isn't willing to enter government.
-go-to: election_1928.right_coalition_2
+go-to: election_1928.conservative_coalition_2
 
 @center_right_coalition
 view-if: conservative_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate"
