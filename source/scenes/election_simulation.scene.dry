@@ -270,7 +270,7 @@ Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r;
 Q.constitutional_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
+Q.conservative_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.national_liberal_coalition = Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r + 3;
 Q.hard_right_coalition = Q.dvp_r + Q.other_r + Q.dnvp_r + 3;
 Q.national_coalition = Q.dvp_r + Q.other_r + Q.dnvp_r + Q.nsdap_r + 3;
@@ -317,7 +317,7 @@ National Front (DNVP + NSDAP + Others + WP + BVP): [+ national_coalition+]
 
 Right Coalition (DNVP + Others + WP + BVP): [+ hard_right_coalition+]
 
-Conservative Coalition (DNVP + Others + WP + BVP + Z): [+ right_coalition +]
+Conservative Coalition (DNVP + Others + WP + BVP + Z): [+ conservative_coalition +]
 
 National-Liberal Coalition (DNVP + Others + WP + BVP + LVP): [+ national_liberal_coalition +]
 

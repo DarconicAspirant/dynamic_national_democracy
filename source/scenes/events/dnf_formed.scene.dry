@@ -78,9 +78,9 @@ if (Q.kvp_formed && Q.lvp_formed) {
 }
 
 if (Q.lvp_formed) {
-    Q.right_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
+    Q.conservative_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 } else {
-    Q.right_coalition = parseFloat((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
+    Q.conservative_coalition = parseFloat((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 }
 
 if (Q.dnvp_ideology === "Moderate") {
@@ -136,4 +136,4 @@ for (var record of Q.party_support_records) {
     record['dnf'] = 0;
 }
 !}
-go-to: dnf_collapse_right_coalition if right_coalition < 50 and in_right_coalition == 1; dnf_collapse_center_right_coalition if center_right_coalition < 50 and in_center_right_coalition == 1
+go-to: dnf_collapse_right_coalition if conservative_coalition < 50 and in_conservative_coalition == 1; dnf_collapse_center_right_coalition if center_right_coalition < 50 and in_center_right_coalition == 1

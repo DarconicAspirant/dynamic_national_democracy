@@ -26,7 +26,7 @@ if (Q.spd_votes >= 30) {
 if (Q.chancellor == "Brüning" && Q.spd_toleration) {
     Q.dingeldey_points += 2;
     Q.lvp_right += 3;
-} else if (Q.in_right_coalition || Q.in_center_right_coalition) {
+} else if (Q.in_conservative_coalition || Q.in_center_right_coalition) {
     Q.maier_points += 2;
     Q.lvp_right += 1;
 }

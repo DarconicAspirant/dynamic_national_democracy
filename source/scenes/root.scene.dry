@@ -478,7 +478,7 @@ Q.nsdap_in_government = 0;
 
 Q.dnvp_prussia_time = 0;
 
-Q.in_right_coalition = 0;
+Q.in_conservative_coalition = 0;
 // Weimar coalition = USPD + Z + LVP
 Q.in_weimar_coalition = 0;
 // Grand coalition = USPD + Z + BVP + LVP
@@ -486,25 +486,29 @@ Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
 // Popular front = USPD + SPD + Z
 Q.in_popular_front = 0;
-// left coalition = SPD + SPD + left-splinters
+// left coalition = USPD + SPD + left-splinters
 Q.in_left_front = 0;
 // emergency government containing the SPD: only the DNVP president can do this.
 Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
-Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
+Q.in_dnvp_majority = 0;
+Q.center_right_coalition_failed = 0;
+// if the DNVP is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
 Q.in_center_right_coalition = 0;
+Q.in_national_liberal_coalition = 0;
+Q.in_constitutional_coalition = 0;
+Q.in_hard_right_coalition = 0;
+Q.in_national_liberal_coalition = 0;
 Q.in_social_catholic_coalition = 0;
 Q.in_social_liberal_coalition = 0;
 
-Q.in_right_coalition_prussia = 0;
+Q.in_conservative_coalition_prussia = 0;
 Q.in_weimar_coalition_prussia = 1;
 Q.in_grand_coalition_prussia = 0;
 Q.in_popular_front_prussia = 0;
 Q.in_left_front_prussia = 0;
-Q.in_spd_majority_prussia = 0;
+Q.in_dnvp_majority_prussia = 0;
 Q.in_center_right_coalition_prussia = 0;
 Q.in_minority_weimar_coalition_prussia = 0;
 Q.in_minority_grand_coalition_prussia = 0;
@@ -756,7 +760,7 @@ Q.young_plan_votes = 0;
 Q.weimar_ref_signatures = 0;
 Q.weimar_ref_votes = 0;
 Q.was_in_center_right_coalition = 0;
-Q.was_in_right_coalition = 0;
+Q.was_in_conservative_coalition = 0;
 Q.dvp_left = 0;
 Q.dvp_right = 0;
 Q.dvp_was_in_prussia = 0;

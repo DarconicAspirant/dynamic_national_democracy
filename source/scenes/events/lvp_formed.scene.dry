@@ -51,7 +51,7 @@ if (Q.in_grand_coalition_prussia) {
 
 if (Q.in_center_right_coalition) {
     Q.in_center_right_coalition = 0;
-    Q.in_right_coalition = 1;
+    Q.in_conservative_coalition = 1;
 }
 
 Q.parties = Q.parties.filter(party => party !== 'ddp' && party !== 'dvp');
@@ -198,9 +198,9 @@ if (Q.kvp_formed && Q.lvp_formed) {
 }
 
 if (Q.lvp_formed) {
-    Q.right_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
+    Q.conservative_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 } else {
-    Q.right_coalition = parseFloat((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
+    Q.conservative_coalition = parseFloat((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 }
 
 if (Q.dnvp_ideology === "Moderate") {
