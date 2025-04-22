@@ -640,7 +640,7 @@ set-jump: post_election
 @r1_winner
 go-to: election_end
 
-# TODO: different paths for the different outcomes...
+// TODO: different paths for the different outcomes...
 
 
 @hitler_victory
@@ -709,7 +709,7 @@ go-to: thalmann_democrat if presidential_powers; thalmann_civil_war if not presi
 @thalmann_civil_war
 on-arrival: nsdap_relation = 80
 
-# TODO: depose the chancellor?
+// TODO: depose the chancellor?
 
 Thälmann wastes no time in consolidating power, using all means available to reshape the government. In response, the far-right immediately launches a coup attempt. We have no choice but to unite with the <span style="color: #700000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
 

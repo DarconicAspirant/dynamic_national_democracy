@@ -6,8 +6,8 @@ max-visits: 3
 is-card: true
 card-image: img/poster_1.png
 tags: party_affairs
-# TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
-# TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
+// TODO Coloring: These parties have multiple colors depending on ideology. Consider applying here. (Lookup dynamic)
+// TODO SPD variants based on how seriously the party is taken as a threat. Similar for NSDAP but more about how big it is.
 
 = Choosing our enemies
 
@@ -26,13 +26,13 @@ In our media and campaign materials, who should we consider as our main opponent
 on-arrival: enemies = "extremist and socialist parties of the left and the far-right"; christsoc_strength += 5; popcon_strength += 5; right_dissent += 5; workers_kpd -= 1.5; workers_nsdap -= 2; workers_dnvp -= 1 if dnvp_ideology == "Radical"; workers_dnf -= 1; unemployed_kpd -= 2; unemployed_nsdap -= 2; nsdap_relation -= 10
 
 Attacking socialism and the extremist spoilers to our right is acceptable to all but the strongly anti-republican right wing of our party, who consider our strategy an implicit reinforcement of the republican center. This might also hamper our ability to ally the far-right in the future.
-# TODO: Better effect if either lambach chairman or christsoc dominance
+// TODO: Better effect if either lambach chairman or christsoc dominance
 
 @left
 on-arrival: enemies = "socialist and marxist parties of the left"; right_strength += 5; right_dissent -= 5; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_dnvp -= 2 if dnvp_ideology == "Radical"; workers_dnf -= 2
 
 Attacking socialism is popular among the entire party, although the right considers the bourgeois republican parties to be enemies as well. Our potential moderate coalition partners have also noted the lack of focus on the extreme right. The effect of our attack is somewhat weakened by our low standing among potential socialist voters. 
-# TODO: Better effect if either lambach chairman or christsoc dominance
+// TODO: Better effect if either lambach chairman or christsoc dominance
 
 @nsdap
 on-arrival: enemies = "NSDAP"; paramilitarist_strength += 5; revolutionary_urgency += 1; workers_nsdap -= 4; unemployed_nsdap -= 4;
