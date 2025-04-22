@@ -1564,7 +1564,7 @@ if (Q.pro_republic < 45 && Q.pro_republic >= 36) {
     Q.workers_spd -= 6;
 }
 if (Q.pro_republic < 36) {
-    // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
+    # TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
     Q.workers_spd *= 0.85;
     Q.new_middle_spd -= 5;
     Q.old_middle_spd -= 5;

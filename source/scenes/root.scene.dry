@@ -37,7 +37,7 @@ Q.historical_mode = 0;
 // old demographics
 Q.old_demographics = 0;
 // use decimals for reichstag seats
-// TODO: not yet implemented
+# TODO: not yet implemented
 Q.use_decimals = 0;
 
 // party resources
@@ -71,8 +71,8 @@ Q.right_secedes = 0;
 Q.popcon_resigned = 0;
 // christian unions/dhv can disaffiliate in an event influenced by christsoc split and dissent but separate from it
 Q.unions_disaffiliated = 0;
-// TODO: center (westarp gang) can resign if the party leans too heavily in one direction and at least one faction has split
-// TODO: following event depending on whether he went to the kvp or resigned from politics (some of his gang may join dnf still)
+# TODO: center (westarp gang) can resign if the party leans too heavily in one direction and at least one faction has split
+# TODO: following event depending on whether he went to the kvp or resigned from politics (some of his gang may join dnf still)
 Q.center_resigned = 0;
 
 // have we deepened our ties with the right wing paramilitaries?
@@ -92,10 +92,10 @@ Q.militarism = 0;
 // Related to but not the same as support for a monarchial restoration, more about de-democratizing the republic
 Q.antimocratization = 0;
 // Support for a Bernburg coalition relative to 1928 - Bernburg will be unavailable due to the USPD controlled state gov, while Anhalt will be Center-right coalition
-// TODO:There will be more disruptions than in Bad Harzurg as to show how sadder things are for the far-right
-// TODO:Unless you control Prussia, in which case you can just chill in another city and clear it out of disruptors
-// TODO:It will be mentioned in flavor events that you lose Brunswick when it happens
-// TODO:It will be mentioned in flavor events in apr 1928 that you gain Anhalt in coalition w Z/LVP because of USPD local corruption and the coalitions infighting unless you and your coalition partners extremely low in voteshare at which point the bernburg front event will give a funni congrats player message and the be like theres nowhere to go!!! and thereby cause the event to not give you a boost from the rally effect but a pop reduction because you toom the time away from politics to manage to cooperate the whole tjinh remotely and in various small meetings in a variety of locations
+# TODO:There will be more disruptions than in Bad Harzurg as to show how sadder things are for the far-right
+# TODO:Unless you control Prussia, in which case you can just chill in another city and clear it out of disruptors
+# TODO:It will be mentioned in flavor events that you lose Brunswick when it happens
+# TODO:It will be mentioned in flavor events in apr 1928 that you gain Anhalt in coalition w Z/LVP because of USPD local corruption and the coalitions infighting unless you and your coalition partners extremely low in voteshare at which point the bernburg front event will give a funni congrats player message and the be like theres nowhere to go!!! and thereby cause the event to not give you a boost from the rally effect but a pop reduction because you toom the time away from politics to manage to cooperate the whole tjinh remotely and in various small meetings in a variety of locations
 Q.bernburg_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - Works creation plan, 2 - Austerity, 3 - neoliberal plan (improving conditions for and subsidizing private industry, breaking of proletarian power)
@@ -140,7 +140,7 @@ Q.braun_relation = 25;
 Q.braun_angry = 0;
 
 // prussian activities lol
-// TODO: prussian coalition has 2 options, one with dnvp M-P, one with Stegerwald. Naturally option 1 is harder to negotiate but gives the affairs card
+# TODO: prussian coalition has 2 options, one with dnvp M-P, one with Stegerwald. Naturally option 1 is harder to negotiate but gives the affairs card
 Q.dnvp_prussia = 0;
 Q.left_prussia = 0;
 Q.democratic_prussia = 1;
