@@ -193,8 +193,9 @@ if (Q.sh_strength) {
 if (Q.sa_strength) {
     Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 }
-# TODO: Make VB text switch if it radicalizes
 !}
+
+# TODO: Make VB text switch if it radicalizes
 
 = Paramilitaries
 
