@@ -89,7 +89,7 @@ if (Q.workers_spd_normalized >= 40 && Q.new_middle_spd_normalized >= 40 && Q.old
     this.achieve('grosse_volkspartei');
 }
 // Räterepublik - begin the transformation to a socialist economy.
-if (Q.dnvp_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
+if (Q.dnvp_in_government && ((Q.neoliberalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.neoliberalization_progress >= 1 && Q.economic_democracy >= 4))) {
     this.achieve('raterepublik');
 }
 // Polykrise - survive both a fascist coup and a capital strike.
@@ -97,7 +97,7 @@ if (Q.march_on_berlin_seen && Q.general_strike_seen && Q.chancellor != "Hitler" 
     this.achieve("polykrise");
 }
 // Wirtschaftsexperiment - implement two different economic plans.
-if ((Q.nationalization_progress >= 1 && Q.wtb_implemented >= 1) || (Q.wtb_implemented >= 1 && Q.moderate_plan_progress >= 1) || (Q.nationalization_progress >= 1 && Q.moderate_plan_progress >= 1)) {
+if ((Q.neoliberalization_progress >= 1 && Q.works_plan_implemented >= 1) || (Q.works_plan_implemented >= 1 && Q.moderate_plan_progress >= 1) || (Q.neoliberalization_progress >= 1 && Q.moderate_plan_progress >= 1)) {
     this.achieve("wirtschaftsexperiment");
 }
 // Syndikalismus - support factory takeovers by workers.
@@ -233,7 +233,7 @@ The <span style="color: #c00000;">**SPD**</span> is still in government, under C
 
 @spd_victorious_2
 title: The <span style="color: #c00000;">**SPD**</span> is victorious?
-view-if: total_defeat == 0 and long_war == 0 and schleicher_spd and wtb_implemented
+view-if: total_defeat == 0 and long_war == 0 and schleicher_spd and works_plan_implemented
 tags: endings
 go-to: eg_menu
 
@@ -302,7 +302,7 @@ The <span style="color: #c00000;">**SPD**</span> has been declared a "People's P
 
 @nationalization_achieved
 title: Socialization of the economy has commenced.
-view-if: nationalization_progress >= 2
+view-if: neoliberalization_progress >= 2
 tags: endings
 go-to: eg_menu
 

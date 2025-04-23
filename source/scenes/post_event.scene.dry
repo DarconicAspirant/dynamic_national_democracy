@@ -418,7 +418,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
     if (Q.economic_growth >= 3 && Q.unemployed < 20 && Q.black_thursday_seen) {
         Q.general_strike_progress -= 0.25;
     }
-    if (!Q.economic_democracy && !Q.nationalization_progress && Q.dnvp_in_government) {
+    if (!Q.economic_democracy && !Q.neoliberalization_progress && Q.dnvp_in_government) {
         Q.general_strike_progress -= 0.1;
     }
     if (Q.budget > 0 && Q.black_thursday_seen && Q.dnvp_in_government) {
@@ -1294,9 +1294,9 @@ if (Q.reichsbank_policy_time >= Q.time) {
     Q.unemployed *= 0.997;
     if (Q.economic_growth < -2) Q.economic_growth *= 0.995;
     if (Q.inflation < -4) Q.inflation *= 0.995;
-    if (Q.soviet_relation < 3) {
-        Q.unemployed *= (0.997 - (Q.soviet_relation / 100));
-    } else if (Q.soviet_relation >= 3) {
+    if (Q.southern_relation < 3) {
+        Q.unemployed *= (0.997 - (Q.southern_relation / 100));
+    } else if (Q.southern_relation >= 3) {
         Q.unemployed *= (0.957);
     }
     Q.workers_nsdap -= 4/12;
@@ -3071,8 +3071,8 @@ if (Q.dnvp_in_government_time >= 6) {
     } else if (Q.stegerwald_path && Q.bourgeois_coalition < 40) {
         Q.braun_angry += 1;
     }
-    if (Q.soviet_relation >= 1) {
-        Q.braun_angry += Q.soviet_relation;
+    if (Q.southern_relation >= 1) {
+        Q.braun_angry += Q.southern_relation;
     }
     if (Q.rearmament_exposed >= 1) {
         Q.braun_angry += 3;

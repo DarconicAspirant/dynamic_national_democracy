@@ -200,7 +200,7 @@ go-to: long_war_intervention
 We send a call for help to the West, but their governments are divided on whether or not to support us. We have to survive on our own until they make a decision.
 
 @soviet_aid
-choose-if: (soviet_relation >= 1 and nsdap_relation >= 50) or (nsdap_relation >= 75)
+choose-if: (southern_relation >= 1 and nsdap_relation >= 50) or (nsdap_relation >= 75)
 on-arrival: soviet_aid += 1
 unavailable-subtitle: Our relations are not strong enough.
 max-visits: 1

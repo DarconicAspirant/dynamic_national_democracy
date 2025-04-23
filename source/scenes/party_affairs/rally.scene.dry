@@ -80,9 +80,9 @@ Mass rallies are a common feature of <span style="color: #c00000;">social democr
 - @easy_discard
 
 @class_struggle
-on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if right_strength > popcon_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; right_strength += 5; right_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2; dvp_right += 0.5; ddp_right += 0.5; lvp_right += 0.5
+on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if right_strength > popcon_strength; workers_spd += 4*(1-dissent) if neoliberalization_progress > 0; unemployed_spd += 3*(1-dissent) if neoliberalization_progress > 0; right_strength += 5; right_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2; dvp_right += 0.5; ddp_right += 0.5; lvp_right += 0.5
 
-Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
+Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if neoliberalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 
 @welfare
 on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; popcon_strength += 3; christsoc_strength += 4; popcon_dissent -= 3; christsoc_dissent -= 3;
@@ -107,11 +107,11 @@ Our speakers denounce the military establishment and all the spending entering t
 
 @wtb
 view-if: worksplan_adopted = 1
-choose-if: return_to_normalcy = 0 and (wtb_implemented >= wtb_rally or (not dnvp_in_government and not dnvp_toleration))
-unavailable-subtitle: [? if return_to_normalcy == 1: The economic crisis is largely over now, and the public is no longer interested in hearing about it. ?] [? if wtb_rally > wtb_implemented: Rhetoric alone has its limits; further implementation of the WTB plan is necessary to continue an effective campaign. ?]
-on-arrival: workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); rural_spd += 1*(1-dissent); new_middle_spd += 1*(1-dissent); old_middle_spd += 1*(1-dissent); workers_spd += 3*(1-dissent) if wtb_implemented; unemployed_spd += 3*(1-dissent) if wtb_implemented; rural_spd += 2*(1-dissent) if wtb_implemented; new_middle_spd += 2*(1-dissent) if wtb_implemented; old_middle_spd += 2*(1-dissent) if wtb_implemented; wtb_rally += 1
+choose-if: return_to_normalcy = 0 and (works_plan_implemented >= wtb_rally or (not dnvp_in_government and not dnvp_toleration))
+unavailable-subtitle: [? if return_to_normalcy == 1: The economic crisis is largely over now, and the public is no longer interested in hearing about it. ?] [? if wtb_rally > works_plan_implemented: Rhetoric alone has its limits; further implementation of the WTB plan is necessary to continue an effective campaign. ?]
+on-arrival: workers_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); rural_spd += 1*(1-dissent); new_middle_spd += 1*(1-dissent); old_middle_spd += 1*(1-dissent); workers_spd += 3*(1-dissent) if works_plan_implemented; unemployed_spd += 3*(1-dissent) if works_plan_implemented; rural_spd += 2*(1-dissent) if works_plan_implemented; new_middle_spd += 2*(1-dissent) if works_plan_implemented; old_middle_spd += 2*(1-dissent) if works_plan_implemented; wtb_rally += 1
 
-The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises. [? if not wtb_implemented: However, many still believe that the plan is merely an empty slogan and will remain skeptical until we actually implement it. ?]
+The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises. [? if not works_plan_implemented: However, many still believe that the plan is merely an empty slogan and will remain skeptical until we actually implement it. ?]
 
 
 @local

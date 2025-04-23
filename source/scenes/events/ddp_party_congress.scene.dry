@@ -20,7 +20,7 @@ if (Q.unemployed >= 18) {
 } else if (Q.works_program || Q.workers_spd_normalized < 45) {
     Q.lemmer_points += 1;
 }
-if (Q.nationalization_progress) {
+if (Q.neoliberalization_progress) {
     Q.lemmer_points -= 1;
 }
 if (Q.general_strike_progress >= 6) {

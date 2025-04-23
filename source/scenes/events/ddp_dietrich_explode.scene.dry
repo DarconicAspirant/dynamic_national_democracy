@@ -18,7 +18,7 @@ if (Q.lvp_relation >= 45) {
     Q.ddp_cohesion += 1;
 }
 
-if (Q.nationalization_progress) {
+if (Q.neoliberalization_progress) {
     Q.stolper_points += 1;
     Q.maier_points += 1;
 }

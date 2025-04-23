@@ -464,7 +464,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Braun";
-// starting chancellor: Hermann Müller, switch party to USPD once that works
+// starting chancellor: Hermann Müller. TODO: switch party to USPD once that works
 Q.chancellor = "Müller";
 Q.chancellor_party = 'SPD';
 Q.dnvp_in_government = 0;
@@ -507,6 +507,8 @@ Q.in_bourgeois_coalition = 0;
 Q.in_social_catholic_coalition = 0;
 Q.in_social_liberal_coalition = 0;
 
+Q.in_national_front_prussia = 0;
+Q.in_national_liberal_coalition_prussia = 0;
 Q.in_conservative_coalition_prussia = 0;
 Q.in_weimar_coalition_prussia = 1;
 Q.in_grand_coalition_prussia = 0;
@@ -518,7 +520,7 @@ Q.in_minority_conservative_coalition_prussia = 0;
 Q.in_minority_center_right_coalition_prussia = 0;
 Q.lvp_prussia_asked = 0;
 Q.in_far_right_coalition_prussia = 0;
-// delete/eplace eventually
+// delete/replace eventually
 Q.ddp_in_popular_front_prussia = 0;
 Q.nazi_goals_seen_prussia = 0;
 Q.reichsexekution = 0;
@@ -581,6 +583,7 @@ Q.agriculture_minister = 'Haslinde';
 Q.agriculture_minister_party = 'Z';
 
 // Events: what has occurred?
+// TODO: Return here
 Q.panzerkreuzer_seen = 0;
 Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
@@ -589,43 +592,51 @@ Q.unemployment_insurance_seen = 0;
 Q.unemployment_insurance_threshold = 10;
 Q.blutmai = 0;
 
-// have we reformed these institutions to be more democratic?
+// have we reformed these institutions to be more reactionary?
 Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
+// TODO: Actual research on what they'd do with women's issues
 Q.womens_rights = 0;
 // level of welfare relative to 1928 (can go negative)
 Q.welfare = 0;
 // level of support for farmers
+// TODO: Make agricultural ministry more important and probably add/remove a few options
 Q.agricultural_policy = 0;
 Q.land_reform = 0;
 // works-creation programs (i.e. WTB-plan) - how much have they implemented?
 Q.works_program = 0;
-Q.wtb_implemented = 0;
+Q.works_plan_implemented = 0;
 // Relations with the Western countries (France, UK).
 Q.west_relation = 0;
 // Relations with the Eastern countries (Poland, Czechoslovakia)
 Q.east_relation = 0;
-// Relations with the Soviet Union
-Q.soviet_relation = 0;
+// Relations with the right-wing Southern countries (Italy, Yugoslavia, Hungary, Balkans)
+// TODO: Consider if some or all of them would ally and give them some lore
+// TODO: Ensure that Italy would also be fascist
+Q.southern_relation = 0;
 // How much have we exposed the secret rearmament programs?
 Q.rearmament_exposed = 0;
 // reparations vs baseline: young plan is -1.
+// TODO: Consider removing young plan debacle and replacing it with some sort of conflict of the socialistic nature of the Weimar constitution (Weimar Referendum maybe) as the reparations are softer due to Russia and also the previous governments kept western relations friendly and probably were able to pay better
+// TODO: Once the crisis begins there will be talk of a push to use the crisis to end reparations burden once and for all. This will be the inciting incident for Braun kicking the DNVP out of government.
 Q.reparations = 0;
 Q.reparations_negotiation = 0;
-// nationalization_progress is part of the left economic plan.
-Q.nationalization_progress = 0;
-// socializations is part of the economic democracy card.
-Q.socializations = 0;
-Q.nationalize_budget = 4;
+// neoliberalization_progress is part of the thatcherite economic plan.
+Q.neoliberalization_progress = 0;
+// privatizations is part of the economic rationalization card.
+Q.privatizations = 0;
+Q.privatize_subsidize_budget = 4;
 // have there been any factory takeovers?
 Q.factory_takeovers = 0;
 // progress on the moderate economic plan
 Q.moderate_plan_progress = 0;
 // European Union negotiation process
+// TODO: Lore: What would the DNVP's foreign policy project be? An anti-socialist alliance? An entry into the southern pact? An economic union with countries in the southern pact? This would help if Austria gets in it since it would supersede the customs union
 Q.eu = 0;
 Q.eu_progress = 0;
 // science/education
+// TODO: What sort of research would the DNVP be for? Military stuff maybe?
 Q.science = 0;
 Q.education_science = 0;
 
@@ -637,10 +648,10 @@ Q.tariffs = 0;
 Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
-// did the SPD vote against the previous government in a vote of no confidence?
-Q.spd_no_confidence = 0;
+// did the DNVP vote against the previous government in a vote of no confidence?
+Q.dnvp_no_confidence = 0;
 // was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_spd = 0;
+Q.no_confidence_against_dnvp = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;
