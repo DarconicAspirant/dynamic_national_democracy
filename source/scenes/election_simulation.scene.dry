@@ -1,12 +1,12 @@
-title: Election Simulation
+title: Election Records
 set-jump: post_election
 
-- @1919: 1919 alt-historical scenario
-- @1920: 1920 alt-historical scenario
-- @1924: 1924 alt-historical scenario
-- @1928: 1928 alt-historical "starting popularities" scenario
-- @1930: 1930 alt-historical "canon" scenario
-- @1932: 1932 alt-historical "canon" scenario
+- @1919: 1919 Election
+- @1920: 1920 Election
+- @1924: 1924 Election
+- @1928: 1928 Election (Starting Popularities)
+- @1930: 1930 Election (Historical/Canon Result)
+- @1932: 1932 Election (Historical/Canon Result)
 
 @1919
 on-arrival: {!
@@ -71,6 +71,14 @@ Q.catholics_ddp = 8;
 Q.catholics_dvp = 3;
 Q.catholics_dnvp = 14;
 Q.catholics_other = 2;
+
+Q.uspd_r = 25;
+Q.spd_r = 10;
+Q.z_r = 15;
+Q.ddp_r = 10;
+Q.dvp_r = 10;
+Q.dnvp_r = 14;
+Q.other_r = 5;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -87,7 +95,7 @@ Q.unemployed = 7;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'ddp', 'dvp', 'dnvp', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'dvp', 'wp', 'dnvp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -96,6 +104,7 @@ Q.workers_spd = 58;
 Q.workers_z = 4;
 Q.workers_ddp = 4;
 Q.workers_dvp = 0;
+Q.workers_wp = 0;
 Q.workers_dnvp = 7;
 Q.workers_other = 2;
 
@@ -104,6 +113,7 @@ Q.new_middle_spd = 4;
 Q.new_middle_z = 11;
 Q.new_middle_ddp = 40;
 Q.new_middle_dvp = 10;
+Q.new_middle_wp = 2;
 Q.new_middle_dnvp = 20;
 Q.new_middle_other = 4;
 
@@ -112,6 +122,7 @@ Q.old_middle_spd = 0;
 Q.old_middle_z = 5;
 Q.old_middle_ddp = 21;
 Q.old_middle_dvp = 15;
+Q.old_middle_wp = 5;
 Q.old_middle_dnvp = 48;
 Q.old_middle_other = 2;
 
@@ -120,6 +131,7 @@ Q.rural_spd = 2;
 Q.rural_z = 7;
 Q.rural_ddp = 14;
 Q.rural_dvp = 6;
+Q.rural_wp = 2;
 Q.rural_dnvp = 52;
 Q.rural_other = 7;
 
@@ -128,6 +140,7 @@ Q.unemployed_spd = 66;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
+Q.unemployed_wp = 0;
 Q.unemployed_dnvp = 7;
 Q.unemployed_other = 2;
 
@@ -136,8 +149,18 @@ Q.catholics_spd = 6;
 Q.catholics_z = 51;
 Q.catholics_ddp = 8;
 Q.catholics_dvp = 3;
+Q.catholics_wp = 0;
 Q.catholics_dnvp = 14;
 Q.catholics_other = 2;
+
+Q.uspd_r = 25;
+Q.spd_r = 10;
+Q.z_r = 15;
+Q.ddp_r = 10;
+Q.dvp_r = 10;
+Q.wp_r = 10;
+Q.dnvp_r = 14;
+Q.other_r = 5;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -217,6 +240,16 @@ Q.catholics_wp = 3;
 Q.catholics_dnvp = 14;
 Q.catholics_nsfb = 0;
 Q.catholics_other = 2;
+
+Q.uspd_r = 25;
+Q.spd_r = 10;
+Q.z_r = 15;
+Q.ddp_r = 10;
+Q.dvp_r = 10;
+Q.wp_r = 10;
+Q.dnvp_r = 14;
+Q.nsfb_r = 10;
+Q.other_r = 5;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -290,6 +323,15 @@ Q.catholics_wp = 3;
 Q.catholics_dnvp = 14;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 2;
+
+Q.uspd_r = 25;
+Q.spd_r = 10;
+Q.z_r = 15;
+Q.lvp_r = 10;
+Q.wp_r = 10;
+Q.dnvp_r = 14;
+Q.nsdap_r = 10;
+Q.other_r = 5;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -306,7 +348,7 @@ Q.unemployed = 23;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'dnvp', 'dnf', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -367,9 +409,10 @@ Q.catholics_other = 2;
 Q.uspd_r = 25;
 Q.spd_r = 10;
 Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
+Q.lvp_r = 10;
+Q.wp_r = 10;
 Q.dnvp_r = 14;
+Q.dnf_r = 14;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
@@ -388,7 +431,7 @@ Q.unemployed = 30;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'kvp', 'dnvp', 'dnf', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -397,7 +440,9 @@ Q.workers_spd = 79;
 Q.workers_z = 4;
 Q.workers_lvp = 2;
 Q.workers_wp = 0;
+Q.workers_kvp = 0;
 Q.workers_dnvp = 0;
+Q.workers_dnf = 0;
 Q.workers_nsdap = 6;
 Q.workers_other = 1;
 
@@ -406,7 +451,9 @@ Q.new_middle_spd = 10;
 Q.new_middle_z = 11;
 Q.new_middle_lvp = 30;
 Q.new_middle_wp = 7;
+Q.new_middle_kvp = 0;
 Q.new_middle_dnvp = 9;
+Q.new_middle_dnf = 0;
 Q.new_middle_nsdap = 19;
 Q.new_middle_other = 2;
 
@@ -415,7 +462,9 @@ Q.old_middle_spd = 2;
 Q.old_middle_z = 5;
 Q.old_middle_lvp = 12;
 Q.old_middle_wp = 9;
+Q.old_middle_kvp = 0;
 Q.old_middle_dnvp = 29;
+Q.old_middle_dnf = 0;
 Q.old_middle_nsdap = 37;
 Q.old_middle_other = 2;
 
@@ -424,7 +473,9 @@ Q.rural_spd = 3;
 Q.rural_z = 8;
 Q.rural_lvp = 10;
 Q.rural_wp = 5;
+Q.rural_kvp = 0;
 Q.rural_dnvp = 29;
+Q.rural_dnf = 0;
 Q.rural_nsdap = 31;
 Q.rural_other = 4;
 
@@ -433,7 +484,9 @@ Q.unemployed_spd = 67;
 Q.unemployed_z = 1;
 Q.unemployed_lvp = 0;
 Q.unemployed_wp = 0;
+Q.unemployed_kvp = 0;
 Q.unemployed_dnvp = 0;
+Q.unemployed_dnf = 0;
 Q.unemployed_nsdap = 19;
 Q.unemployed_other = 2;
 
@@ -442,16 +495,20 @@ Q.catholics_spd = 6;
 Q.catholics_z = 53;
 Q.catholics_lvp = 7;
 Q.catholics_wp = 2;
+Q.catholics_kvp = 0;
 Q.catholics_dnvp = 7;
+Q.catholics_dnf = 0;
 Q.catholics_nsdap = 7;
 Q.catholics_other = 2;
 
 Q.uspd_r = 25;
 Q.spd_r = 10;
 Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
+Q.lvp_r = 10;
+Q.wp_r = 10;
+Q.kvp_r = 10;
 Q.dnvp_r = 14;
+Q.dnf_r = 10;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
@@ -504,14 +561,20 @@ The electoral system is essentially proportional, with the proportion of Reichst
  
 **Election results:**
 
-# 1919: 11.5, 1920: 13, 1924: 16, 1928: 22, 1930: 16, 1932: 9
+# 1919: 11.5, 1920: 13, 1924: 16, 1928: 22, 1930: 14, 1932: 6
 DNVP: [+ dnvp_r +]
 
-# 1919: 0, 1920: 0, 1924: 0, 1928: 2, 1930: 10, 1932: 16
+# 1919: 0, 1920: 0, 1924: 0, 1928: 2, 1930: 8, 1932: 14
 NSDAP: [+ nsdap_r +]
 
 # 1919: 0, 1920: 0, 1924: 4, 1928: 0, 1930: 0, 1932: 0
 NSFB: [+ nsfb_r +]
+
+# 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 4, 1932: 3
+DNF: [+ dnf_r +]
+
+# 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 0, 1932: 3
+KVP: [+ kvp_r +]
 
 # 1919: 1, 1920: 2, 1924: 3, 1928: 3, 1930: 3, 1932: 2
 Other: [+ other_r +]
@@ -531,7 +594,7 @@ LVP: [+ lvp_r +]
 # 1919: 15, 1920: 13, 1924: 7, 1928: 0, 1930: 0, 1932: 0
 DDP: [+ ddp_r +]
 
-# 1919: 19.5, 1920: 18.5, 1924: 18, 1928: 16, 1930: 14, 1932: 11
+# 1919: 19.5, 1920: 18.5, 1924: 18, 1928: 16, 1930: 14, 1932: 10
 USPD: [+ uspd_r +]
 
 # 1919: 30, 1920: 25.5, 1924: 24.5, 1928: 25, 1930: 31, 1932: 39

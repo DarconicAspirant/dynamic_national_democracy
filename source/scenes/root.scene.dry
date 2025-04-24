@@ -13,7 +13,7 @@ go-to: start_menu_2
 - @start_1: Start game
 - @modinfo: Mod Info
 - @credits: Credits
-- @election_simulation: Election simulation (Including Past AltHist Elections)
+- @election_simulation: Election Records
 - @game_over.achievements
 
 @start_1
