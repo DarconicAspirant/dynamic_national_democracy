@@ -266,9 +266,9 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 [? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>: [+ kvp_votes +]% ?]
 
-**Others**: [+ other_votes +]%
-
 <span style="color: #CCAA7A;">**WP**</span>: [+ dvp_votes +]%
+
+**Others**: [+ other_votes +]%
 
 <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
 
