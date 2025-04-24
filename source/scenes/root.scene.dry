@@ -13,7 +13,7 @@ go-to: start_menu_2
 - @start_1: Start game
 - @modinfo: Mod Info
 - @credits: Credits
-- @election_simulation: Election simulation
+- @election_simulation: Election simulation (Including Past AltHist Elections)
 - @game_over.achievements
 
 @start_1
@@ -189,7 +189,7 @@ Q.nationalism = 56;
 // socialism vs capitalism
 Q.socialism = 44;
 // pro-republic vs anti-republic
-Q.pro_republic = 56;
+Q.pro_republic = 60;
 
 Q.emergency_rule = 0;
 
