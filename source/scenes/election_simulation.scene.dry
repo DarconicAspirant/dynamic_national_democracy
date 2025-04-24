@@ -541,20 +541,20 @@ if (Q.spd_r >= Q.uspd_r && Q.spd_r >= Q.nsdap_r) {
 
 // coalitions
 // 0.6 for others is the average SAPD vote share
-Q.weimar_coalition = Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r - 3;
-Q.grand_coalition = Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r;
-Q.constitutional_coalition = Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r +Q.other_r - 0.6 + Q.wp_r;
-Q.center_right_coalition = Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r;
-Q.conservative_coalition = Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r;
-Q.national_liberal_coalition = Q.lvp_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + 3;
-Q.hard_right_coalition = Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + 3;
-Q.national_coalition = Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + Q.nsdap_r + Q.nsfb_r + 3;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r + Q.nsfb_r;
-Q.left_coalition = Q.uspd_r + Q.spd_r;
-Q.popular_front_coalition = Q.uspd_r + Q.spd_r + Q.z_r - 3;
+Q.weimar_coalition = Math.round((Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r - 3)*10)/10;
+Q.grand_coalition = Math.round((Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r)*10)/10;
+Q.constitutional_coalition = Math.round((Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r)*10)/10;
+Q.bourgeois_coalition = Math.round((Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r +Q.other_r - 0.6 + Q.wp_r)*10)/10;
+Q.center_right_coalition = Math.round((Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r)*10)/10;
+Q.conservative_coalition = Math.round((Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r)*10)/10;
+Q.national_liberal_coalition = Math.round((Q.lvp_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + 3)*10)/10;
+Q.hard_right_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + 3)*10)/10;
+Q.national_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + Q.nsdap_r + Q.nsfb_r + 3)*10)/10;
+Q.far_right_coalition = Math.round((Q.dnvp_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
+Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r)*10)/10;
+Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.z_r - 3)*10)/10;
 // this is an absurd concept lol
-Q.anti_democratic_coalition = 0.6 + Q.nsdap_r;
+Q.anti_democratic_coalition = Math.round((0.6 + Q.nsdap_r)*10)/10;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -562,44 +562,43 @@ The electoral system is essentially proportional, with the proportion of Reichst
 **Election results:**
 
 # 1919: 11.5, 1920: 13, 1924: 16, 1928: 22, 1930: 14, 1932: 6
-DNVP: [+ dnvp_r +]
+[? if dnvp_r != 0: DNVP: [+ dnvp_r +] ?]
 
 # 1919: 0, 1920: 0, 1924: 0, 1928: 2, 1930: 8, 1932: 14
-NSDAP: [+ nsdap_r +]
+[? if nsdap_r != 0: NSDAP: [+ nsdap_r +] ?]
 
 # 1919: 0, 1920: 0, 1924: 4, 1928: 0, 1930: 0, 1932: 0
-NSFB: [+ nsfb_r +]
+[? if nsfb_r != 0: NSFB: [+ nsfb_r +] ?]
 
 # 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 4, 1932: 3
-DNF: [+ dnf_r +]
+[? if dnf_r != 0: DNF: [+ dnf_r +] ?]
 
 # 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 0, 1932: 3
-KVP: [+ kvp_r +]
+[? if kvp_r != 0: KVP: [+ kvp_r +] ?]
 
 # 1919: 1, 1920: 2, 1924: 3, 1928: 3, 1930: 3, 1932: 2
-Other: [+ other_r +]
+[? if other_r != 0: Other: [+ other_r +] ?]
 
 # 1919: 0, 1920: 1, 1924: 2, 1928: 4, 1930: 3, 1932: 2
-WP: [+ wp_r +]
+[? if wp_r != 0: WP: [+ wp_r +] ?]
 
 # 1919: 5, 1920: 9, 1924: 8, 1928: 0, 1930: 0, 1932: 0
-DVP: [+ dvp_r +]
+[? if dvp_r != 0: DVP: [+ dvp_r +] ?]
 
 # 1919: 18, 1920: 18, 1924: 17.5, 1928: 16, 1930: 14, 1932: 14
-Z + BVP: [+ z_r +]
+[? if z_r != 0: Z + BVP: [+ z_r +] ?]
 
 # 1919: 0, 1920: 0, 1924: 0, 1928: 12, 1930: 9, 1932: 7
-LVP: [+ lvp_r +]
+[? if lvp_r != 0: LVP: [+ lvp_r +] ?]
 
 # 1919: 15, 1920: 13, 1924: 7, 1928: 0, 1930: 0, 1932: 0
-DDP: [+ ddp_r +]
+[? if ddp_r != 0: DDP: [+ ddp_r +] ?]
 
 # 1919: 19.5, 1920: 18.5, 1924: 18, 1928: 16, 1930: 14, 1932: 10
-USPD: [+ uspd_r +]
+[? if uspd_r != 0: USPD: [+ uspd_r +] ?]
 
 # 1919: 30, 1920: 25.5, 1924: 24.5, 1928: 25, 1930: 31, 1932: 39
-SPD: [+ spd_r +]
-
+[? if spd_r != 0: SPD: [+ spd_r +] ?]
 **Potential coalitions:**
 
 Far-Right Coalition (DNVP + NSDAP): [+ far_right_coalition+]
