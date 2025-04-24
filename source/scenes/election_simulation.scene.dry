@@ -20,7 +20,7 @@ Q.unemployed = 8;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'ddp', 'dvp', 'dnvp', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp',  'wp', 'kvp', 'dnvp', 'dnf', 'nsfb', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized. 
@@ -137,7 +137,7 @@ Q.unemployed = 7;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'ddp', 'dvp', 'wp', 'dnvp', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp',  'wp', 'kvp', 'dnvp', 'dnf', 'nsfb', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -254,7 +254,7 @@ Q.unemployed = 5.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'ddp', 'dvp', 'wp', 'dnvp', 'nsfb', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp',  'wp', 'kvp', 'dnvp', 'dnf', 'nsfb', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -371,7 +371,7 @@ Q.unemployed = 5.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp',  'wp', 'kvp', 'dnvp', 'dnf', 'nsfb', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -488,7 +488,7 @@ Q.unemployed = 23;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'dnvp', 'dnf', 'nsdap', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp',  'wp', 'kvp', 'dnvp', 'dnf', 'nsfb', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -605,7 +605,7 @@ Q.unemployed = 30;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['uspd', 'spd', 'z', 'lvp', 'wp', 'kvp', 'dnvp', 'dnf', 'nsdap', 'other'];
+Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp',  'wp', 'kvp', 'dnvp', 'dnf', 'nsfb', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
