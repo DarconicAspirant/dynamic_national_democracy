@@ -27,9 +27,9 @@ Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp', 'wp', 'kvp', 'dnvp', 'dnf'
 Q.workers_uspd = 25;
 Q.workers_spd = 58;
 Q.workers_z = 4;
-Q.workers_ddp = 4;
-Q.workers_lvp = 0;
-Q.workers_dvp = 1;
+Q.workers_ddp = 0;
+Q.workers_lvp = 4;
+Q.workers_dvp = 0;
 Q.workers_wp = 0;
 Q.workers_kvp = 0;
 Q.workers_dnvp = 7;
@@ -41,66 +41,66 @@ Q.workers_other = 2;
 Q.new_middle_uspd = 8;
 Q.new_middle_spd = 4;
 Q.new_middle_z = 11;
-Q.new_middle_ddp = 40;
-Q.new_middle_lvp = 0;
-Q.new_middle_dvp = 10;
-Q.new_middle_wp = 0;
+Q.new_middle_ddp = 0;
+Q.new_middle_lvp = 40;
+Q.new_middle_dvp = 0;
+Q.new_middle_wp = 10;
 Q.new_middle_kvp = 0;
 Q.new_middle_dnvp = 20;
 Q.new_middle_dnf = 0;
 Q.new_middle_nsfb = 0;
-Q.new_middle_nsdap = 0;
+Q.new_middle_nsdap = 3;
 Q.new_middle_other = 4;
 
 Q.old_middle_uspd = 4;
-Q.old_middle_spd = 1;
+Q.old_middle_spd = 0;
 Q.old_middle_z = 5;
-Q.old_middle_ddp = 21;
-Q.old_middle_lvp = 0;
-Q.old_middle_dvp = 15;
-Q.old_middle_wp = 0;
+Q.old_middle_ddp = 0;
+Q.old_middle_lvp = 21;
+Q.old_middle_dvp = 0;
+Q.old_middle_wp = 15;
 Q.old_middle_kvp = 0;
 Q.old_middle_dnvp = 48;
 Q.old_middle_dnf = 0;
 Q.old_middle_nsfb = 0;
-Q.old_middle_nsdap = 0;
+Q.old_middle_nsdap = 5;
 Q.old_middle_other = 2;
 
 Q.rural_uspd = 8;
 Q.rural_spd = 2;
 Q.rural_z = 7;
-Q.rural_ddp = 14;
-Q.rural_lvp = 0;
-Q.rural_dvp = 6;
-Q.rural_wp = 0;
+Q.rural_ddp = 0;
+Q.rural_lvp = 14;
+Q.rural_dvp = 0;
+Q.rural_wp = 6;
 Q.rural_kvp = 0;
 Q.rural_dnvp = 52;
 Q.rural_dnf = 0;
 Q.rural_nsfb = 0;
-Q.rural_nsdap = 0;
+Q.rural_nsdap = 4;
 Q.rural_other = 7;
 
 Q.unemployed_uspd = 15;
 Q.unemployed_spd = 66;
 Q.unemployed_z = 1;
-Q.unemployed_ddp = 1;
+Q.unemployed_ddp = 0;
 Q.unemployed_lvp = 0;
-Q.unemployed_dvp = 1;
+Q.unemployed_dvp = 0;
 Q.unemployed_wp = 0;
 Q.unemployed_kvp = 0;
 Q.unemployed_dnvp = 7;
 Q.unemployed_dnf = 0;
 Q.unemployed_nsfb = 0;
-Q.unemployed_nsdap = 0;
+Q.unemployed_nsdap = 9;
 Q.unemployed_other = 2;
 
 Q.catholics_uspd = 16;
 Q.catholics_spd = 6;
 Q.catholics_z = 51;
-Q.catholics_ddp = 8;
-Q.catholics_lvp = 0;
-Q.catholics_dvp = 3;
-Q.catholics_wp = 0;
+Q.catholics_ddp = 0;
+Q.catholics_lvp = 8;
+Q.catholics_dvp = 0;
+Q.catholics_wp = 3;
 Q.catholics_kvp = 0;
 Q.catholics_dnvp = 14;
 Q.catholics_dnf = 0;
@@ -144,10 +144,10 @@ Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp', 'wp', 'kvp', 'dnvp', 'dnf'
 Q.workers_uspd = 25;
 Q.workers_spd = 58;
 Q.workers_z = 4;
-Q.workers_ddp = 4;
-Q.workers_lvp = 0;
-Q.workers_dvp = 1;
-Q.workers_wp = 1;
+Q.workers_ddp = 0;
+Q.workers_lvp = 4;
+Q.workers_dvp = 0;
+Q.workers_wp = 0;
 Q.workers_kvp = 0;
 Q.workers_dnvp = 7;
 Q.workers_dnf = 0;
@@ -158,66 +158,66 @@ Q.workers_other = 2;
 Q.new_middle_uspd = 8;
 Q.new_middle_spd = 4;
 Q.new_middle_z = 11;
-Q.new_middle_ddp = 40;
-Q.new_middle_lvp = 0;
-Q.new_middle_dvp = 10;
-Q.new_middle_wp = 1;
+Q.new_middle_ddp = 0;
+Q.new_middle_lvp = 40;
+Q.new_middle_dvp = 0;
+Q.new_middle_wp = 10;
 Q.new_middle_kvp = 0;
 Q.new_middle_dnvp = 20;
 Q.new_middle_dnf = 0;
 Q.new_middle_nsfb = 0;
-Q.new_middle_nsdap = 0;
+Q.new_middle_nsdap = 3;
 Q.new_middle_other = 4;
 
 Q.old_middle_uspd = 4;
-Q.old_middle_spd = 1;
+Q.old_middle_spd = 0;
 Q.old_middle_z = 5;
-Q.old_middle_ddp = 21;
-Q.old_middle_lvp = 0;
-Q.old_middle_dvp = 15;
-Q.old_middle_wp = 1;
+Q.old_middle_ddp = 0;
+Q.old_middle_lvp = 21;
+Q.old_middle_dvp = 0;
+Q.old_middle_wp = 15;
 Q.old_middle_kvp = 0;
 Q.old_middle_dnvp = 48;
 Q.old_middle_dnf = 0;
 Q.old_middle_nsfb = 0;
-Q.old_middle_nsdap = 0;
+Q.old_middle_nsdap = 5;
 Q.old_middle_other = 2;
 
 Q.rural_uspd = 8;
 Q.rural_spd = 2;
 Q.rural_z = 7;
-Q.rural_ddp = 14;
-Q.rural_lvp = 0;
-Q.rural_dvp = 6;
-Q.rural_wp = 1;
+Q.rural_ddp = 0;
+Q.rural_lvp = 14;
+Q.rural_dvp = 0;
+Q.rural_wp = 6;
 Q.rural_kvp = 0;
 Q.rural_dnvp = 52;
 Q.rural_dnf = 0;
 Q.rural_nsfb = 0;
-Q.rural_nsdap = 0;
+Q.rural_nsdap = 4;
 Q.rural_other = 7;
 
 Q.unemployed_uspd = 15;
 Q.unemployed_spd = 66;
 Q.unemployed_z = 1;
-Q.unemployed_ddp = 1;
+Q.unemployed_ddp = 0;
 Q.unemployed_lvp = 0;
-Q.unemployed_dvp = 1;
-Q.unemployed_wp = 1;
+Q.unemployed_dvp = 0;
+Q.unemployed_wp = 0;
 Q.unemployed_kvp = 0;
 Q.unemployed_dnvp = 7;
 Q.unemployed_dnf = 0;
 Q.unemployed_nsfb = 0;
-Q.unemployed_nsdap = 0;
+Q.unemployed_nsdap = 9;
 Q.unemployed_other = 2;
 
 Q.catholics_uspd = 16;
 Q.catholics_spd = 6;
 Q.catholics_z = 51;
-Q.catholics_ddp = 8;
-Q.catholics_lvp = 0;
-Q.catholics_dvp = 3;
-Q.catholics_wp = 1;
+Q.catholics_ddp = 0;
+Q.catholics_lvp = 8;
+Q.catholics_dvp = 0;
+Q.catholics_wp = 3;
 Q.catholics_kvp = 0;
 Q.catholics_dnvp = 14;
 Q.catholics_dnf = 0;
@@ -258,87 +258,87 @@ Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp', 'wp', 'kvp', 'dnvp', 'dnf'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_uspd = 25;
-Q.workers_spd = 58;
+Q.workers_uspd = 27;
+Q.workers_spd = 56;
 Q.workers_z = 4;
-Q.workers_ddp = 4;
-Q.workers_lvp = 0;
-Q.workers_dvp = 1;
-Q.workers_wp = 1;
+Q.workers_ddp = 0;
+Q.workers_lvp = 4;
+Q.workers_dvp = 0;
+Q.workers_wp = 0;
 Q.workers_kvp = 0;
 Q.workers_dnvp = 7;
 Q.workers_dnf = 0;
-Q.workers_nsfb = 1;
+Q.workers_nsfb = 0;
 Q.workers_nsdap = 0;
 Q.workers_other = 2;
 
 Q.new_middle_uspd = 8;
 Q.new_middle_spd = 4;
 Q.new_middle_z = 11;
-Q.new_middle_ddp = 40;
-Q.new_middle_lvp = 0;
-Q.new_middle_dvp = 10;
-Q.new_middle_wp = 1;
+Q.new_middle_ddp = 0;
+Q.new_middle_lvp = 40;
+Q.new_middle_dvp = 0;
+Q.new_middle_wp = 10;
 Q.new_middle_kvp = 0;
 Q.new_middle_dnvp = 20;
 Q.new_middle_dnf = 0;
-Q.new_middle_nsfb = 1;
-Q.new_middle_nsdap = 0;
+Q.new_middle_nsfb = 0;
+Q.new_middle_nsdap = 3;
 Q.new_middle_other = 4;
 
 Q.old_middle_uspd = 4;
-Q.old_middle_spd = 1;
+Q.old_middle_spd = 0;
 Q.old_middle_z = 5;
-Q.old_middle_ddp = 21;
-Q.old_middle_lvp = 0;
-Q.old_middle_dvp = 15;
-Q.old_middle_wp = 1;
+Q.old_middle_ddp = 0;
+Q.old_middle_lvp = 21;
+Q.old_middle_dvp = 0;
+Q.old_middle_wp = 15;
 Q.old_middle_kvp = 0;
 Q.old_middle_dnvp = 48;
 Q.old_middle_dnf = 0;
-Q.old_middle_nsfb = 1;
-Q.old_middle_nsdap = 0;
+Q.old_middle_nsfb = 0;
+Q.old_middle_nsdap = 5;
 Q.old_middle_other = 2;
 
 Q.rural_uspd = 8;
 Q.rural_spd = 2;
 Q.rural_z = 7;
-Q.rural_ddp = 14;
-Q.rural_lvp = 0;
-Q.rural_dvp = 6;
-Q.rural_wp = 1;
+Q.rural_ddp = 0;
+Q.rural_lvp = 14;
+Q.rural_dvp = 0;
+Q.rural_wp = 6;
 Q.rural_kvp = 0;
 Q.rural_dnvp = 52;
 Q.rural_dnf = 0;
-Q.rural_nsfb = 1;
-Q.rural_nsdap = 0;
+Q.rural_nsfb = 0;
+Q.rural_nsdap = 4;
 Q.rural_other = 7;
 
 Q.unemployed_uspd = 15;
 Q.unemployed_spd = 66;
 Q.unemployed_z = 1;
-Q.unemployed_ddp = 1;
+Q.unemployed_ddp = 0;
 Q.unemployed_lvp = 0;
-Q.unemployed_dvp = 1;
-Q.unemployed_wp = 1;
+Q.unemployed_dvp = 0;
+Q.unemployed_wp = 0;
 Q.unemployed_kvp = 0;
 Q.unemployed_dnvp = 7;
 Q.unemployed_dnf = 0;
-Q.unemployed_nsfb = 1;
-Q.unemployed_nsdap = 0;
+Q.unemployed_nsfb = 0;
+Q.unemployed_nsdap = 9;
 Q.unemployed_other = 2;
 
 Q.catholics_uspd = 16;
 Q.catholics_spd = 6;
 Q.catholics_z = 51;
-Q.catholics_ddp = 8;
-Q.catholics_lvp = 0;
-Q.catholics_dvp = 3;
-Q.catholics_wp = 1;
+Q.catholics_ddp = 0;
+Q.catholics_lvp = 8;
+Q.catholics_dvp = 0;
+Q.catholics_wp = 3;
 Q.catholics_kvp = 0;
 Q.catholics_dnvp = 14;
 Q.catholics_dnf = 0;
-Q.catholics_nsfb = 1;
+Q.catholics_nsfb = 0;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 2;
 
@@ -404,7 +404,7 @@ Q.new_middle_nsdap = 3;
 Q.new_middle_other = 4;
 
 Q.old_middle_uspd = 4;
-Q.old_middle_spd = 1;
+Q.old_middle_spd = 0;
 Q.old_middle_z = 5;
 Q.old_middle_ddp = 0;
 Q.old_middle_lvp = 21;
@@ -739,7 +739,7 @@ Q.national_liberal_coalition = Math.round((Q.lvp_r + Q.dvp_r + Q.other_r - 0.6 +
 Q.hard_right_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + 3)*10)/10;
 Q.national_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + Q.nsdap_r + Q.nsfb_r + 3)*10)/10;
 Q.far_right_coalition = Math.round((Q.dnvp_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
-Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r)*10)/10;
+Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r + 0.6)*10)/10;
 Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.z_r - 3)*10)/10;
 !}
 
@@ -771,7 +771,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 # 1919: 5, 1920: 9, 1924: 8, 1928: 0, 1930: 0, 1932: 0
 [? if dvp_r != 0: DVP: [+ dvp_r +] ?]
 
-# 1919: 18, 1920: 18, 1924: 17.5, 1928: 16, 1930: 14, 1932: 14
+# 1919: 18, 1920: 18, 1924: 17.5, 1928: 15.5, 1930: 14, 1932: 14
 [? if z_r != 0: Z + BVP: [+ z_r +] ?]
 
 # 1919: 0, 1920: 0, 1924: 0, 1928: 12, 1930: 9, 1932: 7
@@ -783,26 +783,28 @@ The electoral system is essentially proportional, with the proportion of Reichst
 # 1919: 19.5, 1920: 18.5, 1924: 18, 1928: 16, 1930: 14, 1932: 10
 [? if uspd_r != 0: USPD: [+ uspd_r +] ?]
 
-# 1919: 30, 1920: 25.5, 1924: 24.5, 1928: 25, 1930: 31, 1932: 39
+# 1919: 30, 1920: 25.5, 1924: 24.5, 1928: 25.5, 1930: 31, 1932: 39
 [? if spd_r != 0: SPD: [+ spd_r +] ?]
 
 **Potential coalitions:**
+
+Note: 0,6% from "Others" accounts for the average vote share of SAPD, whose only potential coalition participation is tolerating the Left Front
 
 [? if nsfb_r + nsdap_r != 0:Far-Right Coalition (DNVP [? if nsfb_r != 0:+ NSFB?] [? if nsdap_r != 0: + NSDAP ?]): [+ far_right_coalition +] ?]
 
 [? if nsfb_r + nsdap_r != 0:National Front (DNVP [? if nsfb_r != 0: + NSFB?] [? if nsdap_r != 0:  + NSDAP?] + Others [? if wp_r != 0:  + WP?] + BVP): [+ national_coalition +] ?]
 
-Right Coalition (DNVP + Others(bar SAPD) [? if wp_r != 0: + WP?] + BVP): [+ hard_right_coalition +]
+Right Coalition (DNVP + Others [? if wp_r != 0: + WP?] + BVP): [+ hard_right_coalition +]
 
-Conservative Coalition (DNVP + Others(bar SAPD) [? if wp_r != 0: + WP?] + BVP + Z): [+ conservative_coalition +]
+Conservative Coalition (DNVP + Others [? if wp_r != 0: + WP?] + BVP + Z): [+ conservative_coalition +]
 
-National-Liberal Coalition (DNVP + Others(bar SAPD) [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ national_liberal_coalition +]
+National-Liberal Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ national_liberal_coalition +]
 
-Center-right Coalition (DNVP + Others(bar SAPD) [? if wp_r != 0: + WP?] [? if dvp_r != 0:  + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ center_right_coalition +]
+Center-right Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if dvp_r != 0:  + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ center_right_coalition +]
 
-Bourgeois Coalition (Others(bar SAPD) [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ bourgeois_coalition +]
+Bourgeois Coalition (Others [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ bourgeois_coalition +]
 
-Constitutional Coalition (Others(bar SAPD) [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?] + USPD): [+ constitutional_coalition +]
+Constitutional Coalition (Others [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?] + USPD): [+ constitutional_coalition +]
 
 Grand Coalition ([? if dvp_r != 0:DVP + ?]BVP + Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ grand_coalition +]
 

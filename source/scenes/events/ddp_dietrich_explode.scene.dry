@@ -1,6 +1,6 @@
 title: Hermann Dietrich resigns!
 subtitle: The [? if ddp_ideology != "Left": electoral decline?][? if ddp_ideology == "Left": shifting ideologies?] of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> forces him to resign.
-view-if: year >= 1931 and not lvp_formed and not bruning_time and ((lvp_votes >= 1.8 and (previous_ddp_last_election_votes - lvp_votes > 1 or change_lvp_votes < -1)) or ddp_ideology == "Left") and not dstp_maintained and ddp_leader == "Dietrich"
+view-if: year >= 1931 and not lvp_formed and not bruning_time and ((lvp_votes >= 1.8 and (previous_lvp_last_election_votes - lvp_votes > 1 or change_lvp_votes < -1)) or ddp_ideology == "Left") and not dstp_maintained and ddp_leader == "Dietrich"
 on-arrival: {!
 Q.dietrich_resign = 1;
 if (Q.ddp_ideology == "Left") Q.dietrich_resign_ddp_left = 1;
