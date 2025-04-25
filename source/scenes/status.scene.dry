@@ -274,9 +274,9 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
 
-<span style="color: #FFCC00;">**LVP**</span>: [+ ddp_votes +]%
+<span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]%
 
-<span style="color: #c00000;">**USPD*S*</span>: [+ uspd_votes +]%
+<span style="color: #c00000;">**USPD**</span>: [+ uspd_votes +]%
 
 [? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
 
@@ -287,14 +287,14 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 Support for the Republic: [+ pro_republic_disp +]%
 
-Workers: DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, [? if dnf_formed: DNF: [+ workers_dnf_display +]%,?][?  if kvp_formed: KVP: [+ workers_kvp_display +]%,?] [? if wp_exist: WP: [+ workers_wp_display +]%,?] Others: [+ workers_other_display +]%, [+ z_party_name +]: [+ workers_z_display +]%, LVP: [+ workers_lvp_display +]%, USPD: [+ workers_uspd_display +]%, SPD: [+ workers_uspd_display +]%
+Workers: DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, [? if dnf_formed: DNF: [+ workers_dnf_display +]%,?][?  if kvp_formed: KVP: [+ workers_kvp_display +]%,?] [? if wp_exist: WP: [+ workers_wp_display +]%,?] Others: [+ workers_other_display +]%, [+ z_party_name +]: [+ workers_z_display +]%, LVP: [+ workers_lvp_display +]%, USPD: [+ workers_uspd_display +]%, SPD: [+ workers_spd_display +]%
 
-New Middle Class: DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, [? if dnf_formed: DNF: [+ new_middle_dnf_display +]%,?][?  if kvp_formed: KVP: [+ new_middle_kvp_display +]%,?] [? if wp_exist: WP: [+ new_middle_wp_display +]%,?] Others: [+ new_middle_other_display +]%, [+ z_party_name +]: [+ new_middle_z_display +]%, LVP: [+ new_middle_lvp_display +]%, USPD: [+ new_middle_uspd_display +]%, SPD: [+ new_middle_uspd_display +]%
+New Middle Class: DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, [? if dnf_formed: DNF: [+ new_middle_dnf_display +]%,?][?  if kvp_formed: KVP: [+ new_middle_kvp_display +]%,?] [? if wp_exist: WP: [+ new_middle_wp_display +]%,?] Others: [+ new_middle_other_display +]%, [+ z_party_name +]: [+ new_middle_z_display +]%, LVP: [+ new_middle_lvp_display +]%, USPD: [+ new_middle_uspd_display +]%, SPD: [+ new_middle_spd_display +]%
 
-Old Middle Class: DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, [? if dnf_formed: DNF: [+ old_middle_dnf_display +]%,?][?  if kvp_formed: KVP: [+ old_middle_kvp_display +]%,?] [? if wp_exist: WP: [+ old_middle_wp_display +]%,?] Others: [+ old_middle_other_display +]%, [+ z_party_name +]: [+ old_middle_z_display +]%, LVP: [+ old_middle_lvp_display +]%, USPD: [+ old_middle_uspd_display +]%, SPD: [+ old_middle_uspd_display +]%
+Old Middle Class: DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, [? if dnf_formed: DNF: [+ old_middle_dnf_display +]%,?][?  if kvp_formed: KVP: [+ old_middle_kvp_display +]%,?] [? if wp_exist: WP: [+ old_middle_wp_display +]%,?] Others: [+ old_middle_other_display +]%, [+ z_party_name +]: [+ old_middle_z_display +]%, LVP: [+ old_middle_lvp_display +]%, USPD: [+ old_middle_uspd_display +]%, SPD: [+ old_middle_spd_display +]%
 
-Rural: DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, [? if dnf_formed: DNF: [+ rural_dnf_display +]%,?][?  if kvp_formed:  KVP: [+ rural_kvp_display +]%,?] [? if wp_exist: WP: [+ rural_wp_display +]%,?] Others: [+ rural_other_display +]%, [+ z_party_name +]: [+ rural_z_display +]%, LVP: [+ rural_lvp_display +]%, USPD: [+ rural_uspd_display +]%, SPD: [+ rural_uspd_display +]%
+Rural: DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, [? if dnf_formed: DNF: [+ rural_dnf_display +]%,?][?  if kvp_formed:  KVP: [+ rural_kvp_display +]%,?] [? if wp_exist: WP: [+ rural_wp_display +]%,?] Others: [+ rural_other_display +]%, [+ z_party_name +]: [+ rural_z_display +]%, LVP: [+ rural_lvp_display +]%, USPD: [+ rural_uspd_display +]%, SPD: [+ rural_spd_display +]%
 
-Unemployed: DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, [? if dnf_formed: DNF: [+ unemployed_dnf_display +]%,?][?  if kvp_formed: KVP: [+ unemployed_kvp_display +]%,?] [? if wp_exist: WP: [+ unemployed_wp_display +]%,?] Others: [+ unemployed_other_display +]%, [+ z_party_name +]: [+ unemployed_z_display +]%, LVP: [+ unemployed_lvp_display +]%, USPD: [+ unemployed_uspd_display +]%, SPD: [+ unemployed_uspd_display +]%
+Unemployed: DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, [? if dnf_formed: DNF: [+ unemployed_dnf_display +]%,?][?  if kvp_formed: KVP: [+ unemployed_kvp_display +]%,?] [? if wp_exist: WP: [+ unemployed_wp_display +]%,?] Others: [+ unemployed_other_display +]%, [+ z_party_name +]: [+ unemployed_z_display +]%, LVP: [+ unemployed_lvp_display +]%, USPD: [+ unemployed_uspd_display +]%, SPD: [+ unemployed_spd_display +]%
 
-Catholics: DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, [? if dnf_formed: DNF: [+ catholics_dnf_display +]%,?][?  if kvp_formed: KVP: [+ catholics_kvp_display +]%,?] [? if wp_exist: WP: [+ catholics_wp_display +]%,?] Others: [+ catholics_other_display +]%, [+ z_party_name +]: [+ catholics_z_display +]%, LVP: [+ catholics_lvp_display +]%, USPD: [+ catholics_uspd_display +]%, SPD: [+ catholics_uspd_display +]%
+Catholics: DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, [? if dnf_formed: DNF: [+ catholics_dnf_display +]%,?][?  if kvp_formed: KVP: [+ catholics_kvp_display +]%,?] [? if wp_exist: WP: [+ catholics_wp_display +]%,?] Others: [+ catholics_other_display +]%, [+ z_party_name +]: [+ catholics_z_display +]%, LVP: [+ catholics_lvp_display +]%, USPD: [+ catholics_uspd_display +]%, SPD: [+ catholics_spd_display +]%

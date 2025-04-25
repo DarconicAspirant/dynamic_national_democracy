@@ -1,6 +1,6 @@
 title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s Proposal
 subtitle: Should we offer to help them?
-view-if: (year >= 1932 and not lvp_formed and not dstp_maintained and next_election_time - time < 3) and (((ddp_ideology == "Left" or ddp_leader == "Lemmer") and ddp_votes < 3.0) or (ddp_ideology == "Moderate" and ddp_votes < 2.0) or (ddp_ideology == "Right" and ddp_votes < 1.2))
+view-if: (year >= 1932 and not lvp_formed and not dstp_maintained and next_election_time - time < 3) and (((ddp_ideology == "Left" or ddp_leader == "Lemmer") and lvp_votes < 3.0) or (ddp_ideology == "Moderate" and lvp_votes < 2.0) or (ddp_ideology == "Right" and lvp_votes < 1.2))
 on-arrival: ddp_alliance_seen = 1;
 max-visits: 1
 tags: event
@@ -18,15 +18,15 @@ Despite their electoral standing, many within their business wing like Theodor H
 @ddp_alliance_yay
 on-arrival: {!
 Q.ddp_alliance_points = 0;
-if (Q.ddp_votes < 0.8) {
+if (Q.lvp_votes < 0.8) {
     Q.ddp_alliance_points += 5;
-} else if (Q.ddp_votes < 1.0) {
+} else if (Q.lvp_votes < 1.0) {
     Q.ddp_alliance_points += 3;
-} else if (Q.ddp_votes < 1.5) {
+} else if (Q.lvp_votes < 1.5) {
     Q.ddp_alliance_points += 1;
-} else if (Q.ddp_votes < 2) {
+} else if (Q.lvp_votes < 2) {
     Q.ddp_alliance_points -= 1;
-} else if (Q.ddp_votes < 3) {
+} else if (Q.lvp_votes < 3) {
     Q.ddp_alliance_points -= 3;
 } 
 if (Q.ddp_r < 1) Q.ddp_alliance_points += 5;
@@ -65,7 +65,7 @@ if (Q.popcon_strength >= Q.right_strength) {
 go-to: ddp_alliance_yay_2 if ddp_alliance_points >= 5; ddp_alliance_nay_2 if ddp_alliance_points < 5
 
 @ddp_alliance_yay_2
-on-arrival: ddp_alliance = 1; ddp_alliance_glaze = 1 if ddp_ideology == "Left" and ddp_leader == "Lemmer"; liberal_cooperation -= 10; bourgeois_cooperation -= 3; lvp_relation += 20; pro_republic += ddp_votes; ddp_left += 6; ddp_cohesion -= 4; rural_lvp *= 0.5; old_middle_ddp *= 0.6; new_middle_lvp *= 0.8; workers_lvp += 3 if ddp_alliance_glaze; new_middle_lvp += 2 if ddp_alliance_glaze; old_middle_ddp -= 1 if ddp_alliance_glaze; rural_lvp -= 1 if ddp_alliance_glaze; pro_republic += 3 if ddp_alliance_glaze
+on-arrival: ddp_alliance = 1; ddp_alliance_glaze = 1 if ddp_ideology == "Left" and ddp_leader == "Lemmer"; liberal_cooperation -= 10; bourgeois_cooperation -= 3; lvp_relation += 20; pro_republic += lvp_votes; ddp_left += 6; ddp_cohesion -= 4; rural_lvp *= 0.5; old_middle_ddp *= 0.6; new_middle_lvp *= 0.8; workers_lvp += 3 if ddp_alliance_glaze; new_middle_lvp += 2 if ddp_alliance_glaze; old_middle_ddp -= 1 if ddp_alliance_glaze; rural_lvp -= 1 if ddp_alliance_glaze; pro_republic += 3 if ddp_alliance_glaze
 
 After their internal vote, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> accepts our offer, despite the opposition from whatever remains of the business wing. The party suffers electorally from their association with us, even if many right-wingers stress it as nothing more than a technical list connection. Anyhow, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will receive more parliamentary seats now.
 

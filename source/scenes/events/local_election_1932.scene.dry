@@ -32,7 +32,7 @@ Q.sapd_local_elections_vote = Q.sapd_votes;
 Q.z_local_elections_vote = Q.z_votes;
 Q.kpd_local_elections_vote = Q.spd_votes;
 Q.lvp_local_elections_vote = Q.lvp_votes;
-Q.ddp_local_elections_vote = Q.ddp_votes;
+Q.ddp_local_elections_vote = Q.lvp_votes;
 Q.wp_local_elections_vote = Q.wp_votes;
 Q.kvp_local_elections_vote = Q.kvp_votes;
 Q.other_local_elections_vote = Q.other_votes;
@@ -64,7 +64,7 @@ if (Q.liberal_wurttemberg_defeat) {
     Q.lvp_right += 5;
     Q.ddp_right += 3;
     Q.wp_right += 5;
-    Q.pro_republic -= Q.ddp_votes + Q.wp_votes + Q.lvp_votes;
+    Q.pro_republic -= Q.lvp_votes + Q.wp_votes + Q.lvp_votes;
 }
 
 if (Q.nsdap_local_elections_vote >= 20) {
@@ -286,7 +286,7 @@ if (Q.rural_uspd_normalized >= 30) bavaria_adjustment_factors.spd += 0.2;
 Q.spd_bavaria_elections_vote = Q.spd_local_elections_vote*bavaria_adjustment_factors.spd;
 Q.sapd_bavaria_elections_vote = Q.sapd_local_elections_vote*bavaria_adjustment_factors.sapd;
 Q.kpd_bavaria_elections_vote = Q.kpd_local_elections_vote*bavaria_adjustment_factors.kpd;
-if (Q.ddp_votes >= 3) bavaria_adjustment_factors.ddp = 0.4;
+if (Q.lvp_votes >= 3) bavaria_adjustment_factors.ddp = 0.4;
 Q.ddp_bavaria_elections_vote = Q.ddp_local_elections_vote*bavaria_adjustment_factors.ddp;
 Q.lvp_bavaria_elections_vote = Q.lvp_local_elections_vote*bavaria_adjustment_factors.lvp;
 if (!Q.stegerwald_path) Q.z_bavaria_elections_vote = Q.z_local_elections_vote*bavaria_adjustment_factors.z;
@@ -738,7 +738,7 @@ if (Q.rural_uspd_normalized >= 30) wurttemberg_adjustment_factors.spd += 0.1;
 Q.spd_wurttemberg_elections_vote = Q.spd_local_elections_vote*wurttemberg_adjustment_factors.spd;
 Q.sapd_wurttemberg_elections_vote = Q.sapd_local_elections_vote*wurttemberg_adjustment_factors.sapd;
 Q.kpd_wurttemberg_elections_vote = Q.kpd_local_elections_vote*wurttemberg_adjustment_factors.kpd;
-if (Q.ddp_votes >= 4) wurttemberg_adjustment_factors.ddp -= 0.5;
+if (Q.lvp_votes >= 4) wurttemberg_adjustment_factors.ddp -= 0.5;
 Q.ddp_wurttemberg_elections_vote = Q.ddp_local_elections_vote*wurttemberg_adjustment_factors.ddp;
 Q.lvp_wurttemberg_elections_vote = Q.lvp_local_elections_vote*wurttemberg_adjustment_factors.lvp;
 if (!Q.stegerwald_path) Q.z_wurttemberg_elections_vote = Q.z_local_elections_vote*wurttemberg_adjustment_factors.z;

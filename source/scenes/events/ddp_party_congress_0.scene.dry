@@ -4,7 +4,7 @@ view-if: year == 1930 and month >= 8 and not lvp_formed
 on-arrival: {!
 Q.dstp_formation_points = 0;
 if (!Q.vnr_cool) Q.dstp_formation_points -= 5;
-if (Q.ddp_votes < 3.7) {
+if (Q.lvp_votes < 3.7) {
     Q.dstp_formation_points += 1;
 }
 if (Q.next_election_time - Q.time < 6) {

@@ -74,13 +74,13 @@ on-arrival: {!
     }
     if (Q.cvp_formed) Q.adjustmentFactors_other = 0.6;
     Q.adjustmentFactors_ddp = 1.0;
-    if (Q.ddp_votes < 1 && Q.year >= 1930) {
+    if (Q.lvp_votes < 1 && Q.year >= 1930) {
         Q.adjustmentFactors_ddp = 0.3;
-    } else if (Q.ddp_votes < 1.5 && Q.year >= 1930) {
+    } else if (Q.lvp_votes < 1.5 && Q.year >= 1930) {
         Q.adjustmentFactors_ddp = 0.65;
-    } else if (Q.ddp_votes < 3 && Q.year >= 1930) {
+    } else if (Q.lvp_votes < 3 && Q.year >= 1930) {
         Q.adjustmentFactors_ddp = 0.75;
-    } else if (Q.ddp_votes < 4 && Q.year >= 1930) {
+    } else if (Q.lvp_votes < 4 && Q.year >= 1930) {
         Q.adjustmentFactors_ddp = 0.85;
     }
     if (Q.ddp_alliance) Q.adjustmentFactors_ddp = 0.8;
@@ -615,7 +615,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_kpd +] {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
-[? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes +]% {!</td><td>!} [+ str_votes_change_ddp +] {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
+[? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ lvp_votes +]% {!</td><td>!} [+ str_votes_change_ddp +] {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
 
 [? if lvp_formed: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} LVP: {!</td><td>!} [+ lvp_votes +]% {!</td><td>!} [+ str_votes_change_lvp +] {!</td><td>!} [+ lvp_r +]% {!</td><td>!} [+ str_change_lvp +] {!</td></tr>!} ?]
 

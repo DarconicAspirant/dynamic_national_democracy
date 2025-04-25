@@ -1,6 +1,6 @@
 title: Hermann Dietrich resigns!
 subtitle: The [? if ddp_ideology != "Left": electoral decline?][? if ddp_ideology == "Left": shifting ideologies?] of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> forces him to resign.
-view-if: year >= 1931 and not lvp_formed and not bruning_time and ((ddp_votes >= 1.8 and (previous_ddp_last_election_votes - ddp_votes > 1 or change_ddp_votes < -1)) or ddp_ideology == "Left") and not dstp_maintained and ddp_leader == "Dietrich"
+view-if: year >= 1931 and not lvp_formed and not bruning_time and ((lvp_votes >= 1.8 and (previous_ddp_last_election_votes - lvp_votes > 1 or change_lvp_votes < -1)) or ddp_ideology == "Left") and not dstp_maintained and ddp_leader == "Dietrich"
 on-arrival: {!
 Q.dietrich_resign = 1;
 if (Q.ddp_ideology == "Left") Q.dietrich_resign_ddp_left = 1;
@@ -126,7 +126,7 @@ subtitle: He finally has the motivation to step up, and be the change he wants t
 unavailable-subtitle: He prefers to focus on family, and his party respects that.
 choose-if: heuss_lead_ddp
 view-if: not dietrich_resign_ddp_left
-on-arrival: ddp_leader = "Heuss"; ddp_cohesion += 3; pro_republic += (ddp_votes*2); lvp_relation += 5; ddp_left += 2 if ddp_ideology == "Right"; ddp_right += 2 if ddp_ideology == "Left"; liberal_cooperation += 1; new_middle_lvp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_lvp += 1; workers_lvp += 0.5
+on-arrival: ddp_leader = "Heuss"; ddp_cohesion += 3; pro_republic += (lvp_votes*2); lvp_relation += 5; ddp_left += 2 if ddp_ideology == "Right"; ddp_right += 2 if ddp_ideology == "Left"; liberal_cooperation += 1; new_middle_lvp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_lvp += 1; workers_lvp += 0.5
 face-image: img/portraits/heuss.jpg
 
 Theodor Heuss a journalist turned politician and a rising star has been elected as the chairman of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. Although affiliated with the business wing of the party, his determined and genuine support for <span style="color: #FFCC00;">liberal</span> <span style="color: #586593;">democracy</span> has earned him support from the party's left wing. 
@@ -163,7 +163,7 @@ Relations have improved compared to Dietrich’s tenure, as Stolper's strained t
 title: Marie-­Elisabeth Lüders is elected!
 subtitle: The most active woman within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and strongly internationalist. Associated with the party's left wing.
 view-if: dietrich_resign_ddp_left
-on-arrival: ddp_leader = "Lüders"; lvp_relation += 15; ddp_left += 5; ddp_cohesion -= 3; nationalism -= 5; rural_lvp *= 0.5; old_middle_ddp *= 0.5; old_middle_wp += 5; rural_wp += 3; catholics_lvp *= 0.5; catholics_z += 2; new_middle_lvp *= 2; new_middle_uspd -= 10; workers_lvp += 6; workers_uspd -= 4; workers_spd -= 2; pro_republic += ddp_votes + 2; eu_progress += 1; west_relation += 1
+on-arrival: ddp_leader = "Lüders"; lvp_relation += 15; ddp_left += 5; ddp_cohesion -= 3; nationalism -= 5; rural_lvp *= 0.5; old_middle_ddp *= 0.5; old_middle_wp += 5; rural_wp += 3; catholics_lvp *= 0.5; catholics_z += 2; new_middle_lvp *= 2; new_middle_uspd -= 10; workers_lvp += 6; workers_uspd -= 4; workers_spd -= 2; pro_republic += lvp_votes + 2; eu_progress += 1; west_relation += 1
 face-image: img/portraits/luders.jpg
 
 Marie-Elisabeth Lüders, the second most important woman in the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and easily the most active advocate for the rights and wellbeing of women, children, and the workers of Germany, is elected to the leadership of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. This victory comes with the backing of Ernst Lemmer and his liberal trade unions, who have gained significant influence in recent months.

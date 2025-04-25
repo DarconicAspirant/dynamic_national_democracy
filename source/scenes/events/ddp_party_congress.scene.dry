@@ -132,7 +132,7 @@ This year’s <span style="color: #D3C24D;">**[+ ddp_name +]**</span> party cong
 
 @lemmer
 view-if: lemmer_lead
-on-arrival: ddp_leader = "Lemmer"; liberal_cooperation -= 3; lvp_relation += 10; workers_lvp += 6; catholics_lvp += 2; workers_uspd -= 4; workers_z -= 2; pro_republic += ddp_votes; ddp_left += 5; ddp_cohesion -= 3; new_middle_lvp -= 4 if stolper_program_adopted; old_middle_ddp -= 4 if stolper_program_adopted; new_middle_lvp -= 2; old_middle_ddp -= 2; rural_lvp -= 1;
+on-arrival: ddp_leader = "Lemmer"; liberal_cooperation -= 3; lvp_relation += 10; workers_lvp += 6; catholics_lvp += 2; workers_uspd -= 4; workers_z -= 2; pro_republic += lvp_votes; ddp_left += 5; ddp_cohesion -= 3; new_middle_lvp -= 4 if stolper_program_adopted; old_middle_ddp -= 4 if stolper_program_adopted; new_middle_lvp -= 2; old_middle_ddp -= 2; rural_lvp -= 1;
 face-image: img/portraits/lemmer.jpg
 go-to: achievement_calculation
 
@@ -142,7 +142,7 @@ Lemmer's victory significantly empowers the <span style="color: #c00000;">Social
 
 @heuss
 view-if: heuss_lead_ddp
-on-arrival: ddp_leader = "Heuss"; ddp_cohesion += 3; pro_republic += (ddp_votes*2); lvp_relation += 5; ddp_left += 2 if ddp_ideology == "Right"; ddp_right += 2 if ddp_ideology == "Left"; liberal_cooperation += 1; new_middle_lvp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_lvp += 1; workers_lvp += 0.5;
+on-arrival: ddp_leader = "Heuss"; ddp_cohesion += 3; pro_republic += (lvp_votes*2); lvp_relation += 5; ddp_left += 2 if ddp_ideology == "Right"; ddp_right += 2 if ddp_ideology == "Left"; liberal_cooperation += 1; new_middle_lvp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_lvp += 1; workers_lvp += 0.5;
 face-image: img/portraits/heuss.jpg
 go-to: achievement_calculation
 
