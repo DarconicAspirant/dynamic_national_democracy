@@ -669,15 +669,15 @@ th {
 }
 
 /* Styles for parties */
-.seat.kpd {
+.seat.spd {
   fill: #700000;
 }
 
-.seat.spd {
+.seat.uspd {
   fill: #E3000F;
 }
 
-.seat.ddp {
+.seat.lvp {
   fill: #FFCC00;
 }
 
@@ -689,12 +689,12 @@ th {
   fill: #A2D8E0;
 }
 
-.seat.wp {
-  fill: #CCAA7A;
-}
-
 .seat.other {
   fill: #909090;
+}
+
+.seat.wp {
+  fill: #CCAA7A;
 }
 
 .seat.dnvp {
@@ -717,10 +717,6 @@ th {
 
 .seat.kvp {
   fill: #0087DC;
-}
-
-.seat.lvp {
-  fill: #FFCC00;
 }
 
 .seat.farm {
