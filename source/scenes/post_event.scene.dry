@@ -3560,7 +3560,6 @@ if (Q.nsdap_industrial_backing == 1) {
     }
 }
 
-Q.lvp_votes_post_event = Q.lvp_votes; 
 Q.wp_votes_post_event = Q.wp_votes; 
 Q.lvp_votes_post_event = Q.lvp_votes; 
 Q.dnvp_votes_post_event = Q.dnvp_votes; 
