@@ -790,26 +790,26 @@ The electoral system is essentially proportional, with the proportion of Reichst
 
 **Potential coalitions:**
 
-Far-Right Coalition (DNVP + NSDAP): [+ far_right_coalition+]
+[? if nsfb_r + nsdap_r != 0:Far-Right Coalition (DNVP[? if nsfb_r != 0:  + NSFB?][? if nsdap_r != 0:  + NSDAP ?]): [+ far_right_coalition +] ?]
 
-National Front (DNVP + NSDAP + Others + WP + BVP): [+ national_coalition+]
+[? if nsfb_r + nsdap_r != 0:National Front (DNVP[? if nsfb_r != 0:  + NSFB?][? if nsdap_r != 0:  + NSDAP?] + Others[? if wp_r != 0:  + WP?] + BVP): [+ national_coalition +] ?]
 
-Right Coalition (DNVP + Others + WP + BVP): [+ hard_right_coalition+]
+Right Coalition (DNVP + Others(bar SAPD)[? if wp_r != 0:  + WP?] + BVP): [+ hard_right_coalition +]
 
-Conservative Coalition (DNVP + Others + WP + BVP + Z): [+ conservative_coalition +]
+Conservative Coalition (DNVP + Others(bar SAPD)[? if wp_r != 0:  + WP?] + BVP + Z): [+ conservative_coalition +]
 
-National-Liberal Coalition (DNVP + Others + WP + BVP + LVP): [+ national_liberal_coalition +]
+National-Liberal Coalition (DNVP + Others(bar SAPD)[? if wp_r != 0:  + WP?][? if dvp_r != 0:  + DVP?] + BVP[? if lvp_r != 0:  + LVP?][? if ddp_r != 0:  + DDP?]): [+ national_liberal_coalition +]
 
-Center-right Coalition (DNVP + Others + WP + BVP + Z + LVP): [+ center_right_coalition +]
+Center-right Coalition (DNVP + Others(bar SAPD)[? if wp_r != 0:  + WP?][? if dvp_r != 0:  + DVP?] + BVP + Z[? if lvp_r != 0:  + LVP?][? if ddp_r != 0:  + DDP?]): [+ center_right_coalition +]
 
-Bourgeois Coalition (Others + WP + BVP + Z + LVP): [+ bourgeois_coalition +]
+Bourgeois Coalition (Others(bar SAPD)[? if wp_r != 0:  + WP?][? if dvp_r != 0:  + DVP?] + BVP + Z[? if lvp_r != 0:  + LVP?][? if ddp_r != 0:  + DDP?]): [+ bourgeois_coalition +]
 
-Constitutional Coalition (Others + WP + BVP + Z + LVP + USPD): [+ constitutional_coalition +]
+Constitutional Coalition (Others(bar SAPD)[? if wp_r != 0:  + WP?][? if dvp_r != 0:  + DVP?] + BVP + Z[? if lvp_r != 0:  + LVP?][? if ddp_r != 0:  + DDP?] + USPD): [+ constitutional_coalition +]
 
-Grand Coalition (BVP + Z + LVP + USPD): [+ grand_coalition +]
+Grand Coalition ([? if dvp_r != 0:DVP?] + BVP + Z[? if lvp_r != 0:  + LVP?][? if ddp_r != 0:  + DDP?] + USPD): [+ grand_coalition +]
 
-Weimar Coalition (Z + LVP + USPD): [+ weimar_coalition +]
+Weimar Coalition (Z[? if lvp_r != 0:  + LVP?][? if ddp_r != 0:  + DDP?] + USPD): [+ weimar_coalition +]
 
 Popular Front (Z + USPD + SPD): [+ popular_front_coalition +]
 
-Left Front (USPD + SPD): [+ left_coalition +]
+Left Front (USPD + SPD + SAPD): [+ left_coalition +]
