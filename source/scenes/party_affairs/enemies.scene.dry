@@ -41,11 +41,11 @@ on-arrival: enemies = "NSDAP"; paramilitarist_strength += 5; revolutionary_urgen
 The NSDAP has been a thorn in our side for a while, but it is a tiny party right now and attacking them is of limited electoral gain. Our right faction seems disappointed by our rejection of far-right unity. Our prospective moderate coalition partners are however pleased.
 
 @spd
-on-arrival: enemies = "SPD and the revolutionary left"; popcon_strength += 5; right_dissent += 8; popcon_dissent -= 5; nsdap_relation -= 15; wp_relation += 5; lvp_relation += 3; z_relation += 5; lvp_old_relation += 5; workers_spd -= 3; unemployed_spd -= 4; dvp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
+on-arrival: enemies = "SPD and the revolutionary left"; popcon_strength += 5; right_dissent += 8; popcon_dissent -= 5; nsdap_relation -= 15; wp_relation += 5; lvp_relation += 3; z_relation += 5; lvp_old_relation += 5; workers_spd -= 3; unemployed_spd -= 4; wp_left += 1; ddp_left += 0.5; ddp_cohesion += 0.5; lvp_left += 1
 
 Attacking the SPD and the minor far-left parties and organizations is a safe choice approved by all of our factions and potential coalition partners. However, our very low standing among potential supporters of these parties severely blunts the impact of our attacks.
 
 @bourgeois
-on-arrival: enemies = "bourgeois republican parties"; right_strength += 8; right_dissent -= 5; wp_relation -= 5; z_relation -= 5; lvp_relation -= 3; lvp_old_relation -= 3; nsdap_relation += 5; popcon_dissent += 8; workers_z -= 3; new_middle_wp -= 2; workers_wp -= 1; workers_lvp -= 0.5; workers_lvp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1
+on-arrival: enemies = "bourgeois republican parties"; right_strength += 8; right_dissent -= 5; wp_relation -= 5; z_relation -= 5; lvp_relation -= 3; lvp_old_relation -= 3; nsdap_relation += 5; popcon_dissent += 8; workers_z -= 3; new_middle_wp -= 2; workers_wp -= 1; workers_lvp -= 0.5; workers_lvp -= 0.5 if not wp_exist; coalition_dissent += 1; wp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1
 
 Our rhetoric against the "September Traitors" who sold out the monarchy and signed the humiliation of Versailles is popular among  party's right, center and most of the voter base. However, the more concilliatory factions disapprove, as thisS may make it harder to build the coalitions that are necessary for government in the future.

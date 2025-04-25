@@ -54,6 +54,6 @@ We have accepted the compromise offered by the bourgeoisie. Many of the workers 
 @accept_compromise_good
 choose-if: lvp_ideology == "Left" and lvp_old_relation >= 45
 unavailable-subtitle: [? if lvp_ideology != "Left": The <span style="color: #FFCC00;">**LVP**</span> industrialists have great control over their party. ?] [? if lvp_old_relation < 45: We do not have good enough relations with the right-wing parties. ?]
-on-arrival: popcon_strength += 10; popcon_dissent -= 5; coalition_dissent -= 1; old_middle_lvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; lvp_left += 3; ddp_cohesion += 1; unemployment_goal_dnvp += 1; economic_growth -= 0.1
+on-arrival: popcon_strength += 10; popcon_dissent -= 5; coalition_dissent -= 1; old_middle_lvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; wp_left += 3; ddp_left += 1; lvp_left += 3; ddp_cohesion += 1; unemployment_goal_dnvp += 1; economic_growth -= 0.1
 
 We have pushed for an increase in both employer and employee contributions rather than to cut benefits for the program itself. The <span style="color: #FFCC00;">**LVP**</span> accepts with the influence of [? if not stresemann_dead: Stresemann?][? if stresemann_dead: the Stresemannites?] and pressures from members of the former <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.

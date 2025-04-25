@@ -43,7 +43,7 @@ For further improvements in <span style="color: #700000;">**KPD**</span> relatio
 - @no_history: No, we have no need to apologize.
 
 @yes_history
-on-arrival: popcon_dissent += 12; popcon_strength -= 2; paramilitarist_dissent += 5; right_dissent -= 6; right_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; wp_relation -= 6; lvp_old_relation -= 6; lvp_relation -= 4; nsdap_relation += 8*(1-dissent); coalition_dissent += 1; dvp_right += 2; ddp_right += 2; lvp_right += 2
+on-arrival: popcon_dissent += 12; popcon_strength -= 2; paramilitarist_dissent += 5; right_dissent -= 6; right_strength += 5; kpd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; wp_relation -= 6; lvp_old_relation -= 6; lvp_relation -= 4; nsdap_relation += 8*(1-dissent); coalition_dissent += 1; wp_right += 2; ddp_right += 2; lvp_right += 2
 
 As part of normalizing relations with the <span style="color: #700000;">**KPD**</span>, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
 
@@ -98,7 +98,7 @@ on-arrival: resources -= 1; z_relation += 6*(1 - dissent); cvp_left += 1
 It's not exactly easy to get the <span style="color: #000000;">Christians</span> to like us again—but it's not impossible either. We will leverage our connections with their <span style="color: #FF7F00;">Christian Left</span> and Labor factions to lay the groundwork for a potential reconciliation between our two parties.
 
 @liberals_ddp
-view-if: not lvp_formed and not dvp_exist
+view-if: not lvp_formed and not wp_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
@@ -107,29 +107,29 @@ on-arrival: resources -= 1; lvp_relation += 8*(1 - dissent); ddp_left += 1; ddp_
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of our closest allies throughout the course of the Republic. Now, as they are the only remaining liberal party, strengthening ties with them should be our top priority.
 
 @liberals
-view-if: not lvp_formed and dvp_exist
+view-if: not lvp_formed and wp_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; lvp_relation += 5*(1 - dissent); ddp_left += 0.5; ddp_cohesion += 0.25; wp_relation += 2 if in_grand_coalition_prussia
-go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and dvp_votes >= 5; dvp_moribund if stresemann_dead = 1 and dvp_votes < 5
+go-to: wp_stresemann if stresemann_dead = 0; wp_loss if stresemann_dead = 1 and wp_votes >= 5; wp_moribund if stresemann_dead = 1 and wp_votes < 5
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of our closest allies through the course of the Republic. [? if year >= 1929: Although the national shift to the right is having them question our cooperation. ?]
 
-@dvp_stresemann
-on-arrival: wp_relation += 6*(1 - dissent); dvp_left += 1; dvp_left += 1 if in_grand_coalition_prussia
+@wp_stresemann
+on-arrival: wp_relation += 6*(1 - dissent); wp_left += 1; wp_left += 1 if in_grand_coalition_prussia
 
 Gustav Stresemann, the leader of the <span style="color: #C0A054;">**DVP**</span> is the best foreign policy leaders of the republic, and while he has previously expressed <span style="color: #808080;">monarchist</span> tendencies, he has been friendly towards us. [? if in_grand_coalition_prussia: Their inclusion in the Prussian government has fostered a more conciliatory attitude toward us. ?]
 
-@dvp_loss
-on-arrival: wp_relation += 4*(1 - dissent); dvp_left += 1; dvp_left += 1 if in_grand_coalition_prussia
+@wp_loss
+on-arrival: wp_relation += 4*(1 - dissent); wp_left += 1; wp_left += 1 if in_grand_coalition_prussia
 
 With the death of Gustav Stresemann, the <span style="color: #C0A054;">**DVP**</span> is much less likely to be accommodating of us. In addition, the <span style="color: #D3C24D;">liberal</span> parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
 
 However, given the influence of the <span style="color: #C0A054;">**DVP**</span> among the other <span style="color: #808080;">right</span>-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them. [? if in_grand_coalition_prussia: Their inclusion in the Prussian government has also fostered a more conciliatory attitude toward us. ?]
 
-@dvp_moribund
-on-arrival: wp_relation += 4*(1 - dissent); dvp_left += 1; dvp_left += 1 if in_grand_coalition_prussia
+@wp_moribund
+on-arrival: wp_relation += 4*(1 - dissent); wp_left += 1; wp_left += 1 if in_grand_coalition_prussia
 
 The <span style="color: #D3C24D;">liberal</span> parties (both the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #C0A054;">**DVP**</span>) are electorally <span style="color: #ff0000;">moribund</span>, so perhaps our efforts are best spent elsewhere.
 

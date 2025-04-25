@@ -238,7 +238,7 @@ if (Q.hindenburg_funds >= 5) {
 
 Q.hindenburg_unity = 10;
 if (Q.braun_angry_bruning >= 75) Q.hindenburg_unity -= 1;
-if (Q.dvp_defect) Q.hindenburg_unity -= 1;
+if (Q.wp_defect) Q.hindenburg_unity -= 1;
 if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
 if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
 if (Q.spd_support_hindenburg) Q.hindenburg_unity -= 3;
@@ -327,7 +327,7 @@ Supporting [+ communist_candidate_1932 +] is rather unpopular in our party, even
 - @support_hindenburg: Support <span style="color: #808080;">**Hindenburg**</span> instead.
 
 @support_thalmann_2
-on-arrival: spd_support_thalmann = 1; popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; lvp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_support_thalmann = 1; popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 
 Fine. We have thrown our support to Chairman [+ communist_candidate_1932 +] of the <span style="color: #700000;">**KPD**</span> to the dismay of our bourgeois allies.
 
@@ -455,7 +455,7 @@ view-if: nsdap_relation >= 60 or nsdap_relation >= 45 and spd_leader == "Concili
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -463,7 +463,7 @@ The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presi
 @kpd_relations
 view-if: nsdap_relation >= 75 or (spd_leader == "Conciliators" and nsdap_relation >= 55)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; dvp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.

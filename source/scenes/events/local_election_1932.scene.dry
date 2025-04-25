@@ -33,7 +33,7 @@ Q.z_local_elections_vote = Q.z_votes;
 Q.kpd_local_elections_vote = Q.spd_votes;
 Q.lvp_local_elections_vote = Q.lvp_votes;
 Q.ddp_local_elections_vote = Q.ddp_votes;
-Q.dvp_local_elections_vote = Q.dvp_votes;
+Q.wp_local_elections_vote = Q.wp_votes;
 Q.kvp_local_elections_vote = Q.kvp_votes;
 Q.other_local_elections_vote = Q.other_votes;
 Q.dnvp_local_elections_vote = Q.dnvp_votes;
@@ -63,8 +63,8 @@ if (Q.liberal_wurttemberg_defeat) {
     Q.rural_wp *= 0.6;
     Q.lvp_right += 5;
     Q.ddp_right += 3;
-    Q.dvp_right += 5;
-    Q.pro_republic -= Q.ddp_votes + Q.dvp_votes + Q.lvp_votes;
+    Q.wp_right += 5;
+    Q.pro_republic -= Q.ddp_votes + Q.wp_votes + Q.lvp_votes;
 }
 
 if (Q.nsdap_local_elections_vote >= 20) {
@@ -98,7 +98,7 @@ if (Q.spd_local_elections_vote >= 30) {
     Q.lvp_old_relation += 5;
     Q.ddp_left += 3;
     Q.ddp_cohesion += 1;
-    Q.dvp_left += 1.5;
+    Q.wp_left += 1.5;
     Q.lvp_left += 3;
     Q.new_middle_uspd += 2;
     Q.workers_uspd += 2;
@@ -121,13 +121,13 @@ if (Q.kpd_local_elections_vote >= 20) {
     Q.wp_relation -= 3;
     Q.lvp_old_relation -= 3;
     Q.ddp_right += 2;
-    Q.dvp_right += 2;
+    Q.wp_right += 2;
     Q.lvp_right += 2;
     Q.braun_angry += 30;
     Q.braun_angry_bruning += 50;
 }
 
-if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Radical" && !Q.cvp_formed) {
+if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.wp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Radical" && !Q.cvp_formed) {
     Q.pro_republic += 3;
     Q.braun_angry_bruning -= 50;
     Q.new_middle_lvp *= 1.2;
@@ -144,10 +144,10 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.wp_relation -= 5;
     Q.lvp_old_relation -= 5;
     Q.ddp_right += 2;
-    Q.dvp_right += 4;
+    Q.wp_right += 4;
     Q.lvp_right += 3;
     Q.bourgeois_local_win = 1;
-} else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.dnvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Moderate" && !Q.cvp_formed) {
+} else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.wp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.dnvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Moderate" && !Q.cvp_formed) {
     Q.pro_republic += 5;
     Q.braun_angry_bruning -= 50;
     Q.new_middle_lvp *= 1.2;
@@ -164,10 +164,10 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.wp_relation -= 5;
     Q.lvp_old_relation -= 5;
     Q.ddp_right += 2;
-    Q.dvp_right += 4;
+    Q.wp_right += 4;
     Q.lvp_right += 3;
     Q.bourgeois_local_win = 1;
-} else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.cvp_formed) {
+} else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.wp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.cvp_formed) {
     Q.pro_republic += 5;
     Q.braun_angry_bruning -= 50;
     Q.new_middle_lvp *= 1.2;
@@ -184,7 +184,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.wp_relation -= 5;
     Q.lvp_old_relation -= 5;
     Q.ddp_right += 2;
-    Q.dvp_right += 4;
+    Q.wp_right += 4;
     Q.lvp_right += 3;
     Q.bourgeois_local_cvp_win = 1;
 }
@@ -207,7 +207,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} [+ z_party_name +] + BVP: {!</td><td>!} [+ z_local_elections_vote +]% {!</td></tr>!}
 
-[? if not lvp_formed and dvp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_local_elections_vote +]% {!</td></tr>!} ?]
+[? if not lvp_formed and wp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ wp_local_elections_vote +]% {!</td></tr>!} ?]
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_local_elections_vote +]% {!</td></tr>!}
 
@@ -239,7 +239,7 @@ var bavaria_adjustment_factors = {
     ddp: 0.0,
     lvp: 0.4,
     z: 2.2,
-    dvp: 0.4,
+    wp: 0.4,
     dnvp: 0.4,
     nsdap: 1.0,
     other: 1.3,
@@ -247,11 +247,11 @@ var bavaria_adjustment_factors = {
     dnf: 0.2
 };
 
-if (!Q.dvp_exist) {
+if (!Q.wp_exist) {
     bavaria_adjustment_factors.dnvp += 0.4;
 }
 
-if (Q.dvp_in_cvp) {
+if (Q.wp_in_cvp) {
     bavaria_adjustment_factors.z += 0.4;
 }
 
@@ -261,7 +261,7 @@ Q.kpd_r_bavaria = 0;
 Q.ddp_r_bavaria = 0;
 Q.lvp_r_bavaria = 0;
 Q.z_r_bavaria = 0;
-Q.dvp_r_bavaria = 0;
+Q.wp_r_bavaria = 0;
 Q.dnvp_r_bavaria = 0;
 Q.nsdap_r_bavaria = 0;
 Q.other_r_bavaria = 0;
@@ -274,7 +274,7 @@ Q.kpd_bavaria_elections_vote = 0;
 Q.ddp_bavaria_elections_vote = 0;
 Q.lvp_bavaria_elections_vote = 0;
 Q.z_bavaria_elections_vote = 0;
-Q.dvp_bavaria_elections_vote = 0;
+Q.wp_bavaria_elections_vote = 0;
 Q.dnvp_bavaria_elections_vote = 0;
 Q.nsdap_bavaria_elections_vote = 0;
 Q.other_bavaria_elections_vote = 0;
@@ -292,7 +292,7 @@ Q.lvp_bavaria_elections_vote = Q.lvp_local_elections_vote*bavaria_adjustment_fac
 if (!Q.stegerwald_path) Q.z_bavaria_elections_vote = Q.z_local_elections_vote*bavaria_adjustment_factors.z;
 if (Q.stegerwald_path) Q.z_bavaria_elections_vote = Q.z_local_elections_vote * 1.5;
 if (Q.cvp_formed) Q.z_bavaria_elections_vote = Q.z_local_elections_vote * 1.2;
-Q.dvp_bavaria_elections_vote = Q.dvp_local_elections_vote*bavaria_adjustment_factors.dvp;
+Q.wp_bavaria_elections_vote = Q.wp_local_elections_vote*bavaria_adjustment_factors.wp;
 Q.dnvp_bavaria_elections_vote = Q.dnvp_local_elections_vote*bavaria_adjustment_factors.dnvp;
 Q.nsdap_bavaria_elections_vote = Q.nsdap_local_elections_vote*bavaria_adjustment_factors.nsdap;
 Q.other_bavaria_elections_vote = Q.other_local_elections_vote*bavaria_adjustment_factors.other;
@@ -300,7 +300,7 @@ Q.kvp_bavaria_elections_vote = Q.kvp_local_elections_vote*bavaria_adjustment_fac
 if (Q.cvp_formed) bavaria_adjustment_factors.dnf += 0.6;
 Q.dnf_bavaria_elections_vote = Q.dnf_local_elections_vote*bavaria_adjustment_factors.dnf;
 
-Q.total_votes_bavaria = Q.spd_bavaria_elections_vote + Q.sapd_bavaria_elections_vote + Q.kpd_bavaria_elections_vote + Q.ddp_bavaria_elections_vote + Q.lvp_bavaria_elections_vote + Q.z_bavaria_elections_vote + Q.dvp_bavaria_elections_vote + Q.dnvp_bavaria_elections_vote + Q.nsdap_bavaria_elections_vote + Q.other_bavaria_elections_vote + Q.kvp_bavaria_elections_vote + Q.dnf_bavaria_elections_vote;
+Q.total_votes_bavaria = Q.spd_bavaria_elections_vote + Q.sapd_bavaria_elections_vote + Q.kpd_bavaria_elections_vote + Q.ddp_bavaria_elections_vote + Q.lvp_bavaria_elections_vote + Q.z_bavaria_elections_vote + Q.wp_bavaria_elections_vote + Q.dnvp_bavaria_elections_vote + Q.nsdap_bavaria_elections_vote + Q.other_bavaria_elections_vote + Q.kvp_bavaria_elections_vote + Q.dnf_bavaria_elections_vote;
 
 if (Q.total_votes_bavaria > 0) {
     Q.spd_bavaria_elections_vote = (Q.spd_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
@@ -309,7 +309,7 @@ if (Q.total_votes_bavaria > 0) {
     Q.ddp_bavaria_elections_vote = (Q.ddp_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
     Q.lvp_bavaria_elections_vote = (Q.lvp_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
     Q.z_bavaria_elections_vote = (Q.z_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
-    Q.dvp_bavaria_elections_vote = (Q.dvp_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.wp_bavaria_elections_vote = (Q.wp_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
     Q.dnvp_bavaria_elections_vote = (Q.dnvp_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
     Q.nsdap_bavaria_elections_vote = (Q.nsdap_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
     Q.other_bavaria_elections_vote = (Q.other_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
@@ -323,7 +323,7 @@ Q.kpd_bavaria_elections_vote = (Q.kpd_bavaria_elections_vote != undefined ? pars
 Q.ddp_bavaria_elections_vote = (Q.ddp_bavaria_elections_vote != undefined ? parseFloat(Q.ddp_bavaria_elections_vote.toFixed(1)) : 0);
 Q.lvp_bavaria_elections_vote = (Q.lvp_bavaria_elections_vote != undefined ? parseFloat(Q.lvp_bavaria_elections_vote.toFixed(1)) : 0);
 Q.z_bavaria_elections_vote = (Q.z_bavaria_elections_vote != undefined ? parseFloat(Q.z_bavaria_elections_vote.toFixed(1)) : 0);
-Q.dvp_bavaria_elections_vote = (Q.dvp_bavaria_elections_vote != undefined ? parseFloat(Q.dvp_bavaria_elections_vote.toFixed(1)) : 0);
+Q.wp_bavaria_elections_vote = (Q.wp_bavaria_elections_vote != undefined ? parseFloat(Q.wp_bavaria_elections_vote.toFixed(1)) : 0);
 Q.dnvp_bavaria_elections_vote = (Q.dnvp_bavaria_elections_vote != undefined ? parseFloat(Q.dnvp_bavaria_elections_vote.toFixed(1)) : 0);
 Q.nsdap_bavaria_elections_vote = (Q.nsdap_bavaria_elections_vote != undefined ? parseFloat(Q.nsdap_bavaria_elections_vote.toFixed(1)) : 0);
 Q.other_bavaria_elections_vote = (Q.other_bavaria_elections_vote != undefined ? parseFloat(Q.other_bavaria_elections_vote.toFixed(1)) : 0);
@@ -336,7 +336,7 @@ if (Q.kpd_bavaria_elections_vote >= 3.3) Q.kpd_r_bavaria = Q.kpd_bavaria_electio
 if (Q.ddp_bavaria_elections_vote >= 3.3) Q.ddp_r_bavaria = Q.ddp_bavaria_elections_vote;
 if (Q.lvp_bavaria_elections_vote >= 3.3) Q.lvp_r_bavaria = Q.lvp_bavaria_elections_vote;
 if (Q.z_bavaria_elections_vote >= 3.3) Q.z_r_bavaria = Q.z_bavaria_elections_vote;
-if (Q.dvp_bavaria_elections_vote >= 3.3) Q.dvp_r_bavaria = Q.dvp_bavaria_elections_vote;
+if (Q.wp_bavaria_elections_vote >= 3.3) Q.wp_r_bavaria = Q.wp_bavaria_elections_vote;
 if (Q.dnvp_bavaria_elections_vote >= 3.3) Q.dnvp_r_bavaria = Q.dnvp_bavaria_elections_vote;
 if (Q.nsdap_bavaria_elections_vote >= 3.3) Q.nsdap_r_bavaria = Q.nsdap_bavaria_elections_vote;
 if (Q.other_bavaria_elections_vote >= 3.3) Q.other_r_bavaria = Q.other_bavaria_elections_vote;
@@ -351,7 +351,7 @@ if (Q.kpd_r_bavaria) Q.total_r_bavaria += Q.kpd_r_bavaria;
 if (Q.ddp_r_bavaria) Q.total_r_bavaria += Q.ddp_r_bavaria;
 if (Q.lvp_r_bavaria) Q.total_r_bavaria += Q.lvp_r_bavaria;
 if (Q.z_r_bavaria) Q.total_r_bavaria += Q.z_r_bavaria;
-if (Q.dvp_r_bavaria) Q.total_r_bavaria += Q.dvp_r_bavaria;
+if (Q.wp_r_bavaria) Q.total_r_bavaria += Q.wp_r_bavaria;
 if (Q.dnvp_r_bavaria) Q.total_r_bavaria += Q.dnvp_r_bavaria;
 if (Q.nsdap_r_bavaria) Q.total_r_bavaria += Q.nsdap_r_bavaria;
 if (Q.other_r_bavaria) Q.total_r_bavaria += Q.other_r_bavaria;
@@ -365,7 +365,7 @@ if (Q.total_r_bavaria > 0) {
     Q.ddp_r_bavaria = (Q.ddp_r_bavaria / Q.total_r_bavaria) * 100;
     Q.lvp_r_bavaria = (Q.lvp_r_bavaria / Q.total_r_bavaria) * 100;
     Q.z_r_bavaria = (Q.z_r_bavaria / Q.total_r_bavaria) * 100;
-    Q.dvp_r_bavaria = (Q.dvp_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.wp_r_bavaria = (Q.wp_r_bavaria / Q.total_r_bavaria) * 100;
     Q.dnvp_r_bavaria = (Q.dnvp_r_bavaria / Q.total_r_bavaria) * 100;
     Q.nsdap_r_bavaria = (Q.nsdap_r_bavaria / Q.total_r_bavaria) * 100;
     Q.other_r_bavaria = (Q.other_r_bavaria / Q.total_r_bavaria) * 100;
@@ -379,7 +379,7 @@ Q.kpd_r_bavaria = (Q.kpd_r_bavaria != undefined ? parseFloat(Q.kpd_r_bavaria.toF
 Q.ddp_r_bavaria = (Q.ddp_r_bavaria != undefined ? parseFloat(Q.ddp_r_bavaria.toFixed(1)) : 0);
 Q.lvp_r_bavaria = (Q.lvp_r_bavaria != undefined ? parseFloat(Q.lvp_r_bavaria.toFixed(1)) : 0);
 Q.z_r_bavaria = (Q.z_r_bavaria != undefined ? parseFloat(Q.z_r_bavaria.toFixed(1)) : 0);
-Q.dvp_r_bavaria = (Q.dvp_r_bavaria != undefined ? parseFloat(Q.dvp_r_bavaria.toFixed(1)) : 0);
+Q.wp_r_bavaria = (Q.wp_r_bavaria != undefined ? parseFloat(Q.wp_r_bavaria.toFixed(1)) : 0);
 Q.dnvp_r_bavaria = (Q.dnvp_r_bavaria != undefined ? parseFloat(Q.dnvp_r_bavaria.toFixed(1)) : 0);
 Q.nsdap_r_bavaria = (Q.nsdap_r_bavaria != undefined ? parseFloat(Q.nsdap_r_bavaria.toFixed(1)) : 0);
 Q.other_r_bavaria = (Q.other_r_bavaria != undefined ? parseFloat(Q.other_r_bavaria.toFixed(1)) : 0);
@@ -387,8 +387,8 @@ Q.kvp_r_bavaria = (Q.kvp_r_bavaria != undefined ? parseFloat(Q.kvp_r_bavaria.toF
 Q.dnf_r_bavaria = (Q.dnf_r_bavaria != undefined ? parseFloat(Q.dnf_r_bavaria.toFixed(1)) : 0);
 
 Q.left_coalition_bavaria = parseFloat((Q.spd_r_bavaria + Q.kpd_r_bavaria + Q.sapd_r_bavaria).toFixed(1));
-Q.bourgeois_coalition_bavaria = parseFloat((Q.z_r_bavaria + Q.dvp_r_bavaria + Q.ddp_r_bavaria + Q.lvp_r_bavaria + Q.other_r_bavaria + Q.dnvp_r_bavaria).toFixed(1));
-if (Q.dnvp_ideology == "Radical" && Q.kvp_formed) Q.bourgeois_coalition_bavaria = parseFloat((Q.z_r_bavaria + Q.dvp_r_bavaria + Q.ddp_r_bavaria + Q.lvp_r_bavaria + Q.kvp_r_bavaria + Q.other_r_bavaria).toFixed(1));
+Q.bourgeois_coalition_bavaria = parseFloat((Q.z_r_bavaria + Q.wp_r_bavaria + Q.ddp_r_bavaria + Q.lvp_r_bavaria + Q.other_r_bavaria + Q.dnvp_r_bavaria).toFixed(1));
+if (Q.dnvp_ideology == "Radical" && Q.kvp_formed) Q.bourgeois_coalition_bavaria = parseFloat((Q.z_r_bavaria + Q.wp_r_bavaria + Q.ddp_r_bavaria + Q.lvp_r_bavaria + Q.kvp_r_bavaria + Q.other_r_bavaria).toFixed(1));
 Q.spd_coalition_bavaria = parseFloat((Q.spd_r_bavaria + (Q.other_r_bavaria * 0.8) + Q.ddp_r_bavaria + Q.lvp_r_bavaria).toFixed(1));
 
 Q.farm_bavaria_elections_vote = Q.other_bavaria_elections_vote*0.8
@@ -453,12 +453,12 @@ data = data.concat([{
 }
 ]);
 
-if (Q.dvp_r_bavaria && !Q.lvp_formed && Q.dvp_exist) {
+if (Q.wp_r_bavaria && !Q.lvp_formed && Q.wp_exist) {
     data.push({
-        "id": "dvp",
+        "id": "wp",
         "legend": "DVP",
         "name": "DVP",
-        "seats": Math.round(Q.dvp_r_bavaria * 1.28),
+        "seats": Math.round(Q.wp_r_bavaria * 1.28),
     });
 }
 
@@ -529,8 +529,8 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
+            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'wp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'wp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -540,8 +540,8 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
+            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'wp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'wp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -568,7 +568,7 @@ go-to: bavaria_coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} BVP: {!</td><td>!} [+ z_bavaria_elections_vote +]% {!</td><td>!} [+ z_r_bavaria +]%  {!</td></tr>!}
 
-[? if not lvp_formed and dvp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_bavaria_elections_vote +]% {!</td><td>!} [+ dvp_r_bavaria +]%  {!</td></tr>!} ?]
+[? if not lvp_formed and wp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ wp_bavaria_elections_vote +]% {!</td><td>!} [+ wp_r_bavaria +]%  {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#38C538'> </div> !} Peasants: {!</td><td>!} [+ farm_bavaria_elections_vote +]% {!</td><td>!} [+ farm_r_bavaria +]%  {!</td></tr>!}
 
@@ -589,9 +589,9 @@ United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span styl
 
 Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #38C538;">Bavarian Peasants’ League</span>): [+ spd_coalition_bavaria +]% 
 
-[? if not kvp_formed: Bourgeois Coalition (<span style="color: #A2D8E0;">**BVP**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + **Others**[? if not cvp_formed:&nbsp;+ <span style="color: #3E88B3;">**DNVP**</span>?]): [+ bourgeois_coalition_bavaria +]% ?]
+[? if not kvp_formed: Bourgeois Coalition (<span style="color: #A2D8E0;">**BVP**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if wp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + **Others**[? if not cvp_formed:&nbsp;+ <span style="color: #3E88B3;">**DNVP**</span>?]): [+ bourgeois_coalition_bavaria +]% ?]
 
-[? if kvp_formed: Bourgeois Coalition (<span style="color: #A2D8E0;">**BVP**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] + **Others** + <span style="color: #0087DC;">**KVP**</span>): [+ bourgeois_coalition_bavaria +]% ?]
+[? if kvp_formed: Bourgeois Coalition (<span style="color: #A2D8E0;">**BVP**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if wp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] + **Others** + <span style="color: #0087DC;">**KVP**</span>): [+ bourgeois_coalition_bavaria +]% ?]
 
 @bavaria_coalition_menu
 
@@ -691,7 +691,7 @@ var wurttemberg_adjustment_factors = {
     ddp: 3.0,
     lvp: 2.2,
     z: 1.45,
-    dvp: 1.0,
+    wp: 1.0,
     dnvp: 0.7,
     nsdap: 0.7,
     other: 3.1,
@@ -699,11 +699,11 @@ var wurttemberg_adjustment_factors = {
     dnf: 0.4
 };
 
-if (!Q.dvp_exist) {
+if (!Q.wp_exist) {
     wurttemberg_adjustment_factors.dnvp += 0.6;
 }
 
-if (!Q.dvp_exist && Q.dvp_in_cvp) {
+if (!Q.wp_exist && Q.wp_in_cvp) {
     wurttemberg_adjustment_factors.z += 0.4;
 }
 
@@ -713,7 +713,7 @@ Q.kpd_r_wurttemberg = 0;
 Q.ddp_r_wurttemberg = 0;
 Q.lvp_r_wurttemberg = 0;
 Q.z_r_wurttemberg = 0;
-Q.dvp_r_wurttemberg = 0;
+Q.wp_r_wurttemberg = 0;
 Q.dnvp_r_wurttemberg = 0;
 Q.nsdap_r_wurttemberg = 0;
 Q.other_r_wurttemberg = 0;
@@ -726,7 +726,7 @@ Q.kpd_wurttemberg_elections_vote = 0;
 Q.ddp_wurttemberg_elections_vote = 0;
 Q.lvp_wurttemberg_elections_vote = 0;
 Q.z_wurttemberg_elections_vote = 0;
-Q.dvp_wurttemberg_elections_vote = 0;
+Q.wp_wurttemberg_elections_vote = 0;
 Q.dnvp_wurttemberg_elections_vote = 0;
 Q.nsdap_wurttemberg_elections_vote = 0;
 Q.other_wurttemberg_elections_vote = 0;
@@ -744,7 +744,7 @@ Q.lvp_wurttemberg_elections_vote = Q.lvp_local_elections_vote*wurttemberg_adjust
 if (!Q.stegerwald_path) Q.z_wurttemberg_elections_vote = Q.z_local_elections_vote*wurttemberg_adjustment_factors.z;
 if (Q.stegerwald_path) Q.z_wurttemberg_elections_vote = Q.z_local_elections_vote * 1.35;
 if (Q.cvp_formed) Q.z_wurttemberg_elections_vote = Q.z_local_elections_vote * 1.2;
-Q.dvp_wurttemberg_elections_vote = Q.dvp_local_elections_vote*wurttemberg_adjustment_factors.dvp;
+Q.wp_wurttemberg_elections_vote = Q.wp_local_elections_vote*wurttemberg_adjustment_factors.wp;
 Q.dnvp_wurttemberg_elections_vote = Q.dnvp_local_elections_vote*wurttemberg_adjustment_factors.dnvp;
 Q.nsdap_wurttemberg_elections_vote = Q.nsdap_local_elections_vote*wurttemberg_adjustment_factors.nsdap;
 if (Q.other_votes >= 8) wurttemberg_adjustment_factors.other -= 1.0;
@@ -752,7 +752,7 @@ Q.other_wurttemberg_elections_vote = Q.other_local_elections_vote*wurttemberg_ad
 Q.kvp_wurttemberg_elections_vote = Q.kvp_local_elections_vote*wurttemberg_adjustment_factors.kvp;
 Q.dnf_wurttemberg_elections_vote = Q.dnf_local_elections_vote*wurttemberg_adjustment_factors.dnf;
 
-Q.total_votes_wurttemberg = Q.spd_wurttemberg_elections_vote + Q.sapd_wurttemberg_elections_vote + Q.kpd_wurttemberg_elections_vote + Q.ddp_wurttemberg_elections_vote + Q.lvp_wurttemberg_elections_vote + Q.z_wurttemberg_elections_vote + Q.dvp_wurttemberg_elections_vote + Q.dnvp_wurttemberg_elections_vote + Q.nsdap_wurttemberg_elections_vote + Q.other_wurttemberg_elections_vote + Q.kvp_wurttemberg_elections_vote + Q.dnf_wurttemberg_elections_vote;
+Q.total_votes_wurttemberg = Q.spd_wurttemberg_elections_vote + Q.sapd_wurttemberg_elections_vote + Q.kpd_wurttemberg_elections_vote + Q.ddp_wurttemberg_elections_vote + Q.lvp_wurttemberg_elections_vote + Q.z_wurttemberg_elections_vote + Q.wp_wurttemberg_elections_vote + Q.dnvp_wurttemberg_elections_vote + Q.nsdap_wurttemberg_elections_vote + Q.other_wurttemberg_elections_vote + Q.kvp_wurttemberg_elections_vote + Q.dnf_wurttemberg_elections_vote;
 
 if (Q.total_votes_wurttemberg > 0) {
     Q.spd_wurttemberg_elections_vote = (Q.spd_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
@@ -761,7 +761,7 @@ if (Q.total_votes_wurttemberg > 0) {
     Q.ddp_wurttemberg_elections_vote = (Q.ddp_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
     Q.lvp_wurttemberg_elections_vote = (Q.lvp_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
     Q.z_wurttemberg_elections_vote = (Q.z_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
-    Q.dvp_wurttemberg_elections_vote = (Q.dvp_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
+    Q.wp_wurttemberg_elections_vote = (Q.wp_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
     Q.dnvp_wurttemberg_elections_vote = (Q.dnvp_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
     Q.nsdap_wurttemberg_elections_vote = (Q.nsdap_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
     Q.other_wurttemberg_elections_vote = (Q.other_wurttemberg_elections_vote / Q.total_votes_wurttemberg) * 100;
@@ -775,7 +775,7 @@ Q.kpd_wurttemberg_elections_vote = (Q.kpd_wurttemberg_elections_vote != undefine
 Q.ddp_wurttemberg_elections_vote = (Q.ddp_wurttemberg_elections_vote != undefined ? parseFloat(Q.ddp_wurttemberg_elections_vote.toFixed(1)) : 0);
 Q.lvp_wurttemberg_elections_vote = (Q.lvp_wurttemberg_elections_vote != undefined ? parseFloat(Q.lvp_wurttemberg_elections_vote.toFixed(1)) : 0);
 Q.z_wurttemberg_elections_vote = (Q.z_wurttemberg_elections_vote != undefined ? parseFloat(Q.z_wurttemberg_elections_vote.toFixed(1)) : 0);
-Q.dvp_wurttemberg_elections_vote = (Q.dvp_wurttemberg_elections_vote != undefined ? parseFloat(Q.dvp_wurttemberg_elections_vote.toFixed(1)) : 0);
+Q.wp_wurttemberg_elections_vote = (Q.wp_wurttemberg_elections_vote != undefined ? parseFloat(Q.wp_wurttemberg_elections_vote.toFixed(1)) : 0);
 Q.dnvp_wurttemberg_elections_vote = (Q.dnvp_wurttemberg_elections_vote != undefined ? parseFloat(Q.dnvp_wurttemberg_elections_vote.toFixed(1)) : 0);
 Q.nsdap_wurttemberg_elections_vote = (Q.nsdap_wurttemberg_elections_vote != undefined ? parseFloat(Q.nsdap_wurttemberg_elections_vote.toFixed(1)) : 0);
 Q.other_wurttemberg_elections_vote = (Q.other_wurttemberg_elections_vote != undefined ? parseFloat(Q.other_wurttemberg_elections_vote.toFixed(1)) : 0);
@@ -788,7 +788,7 @@ if (Q.kpd_wurttemberg_elections_vote >= 3.3) Q.kpd_r_wurttemberg = Q.kpd_wurttem
 if (Q.ddp_wurttemberg_elections_vote >= 3.3) Q.ddp_r_wurttemberg = Q.ddp_wurttemberg_elections_vote;
 if (Q.lvp_wurttemberg_elections_vote >= 3.3) Q.lvp_r_wurttemberg = Q.lvp_wurttemberg_elections_vote;
 if (Q.z_wurttemberg_elections_vote >= 3.3) Q.z_r_wurttemberg = Q.z_wurttemberg_elections_vote;
-if (Q.dvp_wurttemberg_elections_vote >= 3.3) Q.dvp_r_wurttemberg = Q.dvp_wurttemberg_elections_vote;
+if (Q.wp_wurttemberg_elections_vote >= 3.3) Q.wp_r_wurttemberg = Q.wp_wurttemberg_elections_vote;
 if (Q.dnvp_wurttemberg_elections_vote >= 3.3) Q.dnvp_r_wurttemberg = Q.dnvp_wurttemberg_elections_vote;
 if (Q.nsdap_wurttemberg_elections_vote >= 3.3) Q.nsdap_r_wurttemberg = Q.nsdap_wurttemberg_elections_vote;
 if (Q.other_wurttemberg_elections_vote >= 3.3) Q.other_r_wurttemberg = Q.other_wurttemberg_elections_vote;
@@ -803,7 +803,7 @@ if (Q.kpd_r_wurttemberg) Q.total_r_wurttemberg += Q.kpd_r_wurttemberg;
 if (Q.ddp_r_wurttemberg) Q.total_r_wurttemberg += Q.ddp_r_wurttemberg;
 if (Q.lvp_r_wurttemberg) Q.total_r_wurttemberg += Q.lvp_r_wurttemberg;
 if (Q.z_r_wurttemberg) Q.total_r_wurttemberg += Q.z_r_wurttemberg;
-if (Q.dvp_r_wurttemberg) Q.total_r_wurttemberg += Q.dvp_r_wurttemberg;
+if (Q.wp_r_wurttemberg) Q.total_r_wurttemberg += Q.wp_r_wurttemberg;
 if (Q.dnvp_r_wurttemberg) Q.total_r_wurttemberg += Q.dnvp_r_wurttemberg;
 if (Q.nsdap_r_wurttemberg) Q.total_r_wurttemberg += Q.nsdap_r_wurttemberg;
 if (Q.other_r_wurttemberg) Q.total_r_wurttemberg += Q.other_r_wurttemberg;
@@ -817,7 +817,7 @@ if (Q.total_r_wurttemberg > 0) {
     Q.ddp_r_wurttemberg = (Q.ddp_r_wurttemberg / Q.total_r_wurttemberg) * 100;
     Q.lvp_r_wurttemberg = (Q.lvp_r_wurttemberg / Q.total_r_wurttemberg) * 100;
     Q.z_r_wurttemberg = (Q.z_r_wurttemberg / Q.total_r_wurttemberg) * 100;
-    Q.dvp_r_wurttemberg = (Q.dvp_r_wurttemberg / Q.total_r_wurttemberg) * 100;
+    Q.wp_r_wurttemberg = (Q.wp_r_wurttemberg / Q.total_r_wurttemberg) * 100;
     Q.dnvp_r_wurttemberg = (Q.dnvp_r_wurttemberg / Q.total_r_wurttemberg) * 100;
     Q.nsdap_r_wurttemberg = (Q.nsdap_r_wurttemberg / Q.total_r_wurttemberg) * 100;
     Q.other_r_wurttemberg = (Q.other_r_wurttemberg / Q.total_r_wurttemberg) * 100;
@@ -831,7 +831,7 @@ Q.kpd_r_wurttemberg = (Q.kpd_r_wurttemberg != undefined ? parseFloat(Q.kpd_r_wur
 Q.ddp_r_wurttemberg = (Q.ddp_r_wurttemberg != undefined ? parseFloat(Q.ddp_r_wurttemberg.toFixed(1)) : 0);
 Q.lvp_r_wurttemberg = (Q.lvp_r_wurttemberg != undefined ? parseFloat(Q.lvp_r_wurttemberg.toFixed(1)) : 0);
 Q.z_r_wurttemberg = (Q.z_r_wurttemberg != undefined ? parseFloat(Q.z_r_wurttemberg.toFixed(1)) : 0);
-Q.dvp_r_wurttemberg = (Q.dvp_r_wurttemberg != undefined ? parseFloat(Q.dvp_r_wurttemberg.toFixed(1)) : 0);
+Q.wp_r_wurttemberg = (Q.wp_r_wurttemberg != undefined ? parseFloat(Q.wp_r_wurttemberg.toFixed(1)) : 0);
 Q.dnvp_r_wurttemberg = (Q.dnvp_r_wurttemberg != undefined ? parseFloat(Q.dnvp_r_wurttemberg.toFixed(1)) : 0);
 Q.nsdap_r_wurttemberg = (Q.nsdap_r_wurttemberg != undefined ? parseFloat(Q.nsdap_r_wurttemberg.toFixed(1)) : 0);
 Q.other_r_wurttemberg = (Q.other_r_wurttemberg != undefined ? parseFloat(Q.other_r_wurttemberg.toFixed(1)) : 0);
@@ -839,8 +839,8 @@ Q.kvp_r_wurttemberg = (Q.kvp_r_wurttemberg != undefined ? parseFloat(Q.kvp_r_wur
 Q.dnf_r_wurttemberg = (Q.dnf_r_wurttemberg != undefined ? parseFloat(Q.dnf_r_wurttemberg.toFixed(1)) : 0);
 
 Q.left_coalition_wurttemberg = parseFloat((Q.spd_r_wurttemberg + Q.kpd_r_wurttemberg + Q.sapd_r_wurttemberg).toFixed(1));
-Q.bourgeois_coalition_wurttemberg = parseFloat((Q.z_r_wurttemberg + Q.ddp_r_wurttemberg + Q.dvp_r_wurttemberg + Q.lvp_r_wurttemberg + Q.kvp_r_wurttemberg + Q.other_r_wurttemberg).toFixed(1));
-if (Q.dnvp_ideology == "Moderate") Q.bourgeois_coalition_wurttemberg = parseFloat((Q.z_r_wurttemberg + Q.ddp_r_wurttemberg + Q.dvp_r_wurttemberg + Q.lvp_r_wurttemberg + Q.dnvp_r_wurttemberg + Q.other_r_wurttemberg).toFixed(1));
+Q.bourgeois_coalition_wurttemberg = parseFloat((Q.z_r_wurttemberg + Q.ddp_r_wurttemberg + Q.wp_r_wurttemberg + Q.lvp_r_wurttemberg + Q.kvp_r_wurttemberg + Q.other_r_wurttemberg).toFixed(1));
+if (Q.dnvp_ideology == "Moderate") Q.bourgeois_coalition_wurttemberg = parseFloat((Q.z_r_wurttemberg + Q.ddp_r_wurttemberg + Q.wp_r_wurttemberg + Q.lvp_r_wurttemberg + Q.dnvp_r_wurttemberg + Q.other_r_wurttemberg).toFixed(1));
 Q.spd_coalition_wurttemberg = parseFloat((Q.spd_r_wurttemberg + Q.ddp_r_wurttemberg + Q.lvp_r_wurttemberg + Q.z_r_wurttemberg).toFixed(1));
 if (Q.cvp_formed) Q.spd_coalition_wurttemberg = parseFloat((Q.spd_r_wurttemberg + Q.ddp_r_wurttemberg + Q.lvp_r_wurttemberg).toFixed(1));
 
@@ -906,12 +906,12 @@ data = data.concat([{
 }
 ]);
 
-if (Q.dvp_r_wurttemberg && !Q.lvp_formed && Q.dvp_exist) {
+if (Q.wp_r_wurttemberg && !Q.lvp_formed && Q.wp_exist) {
     data.push({
-        "id": "dvp",
+        "id": "wp",
         "legend": "DVP",
         "name": "DVP",
-        "seats": Math.round(Q.dvp_r_wurttemberg * 0.8),
+        "seats": Math.round(Q.wp_r_wurttemberg * 0.8),
     });
 }
 if (Q.other_r_wurttemberg) {
@@ -982,8 +982,8 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
+            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'wp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'wp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -993,13 +993,13 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
+            {'spd': '#E3000F', 'kpd': '#700000', 'ddp': '#D3C24D', 'z': '#000', 'wp': '#D5AC27', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC', 'lvp': '#FFCC00'},
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': Q.z_party_name + ' + BVP', 'wp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP', 'lvp': 'LVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
 }
-if (((Q.ddp_wurttemberg_elections_vote + Q.dvp_wurttemberg_elections_vote < 8 && !Q.lvp_formed && Q.dvp_exist) || (Q.ddp_wurttemberg_elections_vote < 6 && !Q.lvp_formed && !Q.dvp_exist)) || Q.lvp_wurttemberg_elections_vote < 12 && Q.lvp_formed) Q.liberal_wurttemberg_defeat = 1;
+if (((Q.ddp_wurttemberg_elections_vote + Q.wp_wurttemberg_elections_vote < 8 && !Q.lvp_formed && Q.wp_exist) || (Q.ddp_wurttemberg_elections_vote < 6 && !Q.lvp_formed && !Q.wp_exist)) || Q.lvp_wurttemberg_elections_vote < 12 && Q.lvp_formed) Q.liberal_wurttemberg_defeat = 1;
 !}
 go-to: wurttemberg_coalition_menu
 
@@ -1022,7 +1022,7 @@ go-to: wurttemberg_coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_wurttemberg_elections_vote +]% {!</td><td>!} [+ z_r_wurttemberg +]%  {!</td></tr>!}
 
-[? if not lvp_formed and dvp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_wurttemberg_elections_vote +]% {!</td><td>!} [+ dvp_r_wurttemberg +]%  {!</td></tr>!} ?]
+[? if not lvp_formed and wp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ wp_wurttemberg_elections_vote +]% {!</td><td>!} [+ wp_r_wurttemberg +]%  {!</td></tr>!} ?]
  
 {!<tr><td><div class="box" style='background-color:#006400'> </div> !} WBWB: {!</td><td>!} [+ farm_wurttemberg_elections_vote +]% {!</td><td>!} [+ farm_r_wurttemberg +]%  {!</td></tr>!}
 
@@ -1043,11 +1043,11 @@ United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span styl
 
 [? if not cvp_formed: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #000000;">**[+ z_party_name +]**</span>): [+ spd_coalition_wurttemberg +]% ?][? if cvp_formed: <span style="color: #c00000;">Social</span>-[? if not lvp_formed: <span style="color: #D3C24D;">Liberal</span>?][? if lvp_formed: <span style="color: #FFCC00;">Liberal</span>?] Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]): [+ spd_coalition_wurttemberg +]% ?]
 
-[? if not kvp_formed: Bourgeois Coalition (<span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #006400;">**WBWB**</span> + **Others**[? if dnvp_ideology == "Moderate" and not cvp_formed:&nbsp;+ <span style="color: #3E88B3;">**DNVP**</span>?]): [+ bourgeois_coalition_wurttemberg +]% ?]
+[? if not kvp_formed: Bourgeois Coalition (<span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if wp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #006400;">**WBWB**</span> + **Others**[? if dnvp_ideology == "Moderate" and not cvp_formed:&nbsp;+ <span style="color: #3E88B3;">**DNVP**</span>?]): [+ bourgeois_coalition_wurttemberg +]% ?]
 
-[? if kvp_formed: Bourgeois Coalition (<span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #006400;">**WBWB**</span> + **Others** + <span style="color: #0087DC;">**KVP**</span>): [+ bourgeois_coalition_wurttemberg +]% ?]
+[? if kvp_formed: Bourgeois Coalition (<span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if wp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #006400;">**WBWB**</span> + **Others** + <span style="color: #0087DC;">**KVP**</span>): [+ bourgeois_coalition_wurttemberg +]% ?]
 
-[? if( ddp_wurttemberg_elections_vote + dvp_wurttemberg_elections_vote < 8 and not lvp_formed) or (lvp_wurttemberg_elections_vote < 12 and lvp_formed): The [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: and <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] have suffered a major defeat, losing a significant number of seats compared to 1928. This will severely demoralize the <span style="color: #FFCC00;">liberals</span>, who had hoped to maintain their traditional stronghold over Württemberg. Combined with other local elections, the <span style="color: #FFCC00;">liberal parties</span> are essentially dead as an effective political force. ?]
+[? if( ddp_wurttemberg_elections_vote + wp_wurttemberg_elections_vote < 8 and not lvp_formed) or (lvp_wurttemberg_elections_vote < 12 and lvp_formed): The [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if wp_exist: and <span style="color: #C0A054;">**DVP**</span>?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] have suffered a major defeat, losing a significant number of seats compared to 1928. This will severely demoralize the <span style="color: #FFCC00;">liberals</span>, who had hoped to maintain their traditional stronghold over Württemberg. Combined with other local elections, the <span style="color: #FFCC00;">liberal parties</span> are essentially dead as an effective political force. ?]
 
 @wurttemberg_coalition_menu
 

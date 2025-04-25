@@ -1,7 +1,7 @@
 title: Resolution to Extend Hindenburg's Term
 subtitle: An amendment to the constitution can be made...
 new-page: true
-on-arrival: hindenburg_extension_seen = 1; dvp_left += 1; ddp_right += 1; ddp_cohesion -= 1; lvp_left += 1
+on-arrival: hindenburg_extension_seen = 1; wp_left += 1; ddp_right += 1; ddp_cohesion -= 1; lvp_left += 1
 tags: event
 view-if: year = 1932 and month == 1 and ((neo_weimar_coalition + kvp_r >= 66.6 and dnvp_ideology == "Radical") or (neo_weimar_coalition + dnvp_r >= 66.6 and dnvp_ideology == "Moderate"))
 face-image: img/portraits/Hindenburg.jpg
@@ -31,7 +31,7 @@ We are forced to impose party discipline, greatly angering the Left and Center o
 @oppose_resolution
 choose-if: not schleicher_spd
 unavailable-subtitle: As part of our deal with Schleicher, we are now forced to support the resolution.
-on-arrival: popcon_dissent += 5; right_dissent -= 10; old_middle_uspd -= 3; lvp_old_relation -= 3; wp_relation -= 5; dvp_right += 3
+on-arrival: popcon_dissent += 5; right_dissent -= 10; old_middle_uspd -= 3; lvp_old_relation -= 3; wp_relation -= 5; wp_right += 3
 
 Of course, we will oppose this undemocratic act—the people should decide whether Hindenburg receives another term or not. 
 

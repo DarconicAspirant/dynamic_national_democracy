@@ -3,7 +3,7 @@ view-if: year = 1929 and month >= 10 and not lvp_formed
 frequency: 1000
 max-visits: 1
 tags: event
-on-arrival: stresemann_dead = 1; wp_relation -= 8; dvp_right += 5; dvp_leader = "Scholz"; dvp_leader = "Curtius" if dvp_reform; foreign_minister = "Curtius" if foreign_minister = "Stresemann"
+on-arrival: stresemann_dead = 1; wp_relation -= 8; wp_right += 5; wp_leader = "Scholz"; wp_leader = "Curtius" if wp_reform; foreign_minister = "Curtius" if foreign_minister = "Stresemann"
 priority: -1
 face-image: img/portraits/Stresemann.jpg
 
@@ -13,4 +13,4 @@ Gustav Stresemann, leader of the <span style="color: #C0A054;">**DVP**</span> an
 
 A hole has been left within the liberal movement at the worse possible time, and it is likely that the industrial wing of the party will complete their takeover and subsequently end cooperation with us. 
 
-[? if dvp_leader == "Scholz": Ernst Scholz, his arch enemy on the right wing has succeeded him as leader of the <span style="color: #C0A054;">**DVP**</span>, and leadership election will be conducted in two months.?][? if dvp_leader == "Curtius": Julius Curtius, his successor in foreign affairs, and ally in the left wing of the party, has succeeded him as leader of the <span style="color: #C0A054;">**DVP**</span>, and leadership election will be conducted in two months.?]
+[? if wp_leader == "Scholz": Ernst Scholz, his arch enemy on the right wing has succeeded him as leader of the <span style="color: #C0A054;">**DVP**</span>, and leadership election will be conducted in two months.?][? if wp_leader == "Curtius": Julius Curtius, his successor in foreign affairs, and ally in the left wing of the party, has succeeded him as leader of the <span style="color: #C0A054;">**DVP**</span>, and leadership election will be conducted in two months.?]

@@ -13,7 +13,7 @@ Our coalition is in trouble. The right-leaning members of the [? if not in_socia
 
 How do we reduce tensions with the coalition?
 
-- @dvp_prussia_2: Let the <span style="color: #C0A054;">**DVP**</span> into Prussia.
+- @wp_prussia_2: Let the <span style="color: #C0A054;">**DVP**</span> into Prussia.
 - @promise_cuts: Agree to the bourgeois plans to cut welfare.
 - @resources: Use our party resources to support our allies.
 - @bring_down: Instead, we will bring down the government with a no-confidence vote, and call for new elections.
@@ -21,11 +21,11 @@ How do we reduce tensions with the coalition?
 - @easy_discard
 
 
-@dvp_prussia_2
-view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_conservative_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and not lvp_formed
+@wp_prussia_2
+view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_conservative_coalition_prussia) and in_grand_coalition = 1 and wp_was_in_prussia == 0 and not lvp_formed
 choose-if: z_leader != "Kaas"
 unavailable-subtitle: [? if z_leader = "Kaas": Kaas and the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] strongly dissents against. ?]
-on-arrival: in_conservative_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_dnvp_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; dnvp_prussia = 1; ddp_in_popular_front_prussia = 0; nazi_goals_seen_prussia = 0; dnvp_toleration_prussia = 0; wp_relation += 10; z_relation -= 5; lvp_relation += 3; coalition_dissent -= 1; right_dissent += 5; in_grand_coalition_prussia = 1; in_weimar_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; dvp_left += 3; new_middle_wp += 3;
+on-arrival: in_conservative_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_dnvp_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; dnvp_prussia = 1; ddp_in_popular_front_prussia = 0; nazi_goals_seen_prussia = 0; dnvp_toleration_prussia = 0; wp_relation += 10; z_relation -= 5; lvp_relation += 3; coalition_dissent -= 1; right_dissent += 5; in_grand_coalition_prussia = 1; in_weimar_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; wp_left += 3; new_middle_wp += 3;
 
 Letting the <span style="color: #C0A054;">**DVP**</span> into the Prussian government is an offer too good for them to refuse, no matter their leadership. 
 
@@ -41,15 +41,15 @@ Fine. We no longer control the government of Prussia. The vote has been called o
 The Minister-President position is transferred to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
 
 @promise_cuts
-on-arrival: workers_uspd -= 5; unemployed_uspd -= 6; workers_spd += 5; unemployed_spd += 3; unemployed_nsdap += 3; right_dissent += 10; christsoc_dissent += 5; welfare -= 1; budget += 1; coalition_dissent = 0; dvp_left += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_dnvp_cancel += 1; social_welfare_timer = 10
+on-arrival: workers_uspd -= 5; unemployed_uspd -= 6; workers_spd += 5; unemployed_spd += 3; unemployed_nsdap += 3; right_dissent += 10; christsoc_dissent += 5; welfare -= 1; budget += 1; coalition_dissent = 0; wp_left += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_dnvp_cancel += 1; social_welfare_timer = 10
 
 Fine. By cutting welfare, we have reduced dissent within the coalition.
 
 @resources
 subtitle: -2 resources
 view-if: historical_mode = 0
-choose-if: (resources >= 2 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 2 and in_grand_coalition and not (dvp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 2 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
-unavailable-subtitle: [? if resources < 2: We do not have enough resources. ?] [? if in_grand_coalition and (dvp_ideology == "Right" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**DVP**</span> doesn't want our resources anymore. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> doesn't want our resources anymore. ?]
+choose-if: (resources >= 2 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 2 and in_grand_coalition and not (wp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 2 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
+unavailable-subtitle: [? if resources < 2: We do not have enough resources. ?] [? if in_grand_coalition and (wp_ideology == "Right" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**DVP**</span> doesn't want our resources anymore. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> doesn't want our resources anymore. ?]
 on-arrival: resources -= 2; coalition_dissent -= 1
 
 By transferring campaign funds to our coalition partners, we can make our policies more acceptable to them. Some would call this corruption, but perhaps it is necessary to save democracy.

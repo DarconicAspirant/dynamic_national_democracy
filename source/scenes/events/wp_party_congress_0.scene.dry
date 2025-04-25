@@ -1,10 +1,10 @@
 title: <span style="color: #C0A054;">**DVP**</span> Congress
 subtitle: The <span style="color: #C0A054;">**DVP**</span> decides their future...
-view-if: year = 1928 and month = 12 and dvp_congress_trigger = 1 and dnvp_ideology != "Radical" and not lvp_formed and lvp_timer_trigger == 0
-on-arrival: dvp_left += 1 if wp_relation >= 50; dvp_right += 1 if wp_relation < 35; dvp_right += 1 if not in_grand_coalition
+view-if: year = 1928 and month = 12 and wp_congress_trigger = 1 and dnvp_ideology != "Radical" and not lvp_formed and lvp_timer_trigger == 0
+on-arrival: wp_left += 1 if wp_relation >= 50; wp_right += 1 if wp_relation < 35; wp_right += 1 if not in_grand_coalition
 max-visits: 1
 tags: event
-face-image: img/dvp.jpg
+face-image: img/wp.jpg
 new-page: true
 
 = <span style="color: #C0A054;">**DVP**</span> Congress
@@ -13,22 +13,22 @@ A party congress has been called within the <span style="color: #C0A054;">**DVP*
 
 German industry isn't going to abandon their voice within the <span style="color: #C0A054;">**DVP**</span> so easily, and this is likely to be the last chance Stresemann will have to maintain control of the party, with his declining health.[? if not in_grand_coalition: The left of the <span style="color: #C0A054;">**DVP**</span> has also been diminished by the current absence of a coalition including both parties. ?]
 
-- @resultsdvp: The party votes...
+- @resultswp: The party votes...
 
-@resultsdvp
+@resultswp
 on-arrival: {!
-if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
-    Q.dvp_ideology = "Right"
-} else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
-    Q.dvp_ideology = "Left"
+if (Q.wp_right > (Q.wp_left*1.5) || (Q.wp_right > (Q.wp_left + 4))) {
+    Q.wp_ideology = "Right"
+} else if (Q.wp_left > (Q.wp_right*1.5) || (Q.wp_left > (Q.wp_right + 4))) {
+    Q.wp_ideology = "Left"
 } else {
-    Q.dvp_ideology = "Moderate"
+    Q.wp_ideology = "Moderate"
 }
 !}
-go-to: left if dvp_ideology == "Left" or (dvp_left - dvp_right >= 3); right if dvp_ideology == "Right" or (dvp_right - dvp_left >= 3); left_conflict if not (dvp_ideology == "Left" or (dvp_left - dvp_right >= 3) and not (dvp_ideology == "Right" or (dvp_right - dvp_left >= 3)))
+go-to: left if wp_ideology == "Left" or (wp_left - wp_right >= 3); right if wp_ideology == "Right" or (wp_right - wp_left >= 3); left_conflict if not (wp_ideology == "Left" or (wp_left - wp_right >= 3) and not (wp_ideology == "Right" or (wp_right - wp_left >= 3)))
 
 @left
-on-arrival: dvp_left += 10; wp_relation += 10; liberal_cooperation += 3; workers_wp += 1; workers_other -= 1; new_middle_wp += 4; new_middle_other -= 4; old_middle_wp += 4; old_middle_other -= 4; rural_wp += 2; rural_other -= 2; catholics_other -= 2; catholics_z -= 2; catholics_wp += 4; coalition_dissent -= 2 if in_grand_coalition; dvp_reform = 1; pro_republic += 5; ddp_left += 1.5; ddp_cohesion += 1.5
+on-arrival: wp_left += 10; wp_relation += 10; liberal_cooperation += 3; workers_wp += 1; workers_other -= 1; new_middle_wp += 4; new_middle_other -= 4; old_middle_wp += 4; old_middle_other -= 4; rural_wp += 2; rural_other -= 2; catholics_other -= 2; catholics_z -= 2; catholics_wp += 4; coalition_dissent -= 2 if in_grand_coalition; wp_reform = 1; pro_republic += 5; ddp_left += 1.5; ddp_cohesion += 1.5
 face-image: img/portraits/Stresemann.jpg
 
 Stresemann rallies what's left of the <span style="color: #C0A054;">**DVP**</span> that aren't bought out by industry into adopting the proposed reform, not without any fierce opposition from the other half of the party. The industrialists have diverted their efforts on maintaining influence within the <span style="color: #3E88B3;">**DNVP**</span> now, to make up for their loss.
@@ -36,7 +36,7 @@ Stresemann rallies what's left of the <span style="color: #C0A054;">**DVP**</spa
 We have noticed an improvement in relations with the <span style="color: #C0A054;">**DVP**</span>[? if in_grand_coalition:, and a decrease in coalition tensions?]. The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has also voiced approval to the actions of the congress and have opened up talks for further cooperation. This also has a ripple effect within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, shifting them leftwards.
 
 @left_conflict
-on-arrival: dvp_left += 5; wp_relation += 5; liberal_cooperation += 2; workers_wp += 1; workers_other -= 1; new_middle_wp += 2; new_middle_other -= 2; old_middle_wp += 2; old_middle_other -= 2; catholics_other -= 2; catholics_wp += 2; dvp_reform = 1; coalition_dissent -= 1 if in_grand_coalition; pro_republic += 3; ddp_left += 1; ddp_cohesion += 1
+on-arrival: wp_left += 5; wp_relation += 5; liberal_cooperation += 2; workers_wp += 1; workers_other -= 1; new_middle_wp += 2; new_middle_other -= 2; old_middle_wp += 2; old_middle_other -= 2; catholics_other -= 2; catholics_wp += 2; wp_reform = 1; coalition_dissent -= 1 if in_grand_coalition; pro_republic += 3; ddp_left += 1; ddp_cohesion += 1
 face-image: img/portraits/Stresemann.jpg
 
 Stresemann and the left-wing of the <span style="color: #C0A054;">**DVP**</span> pushed through the reform by an extremely narrow margin, only achieved by Stresemann's threats to resign if it were not to pass. Half of the party's Reichstag delegation is tied to industry, which are now without much influence within the <span style="color: #C0A054;">**DVP**</span>, and have mostly shifted to support the <span style="color: #3E88B3;">**DNVP**</span> now. Those in the Reichstag delegation are now in open conflict with the left-wing of the <span style="color: #C0A054;">**DVP**</span>.
@@ -44,7 +44,7 @@ Stresemann and the left-wing of the <span style="color: #C0A054;">**DVP**</span>
 We have noticed a small improvement in relations with the <span style="color: #C0A054;">**DVP**</span>[? if in_grand_coalition:, and a decrease in coalition tensions?]. The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has also voiced approval to the actions of the congress and have opened up talks for further cooperation. This also has a ripple effect within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, shifting them leftwards.
 
 @right
-on-arrival: dvp_right += 5; wp_relation -= 5; coalition_dissent += 1 if in_grand_coalition; old_middle_dnvp += 2; new_middle_dnvp += 2; dvp_reform = 0; pro_republic -= 3; ddp_right += 1; ddp_cohesion -= 1
+on-arrival: wp_right += 5; wp_relation -= 5; coalition_dissent += 1 if in_grand_coalition; old_middle_dnvp += 2; new_middle_dnvp += 2; wp_reform = 0; pro_republic -= 3; ddp_right += 1; ddp_cohesion -= 1
 face-image: img/portraits/ernst_scholz.jpg
 
 Stresemann has faced a resounding defeat at the hands of the right-wing industrial interests inside the <span style="color: #C0A054;">**DVP**</span>. They have capitalized on this defeat by restricting the powers of the party chairmanship under Stresemann towards the more conservative Reichstag delegation led by Ernst Scholz, the lead figure on the right-wing. 

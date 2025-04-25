@@ -2,7 +2,7 @@ title: The Death of Hindenburg
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Hindenburg"
-on-arrival: round = 0; hindenburg_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Levi"; kpd_candidate = "Münzenberg" if spd_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; lvp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; dvp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate; kvp_candidate = dnvp_candidate; dnf_candidate = dnvp_candidate
+on-arrival: round = 0; hindenburg_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Levi"; kpd_candidate = "Münzenberg" if spd_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; lvp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; wp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate; kvp_candidate = dnvp_candidate; dnf_candidate = dnvp_candidate
 max-visits: 1
 on-display: {!  
     var cardEl = document.createElement('div');  
@@ -90,7 +90,7 @@ We have endorsed Konrad Adenauer of the [? if z_party_name != "CVP": <span style
 [? if z_relation < 40 : With our support of Adenauer, some of the most conservative parts of the <span style="color: #A2D8E0;">Bavarian People's Party</span> have broken away from the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], shifting their support to the <span style="color: #3E88B3;">**Stahlhelm**</span> leader Seldte. Hopefully it doesn't lead to a repeat of the 1925 Presidential election. ?]
 
 @gessler_r1
-on-arrival: spd_candidate = "Gessler"; lvp_relation += 4; dvp_candidate = "Seldte" if wp_relation < 40; is_unity_candidate = 1
+on-arrival: spd_candidate = "Gessler"; lvp_relation += 4; wp_candidate = "Seldte" if wp_relation < 40; is_unity_candidate = 1
 go-to: r1_menu
 
 We have endorsed Otto Gessler, independent formerly of the DDP.
@@ -359,22 +359,22 @@ title: Convince the <span style="color: #C0A054;">**DVP**</span> to support [+ s
 unavailable-subtitle: The <span style="color: #C0A054;">DVP</span> is not willing to support our candidate.
 view-if: spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate
 choose-if: (wp_relation >= 50 and candidate != "Juchacz") or (wp_relation >= 60 and candidate = "Juchacz")
-on-arrival: dvp_candidate = spd_candidate
+on-arrival: wp_candidate = spd_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if dvp_candidate = spd_candidate: Thanks to our good relations, the <span style="color: #C0A054;">**<span style="color: #C0A054;">**DVP**</span>**</span> is persuaded to support [+ spd_candidate +]! ?]
+[? if wp_candidate = spd_candidate: Thanks to our good relations, the <span style="color: #C0A054;">**<span style="color: #C0A054;">**DVP**</span>**</span> is persuaded to support [+ spd_candidate +]! ?]
 
 @convince_wp_unity
 title: Convince the <span style="color: #C0A054;">**DVP**</span> to support [+ spd_candidate +].
 unavailable-subtitle: The <span style="color: #C0A054;">DVP</span> is not willing to support our candidate.
-view-if: (spd_candidate = "Adenauer" or spd_candidate = "Gessler" or spd_candidate = "Eckener") and dvp_candidate != spd_candidate
+view-if: (spd_candidate = "Adenauer" or spd_candidate = "Gessler" or spd_candidate = "Eckener") and wp_candidate != spd_candidate
 choose-if: wp_relation >= 40
-on-arrival: dvp_candidate = spd_candidate
+on-arrival: wp_candidate = spd_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if dvp_candidate = spd_candidate: Thanks to our good relations, and the fact that our candidate is a unity candidate not affiliated with the <span style="color: #c00000;">**SPD**</span>, the <span style="color: #C0A054;">**DVP**</span> is persuaded to support [+ spd_candidate +]. ?]
+[? if wp_candidate = spd_candidate: Thanks to our good relations, and the fact that our candidate is a unity candidate not affiliated with the <span style="color: #c00000;">**SPD**</span>, the <span style="color: #C0A054;">**DVP**</span> is persuaded to support [+ spd_candidate +]. ?]
 
 
 
@@ -499,14 +499,14 @@ if (Q.Hitler_votes && Q.Seldte_votes) {
 // 2. If Adenauer & Gessler are both running and neither are part of the SPD coalition, the smaller of these drops out.
 Q.adenauer_drops_out = 0;
 Q.gessler_drops_out = 0;
-if (Q.z_candidate == "Adenauer" && (Q.ddp_candidate == "Gessler" || Q.dvp_candidate == "Gessler") && Q.z_candidate != Q.spd_candidate && (Q.ddp_candidate != Q.spd_candidate || Q.dvp_candidate != Q.spd_candidate)) {
+if (Q.z_candidate == "Adenauer" && (Q.ddp_candidate == "Gessler" || Q.wp_candidate == "Gessler") && Q.z_candidate != Q.spd_candidate && (Q.ddp_candidate != Q.spd_candidate || Q.wp_candidate != Q.spd_candidate)) {
     if (Q.Adenauer_votes > Q.Gessler_votes) {
         Q.gessler_drops_out = 1;
         if (Q.ddp_candidate != Q.spd_candidate) {
             Q.ddp_candidate = "Adenauer";
         }
-        if (Q.dvp_candidate != Q.spd_candidate) {
-            Q.dvp_candidate = "Adenauer";
+        if (Q.wp_candidate != Q.spd_candidate) {
+            Q.wp_candidate = "Adenauer";
         }
         Q.Adenauer_bonus = (Q.Adenauer_bonus || 0) + 0.25*Q.other_votes;
     } else {
@@ -521,7 +521,7 @@ if (Q.z_candidate == "Adenauer" && (Q.ddp_candidate == "Gessler" || Q.dvp_candid
     }
 }
 // DVP drops out to favor the center candidate
-if (Q.dvp_candidate != Q.spd_candidate && Q.dvp_candidate != Q.ddp_candidate && Q.dvp_candidate != Q.z_candidate) {
+if (Q.wp_candidate != Q.spd_candidate && Q.wp_candidate != Q.ddp_candidate && Q.wp_candidate != Q.z_candidate) {
 }
 !}
 go-to: r2_menu
@@ -558,10 +558,10 @@ view-if: spd_candidate != "Levi" and kpd_candidate = "Levi"
 choose-if: nsdap_relation >= 50 and right_strength > popcon_strength
 unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; lvp_relation -= 12
-on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Levi"; 
+on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; wp_candidate = z_candidate if wp_candidate = "Braun" or wp_candidate = "Schumacher" or wp_candidate = "Juchacz"; spd_candidate = "Levi"; 
 max-visits: 1
 
-We have switched our endorsement to Ernst Thälmann of the <span style="color: #700000;">**KPD**</span>. [? if z_candidate = spd_candidate : Our former allies in the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will switch their support to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The <span style="color: #C0A054;">**DVP**</span> will also support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?]
+We have switched our endorsement to Ernst Thälmann of the <span style="color: #700000;">**KPD**</span>. [? if z_candidate = spd_candidate : Our former allies in the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will switch their support to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?][? if wp_candidate = "Braun" or wp_candidate = "Schumacher" or wp_candidate = "Juchacz": The <span style="color: #C0A054;">**DVP**</span> will also support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -572,10 +572,10 @@ view-if: spd_candidate != "Münzenberg" and kpd_candidate = "Münzenberg"
 choose-if: nsdap_relation >= 50 and right_strength > popcon_strength
 unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: popcon_dissent += 12; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 12; lvp_relation -= 10; wp_relation -= 15; 
-on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Münzenberg"; 
+on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; ddp_candidate = z_candidate if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz"; wp_candidate = z_candidate if wp_candidate = "Braun" or wp_candidate = "Schumacher" or wp_candidate = "Juchacz"; spd_candidate = "Münzenberg"; 
 max-visits: 1
 
-We have switched our endorsement to Willi Münzenberg of the <span style="color: #700000;">**KPD**</span>. [? if z_candidate = spd_candidate : Our former allies in the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will switch their support to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The <span style="color: #C0A054;">**DVP**</span> will also support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?]
+We have switched our endorsement to Willi Münzenberg of the <span style="color: #700000;">**KPD**</span>. [? if z_candidate = spd_candidate : Our former allies in the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if ddp_candidate = "Braun" or ddp_candidate = "Schumacher" or ddp_candidate = "Juchacz": The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will switch their support to the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?][? if wp_candidate = "Braun" or wp_candidate = "Schumacher" or wp_candidate = "Juchacz": The <span style="color: #C0A054;">**DVP**</span> will also support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -595,7 +595,7 @@ We have endorsed Konrad Adenauer of the [? if z_party_name != "CVP": <span style
 @r2_endorse_gessler
 title: Switch our support to Otto Gessler.
 view-if: ddp_candidate = "Gessler" and spd_candidate != ddp_candidate
-on-departure: kpd_candidate = "Levi" if kpd_candidate == spd_candidate and spd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and spd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Gessler"; lvp_relation += 4; dvp_candidate = "Seldte" if wp_relation < 40; is_unity_candidate = 1
+on-departure: kpd_candidate = "Levi" if kpd_candidate == spd_candidate and spd_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and spd_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Gessler"; lvp_relation += 4; wp_candidate = "Seldte" if wp_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have endorsed Otto Gessler, independent formerly of the <span style="color: #D3C24D;">**DDP**</span>.
@@ -679,7 +679,7 @@ on-arrival: {!
 Q.pro_democracy_votes = Q.uspd_votes + Q.ddp_votes + (Q.lvp_votes / 2) + Q.z_votes - (Q.sa_strength*Q.sa_militancy/10) + (Q.vb_strength*Q.vb_militancy/10);
 if (Q.pro_republic >= 60) {
     Q.pro_democracy_votes += Q.spd_votes;
-    Q.pro_democracy_votes += Q.dvp_votes;
+    Q.pro_democracy_votes += Q.wp_votes;
     Q.pro_democracy_votes += (Q.lvp_votes / 2);
 }
 !}

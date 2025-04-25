@@ -65,7 +65,7 @@ title: Further persecute the <span style="color: #3E88B3;">**Stahlhelm**</span>.
 view-if: sh_banned = 1
 choose-if: judicial_reform >= 4 and interior_police_loyalty >= 0.7
 unavailable-subtitle: [? if judicial_reform < 4 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
-on-arrival: sh_strength *= 0.7; sh_militancy -= 0.05; wp_relation -= 5; lvp_old_relation -= 3; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if dnvp_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; dvp_right += 1; uprising_progress -= 1 if uprising_progress >= 4; braun_angry += 5
+on-arrival: sh_strength *= 0.7; sh_militancy -= 0.05; wp_relation -= 5; lvp_old_relation -= 3; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if dnvp_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; wp_right += 1; uprising_progress -= 1 if uprising_progress >= 4; braun_angry += 5
 
 We have arrested more of the <span style="color: #3E88B3;">**Stahlhelm**</span>'s leaders and confiscated their weapons.
 

@@ -32,7 +32,7 @@ Within our party, we are pushing forward proposals for a people's party against 
 @support_peoples_party
 choose-if: (paramilitarist_strength + popcon_strength >= right_strength + agrarian_strength) and peoples_party_support >= 4
 unavailable-subtitle: The opposition is too strong.
-on-arrival: paramilitarist_strength += 15; popcon_strength += 15; paramilitarist_dissent -= 10; popcon_dissent -= 10; peoples_party = 1; workers_uspd -= 12; rural_uspd += 10; new_middle_uspd += 10; old_middle_uspd += 8; catholics_uspd += 8; right_dissent += 25; center_dissent += 20; nsdap_relation -= 10; nazi_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 5*(1-dissent); wp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); lvp_old_relation += 5*(1-dissent); dvp_left += 3; ddp_left += 3; ddp_cohesion += 2; lvp_left += 3
+on-arrival: paramilitarist_strength += 15; popcon_strength += 15; paramilitarist_dissent -= 10; popcon_dissent -= 10; peoples_party = 1; workers_uspd -= 12; rural_uspd += 10; new_middle_uspd += 10; old_middle_uspd += 8; catholics_uspd += 8; right_dissent += 25; center_dissent += 20; nsdap_relation -= 10; nazi_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 5*(1-dissent); wp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); lvp_old_relation += 5*(1-dissent); wp_left += 3; ddp_left += 3; ddp_cohesion += 2; lvp_left += 3
 achievement: volkspartei
 
 In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from <span style="color: #9B0000;">Marxism</span> towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
@@ -50,7 +50,7 @@ Should we run a new campaign to publicize our new platform?
 @support_peoples_party_hard
 subtitle: This will increase dissent.
 view-if: (paramilitarist_strength + popcon_strength < right_strength + agrarian_strength) or (peoples_party_support < 4)
-on-arrival: paramilitarist_strength += 10; popcon_strength += 8; peoples_party = 1; workers_uspd -= 15; rural_uspd += 10; new_middle_uspd += 10; old_middle_uspd += 8; catholics_uspd += 8; right_dissent += 40; center_dissent += 40; nsdap_relation -= 10; nazi_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 4*(1-dissent); wp_relation += 4*(1-dissent); lvp_relation += 5*(1-dissent); lvp_old_relation += 5*(1-dissent); dvp_left += 2; ddp_left += 2; ddp_cohesion += 1.5; lvp_left += 2
+on-arrival: paramilitarist_strength += 10; popcon_strength += 8; peoples_party = 1; workers_uspd -= 15; rural_uspd += 10; new_middle_uspd += 10; old_middle_uspd += 8; catholics_uspd += 8; right_dissent += 40; center_dissent += 40; nsdap_relation -= 10; nazi_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 4*(1-dissent); wp_relation += 4*(1-dissent); lvp_relation += 5*(1-dissent); lvp_old_relation += 5*(1-dissent); wp_left += 2; ddp_left += 2; ddp_cohesion += 1.5; lvp_left += 2
 achievement: volkspartei
 
 It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from <span style="color: #9B0000;">Marxism</span> towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.

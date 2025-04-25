@@ -1,7 +1,7 @@
 title: <span style="color: #C0A054;">**DVP**</span> Executive Committee Meeting
 subtitle: Ernst Scholz has resigned!
-view-if: year = 1930 and month = 12 and dvp_leader == "Scholz" and not lvp_formed
-on-arrival: dvp_left += 2 if wp_relation >= 35; dvp_left += 2 if in_grand_coalition
+view-if: year = 1930 and month = 12 and wp_leader == "Scholz" and not lvp_formed
+on-arrival: wp_left += 2 if wp_relation >= 35; wp_left += 2 if in_grand_coalition
 max-visits: 1
 tags: event
 face-image: img/portraits/ernst_scholz.jpg
@@ -13,22 +13,22 @@ Ernst Scholz, recovering from surgery the past few months due to a resurgence of
 
 Eduard Dingeldey is one of the first within the <span style="color: #C0A054;">**DVP**</span> to support the movement for bourgeois unity and is popular with the youth and bourgeois unity groups that have coalesced on the <span style="color: #C0A054;">**DVP**</span>'s left wing, having rallied around Schnell and his efforts last month. Dingeldey is also sufficiently conservative on most political issues—particularly on the question of cooperation with the <span style="color: #c00000;">**SPD**</span>—to gain support from the party's right wing.
 
-- @resultsdvp: The party votes...
+- @resultswp: The party votes...
 
-@resultsdvp
+@resultswp
 on-arrival: {!
-if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
-    Q.dvp_ideology = "Right"
-} else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
-    Q.dvp_ideology = "Left"
+if (Q.wp_right > (Q.wp_left*1.5) || (Q.wp_right > (Q.wp_left + 4))) {
+    Q.wp_ideology = "Right"
+} else if (Q.wp_left > (Q.wp_right*1.5) || (Q.wp_left > (Q.wp_right + 4))) {
+    Q.wp_ideology = "Left"
 } else {
-    Q.dvp_ideology = "Moderate"
+    Q.wp_ideology = "Moderate"
 }
 !}
 go-to: dingeldey
 
 @dingeldey
-on-arrival: dvp_leader = "Dingeldey"; old_middle_wp -= 2; new_middle_wp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
+on-arrival: wp_leader = "Dingeldey"; old_middle_wp -= 2; new_middle_wp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
 face-image: img/portraits/dingeldey.jpg
 
 Dingeldey's election to the chairmanship represents a triumph for the reform-minded elements on the <span style="color: #C0A054;">**DVP**</span>'s left wing and met with strong approval from the movement towards bourgeois unity. However, despite the enthusiasm exhibited by those on the left wing, his election doesn't seem to represent a shift to the left at all and only confirms the party's shift to the right. [? if chancellor == "Brüning" and not dnvp_in_government: Dingeldey doesn't even feel great loyalty toward the Brüning government and believes that the party could only fulfill its mission towards bourgeois concentration after it is freed from the burden of governmental responsibility.?] So far, he has proven to be a weak and ineffectual leader, capitulating to the right wing at every possible opportunity.

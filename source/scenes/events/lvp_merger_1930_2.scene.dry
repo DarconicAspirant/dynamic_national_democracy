@@ -8,15 +8,15 @@ if (Q.lvp_relation < 50) {
 if (Q.liberal_vote < 7) {
     Q.lvp_formation_points += 1;
 }
-if (Q.dvp_ideology == "Left") {
+if (Q.wp_ideology == "Left") {
     Q.lvp_formation_points += 2;
-} else if (Q.dvp_ideology == "Moderate") {
+} else if (Q.wp_ideology == "Moderate") {
     Q.lvp_formation_points += 1;
 }
 if (Q.ddp_ideology == "Right") {
     Q.lvp_formation_points += 2;
 }
-if (Q.dvp_leader == "Scholz" || Q.dvp_leader == "Dingeldey") {
+if (Q.wp_leader == "Scholz" || Q.wp_leader == "Dingeldey") {
     Q.lvp_formation_points -= 2;
 }
 if (Q.ddp_leader == "Lemmer") {
@@ -56,7 +56,7 @@ However, the leftists within the <span style="color: #D3C24D;">**[+ ddp_name +]*
 
 @ddp_fail
 view-if: lvp_formation_points < 3
-on-arrival: dvp_right += 5; new_middle_lvp -= 4; old_middle_ddp -= 4; pro_republic -= 5; liberal_cooperation -= 10
+on-arrival: wp_right += 5; new_middle_lvp -= 4; old_middle_ddp -= 4; pro_republic -= 5; liberal_cooperation -= 10
 face-image: img/portraits/hitler.jpg
 
 As always, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s left wing have rejected the plans to create a united <span style="color: #FFCC00;">Liberal People's Party</span>. It seems that the infighting that plagues the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> remains alive and well. This outcome has greatly demoralized the German middle and has forced the disbandment of the Liberal Association. 

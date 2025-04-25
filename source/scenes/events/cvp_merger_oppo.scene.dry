@@ -10,7 +10,7 @@ on-display: {!
 
     var image = new Image();  
     image.className = "face-img";  
-    image.src = "img/dvpcampaign.jpg";  
+    image.src = "img/wpcampaign.jpg";  
 
     cardEl.appendChild(image);  
     var contentDiv = document.querySelector("#page #mid_panel #content");
@@ -183,7 +183,7 @@ go-to: cvp_dnvp_menu
 
 The <span style="color: #3E88B3;">nationalists</span> and <span style="color: #385A38;">agrarians</span> have successfully pushed for the inclusion of support for a constitutional monarchy in the party platform. However, it is no longer a central pillar of the party's ideology.
 
-Monarchy - Support for a constitutional monarchy, similar to the stance of the[? if not dvp_exist or lvp_formed:&nbsp;former?] <span style="color: #C0A054;">**DVP**</span>.
+Monarchy - Support for a constitutional monarchy, similar to the stance of the[? if not wp_exist or lvp_formed:&nbsp;former?] <span style="color: #C0A054;">**DVP**</span>.
 
 Democracy - Favoring a strengthened presidency, while maintaining a pro-democratic stance
 
@@ -313,7 +313,7 @@ title: With all differences resolved, the <span style="color: #000000;">**CVP**<
 view-if: cvp_reparations and cvp_economy and cvp_coalition and cvp_monarchy
 on-arrival: {!
 Q.cvp_wp_trigger = 0;
-if (Q.dvp_exist && Q.dvp_votes < 5 && !Q.lvp_formed && !Q.lvp_merger_2_timer && !Q.lvp_timer_2_trigger) Q.cvp_wp_trigger = 1;
+if (Q.wp_exist && Q.wp_votes < 5 && !Q.lvp_formed && !Q.lvp_merger_2_timer && !Q.lvp_timer_2_trigger) Q.cvp_wp_trigger = 1;
 if (Q.dnvp_prussia && !Q.in_dnvp_majority_prussia && !Q.in_left_front_prussia) Q.prussia_coalition_trigger = 1;
 if (Q.in_weimar_coalition && !Q.in_social_liberal_coalition || Q.in_grand_coalition || Q.in_popular_front) Q.federal_coalition_trigger = Q.time;
 !}

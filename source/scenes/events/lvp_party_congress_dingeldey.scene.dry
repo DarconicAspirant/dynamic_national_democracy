@@ -28,7 +28,7 @@ if (Q.foreign_minister_party == "LVP") {
 
 if (!Q.banking_crisis_seen || (Q.banking_crisis_seen && !Q.curtius_banking_crisis)) Q.curtius_points += 1;
 
-if (Q.dvp_reform) Q.curtius_points += 1;
+if (Q.wp_reform) Q.curtius_points += 1;
 
 if (Q.dietrich_resign_lvp) {
     Q.dietrich_points -= 2;

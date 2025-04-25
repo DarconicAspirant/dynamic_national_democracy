@@ -144,7 +144,7 @@ title: We persuade the [? if z_party_name != "CVP": <span style="color: #000000;
 subtitle: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] isn't pulling their weight. -1 resource
 choose-if: z_support_spd == 1 and ((z_relation >= 60 and z_ideology == "Right") or (z_relation >= 45 and z_ideology == "Left")) and resources >= 1
 unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] doesn't support Braun. ?][? if (z_relation < 60 and z_ideology == "Right") or (z_relation < 45 and z_ideology == "Left"): Our relations aren't good enough. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; pro_republic += 3; z_glaze_spd = 1; catholics_nsdap -= 3; catholics_uspd += 3; catholics_z += 2; rural_uspd += 1; z_relation += 5; ddp_left += 2; dvp_left += 3; ddp_cohesion += 1; lvp_left += 2
+on-arrival: resources -= 1; pro_republic += 3; z_glaze_spd = 1; catholics_nsdap -= 3; catholics_uspd += 3; catholics_z += 2; rural_uspd += 1; z_relation += 5; ddp_left += 2; wp_left += 3; ddp_cohesion += 1; lvp_left += 2
 face-image: img/center_poster.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -156,7 +156,7 @@ title: We persuade the <span style="color: #700000;">**Communists**</span> to ta
 subtitle: This will alienate bourgeois voters! -2 resources
 choose-if: kpd_support_spd == 1 and (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
 unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
-on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_uspd += 3; workers_spd += 5; workers_nsdap -= 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_uspd -= 3; old_middle_uspd -= 3; catholics_uspd -= 3
+on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_uspd += 3; workers_spd += 5; workers_nsdap -= 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; wp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_uspd -= 3; old_middle_uspd -= 3; catholics_uspd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -268,7 +268,7 @@ subtitle: [? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if 
 unavailable-subtitle: The <span style="color: #c00000;">SPD</span> doesn't control Prussia.
 view-if: bruning_time
 choose-if: dnvp_prussia
-on-arrival: hindenburg_funds += 1; resources += 3; lvp_relation += 5; z_relation += 3; lvp_old_relation += 3; ddp_left += 1; pro_republic += 3; new_middle_lvp += 2; old_middle_ddp += 2; new_middle_wp += 2 if dvp_ideology != "Right"; old_middle_wp += 2 if dvp_ideology != "Right"; new_middle_lvp += 2; old_middle_lvp += 2; new_middle_nsdap -= 2 if new_middle_nsdap_normalized >= 40; old_middle_nsdap -= 2 if old_middle_nsdap_normalized >= 40; prussian_police_loyalty += 0.05; prussian_police_strength += 20; vb_militancy += 0.05; sa_strength -= 50; embezzle_2 = 1
+on-arrival: hindenburg_funds += 1; resources += 3; lvp_relation += 5; z_relation += 3; lvp_old_relation += 3; ddp_left += 1; pro_republic += 3; new_middle_lvp += 2; old_middle_ddp += 2; new_middle_wp += 2 if wp_ideology != "Right"; old_middle_wp += 2 if wp_ideology != "Right"; new_middle_lvp += 2; old_middle_lvp += 2; new_middle_nsdap -= 2 if new_middle_nsdap_normalized >= 40; old_middle_nsdap -= 2 if old_middle_nsdap_normalized >= 40; prussian_police_loyalty += 0.05; prussian_police_strength += 20; vb_militancy += 0.05; sa_strength -= 50; embezzle_2 = 1
 max-visits: 1
 go-to: embezzlement_options
 
@@ -290,7 +290,7 @@ title: Our government in Prussia will distribute funds to pro-Hindenburg organiz
 subtitle: This would involve financing the bourgeois parties.
 view-if: dnvp_prussia and not bruning_time
 max-visits: 1
-on-arrival: hindenburg_funds += 1; lvp_relation += 5; z_relation += 5; lvp_old_relation += 5; ddp_left += 1; pro_republic += 3; new_middle_lvp += 3; old_middle_ddp += 3; new_middle_wp += 3 if dvp_ideology != "Right"; old_middle_wp += 3 if dvp_ideology != "Right"; new_middle_lvp += 3; old_middle_lvp += 3; new_middle_nsdap -= 3 if new_middle_nsdap_normalized >= 40; old_middle_nsdap -= 3 if new_middle_nsdap_normalized >= 40; rural_other += 3; vb_militancy += 0.06; sa_strength -= 50; embezzle_2 = 1
+on-arrival: hindenburg_funds += 1; lvp_relation += 5; z_relation += 5; lvp_old_relation += 5; ddp_left += 1; pro_republic += 3; new_middle_lvp += 3; old_middle_ddp += 3; new_middle_wp += 3 if wp_ideology != "Right"; old_middle_wp += 3 if wp_ideology != "Right"; new_middle_lvp += 3; old_middle_lvp += 3; new_middle_nsdap -= 3 if new_middle_nsdap_normalized >= 40; old_middle_nsdap -= 3 if new_middle_nsdap_normalized >= 40; rural_other += 3; vb_militancy += 0.06; sa_strength -= 50; embezzle_2 = 1
 go-to: embezzlement_options
 
 We have met with politicians from the [? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?][? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>?], the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] Party, the Reichsbanner, and even some <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> peasant unions. We have agreed to allocate Prussian state funds to their groups, strengthening the Hindenburg campaign among those excluded from the official committee while also improving our relationship with these factions.
@@ -376,7 +376,7 @@ We have lost an alarming number of voters to the <span style="color: #700000;">*
 on-arrival: {!
 Q.hindenburg_unity = 10;
 if (Q.braun_angry_bruning >= 75) Q.hindenburg_unity -= 1;
-if (Q.dvp_defect) Q.hindenburg_unity -= 1;
+if (Q.wp_defect) Q.hindenburg_unity -= 1;
 if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
 if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
 if (Q.spd_support_hindenburg) Q.hindenburg_unity -= 3;
@@ -548,7 +548,7 @@ We have a plethora of campaign options at our disposal.
 @paramilitary
 title: Ally with the <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> on the streets, to fight against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
 subtitle: This will permanently alienate the bourgeois parties!
-on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; vb_strength += 100; rfb_militancy += 0.1; vb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; braun_angry += 150; z_relation -= 20; lvp_relation -= 20; wp_relation -= 20; lvp_old_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
+on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; vb_strength += 100; rfb_militancy += 0.1; vb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; braun_angry += 150; z_relation -= 20; lvp_relation -= 20; wp_relation -= 20; lvp_old_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; wp_right += 10; lvp_right += 10
 face-image: img/reichsbanner_2.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -572,7 +572,7 @@ title: We persuade the <span style="color: #700000;">**Communists**</span> to le
 subtitle: They have been putting themselves at the forefront. -1 resources
 choose-if: (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
 unavailable-subtitle: [? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
-on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_uspd += 3; workers_spd += 3; workers_nsdap -= 3; unemployed_uspd += 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; dvp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_spd = 1
+on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_uspd += 3; workers_spd += 3; workers_nsdap -= 3; unemployed_uspd += 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; wp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_spd = 1
 face-image: img/kpd_poster.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -642,7 +642,7 @@ Q.industrial_hindenburg = 1;
 
 Q.hindenburg_unity = 10;
 if (Q.braun_angry_bruning >= 75) Q.hindenburg_unity -= 1;
-if (Q.dvp_defect) Q.hindenburg_unity -= 1;
+if (Q.wp_defect) Q.hindenburg_unity -= 1;
 if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
 if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
 if (Q.nsdap_votes >= 25) Q.hindenburg_unity -= 1;

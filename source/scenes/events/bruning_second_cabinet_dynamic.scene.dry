@@ -5,7 +5,7 @@ view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_ri
 on-arrival: {!
 Q.second_bruning_cabinet_seen = 1;
 Q.ddp_right += 1;
-Q.dvp_right += 2;
+Q.wp_right += 2;
 Q.lvp_right += 2;
 Q.pro_republic -= 3;
 Q.new_middle_wp -= 1;

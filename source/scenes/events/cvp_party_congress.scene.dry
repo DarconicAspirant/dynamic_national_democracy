@@ -71,7 +71,7 @@ if (Q.cvp_ideology == "Right") {
 }
 
 if (Q.dnvp_wp_formed || Q.cvp_wp_formed) {
-    Q.dvp_in_cvp = 1;
+    Q.wp_in_cvp = 1;
     Q.tory_democratic_points += 4;
 }
 
@@ -138,9 +138,9 @@ if (Q.land_reform || Q.tariffs < 0) {
     Q.agrarian_right_points += (Q.tariffs*-1)*5;
 }
 
-if (Q.dvp_reform && !Q.lvp_formed && Q.dvp_exist) {
-    Q.tory_democratic_points += Q.dvp_votes;
-} else if (Q.dvp_reform && Q.lvp_formed && Q.dvp_exist) {
+if (Q.wp_reform && !Q.lvp_formed && Q.wp_exist) {
+    Q.tory_democratic_points += Q.wp_votes;
+} else if (Q.wp_reform && Q.lvp_formed && Q.wp_exist) {
     Q.tory_democratic_points += Q.lvp_votes / 2;
 }
 

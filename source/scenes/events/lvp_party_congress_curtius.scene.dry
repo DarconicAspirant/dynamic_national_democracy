@@ -205,7 +205,7 @@ title: Siegfried von Kardorff is elected!
 subtitle: Kardorff is able to secure the continuation of Curtius's leadership.
 unavailable-subtitle: His closeness to Curtius has undermined his position.
 choose-if: kardorff_lvp_unlock
-on-arrival: lvp_leader = "Kardorff"; dvp_left += 3 if in_grand_coalition; bourgeois_cooperation += 1; wp_relation += 5 if in_grand_coalition; new_middle_lvp += 4; catholics_lvp += 2; rural_lvp += 2; old_middle_lvp += 2; pro_republic += 3
+on-arrival: lvp_leader = "Kardorff"; wp_left += 3 if in_grand_coalition; bourgeois_cooperation += 1; wp_relation += 5 if in_grand_coalition; new_middle_lvp += 4; catholics_lvp += 2; rural_lvp += 2; old_middle_lvp += 2; pro_republic += 3
 face-image: img/portraits/kardorff.jpg
 
 Kardorff is elected to succeed Curtius as the leader of the <span style="color: #FFCC00;">**LVP**</span>. He is expected to be a continuation of Curtius's leadership, being another Stresemann follower and supporter of constructive cooperation with the <span style="color: #c00000;">**SPD**</span>. [? if ui0_seen: He even rallied his parliamentary faction to save our Grand Coalition back in 1929.?]

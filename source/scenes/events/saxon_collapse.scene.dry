@@ -3,17 +3,17 @@ subtitle: Wilhelm Bünger faces a vote of no confidence.
 view-if: saxony_right and year == 1930 and month >= 2
 on-arrival: {!
 Q.saxony_kill = 1;
-let dvp_toleration_threshold = 40;
+let wp_toleration_threshold = 40;
 let lvp_toleration_threshold = 50;
-if (Q.dvp_leader == "Scholz") {
-    dvp_toleration_threshold += 20;
-} else if (Q.dvp_leader != "Scholz") {
-    dvp_toleration_threshold -= 10;
+if (Q.wp_leader == "Scholz") {
+    wp_toleration_threshold += 20;
+} else if (Q.wp_leader != "Scholz") {
+    wp_toleration_threshold -= 10;
 }
-if (Q.dvp_ideology != "Left") {
-    dvp_toleration_threshold += 10;
-} else if (Q.dvp_ideology == "Left") {
-    dvp_toleration_threshold -= 10;
+if (Q.wp_ideology != "Left") {
+    wp_toleration_threshold += 10;
+} else if (Q.wp_ideology == "Left") {
+    wp_toleration_threshold -= 10;
 }
 if (Q.lvp_ideology != "Left") {
     lvp_toleration_threshold += 10;
@@ -22,22 +22,22 @@ if (Q.lvp_ideology != "Left") {
 }
 if (Q.united_left_saxony >= 50) {
     lvp_toleration_threshold -= 20;
-    dvp_toleration_threshold -= 20;
+    wp_toleration_threshold -= 20;
 }
-if ((Q.wp_relation >= dvp_toleration_threshold && !Q.lvp_formed) || (Q.lvp_old_relation >= lvp_toleration_threshold && Q.lvp_formed)) {
+if ((Q.wp_relation >= wp_toleration_threshold && !Q.lvp_formed) || (Q.lvp_old_relation >= lvp_toleration_threshold && Q.lvp_formed)) {
     Q.toleration_possible_saxony = 1;
 } else {
     Q.toleration_possible_saxony = 0;
 }
-if (((Q.z_relation >= 45 || !Q.stegerwald_path) && ((Q.wp_relation >= (dvp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp_old_relation >= (lvp_toleration_threshold + 5) && Q.lvp_formed)))) {
+if (((Q.z_relation >= 45 || !Q.stegerwald_path) && ((Q.wp_relation >= (wp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp_old_relation >= (lvp_toleration_threshold + 5) && Q.lvp_formed)))) {
     Q.spd_coalition_possible_saxony = 1;
 } else {
     Q.spd_coalition_possible_saxony = 0;
 }
-if ((Q.wp_relation < (dvp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp_old_relation < (lvp_toleration_threshold + 5) && Q.lvp_formed)) {
-    Q.dvp_toleration_threshold_fail_saxony = 1;
+if ((Q.wp_relation < (wp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp_old_relation < (lvp_toleration_threshold + 5) && Q.lvp_formed)) {
+    Q.wp_toleration_threshold_fail_saxony = 1;
 } else {
-    Q.dvp_toleration_threshold_fail_saxony = 0;
+    Q.wp_toleration_threshold_fail_saxony = 0;
 }
 !}
 max-visits: 1
@@ -80,7 +80,7 @@ As one of the most left-wing and industrial states in Germany, we will use our l
 
 @grand_coalition_saxony
 subtitle: We have somehow reconciled with the bourgeois parties, that they're willing to govern with us again.
-unavailable-subtitle: [? if z_relation < 45 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if right_strength >= 30: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
+unavailable-subtitle: [? if z_relation < 45 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if wp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if right_strength >= 30: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
 view-if: spd_coalition_saxony >= 50
 choose-if: spd_coalition_possible_saxony and right_strength < 30
 on-arrival: saxony_spd = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_uspd += 3; unemployed_uspd += 3; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3; wp_relation += 5; pro_republic += 3; popcon_dissent -= 15; popcon_strength += 10; aspd_dead = 1
