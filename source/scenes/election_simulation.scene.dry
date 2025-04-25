@@ -258,7 +258,7 @@ Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp', 'wp', 'kvp', 'dnvp', 'dnf'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_uspd = 27;
+Q.workers_uspd = 28;
 Q.workers_spd = 56;
 Q.workers_z = 5;
 Q.workers_ddp = 3;
@@ -266,7 +266,7 @@ Q.workers_lvp = 0;
 Q.workers_dvp = 1;
 Q.workers_wp = 0;
 Q.workers_kvp = 0;
-Q.workers_dnvp = 6;
+Q.workers_dnvp = 5;
 Q.workers_dnf = 0;
 Q.workers_nsfb = 0;
 Q.workers_nsdap = 0;
@@ -286,15 +286,15 @@ Q.new_middle_nsfb = 5;
 Q.new_middle_nsdap = 0;
 Q.new_middle_other = 4;
 
-Q.old_middle_uspd = 5;
+Q.old_middle_uspd = 6;
 Q.old_middle_spd = 0;
 Q.old_middle_z = 6;
-Q.old_middle_ddp = 7;
+Q.old_middle_ddp = 8;
 Q.old_middle_lvp = 0;
 Q.old_middle_dvp = 23;
-Q.old_middle_wp = 8;
+Q.old_middle_wp = 7;
 Q.old_middle_kvp = 0;
-Q.old_middle_dnvp = 39;
+Q.old_middle_dnvp = 38;
 Q.old_middle_dnf = 0;
 Q.old_middle_nsfb = 10;
 Q.old_middle_nsdap = 0;
