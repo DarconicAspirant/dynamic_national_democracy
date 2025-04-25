@@ -24,85 +24,85 @@ Q.parties = ['uspd', 'spd', 'z', 'ddp', 'lvp', 'dvp', 'wp', 'kvp', 'dnvp', 'dnf'
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized. 
-Q.workers_uspd = 25;
-Q.workers_spd = 58;
-Q.workers_z = 4;
-Q.workers_ddp = 0;
-Q.workers_lvp = 4;
+Q.workers_uspd = 29;
+Q.workers_spd = 57;
+Q.workers_z = 5;
+Q.workers_ddp = 4;
+Q.workers_lvp = 0;
 Q.workers_dvp = 0;
 Q.workers_wp = 0;
 Q.workers_kvp = 0;
-Q.workers_dnvp = 7;
+Q.workers_dnvp = 3;
 Q.workers_dnf = 0;
 Q.workers_nsfb = 0;
 Q.workers_nsdap = 0;
 Q.workers_other = 2;
 
-Q.new_middle_uspd = 8;
-Q.new_middle_spd = 4;
+Q.new_middle_uspd = 11;
+Q.new_middle_spd = 3;
 Q.new_middle_z = 11;
-Q.new_middle_ddp = 0;
-Q.new_middle_lvp = 40;
-Q.new_middle_dvp = 0;
-Q.new_middle_wp = 10;
+Q.new_middle_ddp = 36;
+Q.new_middle_lvp = 0;
+Q.new_middle_dvp = 23;
+Q.new_middle_wp = 1;
 Q.new_middle_kvp = 0;
-Q.new_middle_dnvp = 20;
+Q.new_middle_dnvp = 8;
 Q.new_middle_dnf = 0;
 Q.new_middle_nsfb = 0;
-Q.new_middle_nsdap = 3;
-Q.new_middle_other = 4;
+Q.new_middle_nsdap = 0;
+Q.new_middle_other = 3;
 
-Q.old_middle_uspd = 4;
-Q.old_middle_spd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp = 0;
-Q.old_middle_lvp = 21;
-Q.old_middle_dvp = 0;
-Q.old_middle_wp = 15;
+Q.old_middle_uspd = 6;
+Q.old_middle_spd = 1;
+Q.old_middle_z = 6;
+Q.old_middle_ddp = 21;
+Q.old_middle_lvp = 0;
+Q.old_middle_dvp = 27;
+Q.old_middle_wp = 5;
 Q.old_middle_kvp = 0;
-Q.old_middle_dnvp = 48;
+Q.old_middle_dnvp = 32;
 Q.old_middle_dnf = 0;
 Q.old_middle_nsfb = 0;
-Q.old_middle_nsdap = 5;
+Q.old_middle_nsdap = 0;
 Q.old_middle_other = 2;
 
-Q.rural_uspd = 8;
-Q.rural_spd = 2;
-Q.rural_z = 7;
-Q.rural_ddp = 0;
-Q.rural_lvp = 14;
-Q.rural_dvp = 0;
-Q.rural_wp = 6;
+Q.rural_uspd = 11;
+Q.rural_spd = 3;
+Q.rural_z = 8;
+Q.rural_ddp = 19;
+Q.rural_lvp = 0;
+Q.rural_dvp = 17;
+Q.rural_wp = 2;
 Q.rural_kvp = 0;
-Q.rural_dnvp = 52;
+Q.rural_dnvp = 36;
 Q.rural_dnf = 0;
 Q.rural_nsfb = 0;
-Q.rural_nsdap = 4;
-Q.rural_other = 7;
+Q.rural_nsdap = 0;
+Q.rural_other = 4;
 
-Q.unemployed_uspd = 15;
-Q.unemployed_spd = 66;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
+Q.unemployed_uspd = 17;
+Q.unemployed_spd = 67;
+Q.unemployed_z = 4;
+Q.unemployed_ddp = 4;
 Q.unemployed_lvp = 0;
 Q.unemployed_dvp = 0;
 Q.unemployed_wp = 0;
 Q.unemployed_kvp = 0;
-Q.unemployed_dnvp = 7;
+Q.unemployed_dnvp = 5;
 Q.unemployed_dnf = 0;
 Q.unemployed_nsfb = 0;
-Q.unemployed_nsdap = 9;
-Q.unemployed_other = 2;
+Q.unemployed_nsdap = 0;
+Q.unemployed_other = 3;
 
-Q.catholics_uspd = 16;
-Q.catholics_spd = 6;
-Q.catholics_z = 51;
-Q.catholics_ddp = 0;
-Q.catholics_lvp = 8;
-Q.catholics_dvp = 0;
-Q.catholics_wp = 3;
+Q.catholics_uspd = 17;
+Q.catholics_spd = 5;
+Q.catholics_z = 58;
+Q.catholics_ddp = 7;
+Q.catholics_lvp = 0;
+Q.catholics_dvp = 4;
+Q.catholics_wp = 1;
 Q.catholics_kvp = 0;
-Q.catholics_dnvp = 14;
+Q.catholics_dnvp = 6;
 Q.catholics_dnf = 0;
 Q.catholics_nsfb = 0;
 Q.catholics_nsdap = 0;
@@ -788,9 +788,9 @@ The electoral system is essentially proportional, with the proportion of Reichst
 
 **Potential coalitions:**
 
-Note: 0,6% from "Others" accounts for the average vote share of the far-left SAPD, whose only potential coalition participation is tolerating the Left Front. The rest minor parties position themselves between the DNVP and the moderate bourgeois parties.
+Note: The "Others" category often ends up with fewer seats than their share of the vote would suggest. This is because it includes a multitude of tiny parties that do not gain enough votes to be awarded a seat. As a result larger parties have slightly larger than proportional share of seats. This can impact coalition formation and is not taken into account in the below tallies:
 
-Note: The "others" category often ends up with fewer seats than their share of the vote would suggest. This is because it includes a multitude of tiny parties that do not gain enough votes to be awarded a seat. As a result larger parties have slightly larger than proportional share of seats. This can impact coalition formation and is not taken into account in the below tallies:
+Note: 0,6% from "Others" accounts for the average vote share of the far-left SAPD, whose only potential coalition participation is tolerating the Left Front. The rest minor parties position themselves between the DNVP and the moderate bourgeois parties.
 
 [? if nsfb_r + nsdap_r != 0:Far-Right Coalition (DNVP [? if dnf_r != 0:+ DNF?] [? if nsfb_r != 0:+ NSFB?][? if nsdap_r != 0: + NSDAP?]): [+ far_right_coalition +] ?]
 
