@@ -296,9 +296,9 @@ Q.old_middle_wp = 7;
 Q.old_middle_kvp = 0;
 Q.old_middle_dnvp = 37;
 Q.old_middle_dnf = 0;
-Q.old_middle_nsfb = 10;
+Q.old_middle_nsfb = 9;
 Q.old_middle_nsdap = 0;
-Q.old_middle_other = 3;
+Q.old_middle_other = 4;
 
 Q.rural_uspd = 10;
 Q.rural_spd = 2;
@@ -324,9 +324,9 @@ Q.unemployed_wp = 0;
 Q.unemployed_kvp = 0;
 Q.unemployed_dnvp = 3;
 Q.unemployed_dnf = 0;
-Q.unemployed_nsfb = 14;
+Q.unemployed_nsfb = 13;
 Q.unemployed_nsdap = 0;
-Q.unemployed_other = 2;
+Q.unemployed_other = 3;
 
 Q.catholics_uspd = 17;
 Q.catholics_spd = 6;
