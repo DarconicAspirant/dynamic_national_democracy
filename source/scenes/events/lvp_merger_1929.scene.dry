@@ -46,7 +46,7 @@ The aftermath of the congress has significantly diminished the influence of the 
 
 @dvp_fail
 view-if: lvp_formation_points < 3
-on-arrival: wp_relation -= 3; dvp_right += 5; new_middle_dvp -= 2; old_middle_dvp -= 2; pro_republic -= 3; liberal_cooperation -= 10
+on-arrival: wp_relation -= 3; dvp_right += 5; new_middle_wp -= 2; old_middle_wp -= 2; pro_republic -= 3; liberal_cooperation -= 10
 face-image: img/portraits/ernst_scholz.jpg
 
 Unfortunately, the efforts to unify the liberal parties have ended in failure. The right wing and industrial backers of the <span style="color: #C0A054;">**DVP**</span> successfully swayed a narrow majority to reject the merger proposal. This outcome has greatly demoralized the German middle and has forced the disbandment of the Liberal Association.

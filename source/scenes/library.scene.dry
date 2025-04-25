@@ -378,12 +378,12 @@ go-to: menu
         </tr>
         [? if dvp_exist: <tr>
             <td><span style="color: #CCAA7A;">**DVP**</span></td>
-            <td style="background-color: rgba(204, 170, 122, 0.2); padding: 10px;">[+ workers_dvp_display +]%</td>
-            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ new_middle_dvp_display +]%</td>
-            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ old_middle_dvp_display +]%</td>
-            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ rural_dvp_display +]%</td>
-            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ unemployed_dvp_display +]%</td>
-            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ catholics_dvp_display +]%</td>
+            <td style="background-color: rgba(204, 170, 122, 0.2); padding: 10px;">[+ workers_wp_display +]%</td>
+            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ new_middle_wp_display +]%</td>
+            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ old_middle_wp_display +]%</td>
+            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ rural_wp_display +]%</td>
+            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ unemployed_wp_display +]%</td>
+            <td style="background-color: rgba(204, 170, 122, 0.2);">[+ catholics_wp_display +]%</td>
         </tr> ?]?]
         [? if lvp_formed: <tr>
             <td><span style="color: #FFCC00;">**LVP**</span></td>
@@ -469,7 +469,7 @@ Current relations: [+ z_relation : relationships +]
 
 [? if kvp_formed: Current relations: [+ kvp_relation : relationships +] ?]
 
-[? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span> - <i>Deutschnationale Volkspartei</i> (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans. [? if dnvp_dvp_formed: They have recently merged with the <span style="color: #CCAA7A;">**DVP**</span>. ?]?]
+[? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span> - <i>Deutschnationale Volkspartei</i> (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans. [? if dnvp_wp_formed: They have recently merged with the <span style="color: #CCAA7A;">**DVP**</span>. ?]?]
 
 [? if not cvp_formed: Current relations: [+ uspd_relation : relationships +]?]
 

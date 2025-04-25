@@ -210,8 +210,8 @@ view-if: round = 0
 - @convince_z_spd
 - @convince_ddp_unity
 - @convince_ddp_spd
-- @convince_dvp_spd
-- @convince_dvp_unity
+- @convince_wp_spd
+- @convince_wp_unity
 - @convince_kpd_spd
 - @round_1: Let the voting begin.
 
@@ -354,7 +354,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 The <span style="color: #700000;">**KPD**</span> now endorses [+ spd_candidate +] in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 
-@convince_dvp_spd
+@convince_wp_spd
 title: Convince the <span style="color: #C0A054;">**DVP**</span> to support [+ spd_candidate +].
 unavailable-subtitle: The <span style="color: #C0A054;">DVP</span> is not willing to support our candidate.
 view-if: spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate
@@ -365,7 +365,7 @@ max-visits: 1
 
 [? if dvp_candidate = spd_candidate: Thanks to our good relations, the <span style="color: #C0A054;">**<span style="color: #C0A054;">**DVP**</span>**</span> is persuaded to support [+ spd_candidate +]! ?]
 
-@convince_dvp_unity
+@convince_wp_unity
 title: Convince the <span style="color: #C0A054;">**DVP**</span> to support [+ spd_candidate +].
 unavailable-subtitle: The <span style="color: #C0A054;">DVP</span> is not willing to support our candidate.
 view-if: (spd_candidate = "Adenauer" or spd_candidate = "Gessler" or spd_candidate = "Eckener") and dvp_candidate != spd_candidate
@@ -624,8 +624,8 @@ view-if: round = 1
 - @convince_z_spd
 - @convince_ddp_unity
 - @convince_ddp_spd
-- @convince_dvp_spd
-- @convince_dvp_unity
+- @convince_wp_spd
+- @convince_wp_unity
 - @convince_kpd_spd
 - @r2_vote: Let the voting begin.
 

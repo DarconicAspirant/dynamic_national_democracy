@@ -517,7 +517,7 @@ With control of the Education Ministry, Frick appoints racial researchers and kn
 title: The incumbent center-right coalition continues governing.
 subtitle: The incumbent coalition holds a majority, one without the <span style="color: #7A3C00;">**NSDAP**</span>.
 view-if: bourgeois_coalition_thuringia >= 50
-on-arrival: thuringia_right = 1; new_middle_dvp += 2; old_middle_dvp += 2; new_middle_other += 2; old_middle_other += 2; rural_other += 2
+on-arrival: thuringia_right = 1; new_middle_wp += 2; old_middle_wp += 2; new_middle_other += 2; old_middle_other += 2; rural_other += 2
 
 Unexpectedly, the parties involved in the incumbent government have gained votes, and now no longer require the votes of the <span style="color: #7A3C00;">**NSDAP**</span>. The continuation of the stable leadership over Thuringia will weaken the <span style="color: #7A3C00;">Nazis</span>.
 

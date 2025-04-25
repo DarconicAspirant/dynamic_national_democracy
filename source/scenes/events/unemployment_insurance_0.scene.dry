@@ -54,6 +54,6 @@ We have accepted the compromise offered by the bourgeoisie. Many of the workers 
 @accept_compromise_good
 choose-if: dvp_ideology == "Left" and wp_relation >= 40
 unavailable-subtitle: [? if dvp_ideology != "Left": The <span style="color: #C0A054;">DVP</span> are too far gone. ?] [? if wp_relation < 40: We do not have good enough relations with the right-wing parties. ?]
-on-arrival: workers_uspd -= 1; unemployed_uspd -= 1; unemployed_spd += 1; unemployed_nsdap += 1; workers_nsdap += 1; right_dissent += 5; christsoc_dissent += 3; nsdap_relation -= 4; popcon_strength += 10; popcon_dissent -= 5; coalition_dissent -= 1; old_middle_dvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; ddp_cohesion += 1; unemployment_goal_dnvp += 1; economic_growth -= 0.1
+on-arrival: workers_uspd -= 1; unemployed_uspd -= 1; unemployed_spd += 1; unemployed_nsdap += 1; workers_nsdap += 1; right_dissent += 5; christsoc_dissent += 3; nsdap_relation -= 4; popcon_strength += 10; popcon_dissent -= 5; coalition_dissent -= 1; old_middle_wp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; ddp_cohesion += 1; unemployment_goal_dnvp += 1; economic_growth -= 0.1
 
 We have pushed for an increase in both employer and employee contributions rather than to cut benefits for the program itself. The <span style="color: #C0A054;">**DVP**</span> accepts with the influence of [? if not stresemann_dead: Stresemann and?] their left wing.

@@ -78,7 +78,7 @@ title: Slash the salaries of government employees.
 subtitle: This will radicalize the middle class. +1 budget
 unavailable-subtitle: We've already cut their wages.
 choose-if: not government_salaries_cut
-on-arrival: government_salaries_cut = 1; new_middle_uspd -= 8; new_middle_lvp -= 4; new_middle_dvp -= 4; new_middle_lvp -= 8; new_middle_nsdap += 12; pro_republic -= 5; christsoc_dissent += 15; right_dissent += 15; center_dissent += 10; unemployed += 1; inflation -= 0.5; economic_growth -= 0.4; budget += 1; ddp_right += 3; dvp_right += 6; lvp_right += 5; ddp_cohesion -= 3; lvp_relation -= 10; wp_relation -= 15; z_relation -= 6; lvp_old_relation -= 12; goal_dnvp_cancel_peoples += 1; goal_dnvp_cancel += 1
+on-arrival: government_salaries_cut = 1; new_middle_uspd -= 8; new_middle_lvp -= 4; new_middle_wp -= 4; new_middle_lvp -= 8; new_middle_nsdap += 12; pro_republic -= 5; christsoc_dissent += 15; right_dissent += 15; center_dissent += 10; unemployed += 1; inflation -= 0.5; economic_growth -= 0.4; budget += 1; ddp_right += 3; dvp_right += 6; lvp_right += 5; ddp_cohesion -= 3; lvp_relation -= 10; wp_relation -= 15; z_relation -= 6; lvp_old_relation -= 12; goal_dnvp_cancel_peoples += 1; goal_dnvp_cancel += 1
 go-to: austerity
 
 We have slashed wages for government employees by about 15%, framing it as a painful, but necessary step towards Germany's economic recovery. However, this justification doesn't persuade many, with many switching their allegiance away from the democratic parties toward the radical <span style="color: #7A3C00;">**NSDAP**</span>.

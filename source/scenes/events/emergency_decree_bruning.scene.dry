@@ -2,7 +2,7 @@ title: Second Emergency Decree for Economy and Finance
 subtitle: Chancellor [+ chancellor +] enacts his most controversial emergency decree yet.
 new-page: true
 view-if: total_bruning_time == 15 and bruning_toleration_time and reparations >= 0 and not hoover_moratorium_seen and not emergency_act_alt_seen and not lautenbach_adopted and not bruning_sigma_time and not bruning_skibidi_time
-on-arrival: emergency_decree_seen = 1; ddp_right += 3; dvp_right += 5; lvp_right += 3; ddp_cohesion -= 3; pro_republic -= 5; new_middle_nsdap += new_middle_lvp*0.2; old_middle_nsdap += old_middle_ddp*0.2; new_middle_nsdap += new_middle_dvp*0.2; old_middle_nsdap += old_middle_dvp*0.2; new_middle_lvp *= 0.6; old_middle_ddp *= 0.6; new_middle_dvp *= 0.6; old_middle_dvp *= 0.6; new_middle_nsdap += new_middle_lvp*0.2; old_middle_nsdap += old_middle_lvp*0.2; new_middle_lvp *= 0.8; old_middle_lvp *= 0.8; braun_angry_bruning += 10; liberal_cooperation -= 3; bourgeois_cooperation -= 3; dnvp_angry += 1 if dnvp_toleration_uspd
+on-arrival: emergency_decree_seen = 1; ddp_right += 3; dvp_right += 5; lvp_right += 3; ddp_cohesion -= 3; pro_republic -= 5; new_middle_nsdap += new_middle_lvp*0.2; old_middle_nsdap += old_middle_ddp*0.2; new_middle_nsdap += new_middle_wp*0.2; old_middle_nsdap += old_middle_wp*0.2; new_middle_lvp *= 0.6; old_middle_ddp *= 0.6; new_middle_wp *= 0.6; old_middle_wp *= 0.6; new_middle_nsdap += new_middle_lvp*0.2; old_middle_nsdap += old_middle_lvp*0.2; new_middle_lvp *= 0.8; old_middle_lvp *= 0.8; braun_angry_bruning += 10; liberal_cooperation -= 3; bourgeois_cooperation -= 3; dnvp_angry += 1 if dnvp_toleration_uspd
 tags: event
 face-image: img/article48.jpg
 max-visits: 1
@@ -34,9 +34,9 @@ if (Q.emergency_decree_mitigated) {
     Q.economic_growth += 0.3;
     Q.new_middle_lvp += 3;
     Q.old_middle_ddp += 2;
-    Q.new_middle_dvp += 4;
-    Q.old_middle_dvp += 4;
-    Q.rural_dvp += 2;
+    Q.new_middle_wp += 4;
+    Q.old_middle_wp += 4;
+    Q.rural_wp += 2;
     Q.new_middle_lvp += 6;
     Q.old_middle_lvp += 6;
     Q.rural_lvp += 2;
@@ -53,9 +53,9 @@ if (Q.emergency_decree_mitigated_more) {
     Q.economic_growth += 0.1;
     Q.new_middle_lvp += 2;
     Q.old_middle_ddp += 1;
-    Q.new_middle_dvp += 2;
-    Q.old_middle_dvp += 2;
-    Q.rural_dvp += 1;
+    Q.new_middle_wp += 2;
+    Q.old_middle_wp += 2;
+    Q.rural_wp += 1;
     Q.new_middle_lvp += 3;
     Q.old_middle_lvp += 3;
     Q.rural_lvp += 1.5;
@@ -94,9 +94,9 @@ if (Q.emergency_decree_mitigated) {
     Q.economic_growth += 0.3;
     Q.new_middle_lvp += 3;
     Q.old_middle_ddp += 2;
-    Q.new_middle_dvp += 4;
-    Q.old_middle_dvp += 4;
-    Q.rural_dvp += 2;
+    Q.new_middle_wp += 4;
+    Q.old_middle_wp += 4;
+    Q.rural_wp += 2;
     Q.new_middle_lvp += 6;
     Q.old_middle_lvp += 6;
     Q.rural_lvp += 2;
@@ -113,9 +113,9 @@ if (Q.emergency_decree_mitigated_more) {
     Q.economic_growth += 0.4;
     Q.new_middle_lvp += 2;
     Q.old_middle_ddp += 1;
-    Q.new_middle_dvp += 2;
-    Q.old_middle_dvp += 2;
-    Q.rural_dvp += 1;
+    Q.new_middle_wp += 2;
+    Q.old_middle_wp += 2;
+    Q.rural_wp += 1;
     Q.new_middle_lvp += 3;
     Q.old_middle_lvp += 3;
     Q.rural_lvp += 1.5;
@@ -162,9 +162,9 @@ if (Q.emergency_decree_mitigated) {
     Q.economic_growth += 0.3;
     Q.new_middle_lvp += 3;
     Q.old_middle_ddp += 2;
-    Q.new_middle_dvp += 4;
-    Q.old_middle_dvp += 4;
-    Q.rural_dvp += 2;
+    Q.new_middle_wp += 4;
+    Q.old_middle_wp += 4;
+    Q.rural_wp += 2;
     Q.new_middle_lvp += 6;
     Q.old_middle_lvp += 6;
     Q.rural_lvp += 2;
@@ -181,9 +181,9 @@ if (Q.emergency_decree_mitigated_more) {
     Q.economic_growth += 0.4;
     Q.new_middle_lvp += 2;
     Q.old_middle_ddp += 1;
-    Q.new_middle_dvp += 2;
-    Q.old_middle_dvp += 2;
-    Q.rural_dvp += 1;
+    Q.new_middle_wp += 2;
+    Q.old_middle_wp += 2;
+    Q.rural_wp += 1;
     Q.new_middle_lvp += 3;
     Q.old_middle_lvp += 3;
     Q.rural_lvp += 1.5;

@@ -28,7 +28,7 @@ if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
 go-to: dingeldey
 
 @dingeldey
-on-arrival: dvp_leader = "Dingeldey"; old_middle_dvp -= 2; new_middle_dvp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
+on-arrival: dvp_leader = "Dingeldey"; old_middle_wp -= 2; new_middle_wp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
 face-image: img/portraits/dingeldey.jpg
 
 Dingeldey's election to the chairmanship represents a triumph for the reform-minded elements on the <span style="color: #C0A054;">**DVP**</span>'s left wing and met with strong approval from the movement towards bourgeois unity. However, despite the enthusiasm exhibited by those on the left wing, his election doesn't seem to represent a shift to the left at all and only confirms the party's shift to the right. [? if chancellor == "Brüning" and not dnvp_in_government: Dingeldey doesn't even feel great loyalty toward the Brüning government and believes that the party could only fulfill its mission towards bourgeois concentration after it is freed from the burden of governmental responsibility.?] So far, he has proven to be a weak and ineffectual leader, capitulating to the right wing at every possible opportunity.

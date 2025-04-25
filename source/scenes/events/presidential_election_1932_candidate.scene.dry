@@ -213,7 +213,7 @@ if (Q.nsdap_candidate_1932 == "Hitler") {
 if (Q.industrial_total_backing) {
     Q.hindenburg_funds += Q.industrial_ddp_backing;
     Q.hindenburg_funds += Q.industrial_lvp_backing;
-    Q.hindenburg_funds += Q.industrial_dvp_backing;
+    Q.hindenburg_funds += Q.industrial_wp_backing;
     Q.hindenburg_funds += Q.industrial_dnvp_backing;
     Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
     if (Q.dnvp_in_government) Q.hindenburg_funds += ((100 - Q.spd_votes) / 10);
@@ -231,9 +231,9 @@ if (Q.hindenburg_funds >= 5) {
     Q.new_middle_other += Q.hindenburg_funds / 3;
     Q.old_middle_other += Q.hindenburg_funds / 3;
     Q.rural_other += Q.hindenburg_funds / 3;
-    Q.new_middle_dvp += Q.hindenburg_funds / 3;
-    Q.old_middle_dvp += Q.hindenburg_funds / 3;
-    Q.rural_dvp += Q.hindenburg_funds / 4;
+    Q.new_middle_wp += Q.hindenburg_funds / 3;
+    Q.old_middle_wp += Q.hindenburg_funds / 3;
+    Q.rural_wp += Q.hindenburg_funds / 4;
 }
 
 Q.hindenburg_unity = 10;
@@ -270,8 +270,8 @@ if (Q.hindenburg_support) {
     Q.old_middle_ddp += Q.hindenburg_support / 3;
     Q.new_middle_other += Q.hindenburg_support / 1.5;
     Q.old_middle_other += Q.hindenburg_support / 1.5;
-    Q.new_middle_dvp += Q.hindenburg_support / 3;
-    Q.old_middle_dvp += Q.hindenburg_support / 3;
+    Q.new_middle_wp += Q.hindenburg_support / 3;
+    Q.old_middle_wp += Q.hindenburg_support / 3;
     Q.rural_other += Q.hindenburg_support / 1.5;
     Q.pro_republic += Q.hindenburg_support; 
     if (!Q.kvp_formed) Q.rural_other += Q.hindenburg_support;

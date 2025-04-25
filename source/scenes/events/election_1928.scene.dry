@@ -623,7 +623,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} BVP: {!</td><td>!} [+ bvp_votes +]% {!</td><td>!} [+ str_votes_change_bvp +] {!</td><td>!} [+ bvp_r +]% {!</td><td>!} [+ str_change_bvp +] {!</td></tr>!}
 
-[? if not lvp_formed and dvp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_votes +]% {!</td><td>!} [+ str_votes_change_dvp +] {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!} ?]
+[? if not lvp_formed and dvp_exist: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_votes +]% {!</td><td>!} [+ str_votes_change_wp +] {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_wp +] {!</td></tr>!} ?]
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes +]% {!</td><td>!} [+ str_votes_change_other +] {!</td><td>!} [+ other_r +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
@@ -708,12 +708,12 @@ go-to: coalition_menu
         {!</tr>!} ?]
         [? if not lvp_formed and dvp_exist: {!<tr>!}
             {!<td><span style="color: #C0A054;"><b>DVP</b></span></td>!}
-            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em; padding: 10px">!}[+ workers_dvp_display +]%[? if n_elections != 1 and demo_change_workers_dvp_display != 0 : ([+ demo_change_workers_dvp_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ new_middle_dvp_display +]%[? if n_elections != 1 and demo_change_new_middle_dvp_display != 0 : ([+ demo_change_new_middle_dvp_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ old_middle_dvp_display +]%[? if n_elections != 1 and demo_change_old_middle_dvp_display != 0 : ([+ demo_change_old_middle_dvp_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ rural_dvp_display +]%[? if n_elections != 1 and demo_change_rural_dvp_display != 0 : ([+ demo_change_rural_dvp_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ unemployed_dvp_display +]%[? if n_elections != 1 and demo_change_unemployed_dvp_display != 0 : ([+ demo_change_unemployed_dvp_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ catholics_dvp_display +]%[? if n_elections != 1 and demo_change_catholics_dvp_display != 0 : ([+ demo_change_catholics_dvp_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em; padding: 10px">!}[+ workers_wp_display +]%[? if n_elections != 1 and demo_change_workers_wp_display != 0 : ([+ demo_change_workers_wp_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ new_middle_wp_display +]%[? if n_elections != 1 and demo_change_new_middle_wp_display != 0 : ([+ demo_change_new_middle_wp_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ old_middle_wp_display +]%[? if n_elections != 1 and demo_change_old_middle_wp_display != 0 : ([+ demo_change_old_middle_wp_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ rural_wp_display +]%[? if n_elections != 1 and demo_change_rural_wp_display != 0 : ([+ demo_change_rural_wp_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ unemployed_wp_display +]%[? if n_elections != 1 and demo_change_unemployed_wp_display != 0 : ([+ demo_change_unemployed_wp_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 160, 84, 0.2); font-size: 0.85em;">!}[+ catholics_wp_display +]%[? if n_elections != 1 and demo_change_catholics_wp_display != 0 : ([+ demo_change_catholics_wp_display +])?]{!</td>!}
         {!</tr>!} ?]
         [? if kvp_formed: {!<tr>!}
             {!<td><span style="color: #0087DC;">!}**KVP**{!</span></td>!}
@@ -1828,7 +1828,7 @@ if (Q.cvp_economy_accepted && Q.budget < 0) {
 go-to: social_catholic_coalition_cvp_2
 
 @social_catholic_coalition_cvp_2
-on-arrival: leverage -= 10; leverage += 5 if cvp_ideology == "Left"; in_weimar_coalition = 1; in_social_catholic_coalition = 1; dnvp_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; finance_minister_party = "Z"; economic_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Guérard"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Brüning"; finance_minister = "Köhler"; agriculture_minister = "Hermes"; dvp_right += 2; ddp_right += 4; ddp_cohesion -= 3; lvp_right += 3; braun_angry = 30; liberal_cooperation += 5; z_relation += 10; workers_z += 3; unemployed_z += 3; new_middle_z -= 6; old_middle_z -= 10; rural_z -= 6; catholics_z += 4; new_middle_dnf += 2; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_lvp += 4; old_middle_dnf += 6; old_middle_dvp += 4; old_middle_dvp += 4; rural_dnf += 4; rural_dvp += 2; rural_lvp += 2
+on-arrival: leverage -= 10; leverage += 5 if cvp_ideology == "Left"; in_weimar_coalition = 1; in_social_catholic_coalition = 1; dnvp_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; finance_minister_party = "Z"; economic_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Guérard"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Brüning"; finance_minister = "Köhler"; agriculture_minister = "Hermes"; dvp_right += 2; ddp_right += 4; ddp_cohesion -= 3; lvp_right += 3; braun_angry = 30; liberal_cooperation += 5; z_relation += 10; workers_z += 3; unemployed_z += 3; new_middle_z -= 6; old_middle_z -= 10; rural_z -= 6; catholics_z += 4; new_middle_dnf += 2; new_middle_wp += 2; new_middle_lvp += 2; new_middle_lvp += 4; old_middle_dnf += 6; old_middle_wp += 4; old_middle_wp += 4; rural_dnf += 4; rural_wp += 2; rural_lvp += 2
 
 We have somehow convinced the <span style="color: #000000;">**[+ z_party_name +]**</span> to enter in a <span style="color: #c00000;">Social</span>-<span style="color: #000000;">Christian</span> Coalition with us! The <span style="color: #3E88B3;">nationalist</span> elements within the <span style="color: #000000;">**[+ z_party_name +]**</span> are disgusted by this, never actually expecting the negotiations to have a successful conclusion. They're refusing to participate in government through cabinet positions as to not be associated with the <span style="color: #c00000;">socialists</span>.
 
@@ -1999,8 +1999,8 @@ Q.new_middle_uspd -= 5;
 Q.old_middle_uspd -= 5;
 Q.rural_uspd -= 5;
 Q.catholics_uspd -= 3;
-Q.new_middle_dvp -= 8;
-Q.old_middle_dvp -= 8;
+Q.new_middle_wp -= 8;
+Q.old_middle_wp -= 8;
 Q.new_middle_lvp -= 5;
 Q.old_middle_ddp -= 10;
 Q.new_middle_lvp -= 8;
@@ -2068,13 +2068,13 @@ Unfortunately, the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</
 - @no_majority: Thus, there is no clear majority.
 - @brauns_dilemma
 - @conservative_coalition_2: Perhaps a right-wing coalition may form.
-- @beg_dvp: Perhaps we could ask the <span style="color: #C0A054;">**DVP**</span> to change their minds?
+- @beg_wp: Perhaps we could ask the <span style="color: #C0A054;">**DVP**</span> to change their minds?
 - @beg_lvp: Perhaps we could ask the <span style="color: #FFCC00;">**LVP**</span> to change their minds?
 - @unity_government
 - @coalition_menu: What are the other governing arrangements?
 
 
-@beg_dvp
+@beg_wp
 view-if: wp_relation >= 20 and not lvp_formed
 go-to: dvp_conservative if stresemann_dead == 1; dvp_majority if stresemann_dead == 0
 
@@ -2092,25 +2092,25 @@ Under the influence of Gustav Stresemann, the [? if not lvp_formed: <span style=
 
 The [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] asks us to adhere to their conservative economic policies (that is, extreme austerity and labor discipline) in exchange for us joining the coalition.
 
-- @beg_dvp_2: But they would not have a majority without the <span style="color: #c00000;">**SPD**</span>! The [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnf_formed: <span style="color: #003755;">**DNF**</span> ?] and <span style="color: #7A3C00;">**NSDAP**</span> have no interest in participating in government.
+- @beg_wp_2: But they would not have a majority without the <span style="color: #c00000;">**SPD**</span>! The [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnf_formed: <span style="color: #003755;">**DNF**</span> ?] and <span style="color: #7A3C00;">**NSDAP**</span> have no interest in participating in government.
 - @dvp_prussia: We will offer them participation in the Prussian government.
 - @no_majority: There is no chance that we would agree.
 - @brauns_dilemma
 - @coalition_menu: What are the other governing arrangements?
 
 
-@beg_dvp_2
-go-to: beg_dvp_fail
+@beg_wp_2
+go-to: beg_wp_fail
 
 We make the case that without the <span style="color: #c00000;">**SPD**</span>, there is no parliamentary majority, given the [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**DNVP**</span> ?][? if dnf_formed: <span style="color: #003755;">**DNF**</span> ?] and <span style="color: #7A3C00;">**NSDAP**</span>'s hostility to constitutional government.
 
-@beg_dvp_succeed
+@beg_wp_succeed
 go-to: join_bruning
 
 Somehow, we succeed in convincing them! We are now in a coalition.
 
 
-@beg_dvp_fail
+@beg_wp_fail
 go-to: no_majority
 
 As expected, the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] is too set in their anti-democratic ways.
@@ -2118,7 +2118,7 @@ As expected, the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</sp
 @dvp_prussia
 subtitle: This will restrict our actions in Prussia.
 view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_conservative_coalition_prussia) and dvp_was_in_prussia == 0 and not lvp_formed and dvp_exist
-on-arrival: in_conservative_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_dnvp_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; dnvp_prussia = 1; democratic_prussia = 0; ddp_in_popular_front_prussia = 0; nazi_goals_seen_prussia = 0; dnvp_toleration_prussia = 0; leverage += 5; wp_relation += 10; z_relation -= 5; lvp_relation += 3; coalition_dissent = -1; right_dissent += 5; dvp_left += 3; new_middle_dvp += 3; lvp_prussia_asked = 1
+on-arrival: in_conservative_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_dnvp_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; dnvp_prussia = 1; democratic_prussia = 0; ddp_in_popular_front_prussia = 0; nazi_goals_seen_prussia = 0; dnvp_toleration_prussia = 0; leverage += 5; wp_relation += 10; z_relation -= 5; lvp_relation += 3; coalition_dissent = -1; right_dissent += 5; dvp_left += 3; new_middle_wp += 3; lvp_prussia_asked = 1
 go-to: join_bruning
 
 Letting the <span style="color: #C0A054;">**DVP**</span> into the Prussian government is an offer too good for them to refuse, no matter their leadership. However, this will negatively impact our actions involving the Prussian police force due to the <span style="color: #C0A054;">**DVP**</span> has ties to right-wing organizations such as the <span style="color: #3E88B3;">Stahlhelm</span>.
@@ -2574,7 +2574,7 @@ go-to: ministries
 @dvp_prussia_1
 subtitle: This will restrict our actions in Prussia.
 view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_conservative_coalition_prussia) and not in_left_front and not in_popular_front and not in_weimar_coalition and not in_emergency_government and dvp_was_in_prussia == 0 and not lvp_formed and dvp_exist
-on-arrival: in_conservative_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_dnvp_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; nazi_goals_seen_prussia = 0; dnvp_toleration_prussia = 0; leverage += 5; wp_relation += 7; z_relation -= 5; coalition_dissent = -1; right_dissent += 5; dvp_left += 3; new_middle_dvp += 3
+on-arrival: in_conservative_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_dnvp_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_conservative_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; nazi_goals_seen_prussia = 0; dnvp_toleration_prussia = 0; leverage += 5; wp_relation += 7; z_relation -= 5; coalition_dissent = -1; right_dissent += 5; dvp_left += 3; new_middle_wp += 3
 go-to: ministries
 
 Letting the <span style="color: #C0A054;">**DVP**</span> into the Prussian government is an offer too good for them to refuse, no matter their leadership. However, this will negatively impact our actions involving the Prussian police force due to the <span style="color: #C0A054;">**DVP**</span> has ties to right-wing organizations such as the <span style="color: #3E88B3;">Stahlhelm</span>.

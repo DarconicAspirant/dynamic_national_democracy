@@ -55,12 +55,12 @@ title: Overall Results
 view-if: bavaria_seen and wurttemberg_seen
 on-arrival: {!
 if (Q.liberal_wurttemberg_defeat) {
-    Q.new_middle_dvp *= 0.6;
-    Q.old_middle_dvp *= 0.6;
+    Q.new_middle_wp *= 0.6;
+    Q.old_middle_wp *= 0.6;
     Q.new_middle_lvp *= 0.6;
     Q.old_middle_ddp *= 0.6;
     Q.rural_lvp *= 0.6;
-    Q.rural_dvp *= 0.6;
+    Q.rural_wp *= 0.6;
     Q.lvp_right += 5;
     Q.ddp_right += 3;
     Q.dvp_right += 5;
@@ -132,8 +132,8 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.braun_angry_bruning -= 50;
     Q.new_middle_lvp *= 1.2;
     Q.old_middle_ddp *= 1.2;
-    Q.new_middle_dvp *= 1.2;
-    Q.old_middle_dvp *= 1.2;
+    Q.new_middle_wp *= 1.2;
+    Q.old_middle_wp *= 1.2;
     Q.new_middle_lvp *= 1.1;
     Q.old_middle_lvp *= 1.1;
     Q.new_middle_other += 2;
@@ -152,8 +152,8 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.braun_angry_bruning -= 50;
     Q.new_middle_lvp *= 1.2;
     Q.old_middle_ddp *= 1.2;
-    Q.new_middle_dvp *= 1.2;
-    Q.old_middle_dvp *= 1.2;
+    Q.new_middle_wp *= 1.2;
+    Q.old_middle_wp *= 1.2;
     Q.new_middle_lvp *= 1.1;
     Q.old_middle_lvp *= 1.1;
     Q.new_middle_dnvp += 2;
@@ -172,8 +172,8 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
     Q.braun_angry_bruning -= 50;
     Q.new_middle_lvp *= 1.2;
     Q.old_middle_ddp *= 1.2;
-    Q.new_middle_dvp *= 1.2;
-    Q.old_middle_dvp *= 1.2;
+    Q.new_middle_wp *= 1.2;
+    Q.old_middle_wp *= 1.2;
     Q.new_middle_lvp *= 1.1;
     Q.old_middle_lvp *= 1.1;
     Q.new_middle_z += 6;

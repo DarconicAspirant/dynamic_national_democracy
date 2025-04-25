@@ -1,19 +1,19 @@
 on-arrival: {!
 
-Q.cvp_dvp_formed = 1;
+Q.cvp_wp_formed = 1;
 Q.dvp_exist = 0;
 
-Q.workers_z += Q.workers_dvp;
+Q.workers_z += Q.workers_wp;
 
-Q.new_middle_z += Q.new_middle_dvp;
+Q.new_middle_z += Q.new_middle_wp;
 
-Q.old_middle_z += Q.old_middle_dvp;
+Q.old_middle_z += Q.old_middle_wp;
 
-Q.rural_z += Q.rural_dvp;
+Q.rural_z += Q.rural_wp;
 
-Q.unemployed_z += Q.unemployed_dvp;
+Q.unemployed_z += Q.unemployed_wp;
 
-Q.catholics_z += Q.catholics_dvp;
+Q.catholics_z += Q.catholics_wp;
 
 Q.new_middle_lvp += 6;
 Q.old_middle_ddp += 6;

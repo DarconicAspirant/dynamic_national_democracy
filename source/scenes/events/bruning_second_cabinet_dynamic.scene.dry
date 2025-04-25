@@ -8,7 +8,7 @@ Q.ddp_right += 1;
 Q.dvp_right += 2;
 Q.lvp_right += 2;
 Q.pro_republic -= 3;
-Q.new_middle_dvp -= 1;
+Q.new_middle_wp -= 1;
 !}
 priority: -2
 tags: event

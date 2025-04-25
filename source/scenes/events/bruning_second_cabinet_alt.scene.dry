@@ -9,7 +9,7 @@ Q.dvp_right += 2;
 Q.lvp_right += 2;
 Q.pro_republic -= 3;
 Q.braun_angry_bruning += 10;
-Q.new_middle_dvp -= 1;
+Q.new_middle_wp -= 1;
 !}
 tags: event
 face-image: img/bruningetcurtius.jpg

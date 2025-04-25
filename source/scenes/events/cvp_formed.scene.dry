@@ -27,9 +27,9 @@ Q.new_middle_lvp += (Q.pro_republic / 10);
 Q.old_middle_ddp += (Q.pro_republic / 10);
 Q.rural_lvp += (Q.pro_republic / 20);
 if (Q.dvp_ideology != "Right" || Q.dvp_leader != "Scholz" && Q.dvp_leader != "Dingeldey") {
-    Q.new_middle_dvp += (Q.pro_republic / 10);
-    Q.old_middle_dvp += (Q.pro_republic / 10);
-    Q.rural_dvp += (Q.pro_republic / 10);
+    Q.new_middle_wp += (Q.pro_republic / 10);
+    Q.old_middle_wp += (Q.pro_republic / 10);
+    Q.rural_wp += (Q.pro_republic / 10);
 }
 Q.new_middle_z -= (Q.pro_republic / 10);
 Q.old_middle_z -= (Q.pro_republic / 10);
@@ -48,7 +48,7 @@ Q.catholics_z -= 4;
 Q.catholics_lvp += 2;
 Q.catholics_lvp += 2;
 Q.catholics_uspd += 2;
-Q.catholics_dvp += 2;
+Q.catholics_wp += 2;
 
 Q.catholics -= 5;
 

@@ -24,11 +24,11 @@ The electoral decline of the bourgeois right, the significant shift of the <span
 
 Internal reactions within the <span style="color: #C0A054;">**DVP**</span> are mixed. The Stresemannites and left wing vehemently oppose the merger, while the right-industrial faction supports it as a necessary step. Within the <span style="color: #3E88B3;">**DNVP**</span>, opposition comes from its <span style="color: #385A38;">agrarian</span> and <span style="color: #6D5298;">Christian Socialist</span> factions, who resist unification with the industrial-capitalist <span style="color: #C0A054;">**DVP**</span>. Additionally, the party’s old guard, led by Westarp, remains skeptical due to major differences on the "national questions".
 
-- @dnvp_dvp: Regardless, an agreement has been reached.
+- @dnvp_wp: Regardless, an agreement has been reached.
 
-@dnvp_dvp
+@dnvp_wp
 face-image: img/dvpposter.jpg
-go-to: dnvp_dvp_formed
+go-to: dnvp_wp_formed
 
 Many on the <span style="color: #C0A054;">**DVP**</span>'s left, such as Luther and Curtius, along with their supporters, have defected to the flourishing <span style="color: #D3C24D;">[+ ddp_name +]</span>, seeing it as the last bastion of liberalism.
 
