@@ -203,7 +203,7 @@ if (Q.sa_strength) {
 
 <span style="color: #c00000;">**Volksbanner**</span> Militarization: [+ vb_militancy : militancy +]
 
-<span style="color: #c00000;">**Volksbanner**</span> Ideology: [? if vb_ideology == "Far-Left": <span style="color: #8B0000;">Radical Socialist</span> ?][? if vb_ideology == "Left": <span style="color: #c00000;">Socialist</span> ?][? if vb_ideology == "Center-Left": <span style="color: #c00000;">Socialistic</span> <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> ?][? if vb_ideology == "Center": <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> ?]
+<span style="color: #c00000;">**Volksbanner**</span> Ideology: [? if vb_ideology == "Far-Left": <span style="color: #8B0000;">Radical Socialist</span> ?][? if vb_ideology == "Left": <span style="color: #c00000;">Socialist</span> ?][? if vb_ideology == "Center-Left": <span style="color: #c00000;">Socialistic</span>-<span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> ?][? if vb_ideology == "Center": <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> ?]
 
 <span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a far-left group associated with the SAPD and extra-parliamentary left as well as some SPD radicals." style="color: #8B0000;">**RFB**</span> Strength: [+ rfb_strength_2 +] thousand
 

@@ -729,7 +729,7 @@ Q.other_r = Q.other_votes;
 
 // coalitions
 // 0.6 for others is the average SAPD vote share
-Q.weimar_coalition = Math.round((Q.uspd_r + ddp_r + Q.lvp_r + Q.z_r - 3)*10)/10;
+Q.weimar_coalition = Math.round((Q.uspd_r + Q.lvp_r + Q.z_r - 3)*10)/10;
 Q.grand_coalition = Math.round((Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r)*10)/10;
 Q.constitutional_coalition = Math.round((Q.uspd_r + Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r + Q.other_r - 0.6 + Q.wp_r)*10)/10;
 Q.bourgeois_coalition = Math.round((Q.ddp_r + Q.lvp_r + Q.z_r + Q.dvp_r +Q.other_r - 0.6 + Q.wp_r)*10)/10;
