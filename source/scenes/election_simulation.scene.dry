@@ -741,8 +741,6 @@ Q.national_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r
 Q.far_right_coalition = Math.round((Q.dnvp_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
 Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r)*10)/10;
 Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.z_r - 3)*10)/10;
-// this is an absurd concept lol
-Q.anti_democratic_coalition = Math.round((0.6 + Q.nsdap_r)*10)/10;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.

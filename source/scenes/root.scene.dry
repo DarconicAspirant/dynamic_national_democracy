@@ -151,6 +151,7 @@ Q.prussia_leader = "Stegerwald"
 // Volksbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.vb_strength = 1200;
 Q.vb_militancy = 0.15;
+Q.vb_ideology = "Center-Left";
 Q.women_in_vb = 0;
 Q.vb_banned = 0;
 Q.sh_strength = 450;
