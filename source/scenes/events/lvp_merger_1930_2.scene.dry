@@ -28,7 +28,7 @@ if (Q.ddp_cohesion >= 10) {
 if (Q.pro_republic >= 50) {
     Q.lvp_formation_points += 1;
 }
-if (Q.spd_votes >= 32) {
+if (Q.uspd_votes >= 32) {
     Q.lvp_formation_points += 2;
 }
 !}

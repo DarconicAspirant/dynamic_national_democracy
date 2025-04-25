@@ -67,11 +67,11 @@ Q.other_thuringia_elections_vote = 0;
 Q.kvp_thuringia_elections_vote = 0;
 Q.dnf_thuringia_elections_vote = 0;
 
-if (Q.new_middle_spd_normalized + Q.old_middle_spd_normalized >= 30) thuringia_adjustment_factors.spd += 0.1;
-if (Q.rural_spd_normalized >= 20) thuringia_adjustment_factors.spd += 0.1;
-Q.spd_thuringia_elections_vote = Q.spd_votes*thuringia_adjustment_factors.spd;
+if (Q.new_middle_uspd_normalized + Q.old_middle_uspd_normalized >= 30) thuringia_adjustment_factors.spd += 0.1;
+if (Q.rural_uspd_normalized >= 20) thuringia_adjustment_factors.spd += 0.1;
+Q.spd_thuringia_elections_vote = Q.uspd_votes*thuringia_adjustment_factors.spd;
 Q.sapd_thuringia_elections_vote = Q.sapd_votes*thuringia_adjustment_factors.sapd;
-Q.kpd_thuringia_elections_vote = Q.kpd_votes*thuringia_adjustment_factors.kpd;
+Q.kpd_thuringia_elections_vote = Q.spd_votes*thuringia_adjustment_factors.kpd;
 if (Q.stolper_program_adopted) thuringia_adjustment_factors.ddp += 0.6;
 Q.ddp_thuringia_elections_vote = Q.ddp_votes*thuringia_adjustment_factors.ddp;
 Q.lvp_thuringia_elections_vote = Q.lvp_votes*thuringia_adjustment_factors.lvp;
@@ -504,7 +504,7 @@ Surprisingly, through our reconciliation with the bourgeois parties, they have a
 title: The incumbent coalition is expanded to include the <span style="color: #7A3C00;">**NSDAP**</span>.
 subtitle: A testament to how biased the "democratic" parties are when it comes to working with us.
 view-if: far_right_coalition_thuringia >= 50 and bourgeois_coalition_thuringia < 50
-on-arrival: thuringia_nsdap = 1; workers_nsdap += 2; new_middle_nsdap += 4; old_middle_nsdap += 6; rural_nsdap += 2; unemployed_kpd -= 2; unemployed_nsdap += 2; sa_strength += 50; sa_militancy += 0.03; prussian_police_loyalty -= 0.05; pro_republic -= 5
+on-arrival: thuringia_nsdap = 1; workers_nsdap += 2; new_middle_nsdap += 4; old_middle_nsdap += 6; rural_nsdap += 2; unemployed_spd -= 2; unemployed_nsdap += 2; sa_strength += 50; sa_militancy += 0.03; prussian_police_loyalty -= 0.05; pro_republic -= 5
 face-image: img/portraits/frick.jpg
 
 Wilhelm Frick, a convicted Beer Hall Putsch participant, becomes the first <span style="color: #7A3C00;">Nazi</span> to hold a ministerial-level post in Germany. He is given control of the Interior and Education Ministries, and by passing an "Enabling Act" through a simple majority as an emergency decree, granting him the power to radically transform Thuringia.
@@ -527,7 +527,7 @@ subtitle: We have somehow reconciled with the bourgeois parties, that they're wi
 unavailable-subtitle: [? if z_relation < 60 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?]
 view-if: spd_coalition_thuringia >= 50
 choose-if: spd_coalition_possible
-on-arrival: thuringia_spd = 1; rural_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_spd += 2; old_middle_spd += 2; rural_spd += 2; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; sa_strength -= 25
+on-arrival: thuringia_spd = 1; rural_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_uspd += 2; old_middle_uspd += 2; rural_uspd += 2; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; sa_strength -= 25
 
 Somehow, the bourgeois parties are willing to form a [? if lvp_formed: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed: Grand?] Coalition with us, rather than continuing their current government.
 
@@ -537,7 +537,7 @@ We will use our positions in government to root out right-wing and <span style="
 title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #700000;">**KPD**</span>.
 subtitle: History will repeat itself.
 view-if: left_coalition_thuringia >= 50 and (nsdap_relation >= 40 and spd_leader == "Conciliators") or (nsdap_relation >= 60 and spd_leader != "Conciliators")
-on-arrival: red_thuringia = 1; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; uprising_progress += 3; braun_angry += 40; rfb_militancy += 0.05; rfb_strength += 100; sa_strength += 50; sh_strength += 50; strife += 1; workers_spd += 3; workers_kpd += 3; unemployed_spd += 3; new_middle_spd -= 3; old_middle_spd -= 3; rural_spd -= 3; bernburg_coalition += 3; nsdap_relation += 10
+on-arrival: red_thuringia = 1; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; uprising_progress += 3; braun_angry += 40; rfb_militancy += 0.05; rfb_strength += 100; sa_strength += 50; sh_strength += 50; strife += 1; workers_uspd += 3; workers_spd += 3; unemployed_uspd += 3; new_middle_uspd -= 3; old_middle_uspd -= 3; rural_uspd -= 3; bernburg_coalition += 3; nsdap_relation += 10
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -598,7 +598,7 @@ In an effort to avoid this, they are more open to negotiating a toleration agree
 @no_majority_2
 title: A majority still can't be found!
 subtitle: [? if not toleration_possible: This is getting ridiculous. ?][? if toleration_possible: We will refuse to tolerate the bourgeois government, forcing new elections. ?]
-on-arrival: thuringia_election_2_trigger_time = time + 3; thuringia_no_majority = 1; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 2; unemployed_nsdap += 4; pro_republic -= 3; new_middle_spd -= 3 if toleration_possible; old_middle_spd -= 3 if toleration_possible; rural_spd -= 2 if toleration_possible
+on-arrival: thuringia_election_2_trigger_time = time + 3; thuringia_no_majority = 1; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 2; unemployed_nsdap += 4; pro_republic -= 3; new_middle_uspd -= 3 if toleration_possible; old_middle_uspd -= 3 if toleration_possible; rural_uspd -= 2 if toleration_possible
 
 [? if not toleration_possible: The bourgeois parties remain unwilling to accept our offer of toleration. [? if far_right_coalition_thuringia + ddp_r_thuringia >= 50: One option the incumbent coalition has considered is including both the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and the <span style="color: #7A3C00;">**NSDAP**</span>, but for obvious reasons, both parties have vetoed this proposal. ?]?][? if toleration_possible: By refusing to enter any toleration agreement, and with the bourgeois parties unwilling to let us lead the government, no majority can be found. As a result, we have shouldered much of the blame for the deadlock and are likely to suffer in the next elections. ?]
 

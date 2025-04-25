@@ -52,6 +52,6 @@ on-arrival: paramilitarist_strength += 10; revolutionary_urgency += 1; paramilit
 Working together with other "neorevisionists" such as Sergei Chakhotin, Mierendorff has developed new propaganda methods to fight the rise of the Nazis. They focus on visually striking symbols and repetitious slogans. Time will tell how effective they are.
 
 @p4
-on-arrival: right_strength += 4; agrarian_strength += 4; christsoc_strength += 4; right_dissent -= 3; center_dissent -= 3; christsoc_dissent -= 3; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent)
+on-arrival: right_strength += 4; agrarian_strength += 4; christsoc_strength += 4; right_dissent -= 3; center_dissent -= 3; christsoc_dissent -= 3; workers_uspd += 2*(1-dissent); unemployed_uspd += 2*(1-dissent)
 
 The <span style="color: #7A3C00;">Nazis</span>' appeals are making in-roads even among the working class, so we must redouble our propaganda campaigns among our base in order to prevent any <span style="color: #7A3C00;">Nazi</span> attachment.

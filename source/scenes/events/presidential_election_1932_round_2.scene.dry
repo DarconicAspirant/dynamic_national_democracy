@@ -110,17 +110,17 @@ if (Q.spd_campaign) {
     Q.thalmann_votes += Q.kpd_normalized;
     Q.thalmann_votes += Q.spd_normalized;
     if (!Q.media_communist_seen) {
-        Q.thalmann_votes -= (Q.new_middle_spd_normalized / 1000);
-        Q.thalmann_votes -= (Q.old_middle_spd_normalized / 1000);
+        Q.thalmann_votes -= (Q.new_middle_uspd_normalized / 1000);
+        Q.thalmann_votes -= (Q.old_middle_uspd_normalized / 1000);
     } else if (Q.media_communist_seen) {
-        Q.thalmann_votes -= (Q.new_middle_spd_normalized / 1500);
-        Q.thalmann_votes -= (Q.old_middle_spd_normalized / 1500);
+        Q.thalmann_votes -= (Q.new_middle_uspd_normalized / 1500);
+        Q.thalmann_votes -= (Q.old_middle_uspd_normalized / 1500);
     }
-    Q.thalmann_votes -= (Q.rural_spd_normalized / 500);
-    Q.thalmann_votes -= (Q.catholics_spd_normalized / 500);
+    Q.thalmann_votes -= (Q.rural_uspd_normalized / 500);
+    Q.thalmann_votes -= (Q.catholics_uspd_normalized / 500);
     if (!Q.spd_glaze_thalmann) {
-        Q.thalmann_votes -= (Q.workers_spd_normalized / 2000);
-        Q.hindenburg_votes += (Q.workers_spd_normalized / 2000);
+        Q.thalmann_votes -= (Q.workers_uspd_normalized / 2000);
+        Q.hindenburg_votes += (Q.workers_uspd_normalized / 2000);
     }
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.ddp_normalized;
@@ -247,11 +247,11 @@ Karl Liebknecht of the SPD has won the presidency. He immediately dismissed the 
 
 
 @braun_wins
-on-arrival: president = "Braun"; popcon_dissent -= 15; center_dissent -= 15; christsoc_dissent -= 15; right_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president = "Braun"; popcon_dissent -= 15; center_dissent -= 15; christsoc_dissent -= 15; right_dissent -= 5; workers_uspd += 8*(1-dissent); old_middle_uspd += 5*(1-dissent); new_middle_uspd += 5*(1-dissent); rural_uspd += 5*(1-dissent); unemployed_uspd += 5*(1-dissent);
 
 Otto Braun of the <span style="color: #c00000;">**SPD**</span> has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
 
 @duesterburg_wins
-on-arrival: president = "Braun"; popcon_dissent -= 15; center_dissent -= 15; christsoc_dissent -= 15; right_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president = "Braun"; popcon_dissent -= 15; center_dissent -= 15; christsoc_dissent -= 15; right_dissent -= 5; workers_uspd += 8*(1-dissent); old_middle_uspd += 5*(1-dissent); new_middle_uspd += 5*(1-dissent); rural_uspd += 5*(1-dissent); unemployed_uspd += 5*(1-dissent);
 
 Duesterberg is too ashamed to accept the Presidency, and out of the kindness of his heart, has given it to Otto Braun. 

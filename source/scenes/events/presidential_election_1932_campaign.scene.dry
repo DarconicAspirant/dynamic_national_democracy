@@ -14,13 +14,13 @@ if (Q.nsdap_candidate_1932 == "Hitler") {
     Q.unemployed_nsdap += 4;
     Q.new_middle_dnvp -= 2;
     Q.old_middle_dnvp -= 2; 
-    Q.unemployed_kpd -= 2;
+    Q.unemployed_spd -= 2;
 } else if (Q.nsdap_candidate_1932 == "Göring") {
     Q.old_middle_nsdap += 4;
     Q.old_middle_dnvp -= 4;
     Q.rural_nsdap += 2;
     Q.rural_dnvp -= 2;
-    Q.workers_kpd += 3;
+    Q.workers_spd += 3;
     Q.workers_nsdap -= 3;
 }
 !}
@@ -120,7 +120,7 @@ We have a plethora of campaign options at our disposal.
 @iron_front
 title: Rally the full strength of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> to support Braun.
 view-if: bernburg_front_formed
-on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 3; new_middle_spd += radicalization + 2; unemployed_spd += radicalization + 2; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; right_dissent -= 10; vb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
+on-arrival: radicalization = 3 if radicalization > 3; workers_uspd += radicalization + 3; new_middle_uspd += radicalization + 2; unemployed_uspd += radicalization + 2; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; right_dissent -= 10; vb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
 max-visits: 1
 face-image: img/iron_front_poster.png
 go-to: campaigning_spd
@@ -132,7 +132,7 @@ title: Use our radio stations to broadcast in favor of Braun.
 subtitle: -1 resource
 choose-if: radio >= 2 and resources >= 1
 unavailable-subtitle: [? if radio < 2: We haven't sufficiently built up our radio infrastructure yet. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= (campaign_media + radio - 2); unemployed_nsdap -= (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media)
+on-arrival: resources -= 1; new_middle_uspd += (radio + commercialized_media); old_middle_uspd += (radio + commercialized_media); workers_uspd += (campaign_media + radio - 2); unemployed_uspd += (campaign_media + radio); new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= (campaign_media + radio - 2); unemployed_nsdap -= (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media)
 face-image: img/poster_0.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -144,7 +144,7 @@ title: We persuade the [? if z_party_name != "CVP": <span style="color: #000000;
 subtitle: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] isn't pulling their weight. -1 resource
 choose-if: z_support_spd == 1 and ((z_relation >= 60 and z_ideology == "Right") or (z_relation >= 45 and z_ideology == "Left")) and resources >= 1
 unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] doesn't support Braun. ?][? if (z_relation < 60 and z_ideology == "Right") or (z_relation < 45 and z_ideology == "Left"): Our relations aren't good enough. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; pro_republic += 3; z_glaze_spd = 1; catholics_nsdap -= 3; catholics_spd += 3; catholics_z += 2; rural_spd += 1; z_relation += 5; ddp_left += 2; dvp_left += 3; ddp_cohesion += 1; lvp_left += 2
+on-arrival: resources -= 1; pro_republic += 3; z_glaze_spd = 1; catholics_nsdap -= 3; catholics_uspd += 3; catholics_z += 2; rural_uspd += 1; z_relation += 5; ddp_left += 2; dvp_left += 3; ddp_cohesion += 1; lvp_left += 2
 face-image: img/center_poster.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -156,7 +156,7 @@ title: We persuade the <span style="color: #700000;">**Communists**</span> to ta
 subtitle: This will alienate bourgeois voters! -2 resources
 choose-if: kpd_support_spd == 1 and (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
 unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
-on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
+on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_uspd += 3; workers_spd += 5; workers_nsdap -= 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_uspd -= 3; old_middle_uspd -= 3; catholics_uspd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -190,31 +190,31 @@ Since it's election season, we are able to accelerate campaigning efforts. Buy o
 
 @workers
 view-if: campaigning_count < 2
-on-arrival: workers_spd += 4*(1 - dissent); campaigning_count += 1
+on-arrival: workers_uspd += 4*(1 - dissent); campaigning_count += 1
 go-to: campaign_menu
 
 
 @middle_class
 view-if: campaigning_count < 2
-on-arrival: new_middle_spd += 3*(1 - dissent); old_middle_spd += 3*(1 - dissent); new_middle_spd += 3*(1 - dissent) if peoples_party; old_middle_spd += 3*(1 - dissent) if peoples_party; campaigning_count += 1
+on-arrival: new_middle_uspd += 3*(1 - dissent); old_middle_uspd += 3*(1 - dissent); new_middle_uspd += 3*(1 - dissent) if peoples_party; old_middle_uspd += 3*(1 - dissent) if peoples_party; campaigning_count += 1
 go-to: campaign_menu
 
 
 @rural
 view-if: campaigning_count < 2
-on-arrival: rural_spd += 3*(1 - dissent); rural_spd += 3*(1 - dissent) if peoples_party; campaigning_count += 1
+on-arrival: rural_uspd += 3*(1 - dissent); rural_uspd += 3*(1 - dissent) if peoples_party; campaigning_count += 1
 go-to: campaign_menu
 
 
 @unemployed
 view-if: campaigning_count < 2
-on-arrival: unemployed_spd += 4*(1 - dissent); campaigning_count += 1
+on-arrival: unemployed_uspd += 4*(1 - dissent); campaigning_count += 1
 go-to: campaign_menu
 
 
 @catholics
 view-if: campaigning_count < 2 and peoples_party
-on-arrival: catholics_spd += 4*(1 - dissent); campaigning_count += 1
+on-arrival: catholics_uspd += 4*(1 - dissent); campaigning_count += 1
 go-to: campaign_menu
 
 
@@ -236,7 +236,7 @@ if (Q.industrial_total_backing) {
     Q.hindenburg_funds += Q.industrial_dvp_backing;
     Q.hindenburg_funds += Q.industrial_dnvp_backing;
     Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
-    if (Q.dnvp_in_government) Q.hindenburg_funds += ((100 - Q.kpd_votes) / 10);
+    if (Q.dnvp_in_government) Q.hindenburg_funds += ((100 - Q.spd_votes) / 10);
 }
 Q.hindenburg_funds_old = Q.hindenburg_funds;
 !}
@@ -329,7 +329,7 @@ We have a plethora of campaign options at our disposal.
 @iron_front_hindenburg
 title: Rally the full strength of the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> to support Hindenburg.
 view-if: bernburg_front_formed
-on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 2; new_middle_spd += radicalization + 1; unemployed_spd += radicalization + 1; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; vb_strength += 100; workers_nsdap -= 2 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 2 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 2 if strife >= 5 and far_right_paramilitary
+on-arrival: radicalization = 3 if radicalization > 3; workers_uspd += radicalization + 2; new_middle_uspd += radicalization + 1; unemployed_uspd += radicalization + 1; pro_republic += 3; nationalism -= 3; paramilitarist_dissent -= 10; paramilitarist_strength += 10; vb_strength += 100; workers_nsdap -= 2 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 2 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 2 if strife >= 5 and far_right_paramilitary
 max-visits: 1
 face-image: img/iron_front_poster.png
 go-to: campaigning_hindenburg_2
@@ -341,7 +341,7 @@ title: Use our radio stations to broadcast in favor of Hindenburg.
 subtitle: -1 resource
 choose-if: radio >= 2 and resources >= 1
 unavailable-subtitle: [? if radio < 2: We haven't sufficiently built up our radio infrastructure yet. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media)
+on-arrival: resources -= 1; new_middle_uspd += (radio + commercialized_media); old_middle_uspd += (radio + commercialized_media); workers_uspd += (campaign_media + radio - 2); unemployed_uspd += (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if militarism > 1; pro_republic += (radio + commercialized_media)
 face-image: img/poster_0.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -353,7 +353,7 @@ title: Rally in favor of democracy, and the <span style="color: #000000;">We</sp
 subtitle: We might alienate some of Hindenburg's more <span style="color: #808080;">reactionary</span> supporters. -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; christsoc_dissent -= 5; paramilitarist_dissent -= 5; popcon_dissent -= 5; right_dissent -= 5; workers_spd += 3*(1-dissent) if antimocratization >= 3; unemployed_spd += 3*(1-dissent) if antimocratization >= 3; pro_republic += 2*(1 - dissent) if antimocratization >= 3; new_middle_spd += 3*(1-dissent) if antimocratization >= 3; braun_angry += 10; braun_angry_bruning += 10; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3
+on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; christsoc_dissent -= 5; paramilitarist_dissent -= 5; popcon_dissent -= 5; right_dissent -= 5; workers_uspd += 3*(1-dissent) if antimocratization >= 3; unemployed_uspd += 3*(1-dissent) if antimocratization >= 3; pro_republic += 2*(1 - dissent) if antimocratization >= 3; new_middle_uspd += 3*(1-dissent) if antimocratization >= 3; braun_angry += 10; braun_angry_bruning += 10; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3
 face-image: img/weimar_coalition.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -365,7 +365,7 @@ title: Focus our campaign against the <span style="color: #700000;">**Communist*
 subtitle: He has gained a significant amount of support by positioning himself as the "only left candidate." -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; right_dissent -= 10; workers_spd += 3; workers_kpd -= 3; nsdap_relation -= 10; braun_angry -= 10; braun_angry_bruning -= 10
+on-arrival: resources -= 1; right_dissent -= 10; workers_uspd += 3; workers_spd -= 3; nsdap_relation -= 10; braun_angry -= 10; braun_angry_bruning -= 10
 face-image: img/social_fascist.jpg
 max-visits: 1
 go-to: campaigning_hindenburg_2
@@ -418,7 +418,7 @@ go-to: bourgeois_campaign_menu
 In an attempt to rival the <span class="tooltip-text" title="good mod">dynamism</span> of the <span style="color: #7A3C00;">Nazi</span> campaign, which has utilized aircraft to quickly transport high-profile <span style="color: #7A3C00;">Nazi</span> leaders to deliver up to four speeches per day, Hugo Eckener has been convinced to take flight across Germany to drum up popular support for Hindenburg. 
 
 @eckener_3
-on-arrival: unemployed_nsdap += 6; unemployed_kpd -= 3; unemployed_spd -= 3
+on-arrival: unemployed_nsdap += 6; unemployed_spd -= 3; unemployed_uspd -= 3
 go-to: bourgeois_campaign_menu
 
 In an attempt to rival the dynamism of the <span style="color: #7A3C00;">Nazi</span> campaign, the Hindenburg campaign initially tried to convince Graf Zeppelin pilot Hugo Eckener to fly across Germany in support of Hindenburg. However, with Eckener already scheduled for a flight to South America, the campaign had to pivot to an alternative approach. They opted to rent airplanes to drop twenty million leaflets over the German population. However, this isn't enough to counteract the <span style="color: #7A3C00;">Nazi</span> style of campaigning.
@@ -560,7 +560,7 @@ title: Use our radio stations to broadcast in favor of [+ communist_candidate_19
 subtitle: This may help in overcoming their antagonism against <span style="color: #700000;">Communists</span>. -1 resource
 choose-if: radio >= 2 and resources >= 1
 unavailable-subtitle: [? if radio < 2: We haven't sufficiently built up our radio infrastructure yet. ?] [? if resources < 1: Not enough resources. ?]
-on-arrival: resources -= 1; media_communist_seen = 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_kpd += 3; socialism += 3; nationalism -= 3
+on-arrival: resources -= 1; media_communist_seen = 1; new_middle_uspd += (radio + commercialized_media); old_middle_uspd += (radio + commercialized_media); workers_uspd += (campaign_media + radio - 2); unemployed_uspd += (campaign_media + radio); new_middle_spd += 3; socialism += 3; nationalism -= 3
 face-image: img/poster_0.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -572,7 +572,7 @@ title: We persuade the <span style="color: #700000;">**Communists**</span> to le
 subtitle: They have been putting themselves at the forefront. -1 resources
 choose-if: (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
 unavailable-subtitle: [? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
-on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_spd += 3; workers_kpd += 3; workers_nsdap -= 3; unemployed_spd += 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; dvp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_kpd = 1
+on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_uspd += 3; workers_spd += 3; workers_nsdap -= 3; unemployed_uspd += 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; dvp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_spd = 1
 face-image: img/kpd_poster.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -587,7 +587,7 @@ if (Q.industrial_total_backing) {
     Q.hindenburg_funds += Q.industrial_dvp_backing;
     Q.hindenburg_funds += Q.industrial_dnvp_backing;
     Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
-    if (Q.dnvp_in_government) Q.hindenburg_funds += ((100 - Q.kpd_votes) / 10);
+    if (Q.dnvp_in_government) Q.hindenburg_funds += ((100 - Q.spd_votes) / 10);
 }
 Q.hindenburg_funds_old = Q.hindenburg_funds;
 !}
@@ -683,7 +683,7 @@ go-to: bourgeois_campaign_menu_op
 In an attempt to rival the <span class="tooltip-text" title="good mod">dynamism</span> of the <span style="color: #7A3C00;">Nazi</span> campaign, which has utilized aircraft to quickly transport high-profile <span style="color: #7A3C00;">Nazi</span> leaders to deliver up to four speeches per day, Hugo Eckener has been convinced to take flight across Germany to drum up popular support for Hindenburg. 
 
 @eckener_3_op
-on-arrival: unemployed_nsdap += 6; unemployed_kpd -= 3; unemployed_spd -= 3
+on-arrival: unemployed_nsdap += 6; unemployed_spd -= 3; unemployed_uspd -= 3
 go-to: bourgeois_campaign_menu_op
 
 In an attempt to rival the dynamism of the <span style="color: #7A3C00;">Nazi</span> campaign, the Hindenburg campaign initially tried to convince Graf Zeppelin pilot Hugo Eckener to fly across Germany in support of Hindenburg. However, with Eckener already scheduled for a flight to South America, the campaign had to pivot to an alternative approach. They opted to rent airplanes to drop twenty million leaflets over the German population. However, this isn't enough to counteract the <span style="color: #7A3C00;">Nazi</span> style of campaigning.

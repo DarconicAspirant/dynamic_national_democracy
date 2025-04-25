@@ -72,20 +72,20 @@ for (var c of Q.classes) {
 // Die Rote Fahne - join the KPD in the May Day march.
 // Mehrheitspartei - form an <span style="color: #c00000;">**SPD**</span> majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
-if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
+if (Q.new_middle_uspd_normalized && Q.new_middle_uspd_normalized >= 50) {
     this.achieve('panik_im_mittelstand');
 }
 // Bauernrevolution - have over 50% rural support.
-if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
+if (Q.rural_uspd_normalized && Q.rural_uspd_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
-if (Q.catholics_spd_normalized && Q.catholics_spd_normalized >= 50) {
+if (Q.catholics_uspd_normalized && Q.catholics_uspd_normalized >= 50) {
     this.achieve('katholischer_sozialismus');
 }
-if (Q.workers_spd_normalized >= 80 && Q.new_middle_spd_normalized <= 20 && Q.old_middle_spd_normalized <= 20 && Q.rural_spd <= 20) {
+if (Q.workers_uspd_normalized >= 80 && Q.new_middle_uspd_normalized <= 20 && Q.old_middle_uspd_normalized <= 20 && Q.rural_uspd <= 20) {
     this.achieve('klassenkampf');
 }
-if (Q.workers_spd_normalized >= 40 && Q.new_middle_spd_normalized >= 40 && Q.old_middle_spd_normalized >= 40 && Q.rural_spd >= 40) {
+if (Q.workers_uspd_normalized >= 40 && Q.new_middle_uspd_normalized >= 40 && Q.old_middle_uspd_normalized >= 40 && Q.rural_uspd >= 40) {
     this.achieve('grosse_volkspartei');
 }
 // Räterepublik - begin the transformation to a socialist economy.

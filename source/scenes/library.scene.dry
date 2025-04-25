@@ -288,7 +288,7 @@ go-to: menu
 **Projected election results** (if the election were to be held now):
 
 # 1928: 30, 1930: 25, 1932: 22
-<span style="color: #c00000;">**SPD**</span>: [+ spd_votes +]%
+<span style="color: #c00000;">**SPD**</span>: [+ uspd_votes +]%
 
 [? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
 
@@ -296,7 +296,7 @@ go-to: menu
 <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
 
 # 1928: 10, 1930: 13
-<span style="color: #700000;">**KPD**</span>: [+ kpd_votes +]%
+<span style="color: #700000;">**KPD**</span>: [+ spd_votes +]%
 
 # 1928: 5, 1930: 4 (as DStP)
 [? if not lvp_formed: <span style="color: #FFCC00;">**[+ ddp_name +]**</span>: [+ ddp_votes +]% ?]
@@ -333,12 +333,12 @@ go-to: menu
         </tr>
         <tr>
             <td><span style="color: #c00000;">**SPD**</span></td>
-            <td style="background-color: rgba(192, 0, 0, 0.1); padding: 10px;">[+ workers_spd_display +]%</td>
-            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ new_middle_spd_display +]%</td>
-            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ old_middle_spd_display +]%</td>
-            <td style="background-color: rgba(192, 0, 0, 0.1); ">[+ rural_spd_display +]%</td>
-            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ unemployed_spd_display +]%</td>
-            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ catholics_spd_display +]%</td>
+            <td style="background-color: rgba(192, 0, 0, 0.1); padding: 10px;">[+ workers_uspd_display +]%</td>
+            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ new_middle_uspd_display +]%</td>
+            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ old_middle_uspd_display +]%</td>
+            <td style="background-color: rgba(192, 0, 0, 0.1); ">[+ rural_uspd_display +]%</td>
+            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ unemployed_uspd_display +]%</td>
+            <td style="background-color: rgba(192, 0, 0, 0.1);">[+ catholics_uspd_display +]%</td>
         </tr>
         [? if sapd_formed: {!<tr>!}
             <td><span style="color: #9B0000;">**SAPD**</span></td>
@@ -360,12 +360,12 @@ go-to: menu
         </tr>
         <tr>
             <td><span style="color: #700000;">**KPD**</span></td>
-            <td style="background-color: rgba(112, 0, 0, 0.2); padding: 10px;">[+ workers_kpd_display +]%</td>
-            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ new_middle_kpd_display +]%</td>
-            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ old_middle_kpd_display +]%</td>
-            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ rural_kpd_display +]%</td>
-            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ unemployed_kpd_display +]%</td>
-            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ catholics_kpd_display +]%</td>
+            <td style="background-color: rgba(112, 0, 0, 0.2); padding: 10px;">[+ workers_spd_display +]%</td>
+            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ new_middle_spd_display +]%</td>
+            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ old_middle_spd_display +]%</td>
+            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ rural_spd_display +]%</td>
+            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ unemployed_spd_display +]%</td>
+            <td style="background-color: rgba(112, 0, 0, 0.2);">[+ catholics_spd_display +]%</td>
         </tr>
         [? if not lvp_formed: <tr>
             <td><span style="color: #FFCC00;">**[+ ddp_name +]**</span></td>

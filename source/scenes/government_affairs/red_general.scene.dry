@@ -36,7 +36,7 @@ subtitle: [? if chancellor == "Papen": It's almost impossible to argue to the pa
 unavailable-subtitle: The pro-Schleicher factions aren't strong enough to have an impact on ADGB policy.
 view-if: schleicher_spd_support < 10
 choose-if: christsoc_strength + popcon_strength >= (agrarian_strength*2) + right_strength
-on-arrival: schleicher_spd_support += 3; schleicher_spd_support += 1 if worksplan_adopted; schleicher_spd_support -= 1 if chancellor == "Papen"; schleicher_spd_support -= 1 if otl_prussian_coup_seen; workers_spd -= 1; unemployed_spd -= 1; workers_kpd += 1; unemployed_kpd += 1; center_dissent += 5; right_dissent += 5
+on-arrival: schleicher_spd_support += 3; schleicher_spd_support += 1 if worksplan_adopted; schleicher_spd_support -= 1 if chancellor == "Papen"; schleicher_spd_support -= 1 if otl_prussian_coup_seen; workers_uspd -= 1; unemployed_uspd -= 1; workers_spd += 1; unemployed_spd += 1; center_dissent += 5; right_dissent += 5
 
 Slowly but surely, the ADGB leadership is beginning to warm to the idea of constructive cooperation with the so-called "Red General." However, much work remains to be done—many within the union, and the overwhelming majority of the <span style="color: #c00000;">**SPD**</span>, remain firmly opposed to cooperating with the man [? if chancellor == "Papen": propping up the widely despised Papen cabinet?][? if chancellor == "Schleicher": who now heads a widely unpopular government?]. [? if worksplan_adopted: Our adoption of the WTB Plan—and Schleicher’s public support for similar public works initiatives—has modestly increased the party’s willingness to consider cooperation. ?]
 
@@ -44,7 +44,7 @@ Slowly but surely, the ADGB leadership is beginning to warm to the idea of const
 
 @united_front
 subtitle: The consensus view within the <span style="color: #c00000;">**SPD**</span>. We are a democratic party after all.
-on-arrival: schleicher_spd_support -= 1; schleicher_spd_r -= 1 if schleicher_spd_r >= 1; workers_spd += 2; workers_kpd -= 1; right_dissent -= 5; center_dissent -= 5
+on-arrival: schleicher_spd_support -= 1; schleicher_spd_r -= 1 if schleicher_spd_r >= 1; workers_uspd += 2; workers_spd -= 1; right_dissent -= 5; center_dissent -= 5
 
 We continue to argue for a united opposition of the democratic parties against the unpopular [+ chancellor +] government, and win support among the people for doing so. 
 

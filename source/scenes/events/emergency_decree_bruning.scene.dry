@@ -142,11 +142,11 @@ on-arrival: {!
 Q.nsdap_relation -= 5;
 Q.right_dissent += 15;
 Q.christsoc_dissent += 5;
-Q.new_middle_spd -= 4;
+Q.new_middle_uspd -= 4;
 Q.new_middle_nsdap += 4;
-Q.old_middle_spd -= 2;
+Q.old_middle_uspd -= 2;
 Q.old_middle_nsdap += 2;
-Q.workers_spd -= 3; 
+Q.workers_uspd -= 3; 
 Q.workers_nsdap += 3;
 Q.unemployed += 3;
 Q.budget += 1;

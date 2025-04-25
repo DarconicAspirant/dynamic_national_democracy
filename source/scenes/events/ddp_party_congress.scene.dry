@@ -17,7 +17,7 @@ if (Q.lvp_relation >= 45) {
 
 if (Q.unemployed >= 18) {
     Q.lemmer_points -= 1;
-} else if (Q.works_program || Q.workers_spd_normalized < 45) {
+} else if (Q.works_program || Q.workers_uspd_normalized < 45) {
     Q.lemmer_points += 1;
 }
 if (Q.neoliberalization_progress) {
@@ -132,7 +132,7 @@ This year’s <span style="color: #D3C24D;">**[+ ddp_name +]**</span> party cong
 
 @lemmer
 view-if: lemmer_lead
-on-arrival: ddp_leader = "Lemmer"; liberal_cooperation -= 3; lvp_relation += 10; workers_ddp += 6; catholics_ddp += 2; workers_spd -= 4; workers_z -= 2; pro_republic += ddp_votes; ddp_left += 5; ddp_cohesion -= 3; new_middle_ddp -= 4 if stolper_program_adopted; old_middle_ddp -= 4 if stolper_program_adopted; new_middle_ddp -= 2; old_middle_ddp -= 2; rural_ddp -= 1;
+on-arrival: ddp_leader = "Lemmer"; liberal_cooperation -= 3; lvp_relation += 10; workers_ddp += 6; catholics_ddp += 2; workers_uspd -= 4; workers_z -= 2; pro_republic += ddp_votes; ddp_left += 5; ddp_cohesion -= 3; new_middle_ddp -= 4 if stolper_program_adopted; old_middle_ddp -= 4 if stolper_program_adopted; new_middle_ddp -= 2; old_middle_ddp -= 2; rural_ddp -= 1;
 face-image: img/portraits/lemmer.jpg
 go-to: achievement_calculation
 

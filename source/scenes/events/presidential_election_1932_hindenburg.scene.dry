@@ -17,13 +17,13 @@ if (Q.dnvp_ideology == "Radical") {
 if (Q.schleicher_spd) Q.hindenburg_run_points += 8;
 if (Q.bruning_toleration_time) Q.hindenburg_run_points += 3;
 if (Q.in_center_right_coalition || Q.in_conservative_coalition) Q.hindenburg_run_points -= 1;
-if (Q.spd_votes >= 26) Q.hindenburg_run_points += 1;
-if (Q.spd_votes >= 29) Q.hindenburg_run_points += 1;
-if (Q.spd_votes >= 32) Q.hindenburg_run_points += 1;
+if (Q.uspd_votes >= 26) Q.hindenburg_run_points += 1;
+if (Q.uspd_votes >= 29) Q.hindenburg_run_points += 1;
+if (Q.uspd_votes >= 32) Q.hindenburg_run_points += 1;
 if (Q.right_strength >= Q.popcon_strength) {
     Q.hindenburg_run_points += 1;
 }
-if (Q.spd_votes + (Q.z_votes*0.8) + Q.ddp_votes + (Q.lvp_votes / 2) >= 50) Q.hindenburg_run_points += 2;
+if (Q.uspd_votes + (Q.z_votes*0.8) + Q.ddp_votes + (Q.lvp_votes / 2) >= 50) Q.hindenburg_run_points += 2;
 if (Q.nsdap_relation >= 40) Q.hindenburg_run_points += 1;
 if (Q.general_strike_progress >= 6) Q.hindenburg_run_points += 1;
 if (Q.uprising_progress >= 5) Q.hindenburg_run_points += 1;

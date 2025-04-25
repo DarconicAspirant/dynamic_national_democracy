@@ -27,7 +27,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; wp_relation -= 8; lvp_old_relation -= 8; z_relation -= 8; lvp_relation -= 10; nsdap_relation -= 8; uprising_progress += 2; workers_spd -= 4; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; catholics_spd -= 5; unemployed_spd -= 5; uprising_progress += 2 if nsdap_normalized >= 0.3; uprising_progress += 2 if nsdap_normalized + dnvp_normalized >= 0.5 and dnvp_ideology = "Radical"; uprising_progress += 2 if nsdap_normalized + dnf_normalized >= 0.5 and dnvp_ideology = "Moderate"; sa_strength += 100 if uprising_progress >= 7; sh_strength += 100 if uprising_progress >= 7
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; wp_relation -= 8; lvp_old_relation -= 8; z_relation -= 8; lvp_relation -= 10; nsdap_relation -= 8; uprising_progress += 2; workers_uspd -= 4; new_middle_uspd -= 5; old_middle_uspd -= 5; rural_uspd -= 5; catholics_uspd -= 5; unemployed_uspd -= 5; uprising_progress += 2 if nsdap_normalized >= 0.3; uprising_progress += 2 if nsdap_normalized + dnvp_normalized >= 0.5 and dnvp_ideology = "Radical"; uprising_progress += 2 if nsdap_normalized + dnf_normalized >= 0.5 and dnvp_ideology = "Moderate"; sa_strength += 100 if uprising_progress >= 7; sh_strength += 100 if uprising_progress >= 7
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -609,11 +609,11 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td><td>Reichstag Seats</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_votes +]%** {!</td><td>!} **[+ str_votes_change_spd +]** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ uspd_votes +]%** {!</td><td>!} **[+ str_votes_change_spd +]** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_votes +]% {!</td><td>!} [+ str_votes_change_sapd +] {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ kpd_votes +]% {!</td><td>!} [+ str_votes_change_kpd +] {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_kpd +] {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
 [? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes +]% {!</td><td>!} [+ str_votes_change_ddp +] {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
 
@@ -654,12 +654,12 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td><span style="color: #c00000;"><b>SPD</b></span></td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ workers_spd_display +]%[? if n_elections != 1 and demo_change_workers_spd_display != 0 : ([+ demo_change_workers_spd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ new_middle_spd_display +]%[? if n_elections != 1 and demo_change_new_middle_spd_display != 0 : ([+ demo_change_new_middle_spd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ old_middle_spd_display +]%[? if n_elections != 1 and demo_change_old_middle_spd_display != 0 : ([+ demo_change_old_middle_spd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_spd_display +]%[? if n_elections != 1 and demo_change_rural_spd_display != 0 : ([+ demo_change_rural_spd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ unemployed_spd_display +]%[? if n_elections != 1 and demo_change_unemployed_spd_display != 0 : ([+ demo_change_unemployed_spd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ catholics_spd_display +]%[? if n_elections != 1 and demo_change_catholics_spd_display != 0 : ([+ demo_change_catholics_spd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ workers_uspd_display +]%[? if n_elections != 1 and demo_change_workers_uspd_display != 0 : ([+ demo_change_workers_uspd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ new_middle_uspd_display +]%[? if n_elections != 1 and demo_change_new_middle_uspd_display != 0 : ([+ demo_change_new_middle_uspd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ old_middle_uspd_display +]%[? if n_elections != 1 and demo_change_old_middle_uspd_display != 0 : ([+ demo_change_old_middle_uspd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_uspd_display +]%[? if n_elections != 1 and demo_change_rural_uspd_display != 0 : ([+ demo_change_rural_uspd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ unemployed_uspd_display +]%[? if n_elections != 1 and demo_change_unemployed_uspd_display != 0 : ([+ demo_change_unemployed_uspd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ catholics_uspd_display +]%[? if n_elections != 1 and demo_change_catholics_uspd_display != 0 : ([+ demo_change_catholics_uspd_display +])?]{!</td>!}
         {!</tr>!}
         [? if sapd_formed: {!<tr>!}
             {!<td><span style="color: #9B0000;">!}**SAPD**{!</span></td>!}
@@ -681,12 +681,12 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td><span style="color: #700000;"><b>KPD</b></span></td>!}
-            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em; padding: 10px">!}[+ workers_kpd_display +]%[? if n_elections != 1 and demo_change_workers_kpd_display != 0 : ([+ demo_change_workers_kpd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ new_middle_kpd_display +]%[? if n_elections != 1 and demo_change_new_middle_kpd_display != 0 : ([+ demo_change_new_middle_kpd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ old_middle_kpd_display +]%[? if n_elections != 1 and demo_change_old_middle_kpd_display != 0 : ([+ demo_change_old_middle_kpd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ rural_kpd_display +]%[? if n_elections != 1 and demo_change_rural_kpd_display != 0 : ([+ demo_change_rural_kpd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ unemployed_kpd_display +]%[? if n_elections != 1 and demo_change_unemployed_kpd_display != 0 : ([+ demo_change_unemployed_kpd_display +])?]{!</td>!}
-            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ catholics_kpd_display +]%[? if n_elections != 1 and demo_change_catholics_kpd_display != 0 : ([+ demo_change_catholics_kpd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em; padding: 10px">!}[+ workers_spd_display +]%[? if n_elections != 1 and demo_change_workers_spd_display != 0 : ([+ demo_change_workers_spd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ new_middle_spd_display +]%[? if n_elections != 1 and demo_change_new_middle_spd_display != 0 : ([+ demo_change_new_middle_spd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ old_middle_spd_display +]%[? if n_elections != 1 and demo_change_old_middle_spd_display != 0 : ([+ demo_change_old_middle_spd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ rural_spd_display +]%[? if n_elections != 1 and demo_change_rural_spd_display != 0 : ([+ demo_change_rural_spd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ unemployed_spd_display +]%[? if n_elections != 1 and demo_change_unemployed_spd_display != 0 : ([+ demo_change_unemployed_spd_display +])?]{!</td>!}
+            {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ catholics_spd_display +]%[? if n_elections != 1 and demo_change_catholics_spd_display != 0 : ([+ demo_change_catholics_spd_display +])?]{!</td>!}
         {!</tr>!}
         [? if not lvp_formed: {!<tr>!}
             {!<td>!}<span style="color: #D3C24D;">**[+ ddp_name +]**</span>{!</td>!}
@@ -1549,11 +1549,11 @@ if (Q.next_election_month > 12) {
     Q.next_election_year = Q.year;
 }
 Q.pro_republic -= 5;
-Q.workers_spd -= 3;
-Q.new_middle_spd -= 3;
-Q.old_middle_spd -= 3;
-Q.rural_spd -= 3;
-Q.catholics_spd -= 3;
+Q.workers_uspd -= 3;
+Q.new_middle_uspd -= 3;
+Q.old_middle_uspd -= 3;
+Q.rural_uspd -= 3;
+Q.catholics_uspd -= 3;
 Q.workers_nsdap += 5;
 Q.old_middle_nsdap += 3;
 Q.new_middle_nsdap += 3;
@@ -1561,15 +1561,15 @@ Q.rural_nsdap += 3;
 Q.unemployed_nsdap += 5;
 // Thresholds are kind of arbitrary - adjusted because of negative economic effects on pro_republic
 if (Q.pro_republic < 45 && Q.pro_republic >= 36) {
-    Q.workers_spd -= 6;
+    Q.workers_uspd -= 6;
 }
 if (Q.pro_republic < 36) {
     // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
-    Q.workers_spd *= 0.85;
-    Q.new_middle_spd -= 5;
-    Q.old_middle_spd -= 5;
-    Q.rural_spd -= 5;
-    Q.catholics_spd -= 3;
+    Q.workers_uspd *= 0.85;
+    Q.new_middle_uspd -= 5;
+    Q.old_middle_uspd -= 5;
+    Q.rural_uspd -= 5;
+    Q.catholics_uspd -= 3;
     Q.workers_nsdap += 5;
     Q.old_middle_nsdap += 5;
     Q.new_middle_nsdap += 5;
@@ -1665,8 +1665,8 @@ Q.cvp_women_accepted = 0;
 
 Q.cvp_negotiations_min = 50;
 
-if (Q.z_votes >= Q.spd_votes) {
-    Q.cvp_negotiations_min += (Q.z_votes - Q.spd_votes)*2;
+if (Q.z_votes >= Q.uspd_votes) {
+    Q.cvp_negotiations_min += (Q.z_votes - Q.uspd_votes)*2;
 }
 
 if (Q.cvp_ideology == "Left") Q.cvp_negotiations_min -= 10;
@@ -1806,15 +1806,15 @@ if (Q.cvp_reichsbanner_accepted) {
 if (Q.cvp_economy_accepted && Q.budget < 0) {
     Q.austerity_budget = Q.budget*-1;
     Q.budget = 0;
-    Q.workers_spd -= Q.austerity_budget*3;
-    Q.new_middle_spd -= Q.austerity_budget*2;
-    Q.old_middle_spd -= Q.austerity_budget;
-    Q.unemployed_spd -= Q.austerity_budget*3;
-    Q.catholics_spd -= Q.austerity_budget;
+    Q.workers_uspd -= Q.austerity_budget*3;
+    Q.new_middle_uspd -= Q.austerity_budget*2;
+    Q.old_middle_uspd -= Q.austerity_budget;
+    Q.unemployed_uspd -= Q.austerity_budget*3;
+    Q.catholics_uspd -= Q.austerity_budget;
     if (Q.welfare >= 1) Q.welfare -= 2;
-    Q.workers_kpd += Q.austerity_budget*2;
+    Q.workers_spd += Q.austerity_budget*2;
     Q.workers_nsdap += Q.austerity_budget;
-    Q.unemployed_kpd += Q.austerity_budget*2;
+    Q.unemployed_spd += Q.austerity_budget*2;
     Q.unemployed_nsdap += Q.austerity_budget*2;
     Q.right_dissent += 10*Q.austerity_budget;
     Q.center_dissent += 7*Q.austerity_budget;
@@ -1994,11 +1994,11 @@ if (Q.chancellor == "Brüning") {
     Q.lvp_right += 1;
 }
 Q.pro_republic -= 8;
-Q.workers_spd -= 5;
-Q.new_middle_spd -= 5;
-Q.old_middle_spd -= 5;
-Q.rural_spd -= 5;
-Q.catholics_spd -= 3;
+Q.workers_uspd -= 5;
+Q.new_middle_uspd -= 5;
+Q.old_middle_uspd -= 5;
+Q.rural_uspd -= 5;
+Q.catholics_uspd -= 3;
 Q.new_middle_dvp -= 8;
 Q.old_middle_dvp -= 8;
 Q.new_middle_ddp -= 5;
@@ -2020,12 +2020,12 @@ if (Q.pro_republic < 45) {
     Q.ddp_right += 1;
     Q.lvp_right += 3;
     Q.ddp_cohesion -= 1;
-    Q.workers_spd *= 0.85;
-    Q.unemployed_spd -= 2;
-    Q.new_middle_spd -= 5;
-    Q.old_middle_spd -= 5;
-    Q.rural_spd -= 5;
-    Q.catholics_spd -= 3;
+    Q.workers_uspd *= 0.85;
+    Q.unemployed_uspd -= 2;
+    Q.new_middle_uspd -= 5;
+    Q.old_middle_uspd -= 5;
+    Q.rural_uspd -= 5;
+    Q.catholics_uspd -= 3;
     Q.workers_nsdap += 10;
     Q.old_middle_nsdap += 10;
     Q.new_middle_nsdap += 10;
@@ -2261,7 +2261,7 @@ go-to: conservative_coalition_post_spd if conservative_coalition >= 50 and ((dnv
 go-to: conservative_coalition_2
 
 @new_elections_spd
-on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_spd -= 5; old_middle_spd -= 5; workers_spd -= 3; catholics_spd -= 3; in_election = 1
+on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_uspd -= 5; old_middle_uspd -= 5; workers_uspd -= 3; catholics_uspd -= 3; in_election = 1
 
 Since the remaining bourgeois and right-wing parties cannot form a tolerable governing agreement, new elections have been called for [+ next_election_month : month +] [+ next_election_year +]. The previous chancellor has resigned, and has been replaced by Heinrich Brüning, also of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], ruling as part of a presidential cabinet. 
 

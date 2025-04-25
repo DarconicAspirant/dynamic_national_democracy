@@ -20,7 +20,7 @@ What should we do with this information?
 
 @publicize
 title: We will publicize the scandal to damage the <span style="color: #700000;">**KPD**</span> and Thälmann.
-on-arrival: nsdap_relation -= 10; workers_kpd -= 4; unemployed_kpd -= 4
+on-arrival: nsdap_relation -= 10; workers_spd -= 4; unemployed_spd -= 4
 
 Our newspapers are among the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. We have damaged the <span style="color: #700000;">**KPD**</span>'s standing among the workers, but also perhaps closed the door on further cooperation.
 
@@ -28,7 +28,7 @@ In the end, <span style="color: #8B0000;">Stalin</span>'s pressure helps to keep
 
 @nothing
 title: Do nothing with the information.
-on-arrival: workers_kpd -= 2; unemployed_kpd -= 2
+on-arrival: workers_spd -= 2; unemployed_spd -= 2
 
 The information spreads without our help, leading to some loss of <span style="color: #700000;">**KPD**</span> support among the workers.
 

@@ -27,10 +27,10 @@ The majority of Landtag elections are to be held now.
 @new_elections
 on-arrival: {!  
 
-Q.spd_local_elections_vote = Q.spd_votes;
+Q.spd_local_elections_vote = Q.uspd_votes;
 Q.sapd_local_elections_vote = Q.sapd_votes;
 Q.z_local_elections_vote = Q.z_votes;
-Q.kpd_local_elections_vote = Q.kpd_votes;
+Q.kpd_local_elections_vote = Q.spd_votes;
 Q.lvp_local_elections_vote = Q.lvp_votes;
 Q.ddp_local_elections_vote = Q.ddp_votes;
 Q.dvp_local_elections_vote = Q.dvp_votes;
@@ -100,16 +100,16 @@ if (Q.spd_local_elections_vote >= 30) {
     Q.ddp_cohesion += 1;
     Q.dvp_left += 1.5;
     Q.lvp_left += 3;
-    Q.new_middle_spd += 2;
-    Q.workers_spd += 2;
+    Q.new_middle_uspd += 2;
+    Q.workers_uspd += 2;
     Q.braun_angry += 30;
 }
 
 if (Q.kpd_local_elections_vote >= 20) {
     Q.nsdap_relation += 20;
     Q.bernburg_coalition += 1;
-    Q.workers_kpd += 3;
-    Q.unemployed_kpd += 3;
+    Q.workers_spd += 3;
+    Q.unemployed_spd += 3;
     Q.workers_sapd += 3;
     Q.unemployed_sapd += 3;
     Q.pro_republic -= 3;
@@ -281,8 +281,8 @@ Q.other_bavaria_elections_vote = 0;
 Q.kvp_bavaria_elections_vote = 0;
 Q.dnf_bavaria_elections_vote = 0;
 
-if (Q.catholics_spd_normalized >= 30) bavaria_adjustment_factors.spd += 0.2;
-if (Q.rural_spd_normalized >= 30) bavaria_adjustment_factors.spd += 0.2;
+if (Q.catholics_uspd_normalized >= 30) bavaria_adjustment_factors.spd += 0.2;
+if (Q.rural_uspd_normalized >= 30) bavaria_adjustment_factors.spd += 0.2;
 Q.spd_bavaria_elections_vote = Q.spd_local_elections_vote*bavaria_adjustment_factors.spd;
 Q.sapd_bavaria_elections_vote = Q.sapd_local_elections_vote*bavaria_adjustment_factors.sapd;
 Q.kpd_bavaria_elections_vote = Q.kpd_local_elections_vote*bavaria_adjustment_factors.kpd;
@@ -651,7 +651,7 @@ Heinrich Held, the incumbent Minister-President and a pro-democratic member of t
 title: The <span style="color: #c00000;">**SPD**</span> forms a majority government.
 subtitle: Congratulations.
 view-if: spd_r_bavaria >= 50
-on-arrival: bavaria_spd = 1; new_middle_nsdap -= 3; old_middle_nsdap -= 3; rural_nsdap -= 2; new_middle_z -= 2; old_middle_z -= 2; rural_z -= 2; new_middle_spd += 5; old_middle_spd += 6; rural_spd += 4; catholics_z -= 6; catholics_spd += 6; pro_republic += 5
+on-arrival: bavaria_spd = 1; new_middle_nsdap -= 3; old_middle_nsdap -= 3; rural_nsdap -= 2; new_middle_z -= 2; old_middle_z -= 2; rural_z -= 2; new_middle_uspd += 5; old_middle_uspd += 6; rural_uspd += 4; catholics_z -= 6; catholics_uspd += 6; pro_republic += 5
 go-to: election_menu
 
 We have somehow managed to capture a majority in the Landtag, and have put our Minister-President as the head of the most conservative state in the country. Hopefully this doesn't end badly like last time.
@@ -662,7 +662,7 @@ subtitle: The <span style="color: #38C538;">Bavarian Peasants’ League</span> h
 unavailable-subtitle: Not enough resources.
 view-if: spd_coalition_bavaria >= 50
 choose-if: resources >= 1
-on-arrival: resources -= 1; bavaria_spd = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; new_middle_z -= 2; old_middle_z -= 2; rural_z -= 2; new_middle_spd += 3; old_middle_spd += 3; rural_spd += 1; rural_other += 3; catholics_z -= 4; catholics_spd += 4; z_relation -= 5; pro_republic += 3
+on-arrival: resources -= 1; bavaria_spd = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; new_middle_z -= 2; old_middle_z -= 2; rural_z -= 2; new_middle_uspd += 3; old_middle_uspd += 3; rural_uspd += 1; rural_other += 3; catholics_z -= 4; catholics_uspd += 4; z_relation -= 5; pro_republic += 3
 go-to: election_menu
 
 Somehow, we have brought the [? if not lvp_formed and ddp_r_bavaria: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and?][? if lvp_formed and lvp_r_bavaria: <span style="color: #FFCC00;">**LVP**</span> and?] <span style="color: #38C538;">Bavarian Peasants’ League</span> to the negotiating table, despite their preference for working with the <span style="color: #A2D8E0;">**BVP**</span>. Through connections with the left-wing and liberal factions within the <span style="color: #38C538;">Bavarian Peasants’ League</span>, we have overcome their reluctance—and now, we are in government!
@@ -733,8 +733,8 @@ Q.other_wurttemberg_elections_vote = 0;
 Q.kvp_wurttemberg_elections_vote = 0;
 Q.dnf_wurttemberg_elections_vote = 0;
 
-if (Q.catholics_spd_normalized >= 30) wurttemberg_adjustment_factors.spd += 0.1;
-if (Q.rural_spd_normalized >= 30) wurttemberg_adjustment_factors.spd += 0.1;
+if (Q.catholics_uspd_normalized >= 30) wurttemberg_adjustment_factors.spd += 0.1;
+if (Q.rural_uspd_normalized >= 30) wurttemberg_adjustment_factors.spd += 0.1;
 Q.spd_wurttemberg_elections_vote = Q.spd_local_elections_vote*wurttemberg_adjustment_factors.spd;
 Q.sapd_wurttemberg_elections_vote = Q.sapd_local_elections_vote*wurttemberg_adjustment_factors.sapd;
 Q.kpd_wurttemberg_elections_vote = Q.kpd_local_elections_vote*wurttemberg_adjustment_factors.kpd;
@@ -1078,7 +1078,7 @@ Despite the [? if z_party_name != "CVP": <span style="color: #000000;">Center Pa
 title: The <span style="color: #7A3C00;">**NSDAP**</span> wins a majority?
 subtitle: How did it come to this...?
 view-if: (nsdap_r_wurttemberg + dnf_r_wurttemberg >= 50 and dnvp_ideology == "Moderate") or (nsdap_r_wurttemberg + dnvp_r_wurttemberg >= 50 and dnvp_ideology == "Radical")
-on-arrival: wurttemberg_nsdap = 1; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4; new_middle_z -= 2; old_middle_z -= 2; rural_z -= 2; new_middle_dnvp -= 2; old_middle_dnvp -= 2; catholics_z -= 3; catholics_spd -= 3; catholics_nsdap += 6; rural_other -= 6; pro_republic -= 6
+on-arrival: wurttemberg_nsdap = 1; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4; new_middle_z -= 2; old_middle_z -= 2; rural_z -= 2; new_middle_dnvp -= 2; old_middle_dnvp -= 2; catholics_z -= 3; catholics_uspd -= 3; catholics_nsdap += 6; rural_other -= 6; pro_republic -= 6
 go-to: election_menu
 
 Damn that's crazy. Look dude I don't know what to write for this.
@@ -1096,7 +1096,7 @@ The incumbent coalition consisting of the [? if z_party_name != "CVP": <span sty
 title: The <span style="color: #c00000;">**SPD**</span> forms a majority government.
 subtitle: Congratulations.
 view-if: spd_r_wurttemberg >= 50
-on-arrival: wurttemberg_spd = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; new_middle_z -= 1; old_middle_z -= 1; rural_z -= 1; new_middle_spd += 3; old_middle_spd += 3; rural_spd += 2; catholics_nsdap -= 2; catholics_z -= 2; catholics_spd += 4; pro_republic += 4
+on-arrival: wurttemberg_spd = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 2; rural_nsdap -= 2; new_middle_z -= 1; old_middle_z -= 1; rural_z -= 1; new_middle_uspd += 3; old_middle_uspd += 3; rural_uspd += 2; catholics_nsdap -= 2; catholics_z -= 2; catholics_uspd += 4; pro_republic += 4
 go-to: election_menu
 
 Somehow, we have captured the majority of seats, bypassing the coalition negotiation process and appointing an <span style="color: #c00000;">**SPD**</span> Minister-President for the first time in a decade.
@@ -1109,7 +1109,7 @@ subtitle: We have somehow convinced the [? if z_party_name != "CVP": <span style
 unavailable-subtitle: [? if z_relation < 60: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if (lvp_relation < 40 and not lvp_formed) or (lvp_old_relation < 40 and lvp_formed): We need higher relations with the [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?]
 view-if: spd_coalition_wurttemberg >= 50 and not cvp_formed
 choose-if: z_relation >= 60 and ((lvp_relation >= 40 and not lvp_formed) or (lvp_old_relation >= 40 and lvp_formed))
-on-arrival: wurttemberg_spd = 1; rural_nsdap -= 2; new_middle_spd += 2; old_middle_spd += 2; rural_other += 4; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; catholics_nsdap -= 2; catholics_spd += 2; catholics_z += 1; catholics_other += 1; sa_strength -= 25
+on-arrival: wurttemberg_spd = 1; rural_nsdap -= 2; new_middle_uspd += 2; old_middle_uspd += 2; rural_other += 4; z_relation += 3; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; catholics_nsdap -= 2; catholics_uspd += 2; catholics_z += 1; catholics_other += 1; sa_strength -= 25
 go-to: election_menu
 
 Despite the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] in Württemberg being historically hostile, we've managed to convince them to form a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition. We will now focus on eliminating the <span style="color: #3E88B3;">nationalist</span> and anti-democratic biases in the police force.
@@ -1122,7 +1122,7 @@ subtitle: We have bypassed the <span style="color: #000000;">**[+ z_party_name +
 unavailable-subtitle:[? if (lvp_relation < 55 and not lvp_formed) or (lvp_old_relation < 65 and lvp_formed): We need higher relations with the [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?]
 view-if: spd_coalition_wurttemberg >= 50 and cvp_formed
 choose-if: (lvp_relation >= 55 and not lvp_formed) or (lvp_old_relation >= 65 and lvp_formed)
-on-arrival: wurttemberg_spd = 1; rural_nsdap -= 2; new_middle_spd += 2; old_middle_spd += 2; new_middle_ddp += 2; old_middle_ddp += 2; new_middle_lvp += 2; old_middle_lvp += 2; rural_other += 4; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; sa_strength -= 25
+on-arrival: wurttemberg_spd = 1; rural_nsdap -= 2; new_middle_uspd += 2; old_middle_uspd += 2; new_middle_ddp += 2; old_middle_ddp += 2; new_middle_lvp += 2; old_middle_lvp += 2; rural_other += 4; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; sa_strength -= 25
 go-to: election_menu
 
 With the formation of the <span style="color: #000000;">**[+ z_party_name +]**</span>, combined with the state <span style="color: #000000;">Center Party</span>'s longstanding hostility toward our participation in government, a coalition with them is entirely out of the question. The trend of <span style="color: #c00000;">Social</span>-[? if not lvp_formed: <span style="color: #D3C24D;">Liberal</span>?][? if lvp_formed: <span style="color: #FFCC00;">Liberal</span>?] coalitions has thus continued—for now, it remains the only viable path for us to enter government without relying on the <span style="color: #700000;">**Communists**</span>.

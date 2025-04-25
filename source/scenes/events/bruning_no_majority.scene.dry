@@ -32,12 +32,12 @@ on-arrival: {!
 Q.bruning_joever = 1;
 Q.right_dissent += 15;
 Q.christsoc_dissent += 5;
-Q.unemployed_nsdap += Q.unemployed_spd*0.04;
-Q.unemployed_kpd += Q.unemployed_spd*0.04;
-Q.workers_nsdap += Q.workers_spd*0.04;
-Q.workers_kpd += Q.workers_spd*0.04;
-Q.workers_spd *= 0.96;
-Q.unemployed_spd *= 0.96;
+Q.unemployed_nsdap += Q.unemployed_uspd*0.04;
+Q.unemployed_spd += Q.unemployed_uspd*0.04;
+Q.workers_nsdap += Q.workers_uspd*0.04;
+Q.workers_spd += Q.workers_uspd*0.04;
+Q.workers_uspd *= 0.96;
+Q.unemployed_uspd *= 0.96;
 Q.nsdap_relation -= 5;
 Q.bruning_coalition = Q.neo_weimar_coalition;
 if (Q.dnvp_ideology == "Moderate") Q.bruning_coalition = Q.cordon_sanitaire;

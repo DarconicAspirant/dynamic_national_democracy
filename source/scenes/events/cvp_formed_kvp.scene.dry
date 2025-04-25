@@ -38,7 +38,7 @@ Q.rural_dnf += 8;
 Q.catholics_z -= 4;
 Q.catholics_ddp += 2;
 Q.catholics_lvp += 2;
-Q.catholics_spd += 2;
+Q.catholics_uspd += 2;
 Q.catholics_dvp += 2;
 
 Q.catholics -= 5;

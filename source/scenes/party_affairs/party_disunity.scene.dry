@@ -31,7 +31,7 @@ Something must be done to reinforce party unity.
 
 @enforce_unity
 title: Enforce party discipline.
-on-arrival: popcon_dissent -= 8; center_dissent -= 8; christsoc_dissent -= 8; right_dissent -= 8; paramilitarist_dissent -= 8; workers_spd -= (dissent * 10); new_middle_spd -= (dissent * 5); unemployed_spd -= (dissent * 5)
+on-arrival: popcon_dissent -= 8; center_dissent -= 8; christsoc_dissent -= 8; right_dissent -= 8; paramilitarist_dissent -= 8; workers_uspd -= (dissent * 10); new_middle_uspd -= (dissent * 5); unemployed_uspd -= (dissent * 5)
 
 Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
 

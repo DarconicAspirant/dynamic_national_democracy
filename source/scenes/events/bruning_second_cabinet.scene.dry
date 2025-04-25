@@ -46,12 +46,12 @@ subtitle: Currently, [+ bruning_coalition +]% of the Reichstag supports Brüning
 on-arrival: {!
 Q.right_dissent += 20;
 Q.christsoc_dissent += 5;
-Q.unemployed_nsdap += Q.unemployed_spd*0.05;
-Q.unemployed_kpd += Q.unemployed_spd*0.05;
-Q.workers_nsdap += Q.workers_spd*0.05;
-Q.workers_kpd += Q.workers_spd*0.05;
-Q.workers_spd *= 0.95;
-Q.unemployed_spd *= 0.95;
+Q.unemployed_nsdap += Q.unemployed_uspd*0.05;
+Q.unemployed_spd += Q.unemployed_uspd*0.05;
+Q.workers_nsdap += Q.workers_uspd*0.05;
+Q.workers_spd += Q.workers_uspd*0.05;
+Q.workers_uspd *= 0.95;
+Q.unemployed_uspd *= 0.95;
 Q.nsdap_relation -= 5;
 if (Q.bruning_joever) Q.wp_reversal = 0;
 Q.bruning_coalition = Q.neo_weimar_coalition;

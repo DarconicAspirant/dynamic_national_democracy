@@ -38,7 +38,7 @@ if (Q.dietrich_resign_lvp) {
     Q.heuss_points += 1;
 }
 
-if (Q.spd_votes >= 30) {
+if (Q.uspd_votes >= 30) {
     Q.dingeldey_points += 2;
 }
 

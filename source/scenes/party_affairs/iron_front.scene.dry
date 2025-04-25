@@ -23,7 +23,7 @@ on-display: {!
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> is our new anti-<span style="color: #7A3C00;">fascists</span> coordination front, consisting of the <span style="color: #c00000;">**SPD**</span>, the trade unions, and the Reichsbanner. How should we use the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>?
 
-[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>'s effectiveness is dragged down by the <span style="color: #c00000;">**SPD**</span>'s unpopularity, as the <span style="color: #c00000;">**SPD**</span> is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
+[? if workers_uspd < 45 or workers_uspd < workers_nsdap or workers_uspd < workers_spd : Unfortunately, the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>'s effectiveness is dragged down by the <span style="color: #c00000;">**SPD**</span>'s unpopularity, as the <span style="color: #c00000;">**SPD**</span> is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
 - @defense: Rally for defense against the <span style="color: #7A3C00;">fascists</span> with the Reichsbanner.
 - @pacifism: Rally for pacifism, against nationalism and war.
@@ -42,12 +42,12 @@ The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">
 [? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] decries the militarization of the Reichsbanner, and its members are leaving the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization. ?][? if strife >= 5: Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and mute their criticisms. ?] ?]
 
 @pacifism
-on-arrival: militarism += 1; nationalism -= 5 if militarism >= 3; workers_spd += 5*(1-dissent) if militarism >= 4; unemployed_spd += 4*(1-dissent) if militarism >= 4; new_middle_spd += 4*(1-dissent) if militarism >= 4
+on-arrival: militarism += 1; nationalism -= 5 if militarism >= 3; workers_uspd += 5*(1-dissent) if militarism >= 4; unemployed_uspd += 4*(1-dissent) if militarism >= 4; new_middle_uspd += 4*(1-dissent) if militarism >= 4
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies against nationalism and war.
 
 @republic
-on-arrival: pro_republic += 5*(1-dissent); antimocratization += 1; workers_spd += 5*(1-dissent) if antimocratization >= 4; unemployed_spd += 4*(1-dissent) if antimocratization >= 4; new_middle_spd += 4*(1-dissent) if antimocratization >= 4; ddp_left += 0.5 if antimocratization >= 4; lvp_left += 0.5 if antimocratization >= 4
+on-arrival: pro_republic += 5*(1-dissent); antimocratization += 1; workers_uspd += 5*(1-dissent) if antimocratization >= 4; unemployed_uspd += 4*(1-dissent) if antimocratization >= 4; new_middle_uspd += 4*(1-dissent) if antimocratization >= 4; ddp_left += 0.5 if antimocratization >= 4; lvp_left += 0.5 if antimocratization >= 4
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of the democratic republic and against <span style="color: #7A3C00;">dictatorship</span>.
 
@@ -55,7 +55,7 @@ The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">
 view-if: worksplan_adopted == 1
 choose-if: return_to_normalcy = 0 and (works_plan_implemented >= wtb_rally or (not dnvp_in_government and not dnvp_toleration))
 unavailable-subtitle: [? if return_to_normalcy == 1: The economic crisis is largely over now, and the public is no longer interested in hearing about it. ?] [? if wtb_rally > works_plan_implemented: Rhetoric alone has its limits; further implementation of the WTB plan is necessary to continue an effective campaign. ?]
-on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 2*(1-dissent); old_middle_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); workers_spd += 4*(1-dissent) if works_plan_implemented; unemployed_spd += 4*(1-dissent) if works_plan_implemented; rural_spd += 2*(1-dissent) if works_plan_implemented; new_middle_spd += 3*(1-dissent) if works_plan_implemented; old_middle_spd += 2*(1-dissent) if works_plan_implemented; wtb_rally += 1
+on-arrival: workers_uspd += 4*(1-dissent); unemployed_uspd += 4*(1-dissent); new_middle_uspd += 2*(1-dissent); old_middle_uspd += 1*(1-dissent); rural_uspd += 1*(1-dissent); workers_uspd += 4*(1-dissent) if works_plan_implemented; unemployed_uspd += 4*(1-dissent) if works_plan_implemented; rural_uspd += 2*(1-dissent) if works_plan_implemented; new_middle_uspd += 3*(1-dissent) if works_plan_implemented; old_middle_uspd += 2*(1-dissent) if works_plan_implemented; wtb_rally += 1
 
 The WTB-Plan is the rallying point for the entire <span style="color: #c00000;">**SPD**</span> and its affiliated organizations, including the <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span>. [? if not works_plan_implemented: However, many still believe that the plan is merely an empty slogan and will remain skeptical until we actually implement it. ?]
 

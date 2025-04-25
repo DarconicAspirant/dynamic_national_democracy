@@ -139,8 +139,8 @@ subtitle: [? if (bourgeois_parliament and not lvp_formed) or liberal_parliament 
 view-if: dnvp_toleration
 on-arrival: {!
 Q.right_dissent += 10;
-Q.new_middle_spd -= 2;
-Q.old_middle_spd -= 2;
+Q.new_middle_uspd -= 2;
+Q.old_middle_uspd -= 2;
 Q.nsdap_relation -= 3;
 Q.budget += 1;
 Q.inflation -= 1.5;

@@ -49,14 +49,14 @@ if (Q.nsdap_relation >= 60) {
 }
 // general strike strength
 // maximum (given 25 labor strength) is 400
-// use normalized workers_spd instead of christsoc_strength?
-Q.normalized_workers_spd = 100*Q.workers_spd/(Q.workers_spd + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
-Q.normalized_workers_kpd = 100*Q.workers_kpd/(Q.workers_spd + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
-Q.normalized_workers_total = Q.normalized_workers_spd;
+// use normalized workers_uspd instead of christsoc_strength?
+Q.normalized_workers_uspd = 100*Q.workers_uspd/(Q.workers_uspd + Q.workers_spd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
+Q.normalized_workers_spd = 100*Q.workers_spd/(Q.workers_uspd + Q.workers_spd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
+Q.normalized_workers_total = Q.normalized_workers_uspd;
 if (Q.nsdap_relation >= 60) {
-    Q.normalized_workers_total += Q.normalized_workers_kpd;
+    Q.normalized_workers_total += Q.normalized_workers_spd;
 } else if (Q.nsdap_relation >= 45) {
-    Q.normalized_workers_total += Q.normalized_workers_kpd*0.5;
+    Q.normalized_workers_total += Q.normalized_workers_spd*0.5;
 }
 Q.total_power += (2 - Q.christsoc_dissent/100)*Q.normalized_workers_total*(2 - Q.unemployed/100)*2.5;
 console.log("Supporter strength:", Q.total_power);
