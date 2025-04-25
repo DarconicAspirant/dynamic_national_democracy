@@ -57,9 +57,9 @@ on-arrival: {!
 if (Q.liberal_wurttemberg_defeat) {
     Q.new_middle_dvp *= 0.6;
     Q.old_middle_dvp *= 0.6;
-    Q.new_middle_ddp *= 0.6;
+    Q.new_middle_lvp *= 0.6;
     Q.old_middle_ddp *= 0.6;
-    Q.rural_ddp *= 0.6;
+    Q.rural_lvp *= 0.6;
     Q.rural_dvp *= 0.6;
     Q.lvp_right += 5;
     Q.ddp_right += 3;
@@ -130,7 +130,7 @@ if (Q.kpd_local_elections_vote >= 20) {
 if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Radical" && !Q.cvp_formed) {
     Q.pro_republic += 3;
     Q.braun_angry_bruning -= 50;
-    Q.new_middle_ddp *= 1.2;
+    Q.new_middle_lvp *= 1.2;
     Q.old_middle_ddp *= 1.2;
     Q.new_middle_dvp *= 1.2;
     Q.old_middle_dvp *= 1.2;
@@ -150,7 +150,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
 } else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.dnvp_local_elections_vote >= 40 && Q.dnvp_ideology == "Moderate" && !Q.cvp_formed) {
     Q.pro_republic += 5;
     Q.braun_angry_bruning -= 50;
-    Q.new_middle_ddp *= 1.2;
+    Q.new_middle_lvp *= 1.2;
     Q.old_middle_ddp *= 1.2;
     Q.new_middle_dvp *= 1.2;
     Q.old_middle_dvp *= 1.2;
@@ -170,7 +170,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_election
 } else if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.dvp_local_elections_vote + Q.lvp_local_elections_vote + Q.other_local_elections_vote + Q.kvp_local_elections_vote >= 40 && Q.cvp_formed) {
     Q.pro_republic += 5;
     Q.braun_angry_bruning -= 50;
-    Q.new_middle_ddp *= 1.2;
+    Q.new_middle_lvp *= 1.2;
     Q.old_middle_ddp *= 1.2;
     Q.new_middle_dvp *= 1.2;
     Q.old_middle_dvp *= 1.2;
@@ -1122,7 +1122,7 @@ subtitle: We have bypassed the <span style="color: #000000;">**[+ z_party_name +
 unavailable-subtitle:[? if (lvp_relation < 55 and not lvp_formed) or (lvp_old_relation < 65 and lvp_formed): We need higher relations with the [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?]
 view-if: spd_coalition_wurttemberg >= 50 and cvp_formed
 choose-if: (lvp_relation >= 55 and not lvp_formed) or (lvp_old_relation >= 65 and lvp_formed)
-on-arrival: wurttemberg_spd = 1; rural_nsdap -= 2; new_middle_uspd += 2; old_middle_uspd += 2; new_middle_ddp += 2; old_middle_ddp += 2; new_middle_lvp += 2; old_middle_lvp += 2; rural_other += 4; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; sa_strength -= 25
+on-arrival: wurttemberg_spd = 1; rural_nsdap -= 2; new_middle_uspd += 2; old_middle_uspd += 2; new_middle_lvp += 2; old_middle_ddp += 2; new_middle_lvp += 2; old_middle_lvp += 2; rural_other += 4; lvp_relation += 3; lvp_old_relation += 3; pro_republic += 3; sa_strength -= 25
 go-to: election_menu
 
 With the formation of the <span style="color: #000000;">**[+ z_party_name +]**</span>, combined with the state <span style="color: #000000;">Center Party</span>'s longstanding hostility toward our participation in government, a coalition with them is entirely out of the question. The trend of <span style="color: #c00000;">Social</span>-[? if not lvp_formed: <span style="color: #D3C24D;">Liberal</span>?][? if lvp_formed: <span style="color: #FFCC00;">Liberal</span>?] coalitions has thus continued—for now, it remains the only viable path for us to enter government without relying on the <span style="color: #700000;">**Communists**</span>.

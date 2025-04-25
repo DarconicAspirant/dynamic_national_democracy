@@ -14,9 +14,9 @@ Q.unemployed_z += Q.unemployed_dnvp;
 
 Q.catholics_z += Q.catholics_dnvp;
 
-Q.new_middle_ddp += (Q.pro_republic / 10);
+Q.new_middle_lvp += (Q.pro_republic / 10);
 Q.old_middle_ddp += (Q.pro_republic / 10);
-Q.rural_ddp += (Q.pro_republic / 20);
+Q.rural_lvp += (Q.pro_republic / 20);
 if (Q.dvp_ideology != "Right" || Q.dvp_leader != "Scholz" && Q.dvp_leader != "Dingeldey") {
     Q.new_middle_dvp += (Q.pro_republic / 10);
     Q.old_middle_dvp += (Q.pro_republic / 10);
@@ -36,7 +36,7 @@ Q.rural_z -= 6;
 Q.rural_dnf += 8;
 
 Q.catholics_z -= 4;
-Q.catholics_ddp += 2;
+Q.catholics_lvp += 2;
 Q.catholics_lvp += 2;
 Q.catholics_uspd += 2;
 Q.catholics_dvp += 2;

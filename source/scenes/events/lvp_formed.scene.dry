@@ -3,17 +3,17 @@ on-arrival: {!
 Q.lvp_formed = 1;
 Q.parties.push('lvp');
 
-Q.workers_lvp = Q.workers_ddp + Q.workers_dvp
+Q.workers_lvp = Q.workers_lvp + Q.workers_dvp
 
-Q.new_middle_lvp = Q.new_middle_ddp + Q.new_middle_dvp
+Q.new_middle_lvp = Q.new_middle_lvp + Q.new_middle_dvp
 
 Q.old_middle_lvp = Q.old_middle_ddp + Q.old_middle_dvp
 
-Q.rural_lvp = Q.rural_ddp + Q.rural_dvp
+Q.rural_lvp = Q.rural_lvp + Q.rural_dvp
 
-Q.unemployed_lvp = Q.unemployed_ddp + Q.unemployed_dvp
+Q.unemployed_lvp = Q.unemployed_lvp + Q.unemployed_dvp
 
-Q.catholics_lvp = Q.catholics_ddp + Q.catholics_dvp
+Q.catholics_lvp = Q.catholics_lvp + Q.catholics_dvp
 
 Q.new_middle_other -= 4;
 Q.old_middle_other -= 4;

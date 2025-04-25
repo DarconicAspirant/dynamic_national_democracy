@@ -676,7 +676,7 @@ title: We will enter a toleration agreement with the incumbent government.
 view-if: saxony_no_majority_2
 choose-if: mega_bourgeois_coalition_saxony < 50 and far_right_coalition_saxony >= 50
 unavailable-subtitle: Even when including the <span style="color: #7A3C00;">NSDAP</span>, the bourgeois government can't find a majority.
-on-arrival: saxony_nsdap = 1; nsdap_left += 5; hitler_explode = time + 36; data_miner_detected = 1; workers_nsdap += 6; workers_spd -= 3; workers_uspd -= 2; unemployed_nsdap += 6; unemployed_spd -= 3; unemployed_uspd -= 2; new_middle_nsdap += 4; new_middle_ddp -= 1; new_middle_lvp -= 1; new_middle_uspd -= 3; sa_strength += 100; sa_militancy += 0.05; prussian_police_loyalty -= 0.05; pro_republic -= 5
+on-arrival: saxony_nsdap = 1; nsdap_left += 5; hitler_explode = time + 36; data_miner_detected = 1; workers_nsdap += 6; workers_spd -= 3; workers_uspd -= 2; unemployed_nsdap += 6; unemployed_spd -= 3; unemployed_uspd -= 2; new_middle_nsdap += 4; new_middle_lvp -= 1; new_middle_lvp -= 1; new_middle_uspd -= 3; sa_strength += 100; sa_militancy += 0.05; prussian_police_loyalty -= 0.05; pro_republic -= 5
 face-image: img/portraits/strasser.jpg
 
 After a failed negotiation previously, the bourgeois parties are now willing to offer a ministerial position to the <span style="color: #7A3C00;">**NSDAP**</span> in exchange for their support. Gregor Strasser, leader of the <span style="color: #7A3C00;">**NSDAP**</span>'s left wing, has been appointed as the new Interior Minister, a role he had been denied in the past due to his more radical anti-capitalist views.

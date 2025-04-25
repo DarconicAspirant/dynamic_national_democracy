@@ -369,12 +369,12 @@ go-to: menu
         </tr>
         [? if not lvp_formed: <tr>
             <td><span style="color: #FFCC00;">**[+ ddp_name +]**</span></td>
-            <td style="background-color: rgba(255, 204, 0, 0.2); padding: 10px;">[+ workers_ddp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ new_middle_ddp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2); padding: 10px;">[+ workers_lvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ new_middle_lvp_display +]%</td>
             <td style="background-color: rgba(255, 204, 0, 0.2);">[+ old_middle_ddp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ rural_ddp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ unemployed_ddp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ catholics_ddp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ rural_lvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ unemployed_lvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ catholics_lvp_display +]%</td>
         </tr>
         [? if dvp_exist: <tr>
             <td><span style="color: #CCAA7A;">**DVP**</span></td>

@@ -15,12 +15,12 @@ Q.unemployed_z += Q.unemployed_dvp;
 
 Q.catholics_z += Q.catholics_dvp;
 
-Q.new_middle_ddp += 6;
+Q.new_middle_lvp += 6;
 Q.old_middle_ddp += 6;
 Q.new_middle_z -= 6;
 Q.old_middle_z -= 6;
 Q.rural_z -= 4;
-Q.rural_ddp += 4;
+Q.rural_lvp += 4;
 
 Q.z_r = Math.round((Q.z_r + Q.dvp_r) * 10) / 10;
 Q.z_r_prussia = Math.round((Q.z_r_prussia + Q.dvp_r_prussia) * 10) / 10;

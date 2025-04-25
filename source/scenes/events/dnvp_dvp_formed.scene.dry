@@ -15,12 +15,12 @@ Q.unemployed_dnvp += Q.unemployed_dvp;
 
 Q.catholics_dnvp += Q.catholics_dvp;
 
-Q.new_middle_ddp += (Q.pro_republic / 20);
+Q.new_middle_lvp += (Q.pro_republic / 20);
 Q.old_middle_ddp += (Q.pro_republic / 20);
 Q.new_middle_dnvp -= (Q.pro_republic / 20);
 Q.old_middle_dnvp -= (Q.pro_republic / 20);
 Q.rural_dnvp -= 4;
-Q.rural_ddp += 2;
+Q.rural_lvp += 2;
 Q.rural_dnf += 2;
 
 Q.dnvp_r = Math.round((Q.dnvp_r + Q.dvp_r) * 10) / 10;

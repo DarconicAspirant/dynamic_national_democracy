@@ -266,7 +266,7 @@ if (Q.hindenburg_support) {
         Q.old_middle_dnvp += Q.hindenburg_support;
         Q.rural_dnvp += Q.hindenburg_support;
     }
-    Q.new_middle_ddp += Q.hindenburg_support / 3; 
+    Q.new_middle_lvp += Q.hindenburg_support / 3; 
     Q.old_middle_ddp += Q.hindenburg_support / 3;
     Q.new_middle_other += Q.hindenburg_support / 1.5;
     Q.old_middle_other += Q.hindenburg_support / 1.5;
