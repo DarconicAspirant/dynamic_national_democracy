@@ -50,7 +50,7 @@ Unfortunately, the hands-off approach to internal party affairs under Kaas is ex
 subtitle: Brüning is the leader of the <span style="color: #000000;">Center</span>'s parliamentary group, and the party's economic expert.
 unavailable-subtitle: Brüning needs more power.
 choose-if: bruning_unlock
-on-arrival: z_leader = "Brüning"; z_relation -= 3; wp_right += 1; ddp_right += 1; lvp_right += 1
+on-arrival: z_leader = "Brüning"; z_relation -= 3; wp_right += 1; lvp_right += 1; lvp_right += 1
 face-image: img/portraits/BrüningHeinrich.jpg
 
 Heinrich Brüning, the current chancellor, an ally of Kaas and protege of Stegerwald has got another job under his belt now. Although his responsibilities as chancellor will leave very little room for him to manage the internal affairs of his party, with it once again being left to his colleagues. 

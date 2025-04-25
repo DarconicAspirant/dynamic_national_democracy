@@ -35,7 +35,7 @@ title: Campaign for the strike, and launch a propaganda campaign among the worke
 subtitle: The strike enjoys great sympathy among Berlin's working class, despite its political motives.
 unavailable-subtitle: The Gesamtverband is too reformist to commit to a strike alongside the extremists.
 choose-if: right_strength + (christsoc_strength / 2) >= popcon_strength + agrarian_strength
-on-arrival: z_relation -= 10; lvp_relation -= 10; lvp_old_relation -= 10; wp_relation -= 10; right_strength += 8; right_dissent -= 10; christsoc_dissent -= 5; popcon_dissent += 15; center_dissent += 10; nsdap_relation += 10; bernburg_coalition += 1; spd_relation += 100
+on-arrival: z_relation -= 10; lvp_relation -= 10; lvp_old_relation -= 10; wp_relation -= 10; right_strength += 8; right_dissent -= 10; christsoc_dissent -= 5; popcon_dissent += 15; center_dissent += 10; nsdap_relation += 10; bernburg_coalition += 1; uspd_relation += 100
 
 Through our active efforts to rally reluctant workers—despite the strike being largely unnecessary due to our own union’s negotiations—we have surpassed the required three-fourths majority of all employees in favor. We are now participating in a strike alongside elements of the <span style="color: #700000;">**RGO**</span> and <span style="color: #7A3C00;">**NSBO**</span>, a fact the bourgeois parties are quick to attack us for.
 

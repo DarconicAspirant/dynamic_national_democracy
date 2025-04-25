@@ -417,24 +417,24 @@ max-visits: 1
 
 The <span style="color: #700000;">**KPD**</span> is committed to supporting Ernst Thälmann. [? if (nsdap_relation >= 55 and spd_leader != "Conciliators" or nsdap_relation >= 40 and spd_leader == "Conciliators") : However, the <span style="color: #7A3C00;">Nazi</span>-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if (nsdap_relation < 55 and spd_leader != "Conciliators" or nsdap_relation < 40 and spd_leader == "Conciliators") : They do not seem willing to be convinced. ?]
 
-- @r2_kpd_resources: Use our resources.
-- @r2_kpd_relations: Use our good relations.
+- @r2_spd_resources: Use our resources.
+- @r2_spd_relations: Use our good relations.
 - @round2_menu: Forget about the <span style="color: #700000;">KPD</span>.
 
-@r2_kpd_resources
+@r2_spd_resources
 view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and spd_leader == "Conciliators"
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
-@r2_kpd_relations
+@r2_spd_relations
 view-if: nsdap_relation >= 70 or (spd_leader == "Conciliators" and nsdap_relation >= 50)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
@@ -517,7 +517,7 @@ Supporting Thälmann is rather unpopular in our party, even if the <span style="
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; lvp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the <span style="color: #700000;">**KPD**</span> to the dismay of our bourgeois allies.

@@ -1,7 +1,7 @@
 title: The <span style="color: #700000;">**KPD**</span> calls a vote of no confidence against the current government!
 subtitle: We have angered the <span style="color: #700000;">**KPD**</span> too much...
 new-page: true
-view-if: dnvp_in_government = 1 and ((in_popular_front = 1 and nazi_coalition_dissent >= 3) or (in_left_front = 1 and nazi_coalition_dissent >= 4)) and spd_r < 50 and not constructive_vonc
+view-if: dnvp_in_government = 1 and ((in_popular_front = 1 and nazi_coalition_dissent >= 3) or (in_left_front = 1 and nazi_coalition_dissent >= 4)) and uspd_r < 50 and not constructive_vonc
 tags: event
 go-to: menu
 

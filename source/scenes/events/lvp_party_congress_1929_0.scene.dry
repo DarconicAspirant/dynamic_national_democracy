@@ -30,7 +30,7 @@ Meanwhile, the right wing of the <span style="color: #C0A054;">**DVP**</span>, d
 title: Renegotiate the ruling coalition.
 view-if: in_weimar_coalition and dnvp_in_government
 on-arrival: {!
-Q.leverage = Q.spd_r;
+Q.leverage = Q.uspd_r;
 if (Q.z_ideology == "Left") Q.leverage += 5;
 if (Q.lvp_formed) Q.foreign_minister_party = 'LVP'; 
 if (!Q.lvp_formed) Q.foreign_minister_party = 'DVP';

@@ -121,9 +121,9 @@ Q.wp_relation = 60;
 Q.z_relation = 50;
 Q.lvp_relation = 50;
 Q.nsdap_relation = 30;
-Q.uspd_relation = 10;
+Q.uuspd_relation = 10;
 // SPD is invariably hostile
-Q.spd_relation = 0;
+Q.uspd_relation = 0;
 Q.lvp_old_relation = 0;
 
 Q.spd_leader = "Levi";
@@ -323,10 +323,10 @@ Q.catholics_dnvp_old = 14;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 18.1;
-Q.kpd_r = 24.9;
+Q.uspd_r = 18.1;
+Q.spd_r = 24.9;
 Q.z_r = 17.1;
-Q.ddp_r = 15.2;
+Q.lvp_r = 15.2;
 Q.wp_r = 1.9;
 Q.dnvp_r = 16.3;
 Q.nsdap_r = 3.6;
@@ -334,10 +334,10 @@ Q.other_r = 2.9;
 Q.bvp_r = 3.3;
 
 // diff from prev
-Q.old_spd_r = 18.1;
-Q.old_kpd_r = 24.9;
+Q.old_uspd_r = 18.1;
+Q.old_spd_r = 24.9;
 Q.old_z_r = 17.1;
-Q.old_ddp_r = 15.2;
+Q.old_lvp_r = 15.2;
 Q.old_wp_r = 1.9;
 Q.old_dnvp_r = 16.3;
 Q.old_nsdap_r = 3.6;
@@ -345,8 +345,8 @@ Q.old_other_r = 2.9;
 Q.old_bvp_r = 3.3;
 
 // old election votes
-Q.previous_spd_last_election_votes = 18.1;
-Q.previous_kpd_last_election_votes = 24.9;
+Q.previous_uspd_last_election_votes = 18.1;
+Q.previous_spd_last_election_votes = 24.9;
 Q.previous_z_last_election_votes = 17.1;
 Q.previous_ddp_last_election_votes = 15.2;
 Q.previous_wp_last_election_votes = 1.9;
@@ -356,28 +356,28 @@ Q.previous_other_last_election_votes = 2.9;
 Q.previous_bvp_last_election_votes = 3.3;
 
 // prussian gov right now
-Q.spd_r_prussia = 17.9;
-Q.kpd_r_prussia = 25.3;
+Q.uspd_r_prussia = 17.9;
+Q.spd_r_prussia = 25.3;
 Q.z_r_prussia = 17.6;
-Q.ddp_r_prussia = 14.5;
+Q.lvp_r_prussia = 14.5;
 Q.wp_r_prussia = 2.0;
 Q.dnvp_r_prussia = 19.4;
 Q.nsdap_r_prussia = 2.8;
 Q.other_r_prussia = 0.5;
 
 // diff from prev PRUSSIA
-Q.old_spd_r_prussia = 17.9;
-Q.old_kpd_r_prussia = 25.3;
+Q.old_uspd_r_prussia = 17.9;
+Q.old_spd_r_prussia = 25.3;
 Q.old_z_r_prussia = 17.6;
-Q.old_ddp_r_prussia = 14.5;
+Q.old_lvp_r_prussia = 14.5;
 Q.old_wp_r_prussia = 2.0;
 Q.old_dnvp_r_prussia = 19.4;
 Q.old_nsdap_r_prussia = 2.8;
 Q.old_other_r_prussia = 0.5;
 
 // old election votes PRUSSIA
-Q.previous_spd_last_election_votes_prussia = 17.6;
-Q.previous_kpd_last_election_votes_prussia = 25.0;
+Q.previous_uspd_last_election_votes_prussia = 17.6;
+Q.previous_spd_last_election_votes_prussia = 25.0;
 Q.previous_z_last_election_votes_prussia = 17.3;
 Q.previous_ddp_last_election_votes_prussia = 14.3;
 Q.previous_wp_last_election_votes_prussia = 2.1;
@@ -765,7 +765,7 @@ Q.dnvp_leader = "Westarp";
 Q.dnvp_ideology = "Radical";
 Q.dstp_formed = 0;
 Q.ddp_left = 0;
-Q.ddp_right = 0;
+Q.lvp_right = 0;
 Q.ddp_name = "LVP";
 Q.ddp_full_name = "Liberal People's Party";
 Q.ddp_leader = "Luther";
@@ -852,7 +852,7 @@ Q.hindenburg_papen_r = 5;
 Q.hindenburg_hitler_r = 1;
 
 Q.schleicher_papen_r = 5;
-Q.schleicher_spd_r = 2;
+Q.schleicher_uspd_r = 2;
 Q.schleicher_spd_support = 0;
 
 Q.schleicher_strength = 5;

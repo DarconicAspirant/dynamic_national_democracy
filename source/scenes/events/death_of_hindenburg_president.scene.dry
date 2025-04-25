@@ -330,12 +330,12 @@ max-visits: 1
 
 The <span style="color: #700000;">**KPD**</span> is supporting their own candidate, [+ kpd_candidate +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support [+ spd_candidate +]; how do we convince them? ?][? if nsdap_relation < 50 or spd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
 
-- @kpd_resources: Use our resources.
-- @kpd_relations: Use our good relations.
+- @spd_resources: Use our resources.
+- @spd_relations: Use our good relations.
 - @r1_menu: Forget about the <span style="color: #700000;">**KPD**</span>.
 - @r2_campaigning: Forget about the <span style="color: #700000;">**KPD**</span>.
 
-@kpd_resources
+@spd_resources
 view-if: nsdap_relation >= 50 and not historical_mode
 choose-if: resources >= 3
 subtitle: -3 resources
@@ -345,7 +345,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 The <span style="color: #700000;">**KPD**</span> now endorses [+ spd_candidate +] in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
-@kpd_relations
+@spd_relations
 view-if: nsdap_relation >= 60 or (spd_leader == "Conciliators" and nsdap_relation >= 45)
 unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_candidate = spd_candidate; sapd_candidate = spd_candidate;

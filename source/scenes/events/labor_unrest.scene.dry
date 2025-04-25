@@ -24,7 +24,7 @@ Many workers are unhappy at the government's decision, and our concession of the
 
 @support_employers
 subtitle: This will alienate the workers.
-on-arrival: christsoc_dissent += 8; right_dissent += 8; workers_uspd -= 6; coalition_dissent -= 1; wp_relation += 5; z_relation += 5; lvp_relation += 4; lvp_old_relation += 5; coalition_dissent -= 1; workers_spd += 5; nazi_coalition_dissent += 1; nsdap_relation -= 8; general_strike_progress -= 1 if general_strike_progress > 1; general_strike_progress -= 1 if general_strike_progress > 8; wp_left += 1; ddp_right += 0.5; lvp_left += 0.5; ddp_cohesion -= 1; goal_dnvp_cancel += 1; labor_goal_dnvp_peoples += 1; pro_labor -= 1
+on-arrival: christsoc_dissent += 8; right_dissent += 8; workers_uspd -= 6; coalition_dissent -= 1; wp_relation += 5; z_relation += 5; lvp_relation += 4; lvp_old_relation += 5; coalition_dissent -= 1; workers_spd += 5; nazi_coalition_dissent += 1; nsdap_relation -= 8; general_strike_progress -= 1 if general_strike_progress > 1; general_strike_progress -= 1 if general_strike_progress > 8; wp_left += 1; lvp_right += 0.5; lvp_left += 0.5; ddp_cohesion -= 1; goal_dnvp_cancel += 1; labor_goal_dnvp_peoples += 1; pro_labor -= 1
 
 Even though most workers grudgingly accept the our intervention, there is deep bitterness developing against the <span style="color: #c00000;">**SPD**</span>, especially among the more radical workers. The <span style="color: #700000;">**Communists**</span> stand to gain.
 

@@ -47,7 +47,7 @@ On the other hand, leftists within the <span style="color: #D3C24D;">**[+ ddp_na
 
 @ddp_success
 view-if: lvp_formation_points >= 3
-on-arrival: lvp_relation -= 5; ddp_right += 2; lvp_trigger_2_time = time + 1
+on-arrival: lvp_relation -= 5; lvp_right += 2; lvp_trigger_2_time = time + 1
 face-image: img/weimar_coalition_3.jpg
 
 Perhaps surprisingly, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has followed the <span style="color: #C0A054;">**DVP**</span>'s decision and affirmed their support for a united <span style="color: #FFCC00;">Liberal People's Party</span>. It seems that the leftists within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> have finally lost their battle to maintain the position of a '<span style="color: #c00000;">Social</span> and <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> party in the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> party system.

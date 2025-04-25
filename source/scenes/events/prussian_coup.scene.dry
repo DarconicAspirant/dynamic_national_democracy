@@ -1,7 +1,7 @@
 title: Coup in Prussia
 subtitle: The Chancellor attempts to overthrow the Prussian government.
 view-if: chancellor == "Papen" and altona_seen and dnvp_prussia and not presidential_powers and not prussian_reichsexekution and nsdap_votes >= 25
-on-arrival: prussian_coup_seen = 1; otl_prussian_coup_seen = 1; strife += 2; schleicher_spd_r -= 1; schleicher_spd_support -= 1
+on-arrival: prussian_coup_seen = 1; otl_prussian_coup_seen = 1; strife += 2; schleicher_uspd_r -= 1; schleicher_spd_support -= 1
 new-page: true
 tags: event
 max-visits: 1

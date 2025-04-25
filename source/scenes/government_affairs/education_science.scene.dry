@@ -85,7 +85,7 @@ title: Cut science funding.
 subtitle: +1 budget
 choose-if: science_funding >= 1
 unavailable-subtitle: We have not funded science.
-on-arrival: budget += 1; science -= 1; science_funding -= 1; applied_research -= 0.33; kwg_research -= 0.33; medical_research -= 0.33; economic_growth -= 0.5; new_middle_uspd -= 5; workers_uspd -= 2; lvp_relation -= 4; lvp_old_relation -= 2; unemployed += 0.3; ddp_right += 1; lvp_right += 0.5; goal_dnvp_cancel_peoples += 1
+on-arrival: budget += 1; science -= 1; science_funding -= 1; applied_research -= 0.33; kwg_research -= 0.33; medical_research -= 0.33; economic_growth -= 0.5; new_middle_uspd -= 5; workers_uspd -= 2; lvp_relation -= 4; lvp_old_relation -= 2; unemployed += 0.3; lvp_right += 1; lvp_right += 0.5; goal_dnvp_cancel_peoples += 1
 
 We have cut funding for science. This has a negative effect on our economic growth, and unemployed scientists are less likely to support the <span style="color: #c00000;">**SPD**</span>.
 
@@ -105,7 +105,7 @@ Education in Germany has traditionally been organized on religious and class lin
 title: Support secular schools to end the religious dominance in education.
 subtitle: -1 budget
 unavailable-subtitle: -1 budget - requires a majority of parties to support secular schools.
-choose-if: budget >= 1 and ((progressive_coalition + wp_r >= 50 and not lvp_formed) or (kpd_r + spd_r + lvp_r >= 50 and lvp_formed))
+choose-if: budget >= 1 and ((progressive_coalition + wp_r >= 50 and not lvp_formed) or (spd_r + uspd_r + lvp_r >= 50 and lvp_formed))
 view-if: secularized = 0
 
 Are you sure about this? The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition had an agreement to not touch religious schools; the Catholic [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] will revolt.
@@ -183,7 +183,7 @@ Our educational system should reflect the modern age, and we should teach scienc
 @human_major
 title: Humanist curriculum
 subtitle: Arts, literature, history, and philosophy
-on-arrival: curriculum_timer = 50; major_curriculum = "humanist"; lvp_relation += 3*(1-dissent); lvp_old_relation += 2*(1-dissent); new_middle_uspd += 4*(1-dissent); education_science += 0.2; ddp_right += 1; ddp_cohesion -= 0.5
+on-arrival: curriculum_timer = 50; major_curriculum = "humanist"; lvp_relation += 3*(1-dissent); lvp_old_relation += 2*(1-dissent); new_middle_uspd += 4*(1-dissent); education_science += 0.2; lvp_right += 1; ddp_cohesion -= 0.5
 go-to: curriculum_minor
 
 Our educational curriculum should be focused on the humanities, including arts, literature, history, and philosophy. Some criticize this curriculum as focusing too much on "useless" subjects, while others worry that the arts establishment is too closely tied to romantic nationalism.
@@ -200,7 +200,7 @@ Education should be focused on providing a useful hands-on education, and teach 
 @trad_major
 title: Traditional curriculum
 subtitle: Classics, discipline, and nationalism
-on-arrival: curriculum_timer = 50; major_curriculum = "traditional"; wp_relation += 5*(1-dissent);  z_relation += 4*(1-dissent); old_middle_uspd += 3*(1-dissent); rural_uspd += 3*(1-dissent); militarism -= 1 if militarism > 0; pro_republic -= 5; nationalism += 5; education_science += 0.2; lvp_old_relation += 3 if lvp_ideology != "Left"; lvp_old_relation -= 3 if lvp_ideology == "Left"; ddp_right += 2; wp_right += 2; lvp_right += 2
+on-arrival: curriculum_timer = 50; major_curriculum = "traditional"; wp_relation += 5*(1-dissent);  z_relation += 4*(1-dissent); old_middle_uspd += 3*(1-dissent); rural_uspd += 3*(1-dissent); militarism -= 1 if militarism > 0; pro_republic -= 5; nationalism += 5; education_science += 0.2; lvp_old_relation += 3 if lvp_ideology != "Left"; lvp_old_relation -= 3 if lvp_ideology == "Left"; lvp_right += 2; wp_right += 2; lvp_right += 2
 go-to: curriculum_minor
 
 The traditional curriculum had a focus on ancient history and language (particularly Latin and Greek), as well as rigid discipline and some level of militarism.
@@ -236,7 +236,7 @@ Our educational system should reflect the modern age, and we should teach scienc
 title: Humanist curriculum
 subtitle: Arts, literature, history, and philosophy
 view-if: major_curriculum != "humanist"
-on-arrival: minor_curriculum = "humanist"; new_middle_uspd += 3*(1-dissent); lvp_relation += 3*(1-dissent); lvp_old_relation += 2*(1-dissent); ddp_right += 1; ddp_cohesion -= 0.5
+on-arrival: minor_curriculum = "humanist"; new_middle_uspd += 3*(1-dissent); lvp_relation += 3*(1-dissent); lvp_old_relation += 2*(1-dissent); lvp_right += 1; ddp_cohesion -= 0.5
 
 Our educational curriculum should be focused on the humanities, including arts, literature, history, and philosophy. Some criticize this curriculum as focusing too much on "useless" subjects, while others worry that the arts establishment is too closely tied to romantic nationalism.
 
@@ -253,7 +253,7 @@ Education should be focused on providing a useful hands-on education, and teach 
 title: Traditional curriculum
 subtitle: Classics, discipline, and nationalism
 view-if: major_curriculum != "traditional"
-on-arrival: minor_curriculum = "traditional"; wp_relation += 2*(1-dissent); z_relation += 2*(1-dissent); old_middle_uspd += 2*(1-dissent); rural_uspd += 2*(1-dissent); pro_republic -= 3; nationalism += 3; lvp_old_relation += 2 if lvp_ideology != "Left"; lvp_old_relation -= 2 if lvp_ideology == "Left"; ddp_right += 1; wp_right += 1; lvp_right += 1
+on-arrival: minor_curriculum = "traditional"; wp_relation += 2*(1-dissent); z_relation += 2*(1-dissent); old_middle_uspd += 2*(1-dissent); rural_uspd += 2*(1-dissent); pro_republic -= 3; nationalism += 3; lvp_old_relation += 2 if lvp_ideology != "Left"; lvp_old_relation -= 2 if lvp_ideology == "Left"; lvp_right += 1; wp_right += 1; lvp_right += 1
 
 The traditional curriculum had a focus on ancient history and language (particularly Latin and Greek), as well as rigid discipline.
 

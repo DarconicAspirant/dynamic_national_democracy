@@ -11,7 +11,7 @@ go-to: weltbuhne_dropped if judicial_reform >= 3; weltbuhne_convicted if judicia
 = The Weltbühne Trial, Conclusion
 
 @weltbuhne_convicted
-on-arrival: west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; nationalism += 5; militarism -= 1; ddp_right += 0.5; lvp_right += 1
+on-arrival: west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; nationalism += 5; militarism -= 1; lvp_right += 0.5; lvp_right += 1
 
 Finally, a court has made a decision in the Weltbühne case, sentencing the editor Carl von Ossietzky and journalist Walter Kreiser to prison for 18 months for revealing military secrets. There is outrage in the international community, who see this as yet another example of Germany's slide into militarism.
 

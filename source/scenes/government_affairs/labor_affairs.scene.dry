@@ -24,7 +24,7 @@ Supporting labor is always popular in the <span style="color: #c00000;">**SPD**<
 
 @support_employers
 subtitle: Popular among the bourgeoisie, much less so among the workers.
-on-arrival: christsoc_dissent += 8; workers_uspd -= 3; coalition_dissent -= 1 if coalition_dissent > 0; wp_relation += 5; lvp_old_relation += 5; z_relation += 5; lvp_relation += 4; workers_spd += 3; nazi_coalition_dissent += 1; nsdap_relation -= 8; general_strike_progress -= 1 if general_strike_progress > 1; general_strike_progress -= 1 if general_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1; wp_left += 1; ddp_right += 1; ddp_cohesion -= 0.5; lvp_left += 1; goal_dnvp_cancel += 1; labor_goal_dnvp_peoples += 1
+on-arrival: christsoc_dissent += 8; workers_uspd -= 3; coalition_dissent -= 1 if coalition_dissent > 0; wp_relation += 5; lvp_old_relation += 5; z_relation += 5; lvp_relation += 4; workers_spd += 3; nazi_coalition_dissent += 1; nsdap_relation -= 8; general_strike_progress -= 1 if general_strike_progress > 1; general_strike_progress -= 1 if general_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1; wp_left += 1; lvp_right += 1; ddp_cohesion -= 0.5; lvp_left += 1; goal_dnvp_cancel += 1; labor_goal_dnvp_peoples += 1
 
 The more radical workers despise our suppression of their strikes, recalling the days of Friedrich Ebert.
 

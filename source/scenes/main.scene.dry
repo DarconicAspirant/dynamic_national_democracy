@@ -83,7 +83,7 @@ if (Q.dstp_formed && Q.next_election_time - Q.time == 1 && Q.time !== Q.last_tim
         Q.flavour_9_trigger_shown = 1;
     }
 }
-if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_10_trigger += 1;
     if (Q.flavour_10_trigger && !Q.flavour_10_trigger_shown) {
         Q.flavour_10_trigger_time = Q.time;
@@ -91,7 +91,7 @@ if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp 
         Q.flavour_10_effect_trigger = 1;
     }
 }
-if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_11_trigger += 1;
     if (Q.flavour_11_trigger && !Q.flavour_11_trigger_shown) {
         Q.flavour_11_trigger_time = Q.time;
@@ -259,7 +259,7 @@ if (Q.flavour_29_trigger && Q.flavour_20_trigger && Q.time == Q.flavour_20_trigg
         Q.flavour_31_trigger_shown = 1;
     }
 }
-if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_32_trigger += 1;
     if (Q.flavour_32_trigger && !Q.flavour_32_trigger_shown) {
         Q.flavour_32_trigger_time = Q.time;
@@ -267,7 +267,7 @@ if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp &
         Q.flavour_32_effect_trigger = 1;
     }
 }
-if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_33_trigger += 1;
     if (Q.flavour_33_trigger && !Q.flavour_33_trigger_shown) {
         Q.flavour_33_trigger_time = Q.time;
@@ -899,7 +899,7 @@ go-to: bg if rubicon and bg_change; bg_2 if not rubicon and bg_change
 
 {!<p class="other">!}[? if flavour_33_trigger and flavour_33_trigger_time == time : For one reason or another, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> lacks the Reichstag delegates to form a parliamentary faction and is now required to negotiate with another party to join forces. With the bourgeois parties already grouped together, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is forced to negotiate with them. Surprisingly, the bourgeois parties have gotten over their grudges against the party, and are open to cooperation. [? if wp_leader == "Scholz" and dstp_formed: However, just as they were about to finalize their agreement, an angry Ernst Scholz torpedoed the negotiations, still furious about how the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> disrupted his efforts toward bourgeois unity. As a result of this, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is forced to enter the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary group. ?][? if wp_leader != "Scholz" or not dstp_formed: [? if chancellor == "Brüning" and not dnvp_in_government: They have all agreed to cease their intrigues against Brüning's government in order to finalize the agreement.?][? if not (chancellor == "Brüning" and not dnvp_in_government): With past disputes set aside, they've finalized the agreement.?]?] ?]{!</p>!}
 
-{!<p class="other">!}[? if flavour_54_trigger and flavour_54_trigger_time == time : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, for one reason or another, lacks the necessary Reichstag delegates to form a parliamentary faction. As a result, it is forced to conclude an agreement [? if wp_r + ddp_r >= 3.6: with the <span style="color: #b8996f;">**WP**</span> and other minor bourgeois parties?][? if wp_r + ddp_r < 3.6: to enter the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary group?]. The merger of the <span style="color: #C0A054;">**DVP**</span> into the <span style="color: #3E88B3;">**DNVP**</span> has effectively ruled out the possibility of a unified liberal parliamentary group. ?]{!</p>!}
+{!<p class="other">!}[? if flavour_54_trigger and flavour_54_trigger_time == time : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, for one reason or another, lacks the necessary Reichstag delegates to form a parliamentary faction. As a result, it is forced to conclude an agreement [? if wp_r + lvp_r >= 3.6: with the <span style="color: #b8996f;">**WP**</span> and other minor bourgeois parties?][? if wp_r + lvp_r < 3.6: to enter the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary group?]. The merger of the <span style="color: #C0A054;">**DVP**</span> into the <span style="color: #3E88B3;">**DNVP**</span> has effectively ruled out the possibility of a unified liberal parliamentary group. ?]{!</p>!}
 
 {!<p class="other">!}[? if year = 1930 and month = 9 : In the small Free State of Brunswick, elections are held, resulting in [? if not brunswick_hitler: another majority for the <span style="color: #c00000;">**SPD**</span>?][? if brunswick_hitler: a victory for the bourgeois unity list and the <span style="color: #7A3C00;">**NSDAP**</span>, who enter government together despite our plurality of votes?]. [? if brunswick_hitler: The <span style="color: #7A3C00;">**NSDAP**</span> is expected to use their new position in government to grant Hitler citizenship, as he remains stateless. ?]?]{!</p>!}
 
@@ -1216,7 +1216,7 @@ if (Q.dstp_formed && Q.next_election_time - Q.time == 1 && Q.time !== Q.last_tim
         Q.flavour_9_trigger_shown = 1;
     }
 }
-if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_10_trigger += 1;
     if (Q.flavour_10_trigger && !Q.flavour_10_trigger_shown) {
         Q.flavour_10_trigger_time = Q.time;
@@ -1224,7 +1224,7 @@ if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp 
         Q.flavour_10_effect_trigger = 1;
     }
 }
-if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && !Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_11_trigger += 1;
     if (Q.flavour_11_trigger && !Q.flavour_11_trigger_shown) {
         Q.flavour_11_trigger_time = Q.time;
@@ -1392,7 +1392,7 @@ if (Q.flavour_29_trigger && Q.flavour_20_trigger && Q.time == Q.flavour_20_trigg
         Q.flavour_31_trigger_shown = 1;
     }
 }
-if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r >= 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_32_trigger += 1;
     if (Q.flavour_32_trigger && !Q.flavour_32_trigger_shown) {
         Q.flavour_32_trigger_time = Q.time;
@@ -1400,7 +1400,7 @@ if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp &
         Q.flavour_32_effect_trigger = 1;
     }
 }
-if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.ddp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
+if (Q.ddp_factionless && Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp && !Q.liberal_parliament && Q.lvp_r < 3 && !Q.lvp_formed && Q.time !== Q.last_time_updated) {
     Q.flavour_33_trigger += 1;
     if (Q.flavour_33_trigger && !Q.flavour_33_trigger_shown) {
         Q.flavour_33_trigger_time = Q.time;
@@ -2032,7 +2032,7 @@ go-to: bg if rubicon and bg_change; bg_2 if not rubicon and bg_change
 
 {!<p class="other">!}[? if flavour_33_trigger and flavour_33_trigger_time == time : For one reason or another, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> lacks the Reichstag delegates to form a parliamentary faction and is now required to negotiate with another party to join forces. With the bourgeois parties already grouped together, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is forced to negotiate with them. Surprisingly, the bourgeois parties have gotten over their grudges against the party, and are open to cooperation. [? if wp_leader == "Scholz" and dstp_formed: However, just as they were about to finalize their agreement, an angry Ernst Scholz torpedoed the negotiations, still furious about how the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> disrupted his efforts toward bourgeois unity. As a result of this, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is forced to enter the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary group. ?][? if wp_leader != "Scholz" or not dstp_formed: [? if chancellor == "Brüning" and not dnvp_in_government: They have all agreed to cease their intrigues against Brüning's government in order to finalize the agreement.?][? if not (chancellor == "Brüning" and not dnvp_in_government): With past disputes set aside, they've finalized the agreement.?]?] ?]{!</p>!}
 
-{!<p class="other">!}[? if flavour_54_trigger and flavour_54_trigger_time == time : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, for one reason or another, lacks the necessary Reichstag delegates to form a parliamentary faction. As a result, it is forced to conclude an agreement [? if wp_r + ddp_r >= 3.6: with the <span style="color: #b8996f;">**WP**</span> and other minor bourgeois parties?][? if wp_r + ddp_r < 3.6: to enter the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary group?]. The merger of the <span style="color: #C0A054;">**DVP**</span> into the <span style="color: #3E88B3;">**DNVP**</span> has effectively ruled out the possibility of a unified liberal parliamentary group. ?]{!</p>!}
+{!<p class="other">!}[? if flavour_54_trigger and flavour_54_trigger_time == time : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, for one reason or another, lacks the necessary Reichstag delegates to form a parliamentary faction. As a result, it is forced to conclude an agreement [? if wp_r + lvp_r >= 3.6: with the <span style="color: #b8996f;">**WP**</span> and other minor bourgeois parties?][? if wp_r + lvp_r < 3.6: to enter the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s parliamentary group?]. The merger of the <span style="color: #C0A054;">**DVP**</span> into the <span style="color: #3E88B3;">**DNVP**</span> has effectively ruled out the possibility of a unified liberal parliamentary group. ?]{!</p>!}
 
 {!<p class="other">!}[? if year = 1930 and month = 9 : In the small Free State of Brunswick, elections are held, resulting in [? if not brunswick_hitler: another majority for the <span style="color: #c00000;">**SPD**</span>?][? if brunswick_hitler: a victory for the bourgeois unity list and the <span style="color: #7A3C00;">**NSDAP**</span>, who enter government together despite our plurality of votes?]. [? if brunswick_hitler: The <span style="color: #7A3C00;">**NSDAP**</span> is expected to use their new position in government to grant Hitler citizenship, as he remains stateless. ?]?]{!</p>!}
 

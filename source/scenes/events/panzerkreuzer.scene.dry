@@ -18,7 +18,7 @@ We campaigned on food for children instead of battlecruisers. Will we really bet
 - @abstain: Abstain from the vote.
 
 @vote_yes
-on-arrival: right_dissent += 10; christsoc_dissent += 5; center_dissent += 5; popcon_dissent += 5; paramilitarist_dissent += 5; panzerkreuzer_funded = 1; nazi_coalition_dissent += 1; nsdap_relation -= 6; workers_uspd -= 3; wp_left += 1; ddp_right += 1; ddp_cohesion -= 1; lvp_left += 1; goal_dnvp_cancel += 1; braun_angry -= 5
+on-arrival: right_dissent += 10; christsoc_dissent += 5; center_dissent += 5; popcon_dissent += 5; paramilitarist_dissent += 5; panzerkreuzer_funded = 1; nazi_coalition_dissent += 1; nsdap_relation -= 6; workers_uspd -= 3; wp_left += 1; lvp_right += 1; ddp_cohesion -= 1; lvp_left += 1; goal_dnvp_cancel += 1; braun_angry -= 5
 
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision.
 
@@ -47,6 +47,6 @@ on-arrival: panzerkreuzer_funded = 1
 Our coalition partners are shocked by our intransigence! Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which passes with all parties in favor except the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. The ship will be built.
 
 @abstain
-on-arrival: wp_relation -= 5; lvp_old_relation -= 3; z_relation -= 3; right_dissent += 5; christsoc_dissent += 5; panzerkreuzer_funded = 1; nsdap_relation -= 3; ddp_right += 1; ddp_cohesion -= 1
+on-arrival: wp_relation -= 5; lvp_old_relation -= 3; z_relation -= 3; right_dissent += 5; christsoc_dissent += 5; panzerkreuzer_funded = 1; nsdap_relation -= 3; lvp_right += 1; ddp_cohesion -= 1
 
 Our coalition partners are shocked by our intransigence! Despite our abstention, the vote in the Reichstag goes through, with all parties in favor except the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. The ship will be built.

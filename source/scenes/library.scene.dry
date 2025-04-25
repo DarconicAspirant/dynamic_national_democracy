@@ -81,15 +81,15 @@ Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ uspd_r +]%
 [? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 <span class="tooltip-text" title="[? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>: [+ z_r +]%
 # 1928: 10, 1930: 13
-<span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**KPD**</span>: [+ kpd_r +]%
+<span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**KPD**</span>: [+ spd_r +]%
 # 1928: 5, 1930: 4 (as DStP)
 [? if lvp_formed: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]% ?]
-[? if (not lvp_formed or not ddp_name) : [? if not ddp_name:<span class="tooltip-text" title="German Democratic Party" style="color: #FFCC00;">**DDP**</span>?][? if ddp_name = "DDP":<span class="tooltip-text" title="German Democratic Party" style="color: #FFCC00;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span class="tooltip-text" title="German State Party" style="color: #FFCC00;">**[+ ddp_name +]**</span>?]: [+ ddp_r +]% ?]
+[? if (not lvp_formed or not ddp_name) : [? if not ddp_name:<span class="tooltip-text" title="German Democratic Party" style="color: #FFCC00;">**DDP**</span>?][? if ddp_name = "DDP":<span class="tooltip-text" title="German Democratic Party" style="color: #FFCC00;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span class="tooltip-text" title="German State Party" style="color: #FFCC00;">**[+ ddp_name +]**</span>?]: [+ lvp_r +]% ?]
 # 1928: 9, 1930: 5
 [? if not lvp_formed and wp_exist: <span class="tooltip-text" title="German People's Party" style="color: #CCAA7A;">**DVP**</span>: [+ wp_r +]% ?]
 [? if kvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_r +]% ?]
@@ -471,7 +471,7 @@ Current relations: [+ z_relation : relationships +]
 
 [? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span> - <i>Deutschnationale Volkspartei</i> (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans. [? if dnvp_wp_formed: They have recently merged with the <span style="color: #CCAA7A;">**DVP**</span>. ?]?]
 
-[? if not cvp_formed: Current relations: [+ uspd_relation : relationships +]?]
+[? if not cvp_formed: Current relations: [+ uuspd_relation : relationships +]?]
 
 [? if dnf_formed: <span style="color: #003755;">**DNF**</span> - <i>Deutschnationale Front</i> (German National Front) - a far-right nationalist-conservative party, led by Alfred Hugenberg, originally split from the <span style="color: #3E88B3;">**DNVP**</span>. It is supported by a small but loyal base of Hugenberg supporters, consisting of former aristocrats, racists and nationalists. ?]
 
@@ -485,7 +485,7 @@ Current relations: [+ nsdap_relation : relationships +]
 
 <span style="color: #7A3C00;">**NSDAP**</span> - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or <span style="color: #7A3C00;">Nazis</span>) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
 
-Current relations: [+ spd_relation : relationships +]
+Current relations: [+ uspd_relation : relationships +]
 
 **Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. [? if dnvp_split == 1: They also consist of splinter parties from the <span style="color: #3E88B3;">**DNVP**</span>, as a result of Hugenberg's radical right policies as chairman. ?]Their political position usually lies between the [? if wp_exist and not lvp_formed: <span style="color: #CCAA7A;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if not wp_exist: <span style="color: #FFCC00;">**[+ ddp_name +]**</span>?] and the [? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span>?][? if cvp_formed: <span style="color: #003755;">**DNF**</span>?].
 
@@ -599,7 +599,7 @@ data = [{
     "id": "kpd",
     "legend": "SPD",
     "name": "SPD",
-    "seats": Math.round(Q.kpd_r * 5),
+    "seats": Math.round(Q.spd_r * 5),
 }];
 
 if (Q.sapd_formed && Q.sapd_r) {
@@ -615,15 +615,15 @@ data = data.concat([{
     "id": "spd",
     "legend": "USPD",
     "name": "USPD",
-    "seats": Math.round(Q.spd_r * 5),
+    "seats": Math.round(Q.uspd_r * 5),
 }]);
 
-if (Q.ddp_r && !Q.lvp_formed) {
+if (Q.lvp_r && !Q.lvp_formed) {
     data.push({
         "id": "ddp",
         "legend": "LVP",
         "name": "LVP",
-        "seats": Math.round(Q.ddp_r * 5),
+        "seats": Math.round(Q.lvp_r * 5),
     });
 }
 
@@ -770,11 +770,11 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} LVP: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} LVP: {!</td><td>!} [+ lvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3000F'> </div></td><td>!} USPD: {!</td><td>!} [+ spd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div></td><td>!} USPD: {!</td><td>!} [+ uspd_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#700000'> </div></td><td>!} SPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#700000'> </div></td><td>!} SPD: {!</td><td>!} [+ spd_r +]% {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
 {!</table>!}

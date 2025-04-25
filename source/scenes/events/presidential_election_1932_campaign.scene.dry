@@ -156,7 +156,7 @@ title: We persuade the <span style="color: #700000;">**Communists**</span> to ta
 subtitle: This will alienate bourgeois voters! -2 resources
 choose-if: kpd_support_spd == 1 and (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
 unavailable-subtitle: [? if kpd_support_spd != 1: The <span style="color: #700000;">KPD</span> doesn't support Braun. ?][? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
-on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_uspd += 3; workers_spd += 5; workers_nsdap -= 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; wp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_uspd -= 3; old_middle_uspd -= 3; catholics_uspd -= 3
+on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_uspd += 3; workers_spd += 5; workers_nsdap -= 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 10; lvp_relation -= 10; wp_relation -= 10; lvp_old_relation -= 10; wp_right += 5; lvp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_uspd -= 3; old_middle_uspd -= 3; catholics_uspd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
 go-to: campaigning_spd
@@ -548,7 +548,7 @@ We have a plethora of campaign options at our disposal.
 @paramilitary
 title: Ally with the <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> on the streets, to fight against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
 subtitle: This will permanently alienate the bourgeois parties!
-on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; vb_strength += 100; rfb_militancy += 0.1; vb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; braun_angry += 150; z_relation -= 20; lvp_relation -= 20; wp_relation -= 20; lvp_old_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; wp_right += 10; lvp_right += 10
+on-arrival: kpd_truce = 1; nsdap_relation += 5; rfb_strength += 100; vb_strength += 100; rfb_militancy += 0.1; vb_militancy += 0.04; paramilitarist_dissent += 10; popcon_dissent += 10; braun_angry += 150; z_relation -= 20; lvp_relation -= 20; wp_relation -= 20; lvp_old_relation -= 20; ddp_cohesion -= 5; lvp_right += 6; wp_right += 10; lvp_right += 10
 face-image: img/reichsbanner_2.jpg
 max-visits: 1
 go-to: campaigning_thalmann
@@ -572,7 +572,7 @@ title: We persuade the <span style="color: #700000;">**Communists**</span> to le
 subtitle: They have been putting themselves at the forefront. -1 resources
 choose-if: (nsdap_relation >= 70 or (nsdap_relation >= 55 and spd_leader == "Conciliators")) and resources >= 2
 unavailable-subtitle: [? if (nsdap_relation < 70 or (nsdap_relation < 55 and spd_leader == "Conciliators")): Our relations aren't good enough. ?] [? if resources < 2: Not enough resources. (need 2) ?]
-on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_uspd += 3; workers_spd += 3; workers_nsdap -= 3; unemployed_uspd += 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; wp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_spd = 1
+on-arrival: resources -= 2; spd_glaze_thalmann = 1; workers_uspd += 3; workers_spd += 3; workers_nsdap -= 3; unemployed_uspd += 3; unemployed_spd += 3; unemployed_nsdap -= 3; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; wp_right += 4; lvp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_spd = 1
 face-image: img/kpd_poster.jpg
 max-visits: 1
 go-to: campaigning_thalmann

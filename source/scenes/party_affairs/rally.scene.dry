@@ -80,7 +80,7 @@ Mass rallies are a common feature of <span style="color: #c00000;">social democr
 - @easy_discard
 
 @class_struggle
-on-arrival: workers_uspd += 4*(1-dissent); unemployed_uspd += 3*(1-dissent) if right_strength > popcon_strength; workers_uspd += 4*(1-dissent) if neoliberalization_progress > 0; unemployed_uspd += 3*(1-dissent) if neoliberalization_progress > 0; right_strength += 5; right_dissent -= 5; old_middle_uspd -= 3; new_middle_uspd -= 2; wp_right += 0.5; ddp_right += 0.5; lvp_right += 0.5
+on-arrival: workers_uspd += 4*(1-dissent); unemployed_uspd += 3*(1-dissent) if right_strength > popcon_strength; workers_uspd += 4*(1-dissent) if neoliberalization_progress > 0; unemployed_uspd += 3*(1-dissent) if neoliberalization_progress > 0; right_strength += 5; right_dissent -= 5; old_middle_uspd -= 3; new_middle_uspd -= 2; wp_right += 0.5; lvp_right += 0.5; lvp_right += 0.5
 
 Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if neoliberalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 

@@ -49,7 +49,7 @@ We also aim to improve relations with our eastern neighbors, <span style="color:
 title: Expand our exports to the <span style="color: #750e0e;">**Soviet Union**</span>.
 subtitle: A win for our economy and for our relationship with the <span style="color: #700000;">**KPD**</span>.
 view-if: year >= 1930
-on-arrival: southern_relation += 1; economic_growth += 0.5; unemployed -= 0.5; foreign_goal_completed += 1; nsdap_relation += 6; bernburg_coalition += 1; braun_angry += 15; z_relation -= 3; lvp_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; wp_right += 1; lvp_right += 1; ddp_right += 1
+on-arrival: southern_relation += 1; economic_growth += 0.5; unemployed -= 0.5; foreign_goal_completed += 1; nsdap_relation += 6; bernburg_coalition += 1; braun_angry += 15; z_relation -= 3; lvp_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; wp_right += 1; lvp_right += 1; lvp_right += 1
 max-visits: 1
 
 The <span style="color: #750e0e;">Soviet Union</span>, with its centrally planned economy and isolation from global markets, has insulated itself from the effects of the Great Depression. They have since been rapidly industrializing in accordance with their Five-Year Plan, making them a prime partner for exports, especially as tariffs from our nominal trading partners in the West have increased, along with their general isolation from international markets.

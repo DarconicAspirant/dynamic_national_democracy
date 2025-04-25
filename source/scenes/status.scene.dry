@@ -60,10 +60,10 @@ Reichstag composition:
 [? if kvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_r +]% ?]
 [? if wp_exist : <span class="tooltip-text" title="Economic Party of the German Middle Class" style="color: #CCAA7A;">**WP**</span>: [+ wp_r +]% ?]
 <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>: [+ z_r +]%
-<span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ ddp_r +]%
-<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #c00000;">**USPD**</span>: [+ spd_r +]%
+<span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]%
+<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #c00000;">**USPD**</span>: [+ uspd_r +]%
 [? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ kpd_r +]%
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ spd_r +]%
 **Others**: [+ other_r +]%
 
 [? if dnvp_in_government = 1 : Budget: [+ budget +] ?]
@@ -97,7 +97,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if chancellor == "Papen": Schleicher's confidence: [+ schleicher_papen_r : confidence +] ?]
 
-[? if red_general_unlock: Schleicher-<span style="color: #c00000;">**SPD**</span> relations: [+ schleicher_spd_r : schleicher_spd +] ?]
+[? if red_general_unlock: Schleicher-<span style="color: #c00000;">**SPD**</span> relations: [+ schleicher_uspd_r : schleicher_spd +] ?]
 
 = Government
 
@@ -125,9 +125,9 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
-<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ uspd_relation : relationships +]
+<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ uuspd_relation : relationships +]
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ spd_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ uspd_relation : relationships +]
 
 = Party Leadership
 

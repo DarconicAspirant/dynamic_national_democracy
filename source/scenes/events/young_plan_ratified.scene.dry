@@ -3,7 +3,7 @@ new-page: true
 subtitle: They don't need us anymore.
 tags: event
 view-if: year = 1930 and month >= 3 and dnvp_in_government and not young_plan_ratified
-on-arrival: wp_right += 3; ddp_right += 1; wp_relation -= 5; lvp_right += 3; lvp_old_relation -= 5; braun_angry += 10; young_plan_ratified = 1
+on-arrival: wp_right += 3; lvp_right += 1; wp_relation -= 5; lvp_right += 3; lvp_old_relation -= 5; braun_angry += 10; young_plan_ratified = 1
 max-visits: 1
 
 = Young Plan Ratified
