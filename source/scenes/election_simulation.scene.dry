@@ -804,7 +804,7 @@ Bourgeois Coalition (Others(bar SAPD) [? if wp_r != 0: + WP?] [? if dvp_r != 0: 
 
 Constitutional Coalition (Others(bar SAPD) [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?] + USPD): [+ constitutional_coalition +]
 
-Grand Coalition ([? if dvp_r != 0:DVP?] + BVP + Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ grand_coalition +]
+Grand Coalition ([? if dvp_r != 0:DVP + ?]BVP + Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ grand_coalition +]
 
 Weimar Coalition (Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ weimar_coalition +]
 
