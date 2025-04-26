@@ -366,9 +366,9 @@ if (Q.vnr_r_saxony >= 1.4) Q.vnr_cool = 1;
 !}
 on-display: {!
 data = [{
-    "id": "kpd",
-    "legend": "KPD",
-    "name": "KPD",
+    "id": "spd",
+    "legend": "SPD",
+    "name": "SPD",
     "seats": Math.round(Q.spd_r_saxony * 0.96),
 }];
 
@@ -382,9 +382,9 @@ if (Q.sapd_formed && Q.sapd_r_saxony) {
 }
 
 data = data.concat([{
-    "id": "spd",
-    "legend": "SPD",
-    "name": "SPD",
+    "id": "uspd",
+    "legend": "USPD",
+    "name": "USPD",
     "seats": Math.round(Q.uspd_r_saxony * 0.96),
 }]);
 

@@ -391,9 +391,9 @@ if ((Q.nsdap_votes + Q.dnf_votes >= 30 && Q.dnvp_ideology == "Moderate" || Q.nsd
 !}
 on-display: {!
 data = [{
-    "id": "kpd",
-    "legend": "KPD",
-    "name": "KPD",
+    "id": "spd",
+    "legend": "SPD",
+    "name": "SPD",
     "seats": Math.round(Q.spd_r_prussia * 4.5),
 }];
 
@@ -407,9 +407,9 @@ if (Q.sapd_formed && Q.sapd_r_prussia) {
 }
 
 data = data.concat([{
-    "id": "spd",
-    "legend": "SPD",
-    "name": "SPD",
+    "id": "uspd",
+    "legend": "USPD",
+    "name": "USPD",
     "seats": Math.round(Q.uspd_r_prussia * 4.5),
 }]);
 

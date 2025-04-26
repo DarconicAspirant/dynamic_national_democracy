@@ -462,8 +462,8 @@ on-departure: revolutionary_urgency = 1 if (revolutionary_urgency == 0 and nsdap
 on-display: {!
 data = [{
     "id": "spd",
-    "legend": "KPD",
-    "name": "KPD",
+    "legend": "SPD",
+    "name": "SPD",
     "seats": Math.round(Q.spd_r * 5),
 }];
 
@@ -478,8 +478,8 @@ if (Q.sapd_formed && Q.sapd_r) {
 
 data = data.concat([{
     "id": "uspd",
-    "legend": "SPD",
-    "name": "SPD",
+    "legend": "USPD",
+    "name": "USPD",
     "seats": Math.round(Q.uspd_r * 5),
 }]);
 
