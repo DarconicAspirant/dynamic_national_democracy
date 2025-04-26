@@ -418,8 +418,6 @@ Q.lvp_left = 0;
 Q.lvp_right = 0;
 Q.lvp_leader = "Luther";
 Q.lvp_ideology = "Moderate";
-Q.lvp_normalized = 0;
-Q.lvp_votes = 0;
 
 Q.cvp_right = 0;
 Q.cvp_left = 0;
