@@ -594,6 +594,9 @@ on-arrival: {!
 Q.z_minus_bvp_votes = parseFloat((Q.z_votes - Q.bvp_votes).toFixed(1));
 Q.z_minus_bvp_r = parseFloat((Q.z_r - Q.bvp_r).toFixed(1));
 !}
+
+on-display: {!
+
 if (Q.sapd_formed && Q.sapd_r) {
     data.push({
         "id": "sapd",
@@ -603,7 +606,6 @@ if (Q.sapd_formed && Q.sapd_r) {
     });
 }
 
-on-display: {!
 data = [{
     "id": "spd",
     "legend": "SPD",
