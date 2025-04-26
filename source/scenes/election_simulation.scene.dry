@@ -740,7 +740,7 @@ Q.hard_right_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.kvp_
 Q.national_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r + Q.dnf_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
 Q.far_right_coalition = Math.round((Q.dnvp_r + Q.dnf_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
 Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r + 0.6)*10)/10;
-Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.z_r - 3)*10)/10;
+Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.ddp_r + Q.z_r - 3)*10)/10;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -812,6 +812,6 @@ Grand Coalition ([? if dvp_r != 0:DVP + ?]BVP + Z [? if lvp_r != 0: + LVP?] [? i
 
 Weimar Coalition (Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ weimar_coalition +]
 
-Popular Front (Z + USPD + SPD): [+ popular_front_coalition +]
+Popular Front (Z [? if ddp_r != 0: + DDP ?]+ USPD + SPD): [+ popular_front_coalition +]
 
 Left Front (USPD + SPD + SAPD): [+ left_coalition +]
