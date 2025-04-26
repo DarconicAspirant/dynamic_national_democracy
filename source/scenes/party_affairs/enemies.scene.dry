@@ -16,7 +16,7 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @extreme: The extremist and socialist parties of the left and the far-right
+- @extreme: The socialists and the far-right extremists
 - @left: The socialist and marxist parties of the left
 - @nsdap: The NSDAP
 - @spd: The SPD and revolutionary left
@@ -24,7 +24,7 @@ In our media and campaign materials, who should we consider as our main opponent
 - @easy_discard
 
 @extreme
-on-arrival: enemies = "extremist and socialist parties of the left and the far-right"; christsoc_strength += 5; popcon_strength += 5; right_dissent += 5; workers_spd -= 1.5; workers_nsdap -= 2; workers_dnvp -= 1 if dnvp_ideology == "Radical"; workers_dnf -= 1; unemployed_spd -= 2; unemployed_nsdap -= 2; nsdap_relation -= 10
+on-arrival: enemies = "socialists and the far-right extremists"; christsoc_strength += 5; popcon_strength += 5; right_dissent += 5; workers_spd -= 1.5; workers_nsdap -= 2; workers_dnvp -= 1 if dnvp_ideology == "Radical"; workers_dnf -= 1; unemployed_spd -= 2; unemployed_nsdap -= 2; nsdap_relation -= 10
 
 Attacking socialism and the extremist spoilers to our right is acceptable to all but the strongly anti-republican right wing of our party, who consider our strategy an implicit reinforcement of the republican center. This might also hamper our ability to ally the far-right in the future.
 # TODO: Better effect if either lambach chairman or christsoc dominance
