@@ -427,16 +427,7 @@ data = data.concat([{
     "seats": Math.round(Q.uspd_r_bavaria * 1.28),
 }]);
 
-if (Q.lvp_r_bavaria && !Q.lvp_formed) {
-    data.push({
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.lvp_r_bavaria * 1.28),
-    });
-}
-
-if (Q.lvp_r_bavaria && Q.lvp_formed) {
+if (Q.lvp_r_bavaria) {
     data.push({
         "id": "lvp",
         "legend": "LVP",
@@ -880,23 +871,13 @@ data = data.concat([{
     "seats": Math.round(Q.uspd_r_wurttemberg * 0.8),
 }]);
 
-if (Q.lvp_r_wurttemberg && !Q.lvp_formed) {
-    data.push({
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.lvp_r_wurttemberg * 0.8),
-    });
-}
-
-if (Q.lvp_r_wurttemberg && Q.lvp_formed) {
-    data.push({
+data = data.concat([{
         "id": "lvp",
         "legend": "LVP",
         "name": "LVP",
-        "seats": Math.round(Q.lvp_r_wurttemberg * 0.8),
-    });
+        "seats": Math.round((Q.lvp_r_wurttemberg) * 0.8),
 }
+]);
 
 data = data.concat([{
         "id": "z",

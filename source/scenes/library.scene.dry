@@ -596,7 +596,7 @@ Q.z_minus_bvp_r = parseFloat((Q.z_r - Q.bvp_r).toFixed(1));
 !}
 on-display: {!
 data = [{
-    "id": "spd",
+    "id": "uspd",
     "legend": "SPD",
     "name": "SPD",
     "seats": Math.round(Q.spd_r * 5),

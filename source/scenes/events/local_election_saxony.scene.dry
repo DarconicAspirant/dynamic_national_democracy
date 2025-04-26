@@ -234,12 +234,12 @@ Q.spd_saxony_elections_vote = Q.spd_saxony_elections_vote*spd_share;
 Q.uspd_r_saxony = Q.uspd_r_saxony*spd_share;
 
 Q.aspd_saxony_elections_vote = Q.spd_saxony_elections_vote*aspd_share;
-Q.auspd_r_saxony = Q.uspd_r_saxony*aspd_share;
+Q.aspd_r_saxony = Q.uspd_r_saxony*aspd_share;
 
 Q.left_coalition_saxony = parseFloat((Q.uspd_r_saxony + Q.spd_r_saxony + Q.sapd_r_saxony).toFixed(1));
-Q.bourgeois_coalition_saxony = parseFloat((Q.auspd_r_saxony + Q.z_r_saxony + Q.lvp_r_saxony + Q.wp_r_saxony + Q.lvp_r_saxony + Q.kvp_r_saxony + Q.other_r_saxony + Q.dnvp_r_saxony + Q.nsdap_r_saxony).toFixed(1));
-Q.true_bourgeois_coalition_saxony = parseFloat((Q.auspd_r_saxony + Q.z_r_saxony + Q.lvp_r_saxony + Q.wp_r_saxony + Q.lvp_r_saxony + Q.kvp_r_saxony + Q.other_r_saxony + Q.dnvp_r_saxony).toFixed(1));
-Q.spd_coalition_saxony = parseFloat((Q.auspd_r_saxony + Q.uspd_r_saxony + Q.lvp_r_saxony + Q.lvp_r_saxony + Q.z_r_saxony + Q.wp_r_saxony).toFixed(1));
+Q.bourgeois_coalition_saxony = parseFloat((Q.aspd_r_saxony + Q.z_r_saxony + Q.lvp_r_saxony + Q.wp_r_saxony + Q.lvp_r_saxony + Q.kvp_r_saxony + Q.other_r_saxony + Q.dnvp_r_saxony + Q.nsdap_r_saxony).toFixed(1));
+Q.true_bourgeois_coalition_saxony = parseFloat((Q.aspd_r_saxony + Q.z_r_saxony + Q.lvp_r_saxony + Q.wp_r_saxony + Q.lvp_r_saxony + Q.kvp_r_saxony + Q.other_r_saxony + Q.dnvp_r_saxony).toFixed(1));
+Q.spd_coalition_saxony = parseFloat((Q.aspd_r_saxony + Q.uspd_r_saxony + Q.lvp_r_saxony + Q.lvp_r_saxony + Q.z_r_saxony + Q.wp_r_saxony).toFixed(1));
 
 let farm_share = 0.27;
 if (Q.dnvp_ideology == "Moderate") farm_share -= 0.1;
@@ -277,7 +277,7 @@ Q.spd_saxony_elections_vote = (Q.spd_saxony_elections_vote != undefined ? parseF
 Q.farm_r_saxony = (Q.farm_r_saxony != undefined ? parseFloat(Q.farm_r_saxony.toFixed(1)) : 0);
 Q.wp_r_saxony = (Q.wp_r_saxony != undefined ? parseFloat(Q.wp_r_saxony.toFixed(1)) : 0);
 Q.vrp_r_saxony = (Q.vrp_r_saxony != undefined ? parseFloat(Q.vrp_r_saxony.toFixed(1)) : 0);
-Q.auspd_r_saxony = (Q.auspd_r_saxony != undefined ? parseFloat(Q.auspd_r_saxony.toFixed(1)) : 0);
+Q.aspd_r_saxony = (Q.aspd_r_saxony != undefined ? parseFloat(Q.aspd_r_saxony.toFixed(1)) : 0);
 Q.uspd_r_saxony = (Q.uspd_r_saxony != undefined ? parseFloat(Q.uspd_r_saxony.toFixed(1)) : 0);
 
 !}
@@ -305,30 +305,21 @@ data = data.concat([{
     "seats": Math.round(Q.uspd_r_saxony * 0.96),
 }]);
 
-if (Q.auspd_r_saxony) {
+if (Q.aspd_r_saxony) {
     data.push({
         "id": "aspd",
         "legend": "ASPD",
         "name": "ASPD",
-        "seats": Math.round(Q.auspd_r_saxony * 0.96),
+        "seats": Math.round(Q.aspd_r_saxony * 0.96),
     });
 }
 
-if (Q.lvp_r_saxony && !Q.lvp_formed) {
+if (Q.aspd_r_saxony) {
     data.push({
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.lvp_r_saxony * 0.96),
-    });
-}
-
-if (Q.lvp_r_saxony && Q.lvp_formed) {
-    data.push({
-        "id": "lvp",
-        "legend": "LVP",
-        "name": "LVP",
-        "seats": Math.round(Q.lvp_r_saxony * 0.96),
+        "id": "aspd",
+        "legend": "ASPD",
+        "name": "ASPD",
+        "seats": Math.round(Q.aspd_r_saxony * 0.96),
     });
 }
 
@@ -448,7 +439,7 @@ go-to: saxony_coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_saxony_elections_vote +]% {!</td><td>!} [+ sapd_r_saxony +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}ASPD: {!</td><td>!} [+ aspd_saxony_elections_vote +]% {!</td><td>!} [+ auspd_r_saxony +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}ASPD: {!</td><td>!} [+ aspd_saxony_elections_vote +]% {!</td><td>!} [+ aspd_r_saxony +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ kpd_saxony_elections_vote +]% {!</td><td>!} [+ spd_r_saxony +]%  {!</td></tr>!}
 
@@ -487,9 +478,9 @@ United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span styl
 
 Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_saxony:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_saxony +]% 
 
-Bourgeois Coalition ([? if auspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ true_bourgeois_coalition_saxony +]%
+Bourgeois Coalition ([? if aspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ true_bourgeois_coalition_saxony +]%
 
-Right-Wing Coalition ([? if auspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #7A3C00;">**NSDAP**</span>): [+ bourgeois_coalition_saxony +]%
+Right-Wing Coalition ([? if aspd_r_saxony: <span style="color: #fe9e00;">**ASPD**</span> + ?][? if z_r_saxony: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #11DD11;">**SLV**</span> + <span style="color: #b8996f;">**WP**</span> + <span style="color: #0075EB;">**VRP**</span>[? if kvp_formed:&nbsp;+ <span style="color: #0087DC;">**KVP**</span> ?] + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #7A3C00;">**NSDAP**</span>): [+ bourgeois_coalition_saxony +]%
 
 [? if nsdap_saxony_elections_vote >= 4: The rise of the <span style="color: #7A3C00;">**NSDAP**</span> is quite unexpected, especially given their meager 1.6% of the vote in the last election. ?]
 

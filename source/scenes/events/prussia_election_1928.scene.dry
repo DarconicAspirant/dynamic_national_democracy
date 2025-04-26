@@ -413,23 +413,13 @@ data = data.concat([{
     "seats": Math.round(Q.uspd_r_prussia * 4.5),
 }]);
 
-if (Q.lvp_r_prussia && !Q.lvp_formed) {
-    data.push({
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.lvp_r_prussia * 4.5),
-    });
-}
-
-if (Q.lvp_r_prussia && Q.lvp_formed) {
-    data.push({
+data = data.concat([{
         "id": "lvp",
         "legend": "LVP",
         "name": "LVP",
-        "seats": Math.round(Q.lvp_r_prussia * 4.5),
-    });
+        "seats": Math.round((Q.lvp_r_prussia) * 4.5),
 }
+]);
 
 data = data.concat([{
         "id": "z",

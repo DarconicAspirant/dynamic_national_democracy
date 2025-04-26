@@ -282,16 +282,7 @@ data = data.concat([{
     "seats": Math.round(Q.uspd_r_thuringia * 0.53),
 }]);
 
-if (Q.lvp_r_thuringia && !Q.lvp_formed) {
-    data.push({
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.lvp_r_thuringia * 0.53),
-    });
-}
-
-if (Q.lvp_r_thuringia && Q.lvp_formed) {
+if (Q.z_r_thuringia) {
     data.push({
         "id": "lvp",
         "legend": "LVP",
