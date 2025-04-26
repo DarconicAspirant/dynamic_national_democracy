@@ -125,9 +125,9 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
-<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ uuspd_relation : relationships +]
+<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [+ uspd_relation : relationships +]
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ uspd_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [+ spd_relation : relationships +]
 
 = Party Leadership
 

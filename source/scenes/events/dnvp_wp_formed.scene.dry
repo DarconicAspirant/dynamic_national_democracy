@@ -25,7 +25,7 @@ Q.rural_dnf += 2;
 
 Q.dnvp_r = Math.round((Q.dnvp_r + Q.wp_r) * 10) / 10;
 Q.dnvp_r_prussia = Math.round((Q.dnvp_r_prussia + Q.wp_r_prussia) * 10) / 10;
-Q.uuspd_relation += 5;
+Q.dnvp_old_relation += 5;
 
 Q.lvp_right += (Q.wp_left / 2);
 Q.lvp_relation -= 5;

@@ -121,10 +121,11 @@ Q.wp_relation = 60;
 Q.z_relation = 50;
 Q.lvp_relation = 50;
 Q.nsdap_relation = 30;
-Q.uuspd_relation = 10;
+Q.uspd_relation = 10;
 // SPD is invariably hostile
-Q.uspd_relation = 0;
+Q.spd_relation = 0;
 Q.lvp_old_relation = 0;
+Q.dnvp_old_relation = 10;
 
 Q.spd_leader = "Levi";
 Q.z_leader = "Marx";
