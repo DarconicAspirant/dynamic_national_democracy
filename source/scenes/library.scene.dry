@@ -594,14 +594,6 @@ on-arrival: {!
 Q.z_minus_bvp_votes = parseFloat((Q.z_votes - Q.bvp_votes).toFixed(1));
 Q.z_minus_bvp_r = parseFloat((Q.z_r - Q.bvp_r).toFixed(1));
 !}
-on-display: {!
-data = [{
-    "id": "kpd",
-    "legend": "SPD",
-    "name": "SPD",
-    "seats": Math.round(Q.spd_r * 5),
-}];
-
 if (Q.sapd_formed && Q.sapd_r) {
     data.push({
         "id": "sapd",
@@ -611,30 +603,28 @@ if (Q.sapd_formed && Q.sapd_r) {
     });
 }
 
-data = data.concat([{
+on-display: {!
+data = [{
     "id": "spd",
+    "legend": "SPD",
+    "name": "SPD",
+    "seats": Math.round(Q.spd_r * 5),
+}];
+
+data = data.concat([{
+    "id": "uspd",
     "legend": "USPD",
     "name": "USPD",
     "seats": Math.round(Q.uspd_r * 5),
 }]);
 
-if (Q.lvp_r && !Q.lvp_formed) {
-    data.push({
-        "id": "ddp",
-        "legend": "LVP",
-        "name": "LVP",
-        "seats": Math.round(Q.lvp_r * 5),
-    });
-}
 
-if (Q.lvp_r && Q.lvp_formed) {
-    data.push({
-        "id": "lvp",
-        "legend": "LVP",
-        "name": "LVP",
-        "seats": Math.round(Q.lvp_r * 5),
-    });
-}
+data = data.concat([{
+    "id": "lvp",
+    "legend": "LVP",
+    "name": "LVP",
+    "seats": Math.round(Q.uspd_r * 5),
+}]);
 
 data = data.concat([{
         "id": "z",
