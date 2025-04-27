@@ -208,7 +208,7 @@ choose-if: kardorff_lvp_unlock
 on-arrival: lvp_leader = "Kardorff"; wp_left += 3 if in_grand_coalition; bourgeois_cooperation += 1; wp_relation += 5 if in_grand_coalition; new_middle_lvp += 4; catholics_lvp += 2; rural_lvp += 2; old_middle_lvp += 2; pro_republic += 3
 face-image: img/portraits/kardorff.jpg
 
-Kardorff is elected to succeed Curtius as the leader of the <span style="color: #FFCC00;">**LVP**</span>. He is expected to be a continuation of Curtius's leadership, being another Stresemann follower and supporter of constructive cooperation with the <span style="color: #c00000;">**SPD**</span>. [? if ui0_seen: He even rallied his parliamentary faction to save our Grand Coalition back in 1929.?]
+Kardorff is elected to succeed Curtius as the leader of the <span style="color: #FFCC00;">**LVP**</span>. He is expected to be a continuation of Curtius's leadership, being another Stresemann follower and supporter of constructive cooperation with the <span style="color: #c00000;">**SPD**</span>. [? if ui0_seen: He even rallied his parliamentary faction to save our <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> back in 1929.?]
 
 [? if bruning_time: He is also one of the strongest supporters of the Brüning government, frequently coming into conflict with the right of the party over support for it. ?]
 
