@@ -946,6 +946,7 @@ if (d3 && window) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
     }
+!}
 
 = Reichstag composition
 
@@ -976,4 +977,3 @@ if (d3 && window) {
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
 {!</table>!}
-!}
