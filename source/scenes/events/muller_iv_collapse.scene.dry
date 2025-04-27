@@ -14,7 +14,7 @@ With talks having collapsed, new elections are scheduled for May, and the govern
 - @good: Great!
 
 @good
-on-arrival: next_election_month = 5; next_election_time = 5; lvp_relation += 100
+on-arrival: next_election_month = 5; next_election_time = 5; lvp_relation += 3
 
 Our task is to prepare for the next elections where we stand to gain.
 

@@ -145,9 +145,9 @@ Next Prussian election: [? if prussia_leader != "Papen": [+ next_election_month_
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: Authoritarian conservatism (Hugenberg) ?]
 
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0: <span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [? if spd_leader = "Conciliators": Luxemburgism?][? if spd_leader = "Levi": Stalinism?] ([+ spd_leader +])?]
+<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #E3000F;">**USPD**</span>: [? if uspd_peoples_party = 2 and wtb_adopted = 0 and austerity_totally_rejected = 0: Revisionist Socialism?][? if uspd_peoples_party = 2 and wtb_adopted = 1 or austerity_totally_rejected = 1: Left-Revisionist Socialism?][? if uspd_peoples_party = 1: Reformist Marxism?][? if uspd_peoples_party = 0: Economistic Marxism?][? if uspd_peoples_party = 2 and wtb_adopted = 0 and austerity_totally_rejected = 0: Revisionist Socialism?] ([+ uspd_leader +])
 
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0: <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [? if spd_leader = "Conciliators": Luxemburgism?][? if spd_leader = "Levi": Stalinism?] ([+ spd_leader +])?]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #700000;">**SPD**</span>: [? if spd_leader = "Haase" and left_push_spd = 0: Centrist Marxism?][? if spd_leader = "Haase" and left_push_spd = 1: Left-Socialism?][? if spd_leader = "T. Liebknecht": Left-Socialism?][? if spd_leader = "K. Liebknecht": Revolutionary Frontism?][? if spd_leader = "Ledebour": United Frontism?] ([+ spd_leader +])
 
 = Industrial Backing
 

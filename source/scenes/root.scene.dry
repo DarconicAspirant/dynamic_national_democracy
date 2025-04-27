@@ -127,7 +127,8 @@ Q.spd_relation = 0;
 Q.lvp_old_relation = 0;
 Q.dnvp_old_relation = 10;
 
-Q.spd_leader = "Levi";
+Q.spd_leader = "Haase";
+Q.uspd_leader = "Wels";
 Q.z_leader = "Marx";
 Q.z_ideology = "Right";
 Q.cvp_ideology = "Moderate";
@@ -870,6 +871,19 @@ Q.industrial_nsdap_backing = 0;
 
 // draconic's development assistance variables
 Dracvar_paramil_dwindle_show = 0
+
+// SPD dynamics
+// July 1930 Event (flowchart) 
+left_push_spd = 0
+
+// USPD dynamics
+// 0 = rejected, 1 = opened, 2 = embraced
+uspd_peoples_party = 1
+// These will be opposite after the event, both 0 before the event
+wtb_adopted = 0
+wtb_rejected = 0
+austerity_totally_rejected = 0
+
 
 // flavour text stuff
 for (let i = 0; i <= 100; i++) {
