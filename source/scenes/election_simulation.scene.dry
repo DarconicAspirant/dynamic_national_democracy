@@ -744,82 +744,6 @@ Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.ddp_r + Q.z_r - 3
 
 Q.z_minus_bvp_votes = parseFloat((Q.z_votes - Q.bvp_votes).toFixed(1));
 Q.z_minus_bvp_r = parseFloat((Q.z_r - Q.bvp_r).toFixed(1));
-!}
-
-The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
- 
-**Election results:**
-
-# 1919: 11.5, 1920: 13, 1924: 16, 1928: 22, 1930: 14, 1932: 6.5
-[? if dnvp_r != 0: DNVP: [+ dnvp_r +] ?]
-
-# 1919: 0, 1920: 0, 1924: 0, 1928: 2, 1930: 8, 1932: 14
-[? if nsdap_r != 0: NSDAP: [+ nsdap_r +] ?]
-
-# 1919: 0, 1920: 0, 1924: 4, 1928: 0, 1930: 0, 1932: 0
-[? if nsfb_r != 0: NSFB: [+ nsfb_r +] ?]
-
-# 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 4, 1932: 3
-[? if dnf_r != 0: DNF: [+ dnf_r +] ?]
-
-# 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 0, 1932: 3
-[? if kvp_r != 0: KVP: [+ kvp_r +] ?]
-
-# 1919: 1, 1920: 2, 1924: 3, 1928: 3, 1930: 3, 1932: 2
-[? if other_r != 0: Other: [+ other_r +] ?]
-
-# 1919: 0, 1920: 1, 1924: 2, 1928: 4, 1930: 3, 1932: 1.5
-[? if wp_r != 0: WP: [+ wp_r +] ?]
-
-# 1919: 5, 1920: 9, 1924: 8, 1928: 0, 1930: 0, 1932: 0
-[? if dvp_r != 0: DVP: [+ dvp_r +] ?]
-
-# 1919: 18, 1920: 18, 1924: 17.5, 1928: 15.5, 1930: 14, 1932: 14
-[? if z_r != 0: Z + BVP: [+ z_r +] ?]
-
-# 1919: 0, 1920: 0, 1924: 0, 1928: 12, 1930: 9, 1932: 7
-[? if lvp_r != 0: LVP: [+ lvp_r +] ?]
-
-# 1919: 15, 1920: 13, 1924: 7, 1928: 0, 1930: 0, 1932: 0
-[? if ddp_r != 0: DDP: [+ ddp_r +] ?]
-
-# 1919: 19.5, 1920: 18.5, 1924: 18, 1928: 16, 1930: 14, 1932: 10
-[? if uspd_r != 0: USPD: [+ uspd_r +] ?]
-
-# 1919: 30, 1920: 25.5, 1924: 24.5, 1928: 25.5, 1930: 31, 1932: 39
-[? if spd_r != 0: SPD: [+ spd_r +] ?]
-
-**Potential coalitions:**
-
-Note: The "Others" category often ends up with fewer seats than their share of the vote would suggest. This is because it includes a multitude of tiny parties that do not gain enough votes to be awarded a seat. As a result larger parties have slightly larger than proportional share of seats. This can impact coalition formation and is not taken into account in the below tallies:
-
-Note: 0,6% from "Others" accounts for the average vote share of the far-left SAPD, whose only potential coalition participation is tolerating the Left Front. The rest minor parties position themselves between the DNVP and the moderate bourgeois parties.
-
-[? if nsfb_r + nsdap_r != 0:Far-Right Coalition (DNVP [? if dnf_r != 0:+ DNF?] [? if nsfb_r != 0:+ NSFB?][? if nsdap_r != 0: + NSDAP?]): [+ far_right_coalition +] ?]
-
-[? if nsfb_r + nsdap_r != 0:National Front (DNVP [? if dnf_r != 0:+ DNF?] [? if nsfb_r != 0: + NSFB?][? if nsdap_r != 0:  + NSDAP?] + Others [? if wp_r != 0:  + WP?]): [+ national_coalition +] ?]
-
-Right Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] + BVP): [+ hard_right_coalition +]
-
-Conservative Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] + BVP + Z): [+ conservative_coalition +]
-
-National-Liberal Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ national_liberal_coalition +]
-
-Center-right Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ center_right_coalition +]
-
-Bourgeois Coalition (Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ bourgeois_coalition +]
-
-Constitutional Coalition (Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?] + USPD): [+ constitutional_coalition +]
-
-Grand Coalition ([? if dvp_r != 0:DVP + ?]BVP + Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ grand_coalition +]
-
-Weimar Coalition (Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ weimar_coalition +]
-
-Popular Front (Z [? if ddp_r != 0: + DDP ?]+ USPD + SPD): [+ popular_front_coalition +]
-
-Left Front (USPD + SPD + SAPD): [+ left_coalition +]
-
-on-display: {!
 
 if (Q.sapd_formed && Q.sapd_r > 0) {
     data.push({
@@ -930,7 +854,6 @@ if (Q.nsdap_r > 0) {
     });
 }
 
-if (d3 && window) {
     // get screen width
     var width = 500;
     var height = 500;
@@ -945,7 +868,84 @@ if (d3 && window) {
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
-    }
+!}
+
+The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
+ 
+**Election results:**
+
+# 1919: 11.5, 1920: 13, 1924: 16, 1928: 22, 1930: 14, 1932: 6.5
+[? if dnvp_r != 0: DNVP: [+ dnvp_r +] ?]
+
+# 1919: 0, 1920: 0, 1924: 0, 1928: 2, 1930: 8, 1932: 14
+[? if nsdap_r != 0: NSDAP: [+ nsdap_r +] ?]
+
+# 1919: 0, 1920: 0, 1924: 4, 1928: 0, 1930: 0, 1932: 0
+[? if nsfb_r != 0: NSFB: [+ nsfb_r +] ?]
+
+# 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 4, 1932: 3
+[? if dnf_r != 0: DNF: [+ dnf_r +] ?]
+
+# 1919: 0, 1920: 0, 1924: 0, 1928: 0, 1930: 0, 1932: 3
+[? if kvp_r != 0: KVP: [+ kvp_r +] ?]
+
+# 1919: 1, 1920: 2, 1924: 3, 1928: 3, 1930: 3, 1932: 2
+[? if other_r != 0: Other: [+ other_r +] ?]
+
+# 1919: 0, 1920: 1, 1924: 2, 1928: 4, 1930: 3, 1932: 1.5
+[? if wp_r != 0: WP: [+ wp_r +] ?]
+
+# 1919: 5, 1920: 9, 1924: 8, 1928: 0, 1930: 0, 1932: 0
+[? if dvp_r != 0: DVP: [+ dvp_r +] ?]
+
+# 1919: 18, 1920: 18, 1924: 17.5, 1928: 15.5, 1930: 14, 1932: 14
+[? if z_r != 0: Z + BVP: [+ z_r +] ?]
+
+# 1919: 0, 1920: 0, 1924: 0, 1928: 12, 1930: 9, 1932: 7
+[? if lvp_r != 0: LVP: [+ lvp_r +] ?]
+
+# 1919: 15, 1920: 13, 1924: 7, 1928: 0, 1930: 0, 1932: 0
+[? if ddp_r != 0: DDP: [+ ddp_r +] ?]
+
+# 1919: 19.5, 1920: 18.5, 1924: 18, 1928: 16, 1930: 14, 1932: 10
+[? if uspd_r != 0: USPD: [+ uspd_r +] ?]
+
+# 1919: 30, 1920: 25.5, 1924: 24.5, 1928: 25.5, 1930: 31, 1932: 39
+[? if spd_r != 0: SPD: [+ spd_r +] ?]
+
+**Potential coalitions:**
+
+Note: The "Others" category often ends up with fewer seats than their share of the vote would suggest. This is because it includes a multitude of tiny parties that do not gain enough votes to be awarded a seat. As a result larger parties have slightly larger than proportional share of seats. This can impact coalition formation and is not taken into account in the below tallies:
+
+Note: 0,6% from "Others" accounts for the average vote share of the far-left SAPD, whose only potential coalition participation is tolerating the Left Front. The rest minor parties position themselves between the DNVP and the moderate bourgeois parties.
+
+[? if nsfb_r + nsdap_r != 0:Far-Right Coalition (DNVP [? if dnf_r != 0:+ DNF?] [? if nsfb_r != 0:+ NSFB?][? if nsdap_r != 0: + NSDAP?]): [+ far_right_coalition +] ?]
+
+[? if nsfb_r + nsdap_r != 0:National Front (DNVP [? if dnf_r != 0:+ DNF?] [? if nsfb_r != 0: + NSFB?][? if nsdap_r != 0:  + NSDAP?] + Others [? if wp_r != 0:  + WP?]): [+ national_coalition +] ?]
+
+Right Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] + BVP): [+ hard_right_coalition +]
+
+Conservative Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] + BVP + Z): [+ conservative_coalition +]
+
+National-Liberal Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if dvp_r != 0: + DVP?] + BVP [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ national_liberal_coalition +]
+
+Center-right Coalition (DNVP + Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ center_right_coalition +]
+
+Bourgeois Coalition (Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?]): [+ bourgeois_coalition +]
+
+Constitutional Coalition (Others [? if wp_r != 0: + WP?] [? if kvp_r != 0: + KVP?] [? if dvp_r != 0: + DVP?] + BVP + Z [? if lvp_r != 0: + LVP?][? if ddp_r != 0: + DDP?] + USPD): [+ constitutional_coalition +]
+
+Grand Coalition ([? if dvp_r != 0:DVP + ?]BVP + Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ grand_coalition +]
+
+Weimar Coalition (Z [? if lvp_r != 0: + LVP?] [? if ddp_r != 0: + DDP?] + USPD): [+ weimar_coalition +]
+
+Popular Front (Z [? if ddp_r != 0: + DDP ?]+ USPD + SPD): [+ popular_front_coalition +]
+
+Left Front (USPD + SPD + SAPD): [+ left_coalition +]
+
+on-display: {!
+
+
 !}
 
 = Reichstag composition
