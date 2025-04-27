@@ -741,7 +741,7 @@ Q.national_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r
 Q.far_right_coalition = Math.round((Q.dnvp_r + Q.dnf_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
 Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r + 0.6)*10)/10;
 Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.ddp_r + Q.z_r - 3)*10)/10;
-Q.z_minus_bvp_r = Math.round((Q.z_r - Q.bvp_r)*10)/10;
+Q.z_minus_bvp_r = Math.round((Q.z_r - 3)*10)/10;
 
 
 if (Q.sapd_formed && Q.sapd_r > 0) {
@@ -963,7 +963,7 @@ Left Front (USPD + SPD + SAPD): [+ left_coalition +]
 
 [? if dvp_r !=0:{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}?]
 
-{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div></td><td>!} BVP: {!</td><td>!} [+ bvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div></td><td>!} BVP: {!</td><td>!} [+ 3 +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
 
