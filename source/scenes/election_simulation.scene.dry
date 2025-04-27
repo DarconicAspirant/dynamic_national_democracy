@@ -743,6 +743,7 @@ Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r + 0.6)*10)/10;
 Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.ddp_r + Q.z_r - 3)*10)/10;
 Q.z_minus_bvp_r = Math.round((Q.z_r - Q.bvp_r)*10)/10;
 
+
 if (Q.sapd_formed && Q.sapd_r > 0) {
     data.push({
         "id": "sapd",
