@@ -199,7 +199,7 @@ if (Q.sa_strength) {
 
 = Paramilitaries
 
-<span class="tooltip-text" title="The Volksbanner Schwarz-Rot-Gold is a popular organization for defending the gains of the September Revolution and republicanism. It accepts everyone from the republican center up to radical socialists." style="color: #c00000;">**Volksbanner**</span> Strength: [+ vb_strength_2 +] thousand
+<span class="tooltip-text" title="The Volksbanner Schwarz-Rot-Gold is a militant popular organization dedicated to the defense of the gains of the September Revolution and republicanism. It accepts everyone from the republican center up to radical socialists." style="color: #c00000;">**Volksbanner**</span> Strength: [+ vb_strength_2 +] thousand
 
 <span style="color: #c00000;">**Volksbanner**</span> Militarization: [+ vb_militancy : militancy +]
 
