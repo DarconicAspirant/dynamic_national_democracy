@@ -877,8 +877,8 @@ Dracvar_paramil_dwindle_show = 0
 left_push_spd = 0
 
 // USPD dynamics
-// 0 = rejected, 1 = opened, 2 = embraced
-uspd_peoples_party = 1
+// 0 = opened, 1 = rejected, 2 = embraced
+uspd_peoples_party = 0
 // These will be opposite after the event, both 0 before the event
 wtb_adopted = 0
 wtb_rejected = 0
