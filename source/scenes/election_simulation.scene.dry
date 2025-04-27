@@ -943,11 +943,6 @@ Popular Front (Z [? if ddp_r != 0: + DDP ?]+ USPD + SPD): [+ popular_front_coali
 
 Left Front (USPD + SPD + SAPD): [+ left_coalition +]
 
-on-display: {!
-
-
-!}
-
 = Reichstag composition
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
@@ -955,21 +950,27 @@ on-display: {!
 {!<table>!}
 {!<tr><td><div class="box" style='background-color:#3E88B3; outline: 2px; outline-style: solid;'> </div></td><td>!} **DNVP:** {!</td><td>!} **[+ dnvp_r +]%** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#7A3C00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}
+[? if nsdap_r != 0:{!<tr><td><div class="box" style='background-color:#7A3C00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}?]
 
-[? if dnf_formed : {!<tr><td><div class="box" style='background-color:#003755'> </div></td><td>!} DNF: {!</td><td>!} [+ dnf_r +]% {!</td></tr>!} ?]
+[? if nsfb_r != 0:{!<tr><td><div class="box" style='background-color:#7A3C00'> </div></td><td>!} NSFB: {!</td><td>!} [+ nsfb_r +]% {!</td></tr>!}?]
 
-[? if kvp_formed : {!<tr><td><div class="box" style='background-color:#0087DC'> </div></td><td>!} KVP: {!</td><td>!} [+ kvp_r +]% {!</td></tr>!} ?]
+[? if dnf_r !=0: {!<tr><td><div class="box" style='background-color:#003755'> </div></td><td>!} DNF: {!</td><td>!} [+ dnf_r +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#CCAA7A'> </div></td><td>!} WP: {!</td><td>!} [+ wp_r +]% {!</td></tr>!}
+[? if kvp_r !=0: {!<tr><td><div class="box" style='background-color:#0087DC'> </div></td><td>!} KVP: {!</td><td>!} [+ kvp_r +]% {!</td></tr>!} ?]
+
+[? if wp_r !=0:{!<tr><td><div class="box" style='background-color:#CCAA7A'> </div></td><td>!} WP: {!</td><td>!} [+ wp_r +]% {!</td></tr>!}?]
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +]% {!</td></tr>!}
 
+[? if dvp_r !=0:{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}?]
+
 {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div></td><td>!} BVP: {!</td><td>!} [+ bvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} LVP: {!</td><td>!} [+ lvp_r +]% {!</td></tr>!}
+[? if lvp_r !=0:{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} LVP: {!</td><td>!} [+ lvp_r +]% {!</td></tr>!}?]
+
+[? if ddp_r !=0:{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} DDP: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}?]
 
 {!<tr><td><div class="box" style='background-color:#E3000F'> </div></td><td>!} USPD: {!</td><td>!} [+ uspd_r +]% {!</td></tr>!}
 
