@@ -741,9 +741,7 @@ Q.national_coalition = Math.round((Q.dvp_r + Q.other_r - 0.6 + Q.wp_r + Q.dnvp_r
 Q.far_right_coalition = Math.round((Q.dnvp_r + Q.dnf_r + Q.nsdap_r + Q.nsfb_r)*10)/10;
 Q.left_coalition = Math.round((Q.uspd_r + Q.spd_r + 0.6)*10)/10;
 Q.popular_front_coalition = Math.round((Q.uspd_r + Q.spd_r + Q.ddp_r + Q.z_r - 3)*10)/10;
-
-Q.z_minus_bvp_votes = parseFloat((Q.z_votes - Q.bvp_votes).toFixed(1));
-Q.z_minus_bvp_r = parseFloat((Q.z_r - Q.bvp_r).toFixed(1));
+Q.z_minus_bvp_r = (Q.z_r - Q.bvp_r);
 
 if (Q.sapd_formed && Q.sapd_r > 0) {
     data.push({
