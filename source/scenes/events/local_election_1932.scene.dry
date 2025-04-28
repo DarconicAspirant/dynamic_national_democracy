@@ -197,7 +197,7 @@ if (Q.z_local_elections_vote + Q.ddp_local_elections_vote + Q.wp_local_elections
 {!<tr><td>Party</td><td>Vote share</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_local_elections_vote +]%** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_local_elections_vote +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#580000'> </div> !}SAPD: {!</td><td>!} [+ sapd_local_elections_vote +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ kpd_local_elections_vote +]% {!</td></tr>!}
 
@@ -520,7 +520,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -531,7 +531,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -549,7 +549,7 @@ go-to: bavaria_coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_bavaria_elections_vote +]%** {!</td><td>!} [+ uspd_r_bavaria +]% {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_bavaria_elections_vote +]% {!</td><td>!} [+ sapd_r_bavaria +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#580000'> </div> !}SAPD: {!</td><td>!} [+ sapd_bavaria_elections_vote +]% {!</td><td>!} [+ sapd_r_bavaria +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ kpd_bavaria_elections_vote +]% {!</td><td>!} [+ spd_r_bavaria +]%  {!</td></tr>!}
 
@@ -576,7 +576,7 @@ go-to: bavaria_coalition_menu
 <hr id="read-marker">
 The <span style="color: #38C538;">Bavarian Peasants’ League</span> serves as the nucleus of the federal <span style="color: #007A00;">German Peasants' Party</span> and is surprisingly liberal and <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> compared to other agricultural parties and organizations, such as the <span style="color: #7FCEB1;">**CNBLP**</span>. Recently, they even exited the <span style="color: #A2D8E0;">**BVP**</span>'s cabinet over a dispute about taxes. [? if cvp_formed: <br><br> With the formation of the <span style="color: #000000;">**[+ z_party_name +]**</span>, the <span style="color: #3E88B3;">**DNVP**</span>'s Bavarian branch has largely merged into the <span style="color: #A2D8E0;">**BVP**</span>, although some elements have instead chosen to align with the <span style="color: #003755;">**DNF**</span>. ?]
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_bavaria +]% 
+United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #580000;">**SAPD**</span>?]): [+ left_coalition_bavaria +]% 
 
 Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #38C538;">Bavarian Peasants’ League</span>): [+ spd_coalition_bavaria +]% 
 
@@ -963,7 +963,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -974,7 +974,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-           {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+           {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -993,7 +993,7 @@ go-to: wurttemberg_coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_wurttemberg_elections_vote +]%** {!</td><td>!} [+ uspd_r_wurttemberg +]% {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_wurttemberg_elections_vote +]% {!</td><td>!} [+ sapd_r_wurttemberg +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#580000'> </div> !}SAPD: {!</td><td>!} [+ sapd_wurttemberg_elections_vote +]% {!</td><td>!} [+ sapd_r_wurttemberg +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ kpd_wurttemberg_elections_vote +]% {!</td><td>!} [+ spd_r_wurttemberg +]%  {!</td></tr>!}
 
@@ -1020,7 +1020,7 @@ go-to: wurttemberg_coalition_menu
 <hr id="read-marker">
 The <span style="color: #006400;">Württemberg Farmers' and Winegrowers' Association</span> (<span style="color: #006400;">**WBWB**</span>) is a regional branch of the National Rural League (RLB), and closely cooperates with the regional party of the <span style="color: #3E88B3;">**DNVP**</span>, the <span style="color: #3E88B3;">Württemberg Citizens' Party</span>.[? if cvp_formed: However, the formation of the <span style="color: #000000;">**[+ z_party_name +]**</span> has prompted a merger between the <span style="color: #3E88B3;">Citizens' Party</span> and the <span style="color: #000000;">Center Party</span>. ?]
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_wurttemberg +]% 
+United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #580000;">**SAPD**</span>?]): [+ left_coalition_wurttemberg +]% 
 
 [? if not cvp_formed: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #000000;">**[+ z_party_name +]**</span>): [+ spd_coalition_wurttemberg +]% ?][? if cvp_formed: <span style="color: #c00000;">Social</span>-[? if not lvp_formed: <span style="color: #D3C24D;">Liberal</span>?][? if lvp_formed: <span style="color: #FFCC00;">Liberal</span>?] Coalition (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]): [+ spd_coalition_wurttemberg +]% ?]
 

@@ -59,7 +59,7 @@ go-to: candidate_selection
 
 [? if spd_campaign: - <span style="color: #c00000;">**SPD**</span> ?]
 
-[? if kpd_support_spd == 1 and sapd_formed: - <span style="color: #9B0000;">**SAPD**</span> ?]
+[? if kpd_support_spd == 1 and sapd_formed: - <span style="color: #580000;">**SAPD**</span> ?]
 
 [? if kpd_support_spd == 1: - <span style="color: #830000;">**KPD**</span> ?]
 

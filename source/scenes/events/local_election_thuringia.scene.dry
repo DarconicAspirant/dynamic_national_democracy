@@ -370,7 +370,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -381,7 +381,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -399,7 +399,7 @@ go-to: thuringia_coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_thuringia_elections_vote +]%** {!</td><td>!} [+ uspd_r_thuringia +]% {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_thuringia_elections_vote +]% {!</td><td>!} [+ sapd_r_thuringia +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#580000'> </div> !}SAPD: {!</td><td>!} [+ sapd_thuringia_elections_vote +]% {!</td><td>!} [+ sapd_r_thuringia +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ kpd_thuringia_elections_vote +]% {!</td><td>!} [+ spd_r_thuringia +]%  {!</td></tr>!}
 
@@ -430,7 +430,7 @@ go-to: thuringia_coalition_menu
 <hr id="read-marker">
 Thuringia is currently governed by a broad center-right coalition, which holds exactly half of the Landtag's seats. This coalition includes all parties to the right of us, along with the special interest parties, the <span style="color: #b8996f;">**WP**</span> and <span style="color: #7FCEB1;">**CNBLP**</span>, both of which have a significant presence in state politics.
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_thuringia +]% 
+United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #580000;">**SAPD**</span>?]): [+ left_coalition_thuringia +]% 
 
 <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_thuringia:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_thuringia +]% 
 

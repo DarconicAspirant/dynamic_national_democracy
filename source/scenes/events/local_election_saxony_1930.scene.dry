@@ -521,7 +521,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -532,7 +532,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -550,7 +550,7 @@ go-to: saxony_coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_saxony_elections_vote +]%** {!</td><td>!} [+ uspd_r_saxony +]% {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_saxony_elections_vote +]% {!</td><td>!} [+ sapd_r_saxony +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#580000'> </div> !}SAPD: {!</td><td>!} [+ sapd_saxony_elections_vote +]% {!</td><td>!} [+ sapd_r_saxony +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}ASPD: {!</td><td>!} [+ aspd_saxony_elections_vote +]% {!</td><td>!} [+ aspd_r_saxony +]% {!</td></tr>!}
 
@@ -589,7 +589,7 @@ go-to: saxony_coalition_menu
 <hr id="read-marker">
 The Bünger Cabinet has collapsed a few months ago due to a dispute involving the Saxon Reichrat delegation voting for the Young Plan, which has resulted in the loss of confidence from the <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #11DD11;">**SLV**</span>, and <span style="color: #7A3C00;">**NSDAP**</span>. However, they do elect the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]'s Walther Schieck as Minister-President in a caretaker cabinet of experts, before the <span style="color: #7A3C00;">**NSDAP**</span> ultimately voted for dissolving parliament. The political climate has greatly changed from last year, and the extremist parties are expected to gain. 
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_saxony +]% 
+United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #580000;">**SAPD**</span>?]): [+ left_coalition_saxony +]% 
 
 Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_saxony:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_saxony +]% 
 
