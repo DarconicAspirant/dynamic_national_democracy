@@ -16,7 +16,7 @@ The <span style="color: #c00000;">**SPD**</span> cannot govern by itself yet. Be
 - @liberals_lvp: Strengthen our bonds with the <span style="color: #FFCC00;">Liberal People's Party</span>.
 - @center: Strengthen our bonds with the Catholic [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
 - @cvp: Reconcile with the <span style="color: #000000;">Christian People's Party</span>.
-- @kpd: Work towards repairing relationships with the <span style="color: #700000;">Communist Party</span>.
+- @kpd: Work towards repairing relationships with the <span style="color: #830000;">Communist Party</span>.
 - @spd_alone: The <span style="color: #c00000;">SPD</span> can stand alone for now.
 - @easy_discard
 
@@ -31,13 +31,13 @@ go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_succes
 @kpd_1
 on-arrival: nsdap_relation += 6*(1 - dissent); bernburg_coalition += 1 if kpd_inter_party_seen <= 1; popcon_dissent += 2; z_relation -= 2 if z_ideology == "Right"; wp_relation -= 3; lvp_relation -= 2; lvp_old_relation -= 3
 
-The <span style="color: #700000;">communists</span> are suspicious of our overtures, especially the <span style="color: #8B0000;">Stalinist</span> leadership, who persist in calling us "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascists</span>". However, connections are made at the grassroots and local levels.
+The <span style="color: #830000;">communists</span> are suspicious of our overtures, especially the <span style="color: #8B0000;">Stalinist</span> leadership, who persist in calling us "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascists</span>". However, connections are made at the grassroots and local levels.
 
 @spd_rectification_of_history
 
-One stumbling block for our relations with the <span style="color: #700000;">**KPD**</span> is our history of conflict, dating back to 1918 and 1919. The <span style="color: #700000;">**KPD**</span> is especially contemptuous of Gustav Noske, the <span style="color: #c00000;">**SPD**</span> "bloodhound" who reportedly ordered the violent suppression of the <span style="color: #700000;">Spartacist</span> uprising and other <span style="color: #700000;">**KPD**</span> revolts. They also blame us for the deaths of Rosa Luxemburg and Karl Liebknecht, two <span style="color: #c00000;">**SPD**</span>-turned-<span style="color: #700000;">**KPD**</span> leaders who were killed during the suppression of the uprising.
+One stumbling block for our relations with the <span style="color: #830000;">**KPD**</span> is our history of conflict, dating back to 1918 and 1919. The <span style="color: #830000;">**KPD**</span> is especially contemptuous of Gustav Noske, the <span style="color: #c00000;">**SPD**</span> "bloodhound" who reportedly ordered the violent suppression of the <span style="color: #830000;">Spartacist</span> uprising and other <span style="color: #830000;">**KPD**</span> revolts. They also blame us for the deaths of Rosa Luxemburg and Karl Liebknecht, two <span style="color: #c00000;">**SPD**</span>-turned-<span style="color: #830000;">**KPD**</span> leaders who were killed during the suppression of the uprising.
 
-For further improvements in <span style="color: #700000;">**KPD**</span> relations, it might be necessary to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
+For further improvements in <span style="color: #830000;">**KPD**</span> relations, it might be necessary to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
 
 - @yes_history: Yes, we must apologize for our past actions.
 - @no_history: No, we have no need to apologize.
@@ -45,25 +45,25 @@ For further improvements in <span style="color: #700000;">**KPD**</span> relatio
 @yes_history
 on-arrival: popcon_dissent += 12; popcon_strength -= 2; paramilitarist_dissent += 5; right_dissent -= 6; right_strength += 5; spd_rectified_history = 1; z_relation -= 3; z_relation -= 3 if z_ideology == "Right"; wp_relation -= 6; lvp_old_relation -= 6; lvp_relation -= 4; nsdap_relation += 8*(1-dissent); coalition_dissent += 1; wp_right += 2; lvp_right += 2; lvp_right += 2
 
-As part of normalizing relations with the <span style="color: #700000;">**KPD**</span>, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
+As part of normalizing relations with the <span style="color: #830000;">**KPD**</span>, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
 
 This leads to tensions with the moderates and reformists within our party, and criticism from the <span style="color: #000000;">conservative</span> and <span style="color: #C0A054;">liberal</span> parties.
 
 @no_history
 on-arrival: nsdap_relation -= 3
 
-We have no need to apologize for the actions of Ebert and Noske; it is the <span style="color: #700000;">communists</span>' fault for launching a violent insurrection.
+We have no need to apologize for the actions of Ebert and Noske; it is the <span style="color: #830000;">communists</span>' fault for launching a violent insurrection.
 
 
 @kpd_2
 on-arrival: nsdap_relation += 8*(1 - dissent); bernburg_coalition += 1 if kpd_inter_party_seen <= 1; popcon_dissent += 2; z_relation -= 3; wp_relation -= 3; lvp_old_relation -= 3; lvp_relation -= 3
 
-After the success of the coalition government with the <span style="color: #700000;">**KPD**</span>, they are much more amenable to us.
+After the success of the coalition government with the <span style="color: #830000;">**KPD**</span>, they are much more amenable to us.
 
 @kpd_blutmai
 on-arrival: nsdap_relation += 3*(1 - dissent); popcon_dissent += 1
 
-After the events of Blütmai, reconciling with the <span style="color: #700000;">Communists</span> is difficult, if not impossible. Nevertheless, we must try.
+After the events of Blütmai, reconciling with the <span style="color: #830000;">Communists</span> is difficult, if not impossible. Nevertheless, we must try.
 
 @center
 subtitle: -1 resources

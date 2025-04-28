@@ -408,7 +408,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#700000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -419,7 +419,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#700000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -441,7 +441,7 @@ go-to: saxony_coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}ASPD: {!</td><td>!} [+ aspd_saxony_elections_vote +]% {!</td><td>!} [+ aspd_r_saxony +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ kpd_saxony_elections_vote +]% {!</td><td>!} [+ spd_r_saxony +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ kpd_saxony_elections_vote +]% {!</td><td>!} [+ spd_r_saxony +]%  {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C43988'> </div> !}KPO: {!</td><td>!} [+ kpo_saxony_elections_vote +]% {!</td><td>!} 0%  {!</td></tr>!}
 
@@ -470,11 +470,11 @@ go-to: saxony_coalition_menu
 <hr id="read-marker">
 Saxony is currently governed by the <span style="color: #fe9e00;">Old Social Democratic Party</span> (<span style="color: #fe9e00;">**ASPD**</span>) under Max Heldt (formerly of the <span style="color: #c00000;">**SPD**</span>), leading a majority coalition that includes all parties positioned between the <span style="color: #c00000;">**SPD**</span> and the <span style="color: #7A3C00;">**NSDAP**</span>, including the <span style="color: #3E88B3;">**DNVP**</span> and various <span style="color: #b8996f;">special</span> <span style="color: #11DD11;">interest</span> parties.
 
-The Saxon Dispute arose when the Saxon branch of the <span style="color: #c00000;">**SPD**</span> clashed with the party’s parliamentary delegation, demanding that Heldt dissolve the Grand Coalition and negotiate with the <span style="color: #700000;">**KPD**</span>—even after the Reichsexekution. This conflict led to the party’s reformists breaking away and forming the <span style="color: #fe9e00;">**ASPD**</span>, which has since evolved into a left-wing nationalist offshoot of the <span style="color: #c00000;">**SPD**</span>. Despite initially securing a majority of the Landtag delegation following the dispute, the <span style="color: #fe9e00;">**ASPD**</span> has struggled to achieve electoral success and now appears destined for irrelevance.
+The Saxon Dispute arose when the Saxon branch of the <span style="color: #c00000;">**SPD**</span> clashed with the party’s parliamentary delegation, demanding that Heldt dissolve the Grand Coalition and negotiate with the <span style="color: #830000;">**KPD**</span>—even after the Reichsexekution. This conflict led to the party’s reformists breaking away and forming the <span style="color: #fe9e00;">**ASPD**</span>, which has since evolved into a left-wing nationalist offshoot of the <span style="color: #c00000;">**SPD**</span>. Despite initially securing a majority of the Landtag delegation following the dispute, the <span style="color: #fe9e00;">**ASPD**</span> has struggled to achieve electoral success and now appears destined for irrelevance.
 
-Notable members of the <span style="color: #fe9e00;">**ASPD**</span> include Max Heldt, August Winnig (a supporter of the Kapp Putsch), Ernst Niekisch (a "<span style="color: #7A3C00;">national</span> <span style="color: #700000;">bolshevik</span>"), and its party leader, former Minister-President Wilhelm Buck. The party was labeled "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascist</span>" by the <span style="color: #700000;">**Communists**</span>, marking the <span class="tooltip-text" title="that's me! the modman!">origin</span> of the term.
+Notable members of the <span style="color: #fe9e00;">**ASPD**</span> include Max Heldt, August Winnig (a supporter of the Kapp Putsch), Ernst Niekisch (a "<span style="color: #7A3C00;">national</span> <span style="color: #830000;">bolshevik</span>"), and its party leader, former Minister-President Wilhelm Buck. The party was labeled "<span style="color: #c00000;">social</span> <span style="color: #7A3C00;">fascist</span>" by the <span style="color: #830000;">**Communists**</span>, marking the <span class="tooltip-text" title="that's me! the modman!">origin</span> of the term.
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_saxony +]% 
+United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_saxony +]% 
 
 Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #fe9e00;">**ASPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_saxony:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_saxony +]% 
 
@@ -525,9 +525,9 @@ if ((Q.wp_relation < (wp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp_o
 !}
 
 <hr id="read-marker">
-The bourgeois parties have historically been hostile to us in state politics, particularly after the notorious <span style="color: #c00000;">**SPD**</span>-<span style="color: #700000;">**KPD**</span> United Left government faced a *Reichsexekution* six years ago. The split of our reformist wing into the <span style="color: #fe9e00;">**ASPD**</span> further pushed our state organization toward the left.
+The bourgeois parties have historically been hostile to us in state politics, particularly after the notorious <span style="color: #c00000;">**SPD**</span>-<span style="color: #830000;">**KPD**</span> United Left government faced a *Reichsexekution* six years ago. The split of our reformist wing into the <span style="color: #fe9e00;">**ASPD**</span> further pushed our state organization toward the left.
 
-With the <span style="color: #fe9e00;">**ASPD**</span>’s disastrous result of [+ aspd_saxony_elections_vote +]%, their viability as a political force in the state is coming to an end, with bourgeois parties are seeking a replacement for Max Heldt. Despite our cooperation on the local level, the national <span style="color: #700000;">**KPD**</span> is unlikely to ever accept a coalition.
+With the <span style="color: #fe9e00;">**ASPD**</span>’s disastrous result of [+ aspd_saxony_elections_vote +]%, their viability as a political force in the state is coming to an end, with bourgeois parties are seeking a replacement for Max Heldt. Despite our cooperation on the local level, the national <span style="color: #830000;">**KPD**</span> is unlikely to ever accept a coalition.
 
 - @true_bourgeois_coalition_saxony
 - @bourgeois_coalition_saxony
@@ -544,7 +544,7 @@ on-arrival: saxony_toleration = 1; old_middle_nsdap -= 1; rural_nsdap -= 1; work
 
 We have entered a toleration agreement with the bourgeois cabinet, and have made it unnecessary for them to cooperate with the <span style="color: #7A3C00;">**NSDAP**</span>. As part of our agreement, the bourgeois parties have allowed Max Heldt to retain his Minister-President position, and for the <span style="color: #fe9e00;">**ASPD**</span> to occupy the Work and Welfare	ministry. 
 
-Despite the unsavory qualities of the <span style="color: #fe9e00;">**ASPD**</span>, they're still Marxist at the end of the day. The leftist Saxon organization has protested at our intervention, and many have jumped ship to the <span style="color: #700000;">**KPD**</span>.
+Despite the unsavory qualities of the <span style="color: #fe9e00;">**ASPD**</span>, they're still Marxist at the end of the day. The leftist Saxon organization has protested at our intervention, and many have jumped ship to the <span style="color: #830000;">**KPD**</span>.
 
 @true_bourgeois_coalition_saxony
 title: The incumbent Heldt III cabinet will continue.
@@ -577,7 +577,7 @@ Somehow, the bourgeois parties are willing to form a [? if lvp_formed and steger
 With the <span style="color: #fe9e00;">**ASPD**</span> (whose Saxon chapter is notably more sane) now convinced of our reformist path, they have rejoined the Saxon <span style="color: #c00000;">**SPD**</span>!
 
 @united_left_saxony
-title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #700000;">**KPD**</span>.
+title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #830000;">**KPD**</span>.
 subtitle: History will repeat itself.
 view-if: left_coalition_saxony >= 50 and (nsdap_relation >= 35 and spd_leader == "Conciliators") or (nsdap_relation >= 55 and spd_leader != "Conciliators")
 on-arrival: red_saxony = 1; z_relation -= 7; lvp_relation -= 7; wp_relation -= 7; lvp_old_relation -= 7; uprising_progress += 5; braun_angry += 60; rfb_militancy += 0.08; rfb_strength += 150; sa_strength += 80; sh_strength += 80; strife += 1; workers_uspd += 5; workers_spd += 5; unemployed_uspd += 5; new_middle_uspd -= 5; old_middle_uspd -= 5; rural_uspd -= 5; bernburg_coalition += 3; nsdap_relation += 15

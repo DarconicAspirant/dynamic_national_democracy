@@ -18,7 +18,7 @@ As we have control over the Interior Ministry, we can direct police and intellig
 - @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>.
 - @unban_sh: Unban the <span style="color: #3E88B3;">**Stahlhelm**</span>.
 - @persecute_sh
-- @ban_rfb: Ban the <span style="color: #700000;">Communist</span> <span style="color: #8B0000;">**RFB**</span>.
+- @ban_rfb: Ban the <span style="color: #830000;">Communist</span> <span style="color: #8B0000;">**RFB**</span>.
 - @unban_rfb: Unban the <span style="color: #8B0000;">**RFB**</span>.
 - @persecute_rfb
 - @root: Take no action for now.
@@ -75,13 +75,13 @@ We have arrested more of the <span style="color: #3E88B3;">**Stahlhelm**</span>'
 view-if: bernburg_coalition < 3 and rfb_banned = 0 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: nsdap_relation -= 15; rfb_strength -= 50; rfb_banned = 1; bernburg_coalition -= 1; z_relation += 5; wp_relation += 5; lvp_old_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; nazi_coalition_dissent += 2; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_banned = 0; n_rfb_banned += 1; braun_angry -= 8
 
-The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The <span style="color: #700000;">Communists</span> take this as one more reason why the <span style="color: #c00000;">Socialists</span> are traitors to the left. However, the <span style="color: #000000;">moderate</span> and <span style="color: #C0A054;">center-right</span> parties approve, as do the police.
+The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The <span style="color: #830000;">Communists</span> take this as one more reason why the <span style="color: #c00000;">Socialists</span> are traitors to the left. However, the <span style="color: #000000;">moderate</span> and <span style="color: #C0A054;">center-right</span> parties approve, as do the police.
 
 @unban_rfb
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; nsdap_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; braun_angry += 8; rfb_goal_prussia -= 1
 
-The <span style="color: #700000;">Communist</span> <span style="color: #8B0000;">**RFB**</span> is no longer banned.
+The <span style="color: #830000;">Communist</span> <span style="color: #8B0000;">**RFB**</span> is no longer banned.
 
 @persecute_rfb
 title: Further persecute the <span style="color: #8B0000;">**RFB**</span>.

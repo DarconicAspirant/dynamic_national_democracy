@@ -19,7 +19,7 @@ We can enact policies in Prussia. The inclusion of the <span style="color: #C0A0
 - @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the <span style="color: #7A3C00;">Nazi</span> paramilitary group.
 - @prosecute_sa: Target the <span style="color: #7A3C00;">**SA**</span>, and minimize their disruptions.
 - @unban_sa: Reverse the <span style="color: #7A3C00;">**SA**</span> ban.
-- @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the <span style="color: #700000;">Communist</span> paramilitary.
+- @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the <span style="color: #830000;">Communist</span> paramilitary.
 - @unban_rfb: Reverse the <span style="color: #8B0000;">**RFB**</span> ban.
 - @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>, the Nationalist paramilitary.
 - @unban_sh: Reverse the <span style="color: #3E88B3;">**Stahlhelm**</span> ban.
@@ -89,13 +89,13 @@ The <span style="color: #3E88B3;">**Stahlhelm**</span> is no longer banned.
 view-if: bernburg_coalition < 3 and rfb_banned = 0
 on-arrival: nsdap_relation -= 15; rfb_strength -= 50; rfb_banned = 1; bernburg_coalition -= 1; z_relation += 5; wp_relation += 5; prussian_police_loyalty += 0.1; wp_left += 1; ddp_left += 0.5; braun_angry -= 8
 
-The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The <span style="color: #700000;">Communists</span> take this as one more reason why the <span style="color: #c00000;">Socialists</span> are traitors to the <span style="color: #9B0000;">left</span>. However, the <span style="color: #000000;">moderate</span> and <span style="color: #C0A054;">center-right</span> parties approve, as do the police.
+The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The <span style="color: #830000;">Communists</span> take this as one more reason why the <span style="color: #c00000;">Socialists</span> are traitors to the <span style="color: #9B0000;">left</span>. However, the <span style="color: #000000;">moderate</span> and <span style="color: #C0A054;">center-right</span> parties approve, as do the police.
 
 @unban_rfb
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1; braun_angry += 8
 
-The <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> is no longer banned.
+The <span style="color: #830000;">Communist</span> <span style="color: #830000;">**RFB**</span> is no longer banned.
 
 @negotiate_concordat
 subtitle: The <span style="color: #C0A054;">**DVP**</span> won't like this.

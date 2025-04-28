@@ -80,6 +80,6 @@ Unfortunately, all of this effort is for naught, with only [+ bruning_coalition 
 on-arrival: time_to_election = 3; dnvp_toleration = 0; dnvp_toleration_uspd = 0; bruning_cabinet_collapsed = 1
 call: set_next_election_time
 
-We are once again compelled to vote in favor of the [+ chancellor +] government to prevent the extremist parties on the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #700000;">left</span> from translating their growing popular support into parliamentary gains.
+We are once again compelled to vote in favor of the [+ chancellor +] government to prevent the extremist parties on the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #830000;">left</span> from translating their growing popular support into parliamentary gains.
 
 Unfortunately, all efforts to save the government have been in vain. Only [+ bruning_coalition +]% of the Reichstag voted to support Brüning’s government. As a result, new elections have been scheduled for [+ next_election_month : month +] [+ next_election_year +].

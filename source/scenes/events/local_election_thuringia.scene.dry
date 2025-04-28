@@ -370,7 +370,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#700000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -381,7 +381,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#700000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -401,7 +401,7 @@ go-to: thuringia_coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_thuringia_elections_vote +]% {!</td><td>!} [+ sapd_r_thuringia +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ kpd_thuringia_elections_vote +]% {!</td><td>!} [+ spd_r_thuringia +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ kpd_thuringia_elections_vote +]% {!</td><td>!} [+ spd_r_thuringia +]%  {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C43988'> </div> !}KPO: {!</td><td>!} [+ kpo_thuringia_elections_vote +]% {!</td><td>!} 0%  {!</td></tr>!}
 
@@ -430,7 +430,7 @@ go-to: thuringia_coalition_menu
 <hr id="read-marker">
 Thuringia is currently governed by a broad center-right coalition, which holds exactly half of the Landtag's seats. This coalition includes all parties to the right of us, along with the special interest parties, the <span style="color: #b8996f;">**WP**</span> and <span style="color: #7FCEB1;">**CNBLP**</span>, both of which have a significant presence in state politics.
 <hr id="read-marker">
-United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_thuringia +]% 
+United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #C43988;">**KPO**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition_thuringia +]% 
 
 <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> (<span style="color: #c00000;">**SPD**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if z_r_thuringia:&nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed:&nbsp;+&nbsp;<span style="color: #C0A054;">**DVP**</span>?]): [+ spd_coalition_thuringia +]% 
 
@@ -469,7 +469,7 @@ if ((Q.wp_relation < (wp_toleration_threshold + 5) && !Q.lvp_formed) || (Q.lvp_o
 !}
 
 <hr id="read-marker">
-The bourgeois parties have historically been hostile to us in state politics, especially after the notorious <span style="color: #c00000;">**SPD**</span>-<span style="color: #D47B9B;">**USPD**</span>-<span style="color: #700000;">**KPD**</span> United Left government faced a *Reichsexekution* six years ago. They still haven't forgiven the <span style="color: #c00000;">**SPD**</span> for this. 
+The bourgeois parties have historically been hostile to us in state politics, especially after the notorious <span style="color: #c00000;">**SPD**</span>-<span style="color: #D47B9B;">**USPD**</span>-<span style="color: #830000;">**KPD**</span> United Left government faced a *Reichsexekution* six years ago. They still haven't forgiven the <span style="color: #c00000;">**SPD**</span> for this. 
 
 Meanwhile, the surging <span style="color: #7A3C00;">**NSDAP**</span>, now controlling [+ nsdap_r_thuringia +]% of the Landtag, is no longer content with mere toleration and demands a role in government. With the bourgeois parties determined to exclude us from power, Thuringia may well become the first state to appoint a <span style="color: #7A3C00;">Nazi</span> minister.
 
@@ -500,7 +500,7 @@ face-image: img/portraits/frick.jpg
 
 Wilhelm Frick, a convicted Beer Hall Putsch participant, becomes the first <span style="color: #7A3C00;">Nazi</span> to hold a ministerial-level post in Germany. He is given control of the Interior and Education Ministries, and by passing an "Enabling Act" through a simple majority as an emergency decree, granting him the power to radically transform Thuringia.
 
-Gone are the days of <span style="color: #c00000;">Red</span> Thuringia. Suspected <span style="color: #c00000;">socialists</span> and <span style="color: #D3C24D;">democrats</span> are purged en masse from the civil service. A state police force is established, with Frick preferentially employing <span style="color: #7A3C00;">Nazi</span> officials. All <span style="color: #700000;">communist</span> teachers and mayors are dismissed, and newspapers critical of government policy are banned. [? if prussia_leader == "Braun" and interior_minister_party == "SPD": Fortunately, Carl Severing is able to halt the recruitment of <span style="color: #7A3C00;">Nazis</span> into the police force by suspending state subsidies, effectively ending the practice. ?]
+Gone are the days of <span style="color: #c00000;">Red</span> Thuringia. Suspected <span style="color: #c00000;">socialists</span> and <span style="color: #D3C24D;">democrats</span> are purged en masse from the civil service. A state police force is established, with Frick preferentially employing <span style="color: #7A3C00;">Nazi</span> officials. All <span style="color: #830000;">communist</span> teachers and mayors are dismissed, and newspapers critical of government policy are banned. [? if prussia_leader == "Braun" and interior_minister_party == "SPD": Fortunately, Carl Severing is able to halt the recruitment of <span style="color: #7A3C00;">Nazis</span> into the police force by suspending state subsidies, effectively ending the practice. ?]
 
 With control of the Education Ministry, Frick appoints racial researchers and known <span style="color: #7A3C00;">Nazis</span> to top positions at many universities and bans the anti-war book *All Quiet on the Western Front* from being read or played. His attempts to grant Hitler German citizenship have so far failed, forcing Hitler to look elsewhere.
 
@@ -525,7 +525,7 @@ Somehow, the bourgeois parties are willing to form a [? if lvp_formed: <span sty
 We will use our positions in government to root out right-wing and <span style="color: #3E88B3;">nationalist</span> sympathies within the civil service and to strengthen <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> sentiment.
 
 @united_left_thuringia
-title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #700000;">**KPD**</span>.
+title: The <span style="color: #c00000;">**SPD**</span> will form a coalition government with the <span style="color: #830000;">**KPD**</span>.
 subtitle: History will repeat itself.
 view-if: left_coalition_thuringia >= 50 and (nsdap_relation >= 40 and spd_leader == "Conciliators") or (nsdap_relation >= 60 and spd_leader != "Conciliators")
 on-arrival: red_thuringia = 1; z_relation -= 5; lvp_relation -= 5; wp_relation -= 5; lvp_old_relation -= 5; uprising_progress += 3; braun_angry += 40; rfb_militancy += 0.05; rfb_strength += 100; sa_strength += 50; sh_strength += 50; strife += 1; workers_uspd += 3; workers_spd += 3; unemployed_uspd += 3; new_middle_uspd -= 3; old_middle_uspd -= 3; rural_uspd -= 3; bernburg_coalition += 3; nsdap_relation += 10

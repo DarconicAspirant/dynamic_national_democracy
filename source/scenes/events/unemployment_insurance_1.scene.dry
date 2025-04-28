@@ -18,7 +18,7 @@ In the midst of all this, our right-wing coalition partners in the <span style="
 [? if unemployment_insurance_crisis = 2 : This is the second such ultimatum thrown by the Right. Obviously, the bourgeoisie are trying to remove us from the government. ?]
 
 - @tax_rich: Why can't we simply tax the rich?
-- @gift: This is a gift to the <span style="color: #700000;">Communists</span>.
+- @gift: This is a gift to the <span style="color: #830000;">Communists</span>.
 
 @tax_rich
 max-visits: 1
@@ -29,7 +29,7 @@ The bourgeois parties, as representatives of the rich industrialists, would not 
 @gift
 go-to: what_do
 
-This is a gift to the <span style="color: #700000;">Communists</span>, a boost to their theory that parliamentary democracy will never benefit the working class.
+This is a gift to the <span style="color: #830000;">Communists</span>, a boost to their theory that parliamentary democracy will never benefit the working class.
 
 @what_do
 on-arrival: wp_relation += 3 if chancellor = "Braun"; lvp_old_relation += 3 if chancellor = "Braun"; wp_relation += 3 if in_grand_coalition_prussia
@@ -61,9 +61,9 @@ unavailable-subtitle: [? if popcon_strength + agrarian_strength < right_strength
 choose-if: popcon_strength + agrarian_strength >= right_strength + christsoc_strength
 on-arrival: workers_uspd -= 0.15*workers_uspd; unemployed_uspd -= 0.3*unemployed_uspd; workers_spd += 5; workers_nsdap += 6; unemployed_spd += 5; unemployed_nsdap += 5; right_dissent += 15; center_dissent += 10; christsoc_dissent += 15; popcon_dissent += 5; welfare -= 2; budget += 1; unemployed += 2; pro_republic -= 4; nsdap_relation -= 8; inflation -= 2; wp_left += 1; ddp_cohesion += 1; lvp_right += 1; goal_dnvp_cancel += 1; economic_growth -= 0.6
 
-Unfortunately, we must accept this ultimatum if we are to maintain this coalition. The <span style="color: #7A3C00;">Nazis</span> and <span style="color: #700000;">**Communists**</span> are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
+Unfortunately, we must accept this ultimatum if we are to maintain this coalition. The <span style="color: #7A3C00;">Nazis</span> and <span style="color: #830000;">**Communists**</span> are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
 
-The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the <span style="color: #700000;">**KPD**</span>'s gain, and even the <span style="color: #7A3C00;">**NSDAP**</span>, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the <span style="color: #830000;">**KPD**</span>'s gain, and even the <span style="color: #7A3C00;">**NSDAP**</span>, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 @prolong
 unavailable-subtitle: [? if popcon_strength + agrarian_strength < right_strength + christsoc_strength: The party wants action now. ?][? if unemployment_insurance_crisis > 1: We can't prolong this any longer. ?]
@@ -76,7 +76,7 @@ A compromise put forward by Heinrich Brüning is put into place and the issue is
 unavailable-subtitle: [? if wp_relation < 30 or lvp_relation < 30 or (z_relation < 30 or (z_relation < 25 and z_leader == "Joos") or (z_relation < 20 and z_leader == "Kaiser")): We do not have good enough relations with the right-wing parties. ?]
 choose-if: wp_relation >= 30 and lvp_relation >= 30 and (z_relation >= 30 or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser"))
 
-The <span style="color: #C0A054;">**DVP**</span> ministers in the cabinet have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Reformists and Centrists support maintaining our government to keep the <span style="color: #7A3C00;">fascists</span> and <span style="color: #700000;">communists</span> out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
+The <span style="color: #C0A054;">**DVP**</span> ministers in the cabinet have offered a compromise that raises some taxes on the wealthy, along with lesser welfare cuts. Our members have mixed opinions on accepting this compromise. Reformists and Centrists support maintaining our government to keep the <span style="color: #7A3C00;">fascists</span> and <span style="color: #830000;">communists</span> out, while Labor generally opposes any cuts, and the Left is opposed to compromises with the bourgeoisie.
 
 The <span style="color: #C0A054;">**DVP**</span> themselves are split about this, the Reichstag delegation may go against the compromise fashioned by their own ministers. [? if wp_ideology == "Left": However, the <span style="color: #C0A054;">**DVP**</span> has resisted the national shift towards the right for the most part. ?]If we do go ahead with this, the coalition hinges on the decision of the <span style="color: #C0A054;">**DVP**</span>.
 

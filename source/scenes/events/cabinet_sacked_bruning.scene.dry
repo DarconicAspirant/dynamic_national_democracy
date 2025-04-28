@@ -43,7 +43,7 @@ subtitle: We would essentially provide "toleration" to a bourgeois government.
 view-if: bruning_event_seen or year < 1930
 on-arrival: dnvp_toleration = 1; right_dissent += 10; pro_republic -= 3; workers_spd += 3; workers_nsdap += 3; workers_uspd -= 3; unemployed_spd += 5; unemployed_nsdap += 3; unemployed_uspd -= 5; wp_right += 2; lvp_right += 1; lvp_right += 2; liberal_cooperation += 1; welfare -= 2
 
-Brüning immediately begins to cut welfare using his emergency powers granted by President [+ president +]. We try to convince the workers that this policy is necessary in order to maintain a stable parliamentary government, and to deal with the fiscal consequences of the depression. Still, this policy provides excellent recruiting fodder for <span style="color: #7A3C00;">Nazis</span> and <span style="color: #700000;">**Communists**</span>.
+Brüning immediately begins to cut welfare using his emergency powers granted by President [+ president +]. We try to convince the workers that this policy is necessary in order to maintain a stable parliamentary government, and to deal with the fiscal consequences of the depression. Still, this policy provides excellent recruiting fodder for <span style="color: #7A3C00;">Nazis</span> and <span style="color: #830000;">**Communists**</span>.
 
 @dont_tolerate
 title: Support the vote of no confidence, voting against the government.

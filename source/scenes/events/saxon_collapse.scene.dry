@@ -55,7 +55,7 @@ We can either exit the opposition and prop up the cabinet to avoid new elections
 - @no_majority_saxony
 
 @united_left_saxony
-title: We will form a United Left coalition with the <span style="color: #700000;">**KPD**</span>.
+title: We will form a United Left coalition with the <span style="color: #830000;">**KPD**</span>.
 subtitle: History will repeat itself.
 view-if: left_coalition_saxony >= 50
 choose-if: (nsdap_relation >= 35 and spd_leader == "Conciliators") or (nsdap_relation >= 55 and spd_leader != "Conciliators")

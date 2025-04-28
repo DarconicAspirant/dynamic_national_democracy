@@ -56,4 +56,4 @@ title: Vote in favor of this measure to continue the toleration agreement.
 view-if: dnvp_toleration
 on-arrival: welfare -= 1; unemployed += 1; right_dissent += 10; christsoc_dissent += 10; workers_uspd *= 0.92; unemployed_uspd *= 0.92; unemployed_nsdap += 3; unemployed_spd += 3; workers_nsdap += 3; workers_spd += 2; workers_uspd -= 2 if welfare < 0; unemployed_uspd -= 4 if welfare < 0; pro_republic -= 3; nsdap_relation -= 8; budget += 1; inflation -= 2; economic_growth -= 0.5
 
-We try to convince the workers that this policy is necessary in order to maintain a stable parliamentary government, and to deal with the fiscal consequences of the depression. Still, this policy provides excellent recruiting fodder for <span style="color: #7A3C00;">Nazis</span> and <span style="color: #700000;">**Communists**</span>.
+We try to convince the workers that this policy is necessary in order to maintain a stable parliamentary government, and to deal with the fiscal consequences of the depression. Still, this policy provides excellent recruiting fodder for <span style="color: #7A3C00;">Nazis</span> and <span style="color: #830000;">**Communists**</span>.

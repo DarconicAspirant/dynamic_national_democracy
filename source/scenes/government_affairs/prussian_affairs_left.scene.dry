@@ -9,7 +9,7 @@ card-image: img/braun.jpg
 
 = Prussian Affairs
 
-Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the [? if in_popular_front_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], [? if ddp_in_popular_front_prussia and not lvp_formed: [? if ddp_name == "DDP": <span style="color: #D3C24D;">**Democratic**</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">**State**</span>?]?] and <span style="color: #700000;">**Communist**</span> parties.?][? if in_left_front_prussia: <span style="color: #700000;">**Communists**</span>.?] It is the most left-wing state government in Germany, led by Kurt Rosenfeld.
+Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the [? if in_popular_front_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], [? if ddp_in_popular_front_prussia and not lvp_formed: [? if ddp_name == "DDP": <span style="color: #D3C24D;">**Democratic**</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">**State**</span>?]?] and <span style="color: #830000;">**Communist**</span> parties.?][? if in_left_front_prussia: <span style="color: #830000;">**Communists**</span>.?] It is the most left-wing state government in Germany, led by Kurt Rosenfeld.
 
 We can enact policies in Prussia. [? if president == "Hindenburg": However, President Hindenburg and the political right are closely monitoring our every move and can invoke Reichsexekution at any time. Tread lightly. ?]
 
@@ -28,7 +28,7 @@ We can enact policies in Prussia. [? if president == "Hindenburg": However, Pres
 view-if: prussian_police_loyalty < 1
 on-arrival: prussian_police_loyalty += 0.15; rfb_strength += 25; reichsexekution += 1
 
-The police have historically been overrun with <span style="color: #808080;">reactionaries</span>, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional <span style="color: #3E88B3;">conservatives</span>, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> sympathies. The <span style="color: #700000;">**KPD**</span> have also began to infiltrate some of their own into the police force...
+The police have historically been overrun with <span style="color: #808080;">reactionaries</span>, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional <span style="color: #3E88B3;">conservatives</span>, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> sympathies. The <span style="color: #830000;">**KPD**</span> have also began to infiltrate some of their own into the police force...
 
 Current police loyalty: [+ prussian_police_loyalty : loyalty +].
 
@@ -40,7 +40,7 @@ We have increased the size of the Prussian police.
 @bureaucracy
 on-arrival: prussian_police_loyalty += 0.08; nationalism -= 5; militarism += 1; antimocratization += 2; pro_republic += 3*(1-dissent); new_middle_uspd += 2*(1-dissent) if antimocratization >= 3; new_middle_uspd += 2*(1-dissent) if antimocratization >= 4; uprising_progress += 0.5; wp_left += 2; ddp_left += 1; lvp_left += 1.5; reichsexekution += 1; bureaucracy_goal_prussia -= 1; new_middle_spd += 2
 
-The bureaucracy is deeply <span style="color: #808080;">reactionary</span>, and many abuse their power to favor the <span style="color: #3E88B3;">political right</span>. By removing the <span style="color: #3E88B3;">pro-monarchy</span> and <span style="color: #7A3C00;">pro-dictatorship</span> elements, we can democratize it. The <span style="color: #700000;">**KPD**</span> have also began to infiltrate some of their own into the state bureaucracy...
+The bureaucracy is deeply <span style="color: #808080;">reactionary</span>, and many abuse their power to favor the <span style="color: #3E88B3;">political right</span>. By removing the <span style="color: #3E88B3;">pro-monarchy</span> and <span style="color: #7A3C00;">pro-dictatorship</span> elements, we can democratize it. The <span style="color: #830000;">**KPD**</span> have also began to infiltrate some of their own into the state bureaucracy...
 
 @ban_sa
 view-if: sa_banned == 0
@@ -60,10 +60,10 @@ view-if: sh_banned == 0
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; rfb_strength += 100; prussian_police_loyalty -= 0.1; rfb_goal_prussia -= 1; braun_angry += 8
 
-The <span style="color: #700000;">Communist</span> <span style="color: #700000;">**RFB**</span> is no longer banned.
+The <span style="color: #830000;">Communist</span> <span style="color: #830000;">**RFB**</span> is no longer banned.
 
 @free_kpd
 view-if: rfb_banned = 0
 on-arrival: rfb_banned = 0; rfb_strength += 50; rfb_militancy += 0.03; prussian_police_loyalty -= 0.05; workers_spd += 4; unemployed_spd += 4; free_kpd_goal_prussia -= 1; reichsexekution += 1; wp_relation -= 5; lvp_relation -= 4; lvp_old_relation -= 5; z_relation -= 4; wp_right += 2; lvp_right += 1; ddp_cohesion -= 0.5; lvp_right += 1.5; right_dissent -= 5; popcon_dissent += 5
 
-Restrictions are lifted and police are deployed to protect <span style="color: #700000;">Communist</span> demonstrations and organizations from the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.
+Restrictions are lifted and police are deployed to protect <span style="color: #830000;">Communist</span> demonstrations and organizations from the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>.

@@ -50,7 +50,7 @@ go-to: candidate_selection
 
 With the 1932 German Presidential election coming up next month, we need to decide whether to run a candidate of our own or support one from another party. [? if hindenburg_run: Many are calling for us to support the incumbent Hindenburg, despite his <span style="color: #808080;">reactionary</span> tendencies. Contrary to fears, he hasn’t used his office to destroy the republic yet, so supporting him would hopefully prevent the <span style="color: #7A3C00;">Nazis</span>, who actually support destroying the republic, from winning. ?][? if not hindenburg_run: With Hindenburg's withdrawal, the German Right is in disarray, struggling to find a candidate who can attract support from the moderate right and middle, while also embodying the unifying character of Hindenburg. It’s likely that the candidate they put forward will have a military or industrial background and will be distanced from the partisan bickering of politics. ?]
 
-On the other hand, many in our party are calling for [+ spd_candidate_1932_disp +] to run again, but he is reluctant. [? if nsdap_relation >= 50 : Another strange possibility is an united front with the <span style="color: #700000;">Communists</span>, either to support their candidate or our own candidate. ?][? if sapd_formed: The <span style="color: #9B0000;">**SAPD**</span>, our former leftists, are likely to share an endorsement with the <span style="color: #700000;">Communists</span>. ?]
+On the other hand, many in our party are calling for [+ spd_candidate_1932_disp +] to run again, but he is reluctant. [? if nsdap_relation >= 50 : Another strange possibility is an united front with the <span style="color: #830000;">Communists</span>, either to support their candidate or our own candidate. ?][? if sapd_formed: The <span style="color: #9B0000;">**SAPD**</span>, our former leftists, are likely to share an endorsement with the <span style="color: #830000;">Communists</span>. ?]
 
 Anyhow, let's see who will be the candidates on <span class="tooltip-text" title="good game">the campaign trail</span>.
 
@@ -96,7 +96,7 @@ face-image: img/portraits/hitler2.jpg
 
 The <span style="color: #7A3C00;">**NSDAP**</span> will run Adolf Hitler, who is likely to only receive the backing of his own party. However, there has been some reluctance on Hitler's part to run against President Hindenburg, with his character commanding great respect throughout all corners of Germany. Furthermore, the second most important leader in the <span style="color: #7A3C00;">**NSDAP**</span>, Gregor Strasser, opposes his candidacy as he believes he cannot defeat Hindenburg, but <span style="color: #7A3C00;">Nazi</span> propagandist Joseph Goebbels argues for it. We suspect that the <span style="color: #7A3C00;">Nazis</span> are putting on a show of indecisiveness, and always had Hitler as as candidate in mind.
 
-- @communist: We await the decision the <span style="color: #700000;">Communists</span>.
+- @communist: We await the decision the <span style="color: #830000;">Communists</span>.
 
 @communist
 go-to: thalmann
@@ -105,7 +105,7 @@ go-to: thalmann
 @thalmann
 face-image: img/portraits/ThälmannErnst.jpg
 
-The <span style="color: #700000;">**Communists**</span> will run Ernst Thälmann, their leader and candidate in 1925. If we were to not run a candidate, or to support a right-wing or bourgeois one, Thälmann and the <span style="color: #700000;">**KPD**</span> would greatly capitalize by painting themselves as the only left-wing option in the race. However, if our relations with the <span style="color: #700000;">**KPD**</span> are high enough, we may be able to convince him to drop out in favour of a unity candidate between our two parties.
+The <span style="color: #830000;">**Communists**</span> will run Ernst Thälmann, their leader and candidate in 1925. If we were to not run a candidate, or to support a right-wing or bourgeois one, Thälmann and the <span style="color: #830000;">**KPD**</span> would greatly capitalize by painting themselves as the only left-wing option in the race. However, if our relations with the <span style="color: #830000;">**KPD**</span> are high enough, we may be able to convince him to drop out in favour of a unity candidate between our two parties.
 
 - @socialist: So, what is our decision? Should we run our own candidate?
 
@@ -122,7 +122,7 @@ So, what's our choice?
 
 - @run_braun: Run [+ spd_candidate_1932_disp +] of the <span style="color: #c00000;">**SPD**</span>.
 - @support_hindenburg: Support <span style="color: #808080;">Hindenburg</span>.
-- @support_thalmann: Support [+ communist_candidate_1932_disp +] of the <span style="color: #700000;">**KPD**</span>.
+- @support_thalmann: Support [+ communist_candidate_1932_disp +] of the <span style="color: #830000;">**KPD**</span>.
 - @abstain: Abstain from endorsing any candidate.
 
 @view_candidates
@@ -134,7 +134,7 @@ go-to: endorsements_braun
 
 [? if kpd_support_spd == 1 and sapd_formed: - <span style="color: #9B0000;">**SAPD**</span> ?]
 
-[? if kpd_support_spd == 1: - <span style="color: #700000;">**KPD**</span> ?]
+[? if kpd_support_spd == 1: - <span style="color: #830000;">**KPD**</span> ?]
 
 [? if z_support_spd == 1 and spd_campaign: - [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] ?]
 
@@ -164,9 +164,9 @@ go-to: endorsements_braun
 
 [? if nsdap_candidate_1932: - <span style="color: #7A3C00;">**NSDAP**</span> ?]
 
-[? if kpd_support_spd == 0 and communist_candidate_1932: <span style="color: #700000;">**[+ communist_candidate_1932_disp +]**</span> - supported by: ?]
+[? if kpd_support_spd == 0 and communist_candidate_1932: <span style="color: #830000;">**[+ communist_candidate_1932_disp +]**</span> - supported by: ?]
 
-[? if kpd_support_spd == 0 and communist_candidate_1932: - <span style="color: #700000;">**KPD**</span> ?]
+[? if kpd_support_spd == 0 and communist_candidate_1932: - <span style="color: #830000;">**KPD**</span> ?]
 
 [? if dnvp_candidate_1932: <span style="color: #3E88B3;">**[+ dnvp_candidate_1932_disp +]**</span> - supported by: ?]
 
@@ -296,7 +296,7 @@ if (Q.rlb_nazi) {
 
 !}
 
-None of the candidates are worthy of our support, and we are either unable or unwilling to field a candidate of our own. This decision is widely seen as irresponsible, given our status as the nominally largest party. [? if hindenburg_run: Hindenburg is privately relieved by this, as receiving our endorsement would personally pain him. ?] The <span style="color: #700000;">**Communists**</span> will seize upon our lack of an endorsement, attempting to position [+ communist_candidate_1932_disp +] as the sole left-wing candidate in the race, likely drawing many of our voters as a protest vote.
+None of the candidates are worthy of our support, and we are either unable or unwilling to field a candidate of our own. This decision is widely seen as irresponsible, given our status as the nominally largest party. [? if hindenburg_run: Hindenburg is privately relieved by this, as receiving our endorsement would personally pain him. ?] The <span style="color: #830000;">**Communists**</span> will seize upon our lack of an endorsement, attempting to position [+ communist_candidate_1932_disp +] as the sole left-wing candidate in the race, likely drawing many of our voters as a protest vote.
 
 @run_braun
 subtitle: This will cost us 2 resources.
@@ -306,7 +306,7 @@ on-arrival: resources -= 2; spd_campaign = 1; braun_campaign = 1; popcon_dissent
 
 It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
 
-[? if not lvp_formed: The [? if lvp_votes < 2: miniscule remnants of the?] [? if ddp_name == "DDP": <span style="color: #D3C24D;">**Democratic Party**</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">**State Party**</span>?] aren't guaranteed to support us, [? if lvp_relation < 40: with a deterioration in our relationship?][? if lvp_relation >= 40: but are open to it due to their reluctance in supporting Hindenburg?]?][? if lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> aren't exactly the biggest fans of <span style="color: #c00000;">socialism</span>, [? if lvp_old_relation < 40: with the deterioration in relations making their support a near impossibility.?][? if lvp_old_relation >= 40: but are at least open to it due to their reluctance in supporting Hindenburg?]?]. Who else will? Can we convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to support Braun? What about the <span style="color: #700000;">**Communists**</span>?
+[? if not lvp_formed: The [? if lvp_votes < 2: miniscule remnants of the?] [? if ddp_name == "DDP": <span style="color: #D3C24D;">**Democratic Party**</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">**State Party**</span>?] aren't guaranteed to support us, [? if lvp_relation < 40: with a deterioration in our relationship?][? if lvp_relation >= 40: but are open to it due to their reluctance in supporting Hindenburg?]?][? if lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> aren't exactly the biggest fans of <span style="color: #c00000;">socialism</span>, [? if lvp_old_relation < 40: with the deterioration in relations making their support a near impossibility.?][? if lvp_old_relation >= 40: but are at least open to it due to their reluctance in supporting Hindenburg?]?]. Who else will? Can we convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to support Braun? What about the <span style="color: #830000;">**Communists**</span>?
 
 - @endorsements_braun: Scout out potential endorsements. 
 
@@ -318,25 +318,25 @@ Despite his known <span style="color: #808080;">reactionary</span> nature, Hinde
 
 @support_thalmann
 choose-if: nsdap_relation >= 50 and popcon_strength < right_strength and not schleicher_spd
-unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?][? if schleicher_spd: As part of our deal with Schleicher, we are now obligated to support Hindenburg’s re-election. ?]
+unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #830000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?][? if schleicher_spd: As part of our deal with Schleicher, we are now obligated to support Hindenburg’s re-election. ?]
 
-Supporting [+ communist_candidate_1932 +] is rather unpopular in our party, even if the <span style="color: #700000;">**Communists**</span> accept our support. Are we sure?
+Supporting [+ communist_candidate_1932 +] is rather unpopular in our party, even if the <span style="color: #830000;">**Communists**</span> accept our support. Are we sure?
 
-- @support_thalmann_2: Yes, we will support <span style="color: #700000;">**[+ communist_candidate_1932 +]**</span>, despite the reformists' pleas against it.
+- @support_thalmann_2: Yes, we will support <span style="color: #830000;">**[+ communist_candidate_1932 +]**</span>, despite the reformists' pleas against it.
 - @run_braun: Support <span style="color: #c00000;">**Braun**</span> instead.
 - @support_hindenburg: Support <span style="color: #808080;">**Hindenburg**</span> instead.
 
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; lvp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 
-Fine. We have thrown our support to Chairman [+ communist_candidate_1932 +] of the <span style="color: #700000;">**KPD**</span> to the dismay of our bourgeois allies.
+Fine. We have thrown our support to Chairman [+ communist_candidate_1932 +] of the <span style="color: #830000;">**KPD**</span> to the dismay of our bourgeois allies.
 
 @endorsements_braun
 
 We can't win this election alone, we need support from other parties. [? if uspd_votes >= 50: Nevermind. We actually can win this election alone. ?]
 
 - @convince_z: Convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to back <span style="color: #c00000;">**Braun**</span>.
-- @convince_kpd: Convince the <span style="color: #700000;">**Communists**</span> to back <span style="color: #c00000;">**Braun**</span>.
+- @convince_kpd: Convince the <span style="color: #830000;">**Communists**</span> to back <span style="color: #c00000;">**Braun**</span>.
 - @convince_ddp: Convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to back <span style="color: #c00000;">**Braun**</span>.
 - @convince_lvp: Convince the <span style="color: #FFCC00;">**LVP**</span> to back <span style="color: #c00000;">**Braun**</span>.
 - @view_candidates: View party endorsements.
@@ -441,14 +441,14 @@ Unfortunately, we fail to turn the [? if z_party_name != "CVP": <span style="col
 
 @convince_kpd
 choose-if: uspd_votes >= spd_votes
-unavailable-subtitle: The <span style="color: #700000;">KPD</span> knows that they are more popular than us; they do not see a reason to support our candidate.
+unavailable-subtitle: The <span style="color: #830000;">KPD</span> knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
 
-The <span style="color: #700000;">**KPD**</span> is supporting their own candidate, [+ communist_candidate_1932_disp +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Braun; how do we convince them? ?][? if nsdap_relation < 50 or spd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
+The <span style="color: #830000;">**KPD**</span> is supporting their own candidate, [+ communist_candidate_1932_disp +]. [? if nsdap_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Braun; how do we convince them? ?][? if nsdap_relation < 50 or spd_leader != "Conciliators" : They do not seem willing to be convinced. ?]
 
 - @spd_resources: Use our resources.
 - @spd_relations: Use our good relations.
-- @endorsements_braun: Forget about the <span style="color: #700000;">KPD</span>.
+- @endorsements_braun: Forget about the <span style="color: #830000;">KPD</span>.
 
 @spd_resources
 view-if: nsdap_relation >= 60 or nsdap_relation >= 45 and spd_leader == "Conciliators"
@@ -458,7 +458,7 @@ unavailable-subtitle: Not enough resources (need 3).
 on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun
 
-The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @spd_relations
 view-if: nsdap_relation >= 75 or (spd_leader == "Conciliators" and nsdap_relation >= 55)
@@ -466,4 +466,4 @@ unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: endorsements_braun
 
-The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.

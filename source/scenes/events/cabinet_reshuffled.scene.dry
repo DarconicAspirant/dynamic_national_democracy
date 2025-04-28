@@ -16,7 +16,7 @@ Chancellor [+ chancellor +] has announced his intentions to President [+ preside
 - @conservative_coalition: The <span style="color: #3E88B3;">**DNVP**</span> replaces us in government.
 - @center_right_coalition: The <span style="color: #3E88B3;">**DNVP**</span> replaces us in government.
 - @minority_bruning: Brüning's cabinet survives as a minority government.
-- @breitscheid_vonc: Call a constructive motion of no confidence with the <span style="color: #700000;">**KPD**</span>!
+- @breitscheid_vonc: Call a constructive motion of no confidence with the <span style="color: #830000;">**KPD**</span>!
 - @sack_bruning: President [+ president +] will call snap elections.
 - @bourgeois_coalition: The bourgeois have a lone majority.
 - @bruning_chain: What's next?
@@ -97,7 +97,7 @@ choose-if: left_coalition >= 50 and nsdap_relation >= 50
 unavailable-subtitle: [? if left_coalition < 50 : We do not have a majority in favor of Breitscheid. ?][? if nsdap_relation < 50 : The Communists are unwilling. ?]
 on-arrival: in_left_front = 1; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; chancellor_party = "SPD"; chancellor = "Breitscheid"; uprising_progress += 3; general_strike_progress += 2; uprising_progress += 1 if in_left_front_prussia; general_strike_progress += 1 if in_left_front_prussia; labor_minister_party = "SPD"; interior_minister_party = "SPD"; finance_minister_party = "SPD"; economic_minister_party = "SPD"; justice_minister_party = "SPD"; foreign_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_minister_party = "SPD"; nsdap_relation += 10; z_relation -= 5; lvp_relation -= 5; wp_relation -= 10; lvp_old_relation -= 8; reichswehr_loyalty -= 0.05; wp_right += 10; lvp_right += 5; ddp_cohesion -= 3; lvp_right += 8; liberal_cooperation += 5; bourgeois_cooperation += 10; liberal_cooperation += 3 if in_left_front_prussia or in_popular_front_prussia; bourgeois_cooperation += 5 if in_left_front_prussia or in_popular_front_prussia; popcon_dissent += 20; popcon_strength -= 10; right_dissent -= 30; right_strength += 20
 
-We have successfully passed a motion of no confidence to replace Brüning with Breitscheid. We are now ruling in a united front with the <span style="color: #700000;">**KPD**</span>.
+We have successfully passed a motion of no confidence to replace Brüning with Breitscheid. We are now ruling in a united front with the <span style="color: #830000;">**KPD**</span>.
 
 Whatever their reasoning is, the <span style="color: #c00000;">**SPD**</span> has control over the ministries of government.
 

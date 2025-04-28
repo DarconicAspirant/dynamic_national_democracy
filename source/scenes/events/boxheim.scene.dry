@@ -13,7 +13,7 @@ In the elections in the State of Hesse, which resulted in no clear majority, we 
 
 During these searches, a copy of a letter sent by <span style="color: #7A3C00;">**NSDAP**</span> member Werner Best to the party leadership in Munich is discovered. The letter reveals their plan to violently seize power and includes guidelines for emergency decrees. Among these plans is a provision making access to food contingent on compulsory labor service, from which <span style="color: #005EB8;">Jews</span> would be exempt, implying they would receive no food at all.
 
-In an attempt to protect themselves from the severe damage this revelation causes to [? if not hitler_deported: Hitler's?][? if hitler_deported: their?] oath of legality, the <span style="color: #7A3C00;">**NSDAP**</span> has defended the letter, claiming it was intended solely for a potential <span style="color: #700000;">communist</span> seizure of power. It is now up to the judiciary to determine the consequences of this anti-constitutional plan.
+In an attempt to protect themselves from the severe damage this revelation causes to [? if not hitler_deported: Hitler's?][? if hitler_deported: their?] oath of legality, the <span style="color: #7A3C00;">**NSDAP**</span> has defended the letter, claiming it was intended solely for a potential <span style="color: #830000;">communist</span> seizure of power. It is now up to the judiciary to determine the consequences of this anti-constitutional plan.
 
 - @pressure_drop: We await the decision of the courts.
 - @nothing: We await the decision of the courts.
@@ -30,6 +30,6 @@ Our Hesse government is set to continue in a caretaker capacity for the foreseea
 view-if: judicial_reform < 4
 on-arrival: boxheim_persecuted = 0; paramilitarist_dissent -= 10; paramilitarist_strength += 5; workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; workers_uspd += 2; new_middle_uspd += 2
 
-Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government. [? if bruning_time: We are sure that Chancellor Brüning is behind this downplaying, to keep cooperation with the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> open. ?]
+Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #830000;">communist</span> putschists, rather than the government. [? if bruning_time: We are sure that Chancellor Brüning is behind this downplaying, to keep cooperation with the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> open. ?]
 
 We have at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many, and have managed to keep our Hesse government functioning in a caretaker capacity due to the collapse of talks between the <span style="color: #7A3C00;">**NSDAP**</span> and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].

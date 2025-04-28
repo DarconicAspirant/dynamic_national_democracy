@@ -80,7 +80,7 @@ Despite the formation of a more right-leaning cabinet, the <span style="color: #
 @bruning_lives_no_wp
 on-arrival: second_bruning_cabinet_survived = 1
 
-We are once again compelled to vote in favor of the [+ chancellor +] government to prevent the extremist parties on the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #700000;">left</span> from translating their growing popular support into parliamentary gains. Some members of the <span style="color: #C0A054;">**DVP**</span>'s left wing, such as Curtius and Otto Thiel, have also voted with the government or abstained, going against their wider party.
+We are once again compelled to vote in favor of the [+ chancellor +] government to prevent the extremist parties on the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #830000;">left</span> from translating their growing popular support into parliamentary gains. Some members of the <span style="color: #C0A054;">**DVP**</span>'s left wing, such as Curtius and Otto Thiel, have also voted with the government or abstained, going against their wider party.
 
 Despite the new right-wing cabinet, the <span style="color: #7A3C00;">national</span> <span style="color: #3E88B3;">opposition</span> is still refusing to support Brüning, as they want all the power to themselves. 
 
@@ -99,6 +99,6 @@ Unfortunately, all of this effort is for naught, with only [+ bruning_coalition 
 on-arrival: time_to_election = 3; dnvp_toleration = 0; dnvp_toleration_uspd = 0; second_bruning_cabinet_dead = 1
 call: set_next_election_time
 
-We are once again compelled to vote in favor of the [+ chancellor +] government to prevent the extremist parties on the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #700000;">left</span> from translating their growing popular support into parliamentary gains. Some members of the <span style="color: #C0A054;">**DVP**</span>'s left wing, such as Curtius and Otto Thiel, have also voted with the government or abstained, going against their wider party.
+We are once again compelled to vote in favor of the [+ chancellor +] government to prevent the extremist parties on the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #830000;">left</span> from translating their growing popular support into parliamentary gains. Some members of the <span style="color: #C0A054;">**DVP**</span>'s left wing, such as Curtius and Otto Thiel, have also voted with the government or abstained, going against their wider party.
 
 Unfortunately, all efforts to save the government have been in vain. Only [+ bruning_coalition +]% of the Reichstag voted to support Brüning’s government. As a result, new elections have been scheduled for [+ next_election_month : month +] [+ next_election_year +].

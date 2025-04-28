@@ -164,7 +164,7 @@ Q.sa_strength = 65;
 Q.sa_militancy = 0.5;
 Q.sa_banned = 0;
 Q.sa_banned_prussia = 0;
-Q.rfb_strength = 60;
+Q.rfb_strength = 45;
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 //Any non left prussia will ban the rfb in 1928/29 depending on where I put the pretext (so any feasible prussia at that point in the game)

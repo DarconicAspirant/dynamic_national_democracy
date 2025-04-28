@@ -32,9 +32,9 @@ unavailable-subtitle: [? if popcon_strength + agrarian_strength + christsoc_stre
 choose-if: popcon_strength + agrarian_strength + christsoc_strength / 2 >= right_strength + christsoc_strength / 2
 on-arrival: workers_uspd -= 0.1*workers_uspd; unemployed_uspd -= 0.2*unemployed_uspd; workers_spd += 3; workers_nsdap += 3; unemployed_spd += 5; unemployed_nsdap += 5; right_dissent += 15; center_dissent += 10; christsoc_dissent += 15; welfare -= 1; budget += 1; pro_republic -= 3; nsdap_relation -= 5; inflation -= 1; unemployment_insurance_threshold = unemployed; lvp_left += 2; coalition_dissent -= 1; goal_dnvp_cancel += 1; economic_growth -= 0.3
 
-Unfortunately, we must accept this if we are to maintain this coalition. The <span style="color: #7A3C00;">Nazis</span> and <span style="color: #700000;">**Communists**</span> are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
+Unfortunately, we must accept this if we are to maintain this coalition. The <span style="color: #7A3C00;">Nazis</span> and <span style="color: #830000;">**Communists**</span> are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
 
-The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the <span style="color: #700000;">**KPD**</span>'s gain, and even the <span style="color: #7A3C00;">**NSDAP**</span>, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the <span style="color: #830000;">**KPD**</span>'s gain, and even the <span style="color: #7A3C00;">**NSDAP**</span>, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 @compromise
 unavailable-subtitle: [? if lvp_old_relation < 25: We do not have good enough relations with the right-wing parties.?] [? if lvp_right - lvp_left > 8: The <span style="color: #FFCC00;">**LVP**</span> industrialists have great control over their party. ?]

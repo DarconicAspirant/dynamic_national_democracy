@@ -574,7 +574,7 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#700000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
@@ -585,7 +585,7 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-           {'uspd': '#E3000F', 'spd': '#700000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
+           {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#9B0000', 'dnf': '#003755', 'kvp': '#0087DC'},
             {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
@@ -604,7 +604,7 @@ go-to: coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_votes +]% {!</td><td>!} [+ str_votes_change_sapd +] {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_kpd +] {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#830000'> </div> !}KPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_kpd +] {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
 [? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ lvp_votes +]% {!</td><td>!} [+ str_votes_change_ddp +] {!</td><td>!} [+ lvp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!} ?]
 
@@ -671,7 +671,7 @@ go-to: coalition_menu
             {!<td style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.85em;">!}[+ catholics_z_display +]%[? if n_elections != 1 and demo_change_catholics_z_display != 0 : ([+ demo_change_catholics_z_display +])?]{!</td>!}
         {!</tr>!}
         {!<tr>!}
-            {!<td><span style="color: #700000;"><b>KPD</b></span></td>!}
+            {!<td><span style="color: #830000;"><b>KPD</b></span></td>!}
             {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em; padding: 10px">!}[+ workers_spd_display +]%[? if n_elections != 1 and demo_change_workers_spd_display != 0 : ([+ demo_change_workers_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ new_middle_spd_display +]%[? if n_elections != 1 and demo_change_new_middle_spd_display != 0 : ([+ demo_change_new_middle_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(112, 0, 0, 0.2); font-size: 0.85em;">!}[+ old_middle_spd_display +]%[? if n_elections != 1 and demo_change_old_middle_spd_display != 0 : ([+ demo_change_old_middle_spd_display +])?]{!</td>!}
@@ -759,9 +759,9 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-[? if nsdap_relation >= 40 and left_coalition >= 45: United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition +]% ?]
+[? if nsdap_relation >= 40 and left_coalition >= 45: United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition +]% ?]
 
-[? if nsdap_relation > 35 and z_relation > 35 and not cvp_formed: Popular Front Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span>[? if (liberal_parliament == 0 and bourgeois_parliament_ddp == 0) and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ popular_front_coalition +]% ?]
+[? if nsdap_relation > 35 and z_relation > 35 and not cvp_formed: Popular Front Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span>[? if (liberal_parliament == 0 and bourgeois_parliament_ddp == 0) and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ popular_front_coalition +]% ?]
 
 [? if not cvp_formed: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?][? if sapd_formed and nsdap_relation >= 30:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ weimar_coalition +]% ?]
 
@@ -787,9 +787,9 @@ go-to: coalition_menu
 
 [? if revolutionary_urgency <= 1 and nsdap_r >= 15 : The rapid rise in <span style="color: #7A3C00;">**NSDAP**</span> votes is extremely worrying. Many had believed that the party was <span style="color: #ff0000;">moribund</span>; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 and dnvp_ideology == "Radical": Together, the anti-democratic <span style="color: #700000;">**KPD**</span>, <span style="color: #3E88B3;">**DNVP**</span>, and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 and dnvp_ideology == "Radical": Together, the anti-democratic <span style="color: #830000;">**KPD**</span>, <span style="color: #3E88B3;">**DNVP**</span>, and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
-[? if anti_democratic_coalition >= 50 and dnvp_ideology == "Moderate": Together, the anti-democratic <span style="color: #700000;">**KPD**</span>, <span style="color: #003755;">**DNF**</span>, and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 and dnvp_ideology == "Moderate": Together, the anti-democratic <span style="color: #830000;">**KPD**</span>, <span style="color: #003755;">**DNF**</span>, and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 [? if hitler_right_coalition >= 50 and rubicon and hitler_right_coalition_time == time: The <span style="color: #000000;">Center Party</span> and its <span style="color: #A2D8E0;">Bavarian</span> counterpart, together with the <span style="color: #7A3C00;">**NSDAP**</span>, constitute a majority in the Reichstag. This has sparked rumors of a potential parliamentary-backed Black-Brown coalition that could unseat [+ chancellor +]—rumors that are unlikely to materialize, as the ideological gulf between the <span style="color: #7A3C00;">Nazis</span> and the constitutionalist <span style="color: #000000;">Center Party</span> remains vast. ?]
 
@@ -820,12 +820,12 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span>[? if (liberal_parliament == 0 and bourgeois_parliament_ddp == 0) and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?] ([+ popular_front_coalition +]%)
-unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> + <span style="color: #000000;">[+ z_party_name +]</span>[? if liberal_parliament = 0 and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">[+ ddp_name +]</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">SAPD</span>?] ([+ popular_front_coalition +]%) - [? if ((nsdap_relation < 65 and spd_leader == "Levi") or (nsdap_relation < 45 and spd_leader == "Conciliators")) or ((z_leader == "Joos" and spd_leader == "Conciliators" and nsdap_relation < 35) or (z_leader == "Kaiser" and spd_leader == "Conciliators" and nsdap_relation < 30)): We do not have good enough relations with the <span style="color: #700000;">KPD</span>. ?][? if (z_relation < 45 and z_leader == "Joos") or (z_relation < 40 and z_leader == "Kaiser") or (z_relation < 65 and z_ideology == "Right" and spd_leader != "Conciliators") or (z_relation < 55 and z_ideology == "Right" and spd_leader == "Conciliators") or ((z_leader == "Joos" and spd_leader == "Conciliators" and z_relation < 35) or (z_leader == "Kaiser" and spd_leader == "Conciliators" and z_relation < 30)): We do not have good enough relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if ((lvp_relation < 50 and ddp_ideology != "Left") or (lvp_relation < 40 and ddp_ideology == "Left")) and liberal_parliament == 0 and bourgeois_parliament_ddp == 0 and not lvp_formed: We do not have good enough relations with the <span style="color: #D3C24D;">[+ ddp_name +]</span>. ?][? if bernburg_coalition < 3 : The <span style="color: #700000;">Communists</span> are unwilling to compromise at all. ?] [? if rubicon: - Why the hell would Hindenburg allow this? ?]
+subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span>[? if (liberal_parliament == 0 and bourgeois_parliament_ddp == 0) and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?] ([+ popular_front_coalition +]%)
+unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #830000;">KPD</span> + <span style="color: #000000;">[+ z_party_name +]</span>[? if liberal_parliament = 0 and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">[+ ddp_name +]</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">SAPD</span>?] ([+ popular_front_coalition +]%) - [? if ((nsdap_relation < 65 and spd_leader == "Levi") or (nsdap_relation < 45 and spd_leader == "Conciliators")) or ((z_leader == "Joos" and spd_leader == "Conciliators" and nsdap_relation < 35) or (z_leader == "Kaiser" and spd_leader == "Conciliators" and nsdap_relation < 30)): We do not have good enough relations with the <span style="color: #830000;">KPD</span>. ?][? if (z_relation < 45 and z_leader == "Joos") or (z_relation < 40 and z_leader == "Kaiser") or (z_relation < 65 and z_ideology == "Right" and spd_leader != "Conciliators") or (z_relation < 55 and z_ideology == "Right" and spd_leader == "Conciliators") or ((z_leader == "Joos" and spd_leader == "Conciliators" and z_relation < 35) or (z_leader == "Kaiser" and spd_leader == "Conciliators" and z_relation < 30)): We do not have good enough relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if ((lvp_relation < 50 and ddp_ideology != "Left") or (lvp_relation < 40 and ddp_ideology == "Left")) and liberal_parliament == 0 and bourgeois_parliament_ddp == 0 and not lvp_formed: We do not have good enough relations with the <span style="color: #D3C24D;">[+ ddp_name +]</span>. ?][? if bernburg_coalition < 3 : The <span style="color: #830000;">Communists</span> are unwilling to compromise at all. ?] [? if rubicon: - Why the hell would Hindenburg allow this? ?]
 view-if: popular_front_coalition >= 50 and not cvp_formed and not rubicon
 choose-if: (((nsdap_relation >= 65 and spd_leader == "Levi") or (nsdap_relation >= 45 and spd_leader == "Conciliators")) and ((z_relation >= 45 and z_leader == "Joos") or (z_relation >= 40 and z_leader == "Kaiser") or (z_relation >= 65 and z_ideology == "Right" and spd_leader != "Conciliators") or (z_relation >= 55 and z_ideology == "Right" and spd_leader == "Conciliators")) and ((liberal_parliament = 1 or bourgeois_parliament_ddp or lvp_formed) or ((lvp_relation >= 50 and ddp_ideology != "Left") or (lvp_relation >= 40 and ddp_ideology == "Left"))) and bernburg_coalition >= 3) or (z_leader == "Joos" and spd_leader == "Conciliators" and z_relation >= 35 and nsdap_relation >= 35) or (z_leader == "Kaiser" and spd_leader == "Conciliators" and z_relation >= 30 and nsdap_relation >= 30)
 
-Could we really form a coalition that included both the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and the <span style="color: #700000;">**Communists**</span>? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
+Could we really form a coalition that included both the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and the <span style="color: #830000;">**Communists**</span>? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
 
 The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> might attempt a coup, if such a coalition were formed.
 
@@ -835,7 +835,7 @@ The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right
 @popular_front_2
 view-if: z_ideology != "Left" or spd_leader != "Conciliators"
 
-Somehow, both the <span style="color: #700000;">**Communists**</span> and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are at the very least willing to entertain negotiations. Of course, <span style="color: #700000;">**KPD**</span> radicals and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] conservatives derail the negotiations almost immediately. The <span style="color: #700000;">**KPD**</span> demands leadership of the coalition for themselves and their chairman Ernst Thälmann, [? if uspd_r > spd_r : despite our higher vote share, ?]while the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is offended by the prospect of helping <span style="color: #700000;">**Bolsheviks**</span> enter government. *Something* must be done to restore balance.
+Somehow, both the <span style="color: #830000;">**Communists**</span> and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are at the very least willing to entertain negotiations. Of course, <span style="color: #830000;">**KPD**</span> radicals and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] conservatives derail the negotiations almost immediately. The <span style="color: #830000;">**KPD**</span> demands leadership of the coalition for themselves and their chairman Ernst Thälmann, [? if uspd_r > spd_r : despite our higher vote share, ?]while the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is offended by the prospect of helping <span style="color: #830000;">**Bolsheviks**</span> enter government. *Something* must be done to restore balance.
 
 - @popular_front_resources
 - @popular_front_democracy
@@ -851,9 +851,9 @@ on-arrival: resources -= 3
 go-to: popular_front_success if in_popular_front_prussia or in_left_front_prussia or not dnvp_prussia or popular_front_coalition_prussia < 50; popular_front_prussia if not in_popular_front_prussia and not in_left_front_prussia and dnvp_prussia and popular_front_coalition_prussia >= 50
 
 @popular_front_democracy
-title: Convince the <span style="color: #700000;">**KPD**</span> to accept democracy.
-subtitle: [? if spd_leader == "Conciliators" : The Conciliator leadership of the <span style="color: #700000;">**KPD**</span> at least claim to support the Popular Front. ?]
-unavailable-subtitle: Our relationship with the <span style="color: #700000;">**KPD**</span> is not high enough.
+title: Convince the <span style="color: #830000;">**KPD**</span> to accept democracy.
+subtitle: [? if spd_leader == "Conciliators" : The Conciliator leadership of the <span style="color: #830000;">**KPD**</span> at least claim to support the Popular Front. ?]
+unavailable-subtitle: Our relationship with the <span style="color: #830000;">**KPD**</span> is not high enough.
 choose-if: (nsdap_relation >= 60 and bernburg_coalition >= 3) or spd_leader == "Conciliators"
 go-to: popular_front_success if in_popular_front_prussia or in_left_front_prussia or not dnvp_prussia or popular_front_coalition_prussia < 50; popular_front_prussia if not in_popular_front_prussia and not in_left_front_prussia and dnvp_prussia and popular_front_coalition_prussia >= 50
 
@@ -864,7 +864,7 @@ go-to: popular_front_success if in_popular_front_prussia or in_left_front_prussi
 
 @popular_front_prussia
 
-The coalition negotiations were going relatively smoothly until the <span style="color: #700000;">**KPD**</span> bought up the topic of a reorganization of the Prussian government to include themselves. [? if in_grand_coalition_prussia: This means that we are forced to kick the <span style="color: #C0A054;">**DVP**</span> from the ruling coalition to accommodate. ?][? if in_weimar_coalition_prussia and not in_minority_conservative_coalition_prussia: This means that we are to add the <span style="color: #700000;">**KPD**</span> to the ruling <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition, to form an Übergroß coalition. ?][? if in_weimar_coalition_prussia and in_minority_conservative_coalition_prussia: This means that we are to add the <span style="color: #700000;">**KPD**</span> to the ruling <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition, to form a majority Popular Front coalition. ?]
+The coalition negotiations were going relatively smoothly until the <span style="color: #830000;">**KPD**</span> bought up the topic of a reorganization of the Prussian government to include themselves. [? if in_grand_coalition_prussia: This means that we are forced to kick the <span style="color: #C0A054;">**DVP**</span> from the ruling coalition to accommodate. ?][? if in_weimar_coalition_prussia and not in_minority_conservative_coalition_prussia: This means that we are to add the <span style="color: #830000;">**KPD**</span> to the ruling <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition, to form an Übergroß coalition. ?][? if in_weimar_coalition_prussia and in_minority_conservative_coalition_prussia: This means that we are to add the <span style="color: #830000;">**KPD**</span> to the ruling <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition, to form a majority Popular Front coalition. ?]
 
 *Something* must be done to restore balance, again.
 
@@ -884,39 +884,39 @@ go-to: popular_front_success
 
 @popular_front_relations
 title: Use our good relations to smooth things over.
-unavailable-subtitle: Our relationship with the <span style="color: #700000;">**KPD**</span> is not high enough.
+unavailable-subtitle: Our relationship with the <span style="color: #830000;">**KPD**</span> is not high enough.
 choose-if: (nsdap_relation >= 70 and bernburg_coalition >= 3) or (spd_leader == "Conciliators" and nsdap_relation >= 60)
 go-to: popular_front_success
 
 @popular_front_prussia_weimar
 view-if: in_weimar_coalition_prussia
-title: Accept the <span style="color: #700000;">**KPD**</span>'s demands.
+title: Accept the <span style="color: #830000;">**KPD**</span>'s demands.
 unavailable-subtitle: [? if lvp_relation < 60 and liberal_parliament == 0 and bourgeois_parliament_ddp == 0 and not lvp_formed: Our relationship with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is not high enough. ?] [? if (z_relation < 50 and z_leader == "Kaiser") or (z_relation < 60 and z_leader == "Joos") or (z_relation < 70 and z_ideology == "Right"): Our relationship with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is not high enough. ?]
 choose-if: ((lvp_relation >= 60 and liberal_parliament == 0 and bourgeois_parliament_ddp == 0) or (liberal_parliament == 1 or bourgeois_parliament_ddp == 1 or lvp_formed)) and ((z_relation >= 50 and z_leader == "Kaiser") or (z_relation >= 60 and z_leader == "Joos") or (z_relation >= 70 and z_ideology == "Right"))
 on-arrival: in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 1; in_dnvp_majority_prussia = 0; in_minority_conservative_coalition_prussia = 0; prussia_leader = "Rosenfeld"; dnvp_prussia = 1; democratic_prussia = 0; nazi_goals_seen_prussia = 0; leverage += 5; nsdap_relation += 5; z_relation -= 3; lvp_relation -= 3; lvp_old_relation -= 4; wp_relation -= 5; popcon_dissent += 10; wp_right += 2; lvp_right += 1.5; prussian_police_loyalty -= 0.1; rfb_militancy += 0.05; rfb_strength += 50; ddp_in_popular_front_prussia = 1 if liberal_parliament = 0 and bourgeois_parliament_ddp == 0; lvp_relation -= 3 if ddp_in_popular_front_prussia; uprising_progress += 1; general_strike_progress += 1; prussia_negotiations_kpd_trigger = 1
 
-Surprisingly, the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] agrees to a reform of the ruling <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #700000;">**KPD**</span> members through his work. He is accepted with great reluctance to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and welcomed by the <span style="color: #700000;">**KPD**</span>.
+Surprisingly, the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] agrees to a reform of the ruling <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #830000;">**KPD**</span> members through his work. He is accepted with great reluctance to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and welcomed by the <span style="color: #830000;">**KPD**</span>.
 
-The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #700000;">**KPD**</span> on both levels of government. The <span style="color: #700000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
+The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #830000;">**KPD**</span> on both levels of government. The <span style="color: #830000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
 
 [? if president == "Hindenburg": Hindenburg might object to this coalition, and may perform a *Reichsexekution* on our Prussian government, if we were to become too radical in our actions.?]
 
-- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #700000;">**KPD**</span> presents us with a list of demands.
+- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #830000;">**KPD**</span> presents us with a list of demands.
 
 @popular_front_prussia_groko
 view-if: in_grand_coalition_prussia
-title: Accept the <span style="color: #700000;">**KPD**</span>'s demands.
+title: Accept the <span style="color: #830000;">**KPD**</span>'s demands.
 unavailable-subtitle: [? if lvp_relation < 60 and liberal_parliament == 0 and bourgeois_parliament_ddp == 0 and not lvp_formed: Our relationship with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is not high enough. ?] [? if (z_relation < 50 and z_leader == "Kaiser") or (z_relation < 60 and z_leader == "Joos") or (z_relation < 70 and z_ideology == "Right"): Our relationship with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is not high enough. ?]
 choose-if: ((lvp_relation >= 60 and liberal_parliament == 0 and bourgeois_parliament_ddp == 0) or (liberal_parliament == 1 or bourgeois_parliament_ddp == 1 or lvp_formed)) and ((z_relation >= 50 and z_leader == "Kaiser") or (z_relation >= 60 and z_leader == "Joos") or (z_relation >= 70 and z_ideology == "Right"))
 on-arrival: in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 1; in_dnvp_majority_prussia = 0; in_minority_conservative_coalition_prussia = 0; prussia_leader = "Rosenfeld"; dnvp_prussia = 1; democratic_prussia = 0; nazi_goals_seen_prussia = 0; leverage += 5; nsdap_relation += 5; z_relation -= 5; lvp_relation -= 5; lvp_old_relation -= 10; wp_relation -= 15; popcon_dissent += 10; wp_right += 5; lvp_right += 4; prussian_police_loyalty -= 0.1; rfb_militancy += 0.05; rfb_strength += 50; ddp_in_popular_front_prussia = 1 if liberal_parliament = 0 and bourgeois_parliament_ddp == 0; lvp_relation -= 3 if ddp_in_popular_front_prussia; uprising_progress += 1; general_strike_progress += 1; prussia_negotiations_kpd_trigger = 1
 
-We have kicked out the <span style="color: #C0A054;">**DVP**</span> from the government, and formed a Popular Front. The <span style="color: #C0A054;">**DVP**</span> is infuriated by our betrayal and any future coalitions with them may be impossible. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #700000;">**KPD**</span> members through his work. He is accepted with great reluctance to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and welcomed by the <span style="color: #700000;">**KPD**</span>.
+We have kicked out the <span style="color: #C0A054;">**DVP**</span> from the government, and formed a Popular Front. The <span style="color: #C0A054;">**DVP**</span> is infuriated by our betrayal and any future coalitions with them may be impossible. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #830000;">**KPD**</span> members through his work. He is accepted with great reluctance to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and welcomed by the <span style="color: #830000;">**KPD**</span>.
 
-The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #700000;">**KPD**</span> on both levels of government. The <span style="color: #700000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
+The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #830000;">**KPD**</span> on both levels of government. The <span style="color: #830000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
 
 [? if president == "Hindenburg": Hindenburg might object to this coalition, and may perform a *Reichsexekution* on our Prussian government, if we were to become too radical in our actions.?]
 
-- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #700000;">**KPD**</span> presents us with a list of demands.
+- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #830000;">**KPD**</span> presents us with a list of demands.
 
 @great_popular_front
 view-if: z_ideology == "Left" and spd_leader == "Conciliators"
@@ -924,22 +924,22 @@ on-arrival: dnvp_in_government = 1; in_popular_front = 1; chancellor = "Breitsch
 achievement: grosse_volksfront
 go-to: popular_front_civil_war if uprising_progress >= 10; popular_front_no_civil_war if uprising_progress < 10
 
-Somehow, the coalition is successfully formed! The conciliatory leadership of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #700000;">**KPD**</span> helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the <span style="color: #c00000;">**SPD**</span>, acceptable to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #700000;">**KPD**</span> [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
+Somehow, the coalition is successfully formed! The conciliatory leadership of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #830000;">**KPD**</span> helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the <span style="color: #c00000;">**SPD**</span>, acceptable to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #830000;">**KPD**</span> [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_success
 on-arrival: dnvp_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; nsdap_relation += 10; uprising_progress += 1; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0; uprising_progress += 1 if in_popular_front_prussia; general_strike_progress += 1 if in_popular_front_prussia; braun_angry = 75
 go-to: popular_front_civil_war if uprising_progress >= 10; popular_front_no_civil_war if uprising_progress < 10
 achievement: volksfront
 
-Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the <span style="color: #c00000;">**SPD**</span>, acceptable to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #700000;">**KPD**</span> [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly?].
+Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the <span style="color: #c00000;">**SPD**</span>, acceptable to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #830000;">**KPD**</span> [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly?].
 
 @popular_front_no_civil_war
 on-arrival: kpd_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = "Z"; justice_minister_party = ddp_name if (liberal_parliament = 0 and bourgeois_parliament_ddp == 0 and not lvp_formed); economic_minister_party = "Z"; economic_minister_party = ddp_name if (liberal_parliament = 0 and bourgeois_parliament_ddp == 0 and not lvp_formed); labor_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage += spd_r; leverage += lvp_r if liberal_parliament = 1 or bourgeois_parliament_ddp == 1; wp_right += 6; lvp_right += 3; lvp_right += 5; ddp_cohesion -= 2 if liberal_parliament = 0; liberal_cooperation += 5 if liberal_parliament = 1 or bourgeois_parliament_ddp == 1; bourgeois_cooperation += 5; liberal_cooperation += 3 if ((liberal_parliament = 1 or bourgeois_parliament_ddp == 1) and (in_popular_front_prussia or in_left_front_prussia)); bourgeois_cooperation += 3 if (in_popular_front_prussia or in_left_front_prussia); wp_relation -= 5; lvp_relation -= 5 if liberal_parliament = 1 or bourgeois_parliament_ddp == 1; lvp_old_relation -= 5; popcon_dissent += 20; popcon_strength -= 10; right_dissent -= 20; right_strength += 15; leverage += uspd_r if support_kpd_grand; leverage += spd_r if support_kpd_grand; braun_angry += 10 if (in_popular_front_prussia or in_left_front_prussia)
 achievement: volksfront
 
-In response to the <span style="color: #700000;">**KPD**</span>'s entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. Our task is to prove them wrong. [? if in_popular_front_prussia: The right will be more active in resisting our rule considering we are also ruling with the <span style="color: #700000;">**KPD**</span> in Prussia too. ?]
+In response to the <span style="color: #830000;">**KPD**</span>'s entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. Our task is to prove them wrong. [? if in_popular_front_prussia: The right will be more active in resisting our rule considering we are also ruling with the <span style="color: #830000;">**KPD**</span> in Prussia too. ?]
 
-The <span style="color: #700000;">**KPD**</span> has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them. 
+The <span style="color: #830000;">**KPD**</span> has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them. 
 
 - @ministries: First, we must select our ministries.
 
@@ -947,9 +947,9 @@ The <span style="color: #700000;">**KPD**</span> has taken an abstentionist posi
 @popular_front_civil_war
 on-arrival: nsdap_relation = 80; reichswehr_loyalty += 0.25;
 
-In response to the <span style="color: #700000;">**KPD**</span>'s entrance into the government, the right-wing immediately launches a coup attempt. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and immediately begin clashing with our supporters! <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop us from taking power.
+In response to the <span style="color: #830000;">**KPD**</span>'s entrance into the government, the right-wing immediately launches a coup attempt. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and immediately begin clashing with our supporters! <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop us from taking power.
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] manages to diffuse some of the hostility from the Reichswehr and the <span style="color: #3E88B3;">**Stahlhelm**</span>, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the <span style="color: #700000;">**KPD**</span>, whether we want to or not.
+The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] manages to diffuse some of the hostility from the Reichswehr and the <span style="color: #3E88B3;">**Stahlhelm**</span>, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the <span style="color: #830000;">**KPD**</span>, whether we want to or not.
 
 - @civil_war: A civil war, then.
 
@@ -996,12 +996,12 @@ Alternatively, Braun could use the emergency powers of the presidency. Article 4
 
 @left_coalition
 title: Is a United Left coalition possible?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> [? if sapd_formed: + <span style="color: #9B0000;">**SAPD**</span> ?] ([+ left_coalition +]%)
-unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> [? if sapd_formed: + <span style="color: #9B0000;">SAPD</span> ?] ([+ left_coalition +]%). [? if nsdap_relation < 50 : We do not have adequate relations with the <span style="color: #700000;">KPD</span>. ?][? if bernburg_coalition < 3 : The <span style="color: #700000;">Communists</span> are too committed to their radical ways to partake in government. ?] [? if rubicon: - Why the hell would Hindenburg allow this? ?]
+subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span> [? if sapd_formed: + <span style="color: #9B0000;">**SAPD**</span> ?] ([+ left_coalition +]%)
+unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #830000;">KPD</span> [? if sapd_formed: + <span style="color: #9B0000;">SAPD</span> ?] ([+ left_coalition +]%). [? if nsdap_relation < 50 : We do not have adequate relations with the <span style="color: #830000;">KPD</span>. ?][? if bernburg_coalition < 3 : The <span style="color: #830000;">Communists</span> are too committed to their radical ways to partake in government. ?] [? if rubicon: - Why the hell would Hindenburg allow this? ?]
 view-if: left_coalition >= 50
 choose-if: (nsdap_relation >= 50 or (spd_leader == "Conciliators" and nsdap_relation >= 40)) and bernburg_coalition >= 3 and not rubicon
 
-There are enough votes for a <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> coalition government, if such a thing were actually possible.
+There are enough votes for a <span style="color: #c00000;">**SPD**</span> + <span style="color: #830000;">**KPD**</span> coalition government, if such a thing were actually possible.
 
 The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> might attempt a coup, if such a coalition were formed.
 
@@ -1016,7 +1016,7 @@ A far left coalition is impossible.
 
 @left_coalition_possible
 
-The <span style="color: #700000;">**KPD**</span> is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The <span style="color: #8B0000;">Stalinist</span> leadership is vehemently against such a thing. They demand the appointment of Ernst Thälmann as chancellor in exchange for a coalition. [? if president == "Hindenburg" : There is no chance whatsoever that President Hindenburg would approve of the appointment of a die-hard communist as chancellor. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our centrist or left-leaning members as chancellor.
+The <span style="color: #830000;">**KPD**</span> is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The <span style="color: #8B0000;">Stalinist</span> leadership is vehemently against such a thing. They demand the appointment of Ernst Thälmann as chancellor in exchange for a coalition. [? if president == "Hindenburg" : There is no chance whatsoever that President Hindenburg would approve of the appointment of a die-hard communist as chancellor. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our centrist or left-leaning members as chancellor.
 
 - @thalmann_chancellor: Appoint Thälmann as chancellor.
 - @left_coalition_resources
@@ -1030,9 +1030,9 @@ on-arrival: chancellor = "Levi"; chancellor_party = "KPD"; nsdap_relation = 80; 
 
 With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
 
-Immediately, [+ chancellor +] goes to work building a "<span style="color: #750e0e;">Soviet Germany</span>": consolidating as much power as possible in the <span style="color: #700000;">**KPD**</span>, purging state institutions of anti-<span style="color: #700000;">communists</span>, and sending street fighters against the "enemies of the people".
+Immediately, [+ chancellor +] goes to work building a "<span style="color: #750e0e;">Soviet Germany</span>": consolidating as much power as possible in the <span style="color: #830000;">**KPD**</span>, purging state institutions of anti-<span style="color: #830000;">communists</span>, and sending street fighters against the "enemies of the people".
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and immediately begin clashing with our supporters! <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop the <span style="color: #700000;">**KPD**</span> from taking power. We are forced to be on the same side as the <span style="color: #700000;">**KPD**</span>, whether we want to or not.
+In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and immediately begin clashing with our supporters! <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop the <span style="color: #830000;">**KPD**</span> from taking power. We are forced to be on the same side as the <span style="color: #830000;">**KPD**</span>, whether we want to or not.
 
 - @civil_war
 
@@ -1046,14 +1046,14 @@ on-arrival: resources -= 2
 go-to: left_coalition_success if in_popular_front_prussia or in_left_front_prussia or not dnvp_prussia or left_coalition_prussia < 50; left_front_prussia if not in_popular_front_prussia and not in_left_front_prussia and dnvp_prussia and left_coalition_prussia >= 50
 
 @left_coalition_relations
-title: Convince the <span style="color: #700000;">**KPD**</span> to accept democracy.
-unavailable-subtitle: Our relationships with the <span style="color: #700000;">KPD</span> are not good enough.
+title: Convince the <span style="color: #830000;">**KPD**</span> to accept democracy.
+unavailable-subtitle: Our relationships with the <span style="color: #830000;">KPD</span> are not good enough.
 choose-if: nsdap_relation >= 60 or spd_leader == "Conciliators"
 go-to: left_coalition_success if in_popular_front_prussia or in_left_front_prussia or not dnvp_prussia or left_coalition_prussia < 50; left_front_prussia if not in_popular_front_prussia and not in_left_front_prussia and dnvp_prussia and left_coalition_prussia >= 50
 
 @left_front_prussia
 
-The coalition negotiations were going relatively smoothly until the <span style="color: #700000;">**KPD**</span> bought up the topic of a reorganization of the Prussian government to include themselves. Previous United Left governments at the state level have faced *Reichsexekution* before, [? if president == "Hindenburg": and President Hindenburg will almost certainly do so again if we were to form one.?][? if president == "Braun": but it's unlikely Braun will repeat Ebert's mistakes.?] Despite this, the <span style="color: #700000;">**KPD**</span> are firm about their demands to be included.
+The coalition negotiations were going relatively smoothly until the <span style="color: #830000;">**KPD**</span> bought up the topic of a reorganization of the Prussian government to include themselves. Previous United Left governments at the state level have faced *Reichsexekution* before, [? if president == "Hindenburg": and President Hindenburg will almost certainly do so again if we were to form one.?][? if president == "Braun": but it's unlikely Braun will repeat Ebert's mistakes.?] Despite this, the <span style="color: #830000;">**KPD**</span> are firm about their demands to be included.
 
 *Something* must be done to restore balance, again.
 
@@ -1073,58 +1073,58 @@ go-to: left_coalition_success
 
 @left_coalition_relations_2
 title: Use our good relations to smooth things over.
-unavailable-subtitle: Our relationship with the <span style="color: #700000;">**KPD**</span> is not high enough.
+unavailable-subtitle: Our relationship with the <span style="color: #830000;">**KPD**</span> is not high enough.
 choose-if: (nsdap_relation >= 70 and bernburg_coalition >= 3) or (spd_leader == "Conciliators" and nsdap_relation >= 50)
 go-to: left_coalition_success
 
 @left_front_prussia_weimar
 view-if: in_weimar_coalition_prussia
-title: Accept the <span style="color: #700000;">**KPD**</span>'s demands.
+title: Accept the <span style="color: #830000;">**KPD**</span>'s demands.
 unavailable-subtitle: [? if popcon_strength >= right_strength: Our party reformists rule out this option. ?] [? if president != "Braun": Hindenburg will perform a *Reichsexekution* upon our government. ?]
 choose-if: right_strength >= popcon_strength and president == "Braun"
 on-arrival: in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_dnvp_majority_prussia = 0; in_minority_conservative_coalition_prussia = 0; in_left_front_prussia = 1; prussia_leader = "Rosenfeld"; reichswehr_loyalty -= 0.05; dnvp_prussia = 1; democratic_prussia = 0; nazi_goals_seen_prussia = 0; leverage += 5; nsdap_relation += 10; z_relation -= 5; lvp_relation -= 5; lvp_old_relation -= 7; wp_relation -= 8; wp_right += 5; lvp_right += 3; ddp_cohesion -= 3; lvp_right += 5; prussian_police_loyalty -= 0.1; rfb_militancy += 0.1; rfb_strength += 50; uprising_progress += 1; general_strike_progress += 1; popcon_dissent += 25; popcon_strength -= 10; right_dissent -= 10; right_strength += 10; prussia_negotiations_kpd_left_trigger = 1;
 
-We have exited our long standing <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition to form a United Left Coalition with the <span style="color: #700000;">**KPD**</span>. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #700000;">**KPD**</span> members through his work.
+We have exited our long standing <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition to form a United Left Coalition with the <span style="color: #830000;">**KPD**</span>. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #830000;">**KPD**</span> members through his work.
 
-The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #700000;">**KPD**</span> on both levels of government. The <span style="color: #700000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
+The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #830000;">**KPD**</span> on both levels of government. The <span style="color: #830000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
 
-- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #700000;">**KPD**</span> presents us with a list of demands.
+- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #830000;">**KPD**</span> presents us with a list of demands.
 
 @left_front_prussia_groko
 view-if: in_grand_coalition_prussia
-title: Accept the <span style="color: #700000;">**KPD**</span>'s demands.
+title: Accept the <span style="color: #830000;">**KPD**</span>'s demands.
 unavailable-subtitle: [? if popcon_strength >= right_strength: Our party reformists rule out this option. ?] [? if president != "Braun": Hindenburg will perform a *Reichsexekution* upon our government. ?]
 choose-if: right_strength >= popcon_strength and president == "Braun"
 on-arrival: in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_center_right_coalition_prussia = 0; in_popular_front_prussia = 0; in_dnvp_majority_prussia = 0; in_minority_conservative_coalition_prussia = 0; in_left_front_prussia = 1; prussia_leader = "Rosenfeld"; reichswehr_loyalty -= 0.05; dnvp_prussia = 1; democratic_prussia = 0; nazi_goals_seen_prussia = 0; leverage += 5; nsdap_relation += 10; z_relation -= 15; lvp_relation -= 15; wp_relation -= 20; lvp_old_relation -= 20; popcon_dissent += 25; wp_right += 8; lvp_right += 5; ddp_cohesion -= 5; lvp_right += 5; prussian_police_loyalty -= 0.1; rfb_militancy += 0.1; rfb_strength += 50; uprising_progress += 1; general_strike_progress += 1; popcon_strength -= 10; right_dissent -= 10; right_strength += 10; prussia_negotiations_kpd_left_trigger = 1;
 
-We have kicked out the <span style="color: #C0A054;">**DVP**</span> and the other bourgeois parties from the existing <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> to form a United Left Coalition with the <span style="color: #700000;">**KPD**</span>. The bourgeois parties are infuriated by our betrayal, and any future coalitions with them may be impossible. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #700000;">**KPD**</span> members through his work.
+We have kicked out the <span style="color: #C0A054;">**DVP**</span> and the other bourgeois parties from the existing <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> to form a United Left Coalition with the <span style="color: #830000;">**KPD**</span>. The bourgeois parties are infuriated by our betrayal, and any future coalitions with them may be impossible. The Minister-President position is transferred from Braun to[? if right_secedes == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if right_secedes == 0: belongs?][? if right_secedes == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #830000;">**KPD**</span> members through his work.
 
-The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #700000;">**KPD**</span> on both levels of government. The <span style="color: #700000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
+The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #830000;">**KPD**</span> on both levels of government. The <span style="color: #830000;">**KPD**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
 
-- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #700000;">**KPD**</span> presents us with a list of demands.
+- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #830000;">**KPD**</span> presents us with a list of demands.
 
 @left_coalition_success
 on-arrival: dnvp_in_government = 1; in_left_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; uprising_progress += 3; general_strike_progress += 2; uprising_progress += 1 if in_left_front_prussia; general_strike_progress += 1 if in_left_front_prussia; in_popular_front = 0; in_grand_coalition = 0; in_weimar_coalition = 0; nsdap_relation += 10; z_relation -= 5; lvp_relation -= 5; wp_relation -= 10; lvp_old_relation -= 8; braun_angry = 85
 go-to: left_coalition_civil_war if uprising_progress >= 10; left_coalition_no_civil_war if uprising_progress < 10
 achievement: einheitsfront
 
-Somehow, surprisingly, the left coalition is successfully formed, without appointing Thälmann as chancellor. The consensus choice for chancellor, accepted by the <span style="color: #c00000;">**SPD**</span>, <span style="color: #700000;">**KPD**</span>, and President [+ president +], is Rudolf Breitscheid, who belongs to the centrist faction of the <span style="color: #c00000;">**SPD**</span>, but was acceptable to the left due to his previous membership in the left-wing anti-war <span style="color: #D47B9B;">**USPD**</span>.
+Somehow, surprisingly, the left coalition is successfully formed, without appointing Thälmann as chancellor. The consensus choice for chancellor, accepted by the <span style="color: #c00000;">**SPD**</span>, <span style="color: #830000;">**KPD**</span>, and President [+ president +], is Rudolf Breitscheid, who belongs to the centrist faction of the <span style="color: #c00000;">**SPD**</span>, but was acceptable to the left due to his previous membership in the left-wing anti-war <span style="color: #D47B9B;">**USPD**</span>.
 
 # just raise the coup limit, don't immediately go to civil war
 
 @left_coalition_no_civil_war
 on-arrival: kpd_goals_seen = 0; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; reichswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_loyalty -= 0.05; wp_right += 10; lvp_right += 5; ddp_cohesion -= 3; lvp_right += 8; liberal_cooperation += 5; bourgeois_cooperation += 10; liberal_cooperation += 3 if in_left_front_prussia or in_popular_front_prussia; bourgeois_cooperation += 5 if in_left_front_prussia or in_popular_front_prussia; popcon_dissent += 20; popcon_strength -= 10; right_dissent -= 30; right_strength += 20; braun_angry += 10 if in_popular_front_prussia or in_left_front_prussia
 
-In response to the <span style="color: #700000;">**KPD**</span>'s entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and eventually enabling the destruction of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. Our task is to prove them wrong. [? if in_left_front_prussia: The right will be more active in resisting our rule considering we are also ruling with the <span style="color: #700000;">**KPD**</span> in Prussia too. ?]
+In response to the <span style="color: #830000;">**KPD**</span>'s entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and eventually enabling the destruction of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. Our task is to prove them wrong. [? if in_left_front_prussia: The right will be more active in resisting our rule considering we are also ruling with the <span style="color: #830000;">**KPD**</span> in Prussia too. ?]
 
-The <span style="color: #700000;">**KPD**</span> has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
+The <span style="color: #830000;">**KPD**</span> has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
 
 Whatever their reasoning is, the <span style="color: #c00000;">**SPD**</span> has control over the ministries of government.
 
 @left_coalition_civil_war
 on-arrival: reichswehr_loyalty += 0.1
 
-In response to the <span style="color: #700000;">**KPD**</span>'s entrance into the government, the right-wing immediately launches a coup attempt. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and begin clashing with our supporters. <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop us from taking power.
+In response to the <span style="color: #830000;">**KPD**</span>'s entrance into the government, the right-wing immediately launches a coup attempt. Troops of the <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> enter Berlin and begin clashing with our supporters. <span style="color: #808080;">Reactionary</span> officers within the Reichswehr have taken their troops out of the barracks and joined them with the <span style="color: #3E88B3;">**Stahlhelm**</span> to stop us from taking power.
 
 - @civil_war: A civil war, then.
 
@@ -1453,10 +1453,10 @@ Thus, we have Chancellor-President Otto Braun. He claims that he will resign as 
 - @emergency_no_confidence: The <span style="color: #7A3C00;">Nazis</span> immediately call a no-confidence vote against us...
 
 @breitscheid_emergency_chancellor
-subtitle: The <span style="color: #700000;">Communists</span> are warming to him...
+subtitle: The <span style="color: #830000;">Communists</span> are warming to him...
 on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"; dnvp_in_government = 1; nsdap_relation += 5; lvp_relation -= 3; lvp_old_relation -= 3; wp_relation -= 3; z_relation -= 3; wp_right += 2; lvp_right += 1; ddp_cohesion -= 1; lvp_right += 1; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = "SPD"; labor_minister_party = "SPD"; reichswehr_minister_party = "SPD"; economic_minister_party = "SPD"; finance_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_loyalty -= 0.1;
 
-We have appointed Rudolf Breitscheid as emergency chancellor. The <span style="color: #700000;">**Communists**</span> consider him less objectionable than the alternatives, although it is unclear whether they will tolerate this government.
+We have appointed Rudolf Breitscheid as emergency chancellor. The <span style="color: #830000;">**Communists**</span> consider him less objectionable than the alternatives, although it is unclear whether they will tolerate this government.
 
 - @far_right_coup
 - @emergency_no_confidence
@@ -1519,7 +1519,7 @@ Q.no_confidence_succeeds = (Q.no_confidence_votes > 50) ? 1 : 0;
 Q.no_confidence_votes = parseFloat(Q.no_confidence_votes.toFixed(1));
 !}
 
-The <span style="color: #7A3C00;">**NSDAP**</span>[? if dnf_formed: <span style="color: #003755;">, **DNF**</span>?][? if kvp_formed: <span style="color: #0087DC;">, **KVP**</span>?] and <span style="color: #3E88B3;">**DNVP**</span> will vote against us, of course. The other parties vote their conscience. [? if z_no_confidence: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is voting against us. ?] [? if lvp_no_confidence and lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> will vote against us. ?] [? if kpd_no_confidence: The <span style="color: #700000;">**KPD**</span> votes against us. ?] [? if other_no_confidence: The assortment of minor parties are voting against us. ?]
+The <span style="color: #7A3C00;">**NSDAP**</span>[? if dnf_formed: <span style="color: #003755;">, **DNF**</span>?][? if kvp_formed: <span style="color: #0087DC;">, **KVP**</span>?] and <span style="color: #3E88B3;">**DNVP**</span> will vote against us, of course. The other parties vote their conscience. [? if z_no_confidence: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is voting against us. ?] [? if lvp_no_confidence and lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> will vote against us. ?] [? if kpd_no_confidence: The <span style="color: #830000;">**KPD**</span> votes against us. ?] [? if other_no_confidence: The assortment of minor parties are voting against us. ?]
 
 In total, [+ no_confidence_votes +]% of the Reichstag is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
 
@@ -2261,7 +2261,7 @@ We are seen as responsible for the failure to form a government, and many of our
 
 @ministries
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the <span style="color: #700000;">**KPD**</span>. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the <span style="color: #700000;">**KPD**</span> controls the Reichswehr Ministry, the army will most likely revolt. ?]
+We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the <span style="color: #830000;">**KPD**</span>. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the <span style="color: #830000;">**KPD**</span> controls the Reichswehr Ministry, the army will most likely revolt. ?]
 
 - @wp_prussia_1: Offer the <span style="color: #C0A054;">**DVP**</span> a spot in the Prussian government for more leverage.
 - #mins_1928

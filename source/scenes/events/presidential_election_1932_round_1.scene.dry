@@ -248,7 +248,7 @@ go-to: hindenburg_wins if hindenburg_majority == 1; thalmann_wins if thalmann_ma
 
 Results:
 
-[? if kpd_support_spd == 0 : <span style="color: #700000;">**[+ communist_candidate_1932 +]**</span> - [+ thalmann_votes_disp +]% ?]
+[? if kpd_support_spd == 0 : <span style="color: #830000;">**[+ communist_candidate_1932 +]**</span> - [+ thalmann_votes_disp +]% ?]
 
 [? if spd_campaign > 0 : <span style="color: #c00000;">**[+ spd_candidate_1932 +]**</span> - [+ spd_president_votes_disp +]% ?]
 
@@ -270,7 +270,7 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 [? if hindenburg_confidence: Hindenburg has narrowly missed securing the required majority for a first-round victory, making his success in the runoff highly probable. With state and local elections just a month away, the industrialists and parties backing him have redirected their remaining campaign funds to those contests, confident that his victory is all but assured. This, however, presents a valuable opportunity for [+ nsdap_candidate_1932 +] to gain support among [+ dnvp_candidate_1932 +] voters and leverage their dominance in the presidential campaign to coincide with their local efforts. ?]
 
-[? if thalmann_votes_disp < 15: The <span style="color: #700000;">**Communists**</span> have suffered a demoralizing defeat, leaving many of their supporters disillusioned about the prospects of revolution—a future they once saw as inevitable given Germany’s current state. In the second round, many will abstain from voting altogether, while others may even cast their ballots for [? if not spd_candidate_1932: [+ nsdap_candidate_1932 +] ?][? if spd_candidate_1932: [+ spd_candidate_1932 +] ?]in an effort to make their vote count. ?]
+[? if thalmann_votes_disp < 15: The <span style="color: #830000;">**Communists**</span> have suffered a demoralizing defeat, leaving many of their supporters disillusioned about the prospects of revolution—a future they once saw as inevitable given Germany’s current state. In the second round, many will abstain from voting altogether, while others may even cast their ballots for [? if not spd_candidate_1932: [+ nsdap_candidate_1932 +] ?][? if spd_candidate_1932: [+ spd_candidate_1932 +] ?]in an effort to make their vote count. ?]
 
 [? if dnvp_candidate_1932: There had been discussions of Crown Prince Wilhelm running as a Bernburg unity candidate, a prospect the <span style="color: #7A3C00;">**NSDAP**</span> showed interest in supporting. However, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #3E88B3;">**Stahlhelm**</span> rejected the idea due to their hostility toward an accommodation with the <span style="color: #7A3C00;">**NSDAP**</span>. The nail in the coffin was that his own father threatened to disinherit him if he stood for the "<span style="color: #c00000;">red</span> <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">ican</span> presidential seat of an Ebert". He has since endorsed [+ nsdap_candidate_1932 +]. ?]
 
@@ -279,11 +279,11 @@ There is no majority in this round. In the second round, any candidate who wins 
 @round2_menu
 
 - @round2_convince_z: Convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to switch their support to us.
-- @round2_convince_kpd: Convince the <span style="color: #700000;">**KPD**</span> to switch their support to us. 
+- @round2_convince_kpd: Convince the <span style="color: #830000;">**KPD**</span> to switch their support to us. 
 - @round2_convince_ddp: Convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to switch their support to us.
 - @round2_convince_lvp: Convince the <span style="color: #FFCC00;">**LVP**</span> to switch their support to us.
 - @round2_hindenburg: Switch our support to Hindenburg.
-- @round2_thalmann: Switch our support to <span style="color: #700000;">**Thälmann**</span> of the <span style="color: #700000;">**KPD**</span>.
+- @round2_thalmann: Switch our support to <span style="color: #830000;">**Thälmann**</span> of the <span style="color: #830000;">**KPD**</span>.
 - @round2_organizational_endorsement
 - @round2_vote: We've done enough, second round voting begins next month.
 
@@ -411,15 +411,15 @@ Unfortunately, we fail to turn them away from Hindenburg. [? if hindenburg_votes
 
 @round2_convince_kpd
 choose-if: uspd_votes >= spd_votes
-unavailable-subtitle: The <span style="color: #700000;">**KPD**</span> knows that they are more popular than us; they do not see a reason to support our candidate.
+unavailable-subtitle: The <span style="color: #830000;">**KPD**</span> knows that they are more popular than us; they do not see a reason to support our candidate.
 view-if: spd_campaign > 0 and kpd_support_spd == 0 
 max-visits: 1
 
-The <span style="color: #700000;">**KPD**</span> is committed to supporting Ernst Thälmann. [? if (nsdap_relation >= 55 and spd_leader != "Conciliators" or nsdap_relation >= 40 and spd_leader == "Conciliators") : However, the <span style="color: #7A3C00;">Nazi</span>-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if (nsdap_relation < 55 and spd_leader != "Conciliators" or nsdap_relation < 40 and spd_leader == "Conciliators") : They do not seem willing to be convinced. ?]
+The <span style="color: #830000;">**KPD**</span> is committed to supporting Ernst Thälmann. [? if (nsdap_relation >= 55 and spd_leader != "Conciliators" or nsdap_relation >= 40 and spd_leader == "Conciliators") : However, the <span style="color: #7A3C00;">Nazi</span>-Hindenburg coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if (nsdap_relation < 55 and spd_leader != "Conciliators" or nsdap_relation < 40 and spd_leader == "Conciliators") : They do not seem willing to be convinced. ?]
 
 - @r2_spd_resources: Use our resources.
 - @r2_spd_relations: Use our good relations.
-- @round2_menu: Forget about the <span style="color: #700000;">KPD</span>.
+- @round2_menu: Forget about the <span style="color: #830000;">KPD</span>.
 
 @r2_spd_resources
 view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and spd_leader == "Conciliators"
@@ -429,7 +429,7 @@ unavailable-subtitle: Not enough resources (need 3).
 on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
-The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @r2_spd_relations
 view-if: nsdap_relation >= 70 or (spd_leader == "Conciliators" and nsdap_relation >= 50)
@@ -437,7 +437,7 @@ unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
 go-to: round2_menu
 
-The <span style="color: #700000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
+The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
 
 @round2_convince_ddp
 view-if: not lvp_formed and spd_campaign > 0 and ddp_support_spd != 1 
@@ -508,19 +508,19 @@ With our resources, the <span style="color: #FFCC00;">**LVP**</span> are convinc
 @round2_thalmann
 view-if: spd_support_thalmann == 0 and kpd_support_spd == 0
 choose-if: nsdap_relation >= 50 and right_strength > popcon_strength 
-unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
+unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the <span style="color: #830000;">Communists</span>, so they are not even willing to accept our support. ?] [? if popcon_strength >= right_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 max-visits: 1
 
-Supporting Thälmann is rather unpopular in our party, even if the <span style="color: #700000;">**Communists**</span> accept our support. Are we sure?
+Supporting Thälmann is rather unpopular in our party, even if the <span style="color: #830000;">**Communists**</span> accept our support. Are we sure?
 
-- @round2_thalmann_2: Yes, we will support <span style="color: #700000;">**Thälmann**</span>, despite the reformists' pleas against it.
+- @round2_thalmann_2: Yes, we will support <span style="color: #830000;">**Thälmann**</span>, despite the reformists' pleas against it.
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
 on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; lvp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
-Fine. We have thrown our support to Chairman Thälmann of the <span style="color: #700000;">**KPD**</span> to the dismay of our bourgeois allies.
+Fine. We have thrown our support to Chairman Thälmann of the <span style="color: #830000;">**KPD**</span> to the dismay of our bourgeois allies.
 
 [? if z_support_spd : The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is confused at our capricious behavior, and have switched their support to Hindenburg. ?]
 
@@ -548,7 +548,7 @@ As expected, the incumbent Hindenburg wins the presidency. Let's hope he continu
 @thalmann_wins
 on-arrival: president = "Levi"; nsdap_relation = 80;
 
-Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> has won the presidency. Immediately, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> launches a coup attempt against the government. We have no choice but to unite with the <span style="color: #700000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
+Ernst Thälmann of the <span style="color: #830000;">**KPD**</span> has won the presidency. Immediately, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> launches a coup attempt against the government. We have no choice but to unite with the <span style="color: #830000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
 
 - @civil_war: This is civil war.
 

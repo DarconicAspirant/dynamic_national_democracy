@@ -66,6 +66,6 @@ unavailable-subtitle: The party still doesn't view the <span style="color: #7A3C
 choose-if: nsdap_votes >= 28 or revolutionary_urgency >= 4
 on-arrival: worksplan_adopted = 1; christsoc_dissent -= 15; popcon_dissent -= 10; christsoc_strength += 10; agrarian_strength -= 5; center_dissent += 10; right_dissent += 5; economic_plan = 1; workers_uspd += 5*(1-dissent); unemployed_uspd += 5*(1-dissent)
 
-The collapse in our electoral performance and loss of voters to the <span style="color: #700000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span> have opened the party's eyes, and they are now ready to support our plan as a means to present a solution for the workers.
+The collapse in our electoral performance and loss of voters to the <span style="color: #830000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span> have opened the party's eyes, and they are now ready to support our plan as a means to present a solution for the workers.
 
 With our hard work, we have finally convinced the majority of the party to adopt the WTB plan! [? if dnvp_in_government == 1 : We can begin implementing the plan as soon as possible, as long as we have the Economic and Finance ministries. ?][? if dnvp_in_government = 0 : We should emphasize the plan in our electoral propaganda. ?]
