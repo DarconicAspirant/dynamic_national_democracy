@@ -462,7 +462,7 @@ Q.economic_records = [];
 Q.president = "Braun";
 // starting chancellor: Hermann Müller. TODO: switch party to USPD once that works
 Q.chancellor = "Müller";
-Q.chancellor_party = 'SPD';
+Q.chancellor_party = 'USPD';
 Q.dnvp_in_government = 0;
 Q.z_in_government = 1;
 Q.lvp_in_government = 0;
