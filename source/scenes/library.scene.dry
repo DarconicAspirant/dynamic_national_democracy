@@ -81,16 +81,16 @@ Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**USPD**</span>: [+ uspd_r +]%
-[? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
-<span class="tooltip-text" title="[? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>: [+ z_r +]%
-<span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**SPD**</span>: [+ spd_r +]%
-<span class="tooltip-text" title="Communist Party of Germany" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]%
-[? if not lvp_formed and wp_exist: <span class="tooltip-text" title="German People's Party" style="color: #CCAA7A;">**WP**</span>: [+ wp_r +]% ?]
-[? if kvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_r +]% ?]
 [? if not cvp_formed: <span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_r +]%?]
-[? if dnf_formed: <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_r +]% ?]
 <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_r +]%
+[? if dnf_formed: <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_r +]% ?]
+[? if kvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_r +]% ?]
+[? if not lvp_formed and wp_exist: <span class="tooltip-text" title="German People's Party" style="color: #CCAA7A;">**WP**</span>: [+ wp_r +]% ?]
+<span class="tooltip-text" title="Center Party" style="color: #000000;">**Z**</span> + <span class="tooltip-text" title="Bavarian People's Party" style="color: #A2D8E0;">**BVP**</span>: [+ z_r +]%
+<span class="tooltip-text" title="Communist Party of Germany" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]%
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**USPD**</span>: [+ uspd_r +]%
+<span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**SPD**</span>: [+ spd_r +]%
+[? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
 **Others**: [+ other_r +]%
 
 <span style="color: #3e88b3;">**DNVP**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and dnvp_caretaker == 0 : opposition ?][? if dnvp_caretaker : caretaker government ?]
@@ -243,7 +243,7 @@ go-to: menu
 
 **Catholics** are the largest religious minority, at about 30% of the population. [? if not cvp_formed: They disproportionately support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if cvp_formed: They find themselves split between supporting the <span style="color: #000000;">**CVP**</span> and the <span style="color: #c00000;">**USPD**</span>. ?] (or the <span style="color: #A2D8E0;">**Bavarian People's Party**</span> in <span style="color: #00CCFF;">Bavaria</span>).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, [? if ddp_name == "DDP" or not ddp_name: mostly the DDP?][? if ddp_name == "DStP": although the mild antisemitism of the Young German Order and it's association with the <span style="color: #FFCC00;">**[+ ddp_name +]**</span> has driven them away?], although substantial numbers support the <span style="color: #c00000;">**USPD**</span> or <span style="color: #700000;">**SPD**</span>.
+**Jews** account for between 0.5% to 1% of the population, and tend to support <span style="color: #FFCC00;">liberal parties</span>, especially the former <span style="color: #D3C24D;">DDP</span>. Substantial numbers support the <span style="color: #c00000;">**USPD**</span> or <span style="color: #700000;">**SPD**</span>.
 
 
 @public_opinion
@@ -270,25 +270,25 @@ go-to: menu
 
 **Projected election results** (if the election were to be held now):
 
-<span style="color: #c00000;">**USPD**</span>: [+ uspd_votes +]%
-
-[? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
-
-<span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
-
-<span style="color: #700000;">**SPD**</span>: [+ spd_votes +]%
-
-<span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]%
-
-[? if wp_exist: <span style="color: #CCAA7A;">**WP**</span>: [+ wp_votes +]% ?]
-
-[? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>: [+ kvp_votes +]% ?]
-
 <span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_votes +]%
+
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_votes +]%
 
 [? if dnf_formed: <span style="color: #003755;">**DNF**</span>: [+ dnf_votes +]% ?]
 
-<span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_votes +]%
+[? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>: [+ kvp_votes +]% ?]
+
+[? if wp_exist: <span style="color: #CCAA7A;">**WP**</span>: [+ wp_votes +]% ?]
+
+<span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
+
+<span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]%
+
+<span style="color: #c00000;">**USPD**</span>: [+ uspd_votes +]%
+
+<span style="color: #700000;">**SPD**</span>: [+ spd_votes +]%
+
+[? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
 
 **Others**: [+ other_votes +]%
 
