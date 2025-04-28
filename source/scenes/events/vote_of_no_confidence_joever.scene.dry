@@ -65,7 +65,7 @@ call: set_next_election_time
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @let_it_happen_braun
-on-arrival: spd_caretaker = 1
+on-arrival: dnvp_caretaker = 1
 call: set_next_election_time
 
 The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] remains as the head of a caretaker government, but no longer has the power to enact new policies.

@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #3e88b3;">**DNVP**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+<span style="color: #3e88b3;">**DNVP**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and dnvp_caretaker == 0 : opposition ?][? if dnvp_caretaker : caretaker government ?]
 [? if in_weimar_coalition and not in_social_catholic_coalition and not in_social_liberal_coalition and dnvp_in_government: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ?][? if in_social_catholic_coalition and dnvp_in_government: <span style="color: #c00000;">Social</span>-[? if not stegerwald_path: <span style="color: #000000;">Catholic</span>?][? if stegerwald_path: <span style="color: #000000;">Christian</span>?] Coalition ?][? if in_social_liberal_coalition and dnvp_in_government: <span style="color: #c00000;">Ketchup</span> and [? if not lvp_formed: <span style="color: #D3C24D;">Mustard</span>?][? if lvp_formed: <span style="color: #FFCC00;">Mustard</span>?] Coalition ?][? if in_grand_coalition and dnvp_in_government: <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> ?][? if in_popular_front and dnvp_in_government: Popular Front ?][? if in_left_front and dnvp_in_government: Left Front ?][? if in_dnvp_majority and dnvp_in_government: <span style="color: #c00000;">**SPD**</span> majority ?][? if in_minority_government and dnvp_in_government: minority government ?][? if in_emergency_government and dnvp_in_government: emergency government ?]
 
 [? if bruning_time and dnvp_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
@@ -285,7 +285,11 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 **Detailed results for each demographic**
 
+Support for Nationalism: [+ nationalism_disp +]%
+
 Support for the Republic: [+ pro_republic_disp +]%
+
+Support for Socialism: [+ socialism_disp +]%
 
 Workers: DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, [? if dnf_formed: DNF: [+ workers_dnf_display +]%,?][?  if kvp_formed: KVP: [+ workers_kvp_display +]%,?] [? if wp_exist: WP: [+ workers_wp_display +]%,?] Others: [+ workers_other_display +]%, [+ z_party_name +]: [+ workers_z_display +]%, LVP: [+ workers_lvp_display +]%, USPD: [+ workers_uspd_display +]%, SPD: [+ workers_spd_display +]%
 

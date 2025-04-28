@@ -192,7 +192,7 @@ Q.nationalism = 56;
 // socialism vs capitalism
 Q.socialism = 44;
 // pro-republic vs anti-republic
-Q.pro_republic = 60;
+Q.pro_republic = 57;
 
 Q.emergency_rule = 0;
 
@@ -943,7 +943,7 @@ new-page: true
 
 This is a WIP Mod based on Dynamic Social Democracy.
 
-This mod takes place in a world where world socialism did not experience the intense schism it did during the WW1 years. The majority of the SPD remained opposed to the war, and once it ended, found itself in a far better position to shape the new German Republic. And so, with a potentially terminal crisis of the Republic on the horizon, the German bourgeois and right will find themselves facing a sort of political oblivion distinct but reminiscent of what German socialism and democracy faced in our world. 
+This mod takes place in a world where international socialism did not experience a schism as intense as it did during our WW1 years. The majority of the SPD remained opposed to the war, and at its end, it found itself in a far better position to shape the new German Republic. And so, with 1929 approaching and a potentially terminal crisis of the Republic on the horizon, the German bourgeois and right will find themselves facing a sort of political oblivion distinct but reminiscent of what German socialism and democracy faced in our world. 
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 

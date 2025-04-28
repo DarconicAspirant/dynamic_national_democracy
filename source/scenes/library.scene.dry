@@ -23,7 +23,7 @@ Herein contains relevant information about the government and politics of the Ge
 @government
 go-to: menu
 
-The German Republic, called by some of our detractors as the "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Reichstag. The Reichstag is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
+The German Republic, often termed the "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic", because of its initial site of government, is a parliamentary republic with a somewhat weak president and a strong parliament, called the Reichstag. The Reichstag is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
 
 The Reichstag is elected based on a proportional representation system, giving parties seats roughly proportional to their vote share in each electoral district. The Reichstag then elects the Chancellor and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
 
@@ -93,7 +93,7 @@ Reichstag composition:
 <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_r +]%
 **Others**: [+ other_r +]%
 
-<span style="color: #c00000;">**SPD**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+<span style="color: #3e88b3;">**DNVP**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and dnvp_caretaker == 0 : opposition ?][? if dnvp_caretaker : caretaker government ?]
 [? if in_weimar_coalition and not in_social_catholic_coalition and not in_social_liberal_coalition and dnvp_in_government: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ?][? if in_social_catholic_coalition and dnvp_in_government: <span style="color: #c00000;">Social</span>-[? if not stegerwald_path: <span style="color: #000000;">Catholic</span>?][? if stegerwald_path: <span style="color: #000000;">Christian</span>?] Coalition ?][? if in_social_liberal_coalition and dnvp_in_government: <span style="color: #c00000;">Ketchup</span> and [? if not lvp_formed: <span style="color: #FFCC00;">Mustard</span>?][? if lvp_formed: <span style="color: #FFCC00;">Mustard</span>?] Coalition ?][? if in_grand_coalition and dnvp_in_government: <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> ?][? if in_popular_front and dnvp_in_government: Popular Front ?][? if in_left_front and dnvp_in_government: Left Front ?][? if in_dnvp_majority and dnvp_in_government: <span style="color: #c00000;">**SPD**</span> majority ?][? if in_minority_government and dnvp_in_government: minority government ?][? if in_emergency_government and dnvp_in_government: emergency government ?]
 
 [? if bruning_time and dnvp_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
@@ -233,17 +233,17 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are <span style="color: #c00000;">socialists</span>, supporting either the <span style="color: #c00000;">**SPD**</span> or <span style="color: #700000;">**KPD**</span>. They make up 40-50% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are <span style="color: #c00000;">socialists</span>, supporting either the <span style="color: #c00000;">**USPD**</span> or <span style="color: #700000;">**SPD**</span>. They make up 40-50% of the population.
 
 **Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>. 10-15% of the population.
 
 **New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of <span style="color: #FFCC00;">liberalism</span>. 10-15% of the population.
 
-**Rural**: Small and large farmers and independent rural workers. Protestant farmers usually supports the [? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span>?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span>?]. [? if rural_nsdap_normalized >= 25: However the <span style="color: #7A3C00;">Nazis</span> have gained a strong appeal among them?]. 20-30% of the population.
+**Rural**: Small and large farmers and independent rural workers. Protestant farmers usually supports the [? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span>?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span>?]. [? if rural_nsdap_normalized >= 25: However the <span style="color: #7A3C00;">Nazis</span> have also showed the ability to make inroads among them?]. 20-30% of the population.
 
-**Catholics** are the largest religious minority, at about 30% of the population. [? if not cvp_formed: They disproportionately support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if cvp_formed: They find themselves split between supporting the <span style="color: #000000;">**CVP**</span> and the <span style="color: #c00000;">**SPD**</span>. ?] (or the <span style="color: #A2D8E0;">**Bavarian People's Party**</span> in <span style="color: #00CCFF;">Bavaria</span>).
+**Catholics** are the largest religious minority, at about 30% of the population. [? if not cvp_formed: They disproportionately support the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if cvp_formed: They find themselves split between supporting the <span style="color: #000000;">**CVP**</span> and the <span style="color: #c00000;">**USPD**</span>. ?] (or the <span style="color: #A2D8E0;">**Bavarian People's Party**</span> in <span style="color: #00CCFF;">Bavaria</span>).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, [? if ddp_name == "DDP" or not ddp_name: mostly the DDP?][? if ddp_name == "DStP": although the mild antisemitism of the Young German Order and it's association with the <span style="color: #FFCC00;">**[+ ddp_name +]**</span> has driven them away?], although substantial numbers support the <span style="color: #c00000;">**SPD**</span> or <span style="color: #700000;">**KPD**</span>.
+**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, [? if ddp_name == "DDP" or not ddp_name: mostly the DDP?][? if ddp_name == "DStP": although the mild antisemitism of the Young German Order and it's association with the <span style="color: #FFCC00;">**[+ ddp_name +]**</span> has driven them away?], although substantial numbers support the <span style="color: #c00000;">**USPD**</span> or <span style="color: #700000;">**SPD**</span>.
 
 
 @public_opinion
@@ -258,12 +258,11 @@ set-jump: election_projections
 
 **Public Opinion**
 
-#Support for Socialism: [+ socialism_disp +]%
-
-#Support for Nationalism: [+ nationalism_disp +]%
+Support for Nationalism: [+ nationalism_disp +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
 
+#Support for Socialism: [+ socialism_disp +]%
 
 @election_projections
 view-if: (not historical_mode) or game_over
@@ -271,35 +270,26 @@ go-to: menu
 
 **Projected election results** (if the election were to be held now):
 
-# 1928: 30, 1930: 25, 1932: 22
-<span style="color: #c00000;">**SPD**</span>: [+ uspd_votes +]%
+<span style="color: #c00000;">**USPD**</span>: [+ uspd_votes +]%
 
 [? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
 
-# 1928: 15, 1930: 15, 1932: 
 <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
 
-# 1928: 10, 1930: 13
-<span style="color: #700000;">**KPD**</span>: [+ spd_votes +]%
+<span style="color: #700000;">**SPD**</span>: [+ spd_votes +]%
 
-# 1928: 5, 1930: 4 (as DStP)
-[? if not lvp_formed: <span style="color: #FFCC00;">**[+ ddp_name +]**</span>: [+ lvp_votes +]% ?]
+<span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]%
 
-[? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]% ?]
-# 1928: 9, 1930: 5
-[? if not lvp_formed and wp_exist: <span style="color: #CCAA7A;">**WP**</span>: [+ wp_votes +]% ?]
+[? if wp_exist: <span style="color: #CCAA7A;">**WP**</span>: [+ wp_votes +]% ?]
 
 [? if kvp_formed: <span style="color: #0087DC;">**KVP**</span>: [+ kvp_votes +]% ?]
 
-# 1928: 14, 1930: 7
-[? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_votes +]%?]
+<span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_votes +]%
 
 [? if dnf_formed: <span style="color: #003755;">**DNF**</span>: [+ dnf_votes +]% ?]
 
-# 1928: 3, 1930: 18
 <span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_votes +]%
 
-# 1928: 9, 1930: 10
 **Others**: [+ other_votes +]%
 
 **Detailed results for each demographic**:
@@ -419,47 +409,46 @@ go-to: menu
 @parties
 go-to: menu
 
-<span style="color: #c00000;">**USPD**</span> - *Unabhängige Sozialdemokratische Partei Deutschlands* (Independent Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern <span style="color: #c00000;">**SPD**</span> was formed from a merger of the "Majority" <span style="color: #c00000;">**SPD**</span>, which supported the Great War, and the "Independent" <span style="color: #c00000;">**SPD**</span> or <span style="color: #D47B9B;">**USPD**</span>, which opposed the war.
-
-[? if not cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> - [? if z_party_name != "CVP": <i>Zentrumspartei</i>?][? if z_party_name == "CVP": <i>Christliche Volkspartei</i>?] ([? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">Christian People's Party</span>?]) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the <span style="color: #A2D8E0;">**BVP**</span> (Bavarian People's Party), which represents Catholics in <span style="color: #00CCFF;">Bavaria</span>. [? if (year >= 1930 or chancellor == "Brüning") and z_leader == "Kaas": They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?][? if (year >= 1930 or chancellor == "Brüning") and z_leader == "Stegerwald": They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Adam Stegerwald, who has taken a focus on interconfessionalizing the party. ?][? if (year >= 1930 or chancellor == "Brüning") and z_leader == "Joos": They have appeared to take a more conservative turn recently, with the rise of Brüning and support of austerity. ?][? if year >= 1930 and z_leader == "Kaiser": They have appeared to take a more leftist turn recently, with the election of Jakob Kaiser and support of certain left-wing economic policies. ?]?]
-
-[? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> - <i>Christliche Volkspartei</i> (Christian People's Party) - a center-right to right-wing Christian party formed out of a merger between the Catholic <span style="color: #000000;">Center Party</span> and right-wing Protestant <span style="color: #3E88B3;">**DNVP**</span>. Our relations are much rockier than they were with the <span style="color: #000000;">Center</span>. They are often associated with the <span style="color: #A2D8E0;">**BVP**</span> (Bavarian People's Party), which represents Catholics in <span style="color: #00CCFF;">Bavaria</span>. The party is split into many factions, being largely divided by religion and former party status. [? if cvp_ideology == "Left" or cvp_ideology == "Moderate": The party seeks to emulate the <span style="color: #0087DC;">Tory</span> conservatives in <span style="color: #C8102E;">Great Britain</span>?][? if cvp_ideology == "Right": The party's current ideology is not too disimilar to that of the former <span style="color: #3E88B3;">**DNVP**</span>?]. ?]
-
-Current relations: [+ z_relation : relationships +]
-
-[? if not lvp_formed: <span style="color: #FFCC00;">**[+ ddp_name +]**</span> - [? if ddp_name == "DDP": <i>Deutsche Demokratische Partei</i> (German Democratic Party)?][? if ddp_name == "DStP": <i>Deutsche Staatspartei</i> (German State Party)?] - [? if ddp_name == "DDP": a left-liberal party, popular among the intelligentsia and educated middle class. Although, they have been shifting towards the right over the years. They have often been in coalitions with us. ?][? if ddp_name == "DStP": a liberal party, waning in popularity among the intelligentsia and middle class. [? if dstp_collapsed == 0: They have shifted considerably to the right in recent years and have merged with the political wing of the mildly antisemitic Young German Order in an effort to revive their party.?][? if dstp_collapsed == 1: They have shifted considerably to the right in recent years and have merged with the political wing of the mildly antisemitic Young German Order in an effort to revive their party. Furthermore, the Young German Order has broken off, essentially just leaving the <span style="color: #FFCC00;">**DDP**</span> with a different name.?] They have often been in coalitions with us. ?] ?]
-
-[? if not lvp_formed: Current relations: [+ lvp_relation : relationships +] ?]
-
-[? if not lvp_formed and wp_exist: <span style="color: #CCAA7A;">**WP**</span> - <i>Deutsche Volkspartei</i> (German People's Party) - a conservative-liberal party founded by Gustav Stresemann, supported by the middle classes, bourgeoisie and industrialists. The industrial and right wing of the party has been gaining noticeable influence in recent years with Stresemann's neglect of party affairs. [? if wp_ideology == "Right": The industrial wing of the party has succeeded in it's takeover of the party and are much less inclined to work with us.?] We have occasionally been in coalitions. ?]
-
-[? if not lvp_formed and wp_exist: Current relations: [+ wp_relation : relationships +] ?]
-
-[? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span> - <i>Liberale Volkspartei</i> (Liberal People's Party) - a liberal party, popular among the bourgeois and the middle class. Formed from a merger of the two former liberal parties, the left-liberal <span style="color: #FFCC00;">**[+ ddp_name +]**</span> and conservative-liberal <span style="color: #CCAA7A;">**WP**</span>. Its predecessors have often been in coalitions with us. ?]
-
-[? if lvp_formed: Current relations: [+ lvp_old_relation : relationships +] ?]
-
-[? if kvp_formed: <span style="color: #0087DC;">**KVP**</span> - <i>Konservative Volkspartei</i> (Conservative People's Party) - a moderate right-wing conservative nationalist party, supported by rural workers, former aristocracy, landowners and conservative Lutherans. The party seeks to emulate the <span style="color: #0087DC;">Tory</span> conservatives in <span style="color: #C8102E;">Great Britain</span>. ?]
-
-[? if kvp_formed: Current relations: [+ kvp_relation : relationships +] ?]
 
 [? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span> - <i>Deutschnationale Volkspartei</i> (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans. [? if dnvp_wp_formed: They have recently merged with the <span style="color: #CCAA7A;">**WP**</span>. ?]?]
 
 [? if not cvp_formed: Current relations: [+ dnvp_old_relation : relationships +]?]
 
+[? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> - <i>Christliche Volkspartei</i> (Christian People's Party) - a center-right to right-wing Christian party formed out of a merger between the Catholic <span style="color: #000000;">Center Party</span> and right-wing Protestant <span style="color: #3E88B3;">**DNVP**</span>. Our relations are much rockier than they were with the <span style="color: #000000;">Center</span>. They are often associated with the <span style="color: #A2D8E0;">**BVP**</span> (Bavarian People's Party), which represents Catholics in <span style="color: #00CCFF;">Bavaria</span>. The party is split into many factions, being largely divided by religion and former party status. [? if cvp_ideology == "Left" or cvp_ideology == "Moderate": The party seeks to emulate the <span style="color: #0087DC;">Tory</span> conservatives in <span style="color: #C8102E;">Great Britain</span>?][? if cvp_ideology == "Right": The party's current ideology is not too disimilar to that of the former <span style="color: #3E88B3;">**DNVP**</span>?]. ?]
+
+[? if not lvp_formed and wp_exist: <span style="color: #CCAA7A;">**WP**</span> - <i>Deutsche Volkspartei</i> (German People's Party) - a conservative-liberal party founded by Gustav Stresemann, supported by the middle classes, bourgeoisie and industrialists. The industrial and right wing of the party has been gaining noticeable influence in recent years with Stresemann's neglect of party affairs. [? if wp_ideology == "Right": The industrial wing of the party has succeeded in it's takeover of the party and are much less inclined to work with us.?] We have occasionally been in coalitions. ?]
+
+[? if wp_exist: Current relations: [+ wp_relation : relationships +] ?]
+
+[? if not cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> - [? if z_party_name != "CVP": <i>Zentrumspartei</i>?][? if z_party_name == "CVP": <i>Christliche Volkspartei</i>?] ([? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">Christian People's Party</span>?]) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the <span style="color: #A2D8E0;">**BVP**</span> (Bavarian People's Party), which represents Catholics in <span style="color: #00CCFF;">Bavaria</span>. [? if (year >= 1930 or chancellor == "Brüning") and z_leader == "Kaas": They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?][? if (year >= 1930 or chancellor == "Brüning") and z_leader == "Stegerwald": They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Adam Stegerwald, who has taken a focus on interconfessionalizing the party. ?][? if (year >= 1930 or chancellor == "Brüning") and z_leader == "Joos": They have appeared to take a more conservative turn recently, with the rise of Brüning and support of austerity. ?][? if year >= 1930 and z_leader == "Kaiser": They have appeared to take a more leftist turn recently, with the election of Jakob Kaiser and support of certain left-wing economic policies. ?]?]
+
+Current relations: [+ z_relation : relationships +]
+
+[? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span> - <i>Liberale Volkspartei</i> (Liberal People's Party) - a liberal party, popular among the bourgeois and the middle class. Formed from a merger of the two former liberal parties, the left-liberal <span style="color: #FFCC00;">**[+ ddp_name +]**</span> and conservative-liberal <span style="color: #CCAA7A;">**WP**</span>. Its predecessors have often been in coalitions with us. ?]
+
+Current relations: [+ lvp_relation : relationships +]
+
+[? if kvp_formed: <span style="color: #0087DC;">**KVP**</span> - <i>Konservative Volkspartei</i> (Conservative People's Party) - a moderate right-wing conservative nationalist party, supported by rural workers, former aristocracy, landowners and conservative Lutherans. The party seeks to emulate the <span style="color: #0087DC;">Tory</span> conservatives in <span style="color: #C8102E;">Great Britain</span>. ?]
+
+[? if kvp_formed: Current relations: [+ kvp_relation : relationships +] ?]
+
+<span style="color: #7A3C00;">**NSDAP**</span> - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or <span style="color: #7A3C00;">Nazis</span>) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
+
+Current relations: [+ nsdap_relation : relationships +]
+
 [? if dnf_formed: <span style="color: #003755;">**DNF**</span> - <i>Deutschnationale Front</i> (German National Front) - a far-right nationalist-conservative party, led by Alfred Hugenberg, originally split from the <span style="color: #3E88B3;">**DNVP**</span>. It is supported by a small but loyal base of Hugenberg supporters, consisting of former aristocrats, racists and nationalists. ?]
 
 [? if dnf_formed: Current relations: [+ dnf_relation : relationships +] ?]
+
+<span style="color: #c00000;">**USPD**</span> - *Unabhängige Sozialdemokratische Partei Deutschlands* (Independent Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern <span style="color: #c00000;">**SPD**</span> was formed from a merger of the "Majority" <span style="color: #c00000;">**SPD**</span>, which supported the Great War, and the "Independent" <span style="color: #c00000;">**SPD**</span> or <span style="color: #D47B9B;">**USPD**</span>, which opposed the war.
+
+Current relations: [+ uspd_relation : relationships +]
 
 <span style="color: #700000;">**SPD**</span> - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - a radical left-wing offshoot of the <span style="color: #c00000;">**SPD**</span> that emerged in the aftermath of the German Revolution of 1918, they follow the path of Moscow, opposing parliamentary democracy in favor of a <span style="color: #750e0e;">Soviet</span>-style revolution.
 
 Current relations: [+ spd_relation : relationships +]
 
 [? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span> - <i>Sozialistische Arbeiterpartei Deutschlands</i> (Socialist Worker's Party of Germany) - a party recently formed in a split from the <span style="color: #c00000;">**SPD**</span>, the <span style="color: #9B0000;">**SAPD**</span> is essentially an agglomeration of various left-wing splinter groups between the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. ?]
-
-<span style="color: #7A3C00;">**NSDAP**</span> - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or <span style="color: #7A3C00;">Nazis</span>) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
-
-Current relations: [+ nsdap_relation : relationships +]
 
 **Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. [? if dnvp_split == 1: They also consist of splinter parties from the <span style="color: #3E88B3;">**DNVP**</span>, as a result of Hugenberg's radical right policies as chairman. ?]Their political position usually lies between the [? if wp_exist and not lvp_formed: <span style="color: #CCAA7A;">**WP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?][? if not wp_exist: <span style="color: #FFCC00;">**[+ ddp_name +]**</span>?] and the [? if not cvp_formed: <span style="color: #3E88B3;">**DNVP**</span>?][? if cvp_formed: <span style="color: #003755;">**DNF**</span>?].
 
@@ -474,7 +463,7 @@ go-to: menu
 
 **Paramilitary groups:**
 
-**Reichsbanner** <span style="color: #000000;"><b>Schwarz</b></span>-<span style="color: #DD0000;"><b>Rot</b></span>-<span style="color: #FFCC00;"><b>Gold</b></span>: The Reichsbanner is an organization affiliated with all of the democratic parties - the <span style="color: #c00000;">**SPD**</span>, <span style="color: #000000;">**[+ z_party_name +]**</span>, and [? if lvp_formed: the former ?]<span style="color: #FFCC00;">**[+ ddp_name +]**</span>, but primarily with the <span style="color: #c00000;">**SPD**</span>. Historically, this has been an unarmed organization.
+<span style="color: #DD0000;">**Volksbanner** </span><span style="color: #000000;"><b>Schwarz</b></span>-<span style="color: #DD0000;"><b>Rot</b></span>-<span style="color: #FFCC00;"><b>Gold</b></span>: The Volksbanner is a militant popular organization for defending what its supporters perceive to be the gains of the September Revolution and republicanism. It is affiliated with the socialists and the democratic parties, but it is in effect accepted only by the left-wing of republicanism - the <span style="color: #700000;">**SPD**</span> and <span style="color: #c00000;">**USPD**</span> fully participate, while the <span style="color: #000000;">**[+ z_party_name +]**</span>, and <span style="color: #FFCC00;">**LVP**</span> are not affiliated but have no restrictions on member participation. [? if vb_ideology = Far-Left: Dangerously, the <span style="color: #DD0000;">**Volksbanner**</span> seems to now be a fellow carrier of <span style="color: #700000;">**SPD**</span>'s vision of uncompromising opposition to the bourgeois republic and a believer that only a socialist republic can attain the "dreams of September". This has made the organization far more militant thatn before. Thankfully, membership seems to be affected by this tendency, as moderates are excluded or resign voluntarily.?][? if vb_ideology = Left: Worryingly, <span style="color: #DD0000;">**Volksbanner**</span> membership seems to have moved left recently, and the organization now seems to be more a proponent of socialism than mere republicanism. On the positive side, this has somewhat weakened it membership-wise, not only because of the exodus of centrist republicans, but because the inter-party conflict between the <span style="color: #700000;">SPD</span> and <span style="color: #DD0000;">**USPD**</span> has a greater impact within the organization?][? if vb_ideology = Center: Recently, the <span style="color: #DD0000;">Volksbanner</span> has shown an unexpected positive trend of de-radicalization and rejection of <span style="color: #700000;">radical socialism</span> and militancy. While it absolutely remains a political opponent due to its staunch <span style="color: #000000;">Repub</span><span style="color: #DD0000;">lic</span><span style="color: #FFCC00;">anism</span>, its potential as an enabler of socialist takeover has been neutered.?] Historically, this organization is mostly unarmed.
 
 Strength: [+ vb_strength +] thousand
 
@@ -486,7 +475,7 @@ Strength: [+ rfb_strength +] thousand
 
 Militarization: [+ rfb_militancy : militancy +]
 
-**Der Stahlhelm**: A <span style="color: #3E88B3;">right-wing nationalist</span> organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. [? if not cvp_formed: Associated with the <span style="color: #3E88B3;">**DNVP**</span>.?][? if cvp_formed: Associated with the <span style="color: #000000;">**[+ z_party_name +]**</span> and <span style="color: #003755;">**DNF**</span>.?]
+**Der Stahlhelm**: A <span style="color: #3E88B3;">right-wing nationalist</span> organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. It is primarily associated with our <span style="color: #3E88B3;">party</span>.[? if dnf_formed: and the <span style="color: #003755;">**DNF**</span>.?]
 
 Strength: [+ sh_strength +] thousand
 
