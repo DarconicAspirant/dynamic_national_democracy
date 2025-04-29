@@ -2269,7 +2269,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 
 @labor
 title: Labor Ministry
-subtitle: [? christsoc_strength > (popcon_strength + agrarian_strength  right_strength) * 0.8: Taking the labor ministry is not traditionally expected of us, but the prominence of the <span style="color: #6D5298;">Christian-Socials</span> within our party has recently changed that.?][? christsoc_strength < (popcon_strength + agrarian_strength  right_strength) * 0.8: Taking the Labor Ministry is not expected of us. Labor does not trust us. Our bourgeois backers however may be satisfied by a prospectively more employer-friendly ministry.?]
+subtitle: [? christsoc_strength > (popcon_strength + agrarian_strength  right_strength) * 0.8: Taking the labor ministry is not traditionally expected of us, but the prominence of the <span style="color: #6D5298;">Christian-Socials</span> within our party has recently changed that. ?][? christsoc_strength < (popcon_strength + agrarian_strength  right_strength) * 0.8: Taking the Labor Ministry is not expected of us. Labor does not trust us. Our bourgeois backers however may be satisfied by a prospectively more employer-friendly ministry. ?]
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: [? if christsoc_strength > (popcon_strength + agrarian_strength  right_strength) * 0.8: leverage >= 5 ?][? if christsoc_strength < (popcon_strength + agrarian_strength  right_strength) * 0.8: leverage >= 10 ?]
