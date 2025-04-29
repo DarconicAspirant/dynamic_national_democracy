@@ -35,11 +35,11 @@ The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">
 @defense
 subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; vb_strength += 50; vb_militancy += 0.05; z_relation -= 3 if strife < 5; lvp_relation -= 3 if strife < 5; lvp_old_relation -= 3 if strife < 5
+on-arrival: resources -= rb_militarization_cost; vb_strength += 50; vb_militancy += 0.05; z_relation -= 3 if strife < 5; ddvp_relation -= 3 if strife < 5; ddvp_old_relation -= 3 if strife < 5
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies for the militant defense of the republic against the <span style="color: #7A3C00;">fascists</span> paramilitaries, strengthening the Reichsbanner.
 
-[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] decries the militarization of the Reichsbanner, and its members are leaving the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization. ?][? if strife >= 5: Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and mute their criticisms. ?] ?]
+[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] decries the militarization of the Reichsbanner, and its members are leaving the <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> organization. ?][? if strife >= 5: Seeing the strife that has filled Germany's streets, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not ddvp_formed:<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddvp_formed:<span style="color: #FFCC00;">**DDVP**</span>?] seem to be convinced that it is necessary for the Reichsbanner to be militarized, and mute their criticisms. ?] ?]
 
 @pacifism
 on-arrival: militarism += 1; nationalism -= 5 if militarism >= 3; workers_uspd += 5*(1-dissent) if militarism >= 4; unemployed_uspd += 4*(1-dissent) if militarism >= 4; new_middle_uspd += 4*(1-dissent) if militarism >= 4
@@ -47,7 +47,7 @@ on-arrival: militarism += 1; nationalism -= 5 if militarism >= 3; workers_uspd +
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies against nationalism and war.
 
 @republic
-on-arrival: pro_republic += 5*(1-dissent); antimocratization += 1; workers_uspd += 5*(1-dissent) if antimocratization >= 4; unemployed_uspd += 4*(1-dissent) if antimocratization >= 4; new_middle_uspd += 4*(1-dissent) if antimocratization >= 4; ddp_left += 0.5 if antimocratization >= 4; lvp_left += 0.5 if antimocratization >= 4
+on-arrival: pro_republic += 5*(1-dissent); antimocratization += 1; workers_uspd += 5*(1-dissent) if antimocratization >= 4; unemployed_uspd += 4*(1-dissent) if antimocratization >= 4; new_middle_uspd += 4*(1-dissent) if antimocratization >= 4; ddp_left += 0.5 if antimocratization >= 4; ddvp_left += 0.5 if antimocratization >= 4
 
 The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of the democratic republic and against <span style="color: #7A3C00;">dictatorship</span>.
 
@@ -62,6 +62,6 @@ The WTB-Plan is the rallying point for the entire <span style="color: #c00000;">
 @antisemitism
 title: Rally against antisemitism and in defense of <span style="color: #005EB8;">Jewish</span> Germans.
 view-if: confronting_antisemitism > 1
-on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent); ddp_left += 0.5; lvp_left += 1
+on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent); ddp_left += 0.5; ddvp_left += 1
 
 The <span style="color: #7A3C00;">Nazis</span> and other <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> political movements are increasingly turning their hatred against the <span style="color: #005EB8;">Jewish</span> community of Germany. The <span style="color: #c00000;">**Iron**</span> <span style="color: #1A1A1A;">**Front**</span> rallies in defense of individual <span style="color: #005EB8;">Jews</span> and the broader community against violence.

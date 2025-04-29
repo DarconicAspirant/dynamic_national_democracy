@@ -18,20 +18,20 @@ Much of our party is deeply opposed to rearmament, while the center and right pa
 - @ministry: Use the Reichswehr Ministry to prevent the construction.
 
 @vote_yes
-on-arrival: right_dissent += 10; christsoc_dissent += 10; center_dissent += 5; popcon_dissent += 5; paramilitarist_dissent += 5; panzerkreuzer_b_funded = 1; nazi_coalition_dissent += 1; nsdap_relation -= 6; workers_uspd -= 6; wp_left += 2; lvp_left += 1; braun_angry -= 5
+on-arrival: right_dissent += 10; christsoc_dissent += 10; center_dissent += 5; popcon_dissent += 5; paramilitarist_dissent += 5; panzerkreuzer_b_funded = 1; nazi_coalition_dissent += 1; nsdap_relation -= 6; workers_uspd -= 6; wp_left += 2; ddvp_left += 1; braun_angry -= 5
 
 Our grassroots party members are highly critical of our decision. Many party branches have increased their agitation against our parliamentary fraction, especially after we opposed the construction of the first ship in favor of food for children.
 
 The vote in favor of the battlecruiser easily passes, with opposition only from the <span style="color: #830000;">**KPD**</span>. The ship will be built.
 
 @vote_no
-on-arrival: wp_relation -= 8; lvp_old_relation -= 5; z_relation -= 5; militarism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_uspd += 4*(1-dissent) if nationalism < 49; wp_right += 1; braun_angry += 5
+on-arrival: wp_relation -= 8; ddvp_old_relation -= 5; z_relation -= 5; militarism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_uspd += 4*(1-dissent) if nationalism < 49; wp_right += 1; braun_angry += 5
 go-to: built if (uspd_r + spd_r < 50); not_built if (uspd_r + spd_r >= 50)
 
 Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if dnvp_toleration: , including the minority government that we are currently supporting ?].
 
 @abstain
-on-arrival: wp_relation -= 5; lvp_old_relation -= 3; z_relation -= 3; right_dissent += 8; christsoc_dissent += 8; panzerkreuzer_b_funded = 1; nsdap_relation -= 3; workers_uspd -= 2
+on-arrival: wp_relation -= 5; ddvp_old_relation -= 3; z_relation -= 3; right_dissent += 8; christsoc_dissent += 8; panzerkreuzer_b_funded = 1; nsdap_relation -= 3; workers_uspd -= 2
 
 The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Reichstag passes, with all parties in favor except members of the dissident <span style="color: #c00000;">**SPD**</span> and <span style="color: #830000;">**KPD**</span>. The ship will be built.
 

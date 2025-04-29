@@ -7,14 +7,14 @@ max-visits: 1
 
 = <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> Dissolved
 
-The grand coalition comprising the <span style="color: #e3000f;">USPD</span>, <span style="color: #ffcc00;">LVP</span>, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], and the <span style="color: #A2D8E0;">**BVP**</span>, led by Chancellor Hermann Müller, has been declared dissolved by the <span style="color: #ffcc00;">LVP</span> due to conflicts over the construction of a new battlecruiser whose design would circumvent the restrictions imposed upon our military by the treaty of Versailles. While most coalition members supported the measure as another part of the slow process of German rearmament, the <span style="color: #e3000f;">USPD</span> chancellor refused to bring it to a full Reichstag vote. With the end of the Reichstag's 4 year term approaching, the rightists in the <span style="color: #ffcc00;">LVP</span> decided to accelerate the process, expecting a government more amenable to their goals.
+The grand coalition comprising the <span style="color: #e3000f;">USPD</span>, <span style="color: #ffcc00;">DDVP</span>, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], and the <span style="color: #A2D8E0;">**BVP**</span>, led by Chancellor Hermann Müller, has been declared dissolved by the <span style="color: #ffcc00;">DDVP</span> due to conflicts over the construction of a new battlecruiser whose design would circumvent the restrictions imposed upon our military by the treaty of Versailles. While most coalition members supported the measure as another part of the slow process of German rearmament, the <span style="color: #e3000f;">USPD</span> chancellor refused to bring it to a full Reichstag vote. With the end of the Reichstag's 4 year term approaching, the rightists in the <span style="color: #ffcc00;">DDVP</span> decided to accelerate the process, expecting a government more amenable to their goals.
 
 With talks having collapsed, new elections are scheduled for May, and the government will continue in a caretaker capacity.
 
 - @good: Great!
 
 @good
-on-arrival: next_election_month = 5; next_election_time = 5; lvp_relation += 3
+on-arrival: next_election_month = 5; next_election_time = 5; ddvp_relation += 3
 
 Our task is to prepare for the next elections where we stand to gain.
 

@@ -1,10 +1,10 @@
 title: <span style="color: #D3C24D;">**DDP**</span> Reformation
 subtitle: The <span style="color: #D3C24D;">German Democratic Party</span> is becoming the <span style="color: #D3C24D;">German State Party</span>.
-view-if: year == 1930 and month >= 8 and not lvp_formed
+view-if: year == 1930 and month >= 8 and not ddvp_formed
 on-arrival: {!
 Q.dstp_formation_points = 0;
 if (!Q.vnr_cool) Q.dstp_formation_points -= 5;
-if (Q.lvp_votes < 3.7) {
+if (Q.ddvp_votes < 3.7) {
     Q.dstp_formation_points += 1;
 }
 if (Q.next_election_time - Q.time < 6) {
@@ -16,7 +16,7 @@ if (Q.wp_ideology == "Right") {
 if ((100 - Q.pro_republic) + Q.nationalism >= 90) {
     Q.dstp_formation_points += 1;
 }
-if (Q.lvp_timer_1_trigger == 1) {
+if (Q.ddvp_timer_1_trigger == 1) {
     Q.dstp_formation_points += 5;
 }
 if (Q.major_curriculum == "humanist") {
@@ -24,11 +24,11 @@ if (Q.major_curriculum == "humanist") {
 } else if (Q.minor_curriculum == "humanist") {
     Q.dstp_formation_points += 1;
 }
-if (Q.lvp_relation < 50) {
+if (Q.ddvp_relation < 50) {
     Q.dstp_formation_points += 1;
-    Q.lvp_right += 1;
+    Q.ddvp_right += 1;
 }
-if (Q.lvp_relation >= 50) {
+if (Q.ddvp_relation >= 50) {
     Q.ddp_left += 1;
 }
 if (Q.liberal_parliament || Q.bourgeois_parliament_ddp) {
@@ -54,7 +54,7 @@ Pessimism is a widespread feeling within the party, leading to mounting pressure
 
 @dstp_formed
 view-if: dstp_formation_points >= 3
-on-arrival: dstp_formed = 1; ddp_name = "DStP"; liberal_cooperation -= 5; bourgeois_cooperation -= 3; new_middle_lvp -= 2; old_middle_ddp += 4; rural_lvp += 2; lvp_right += 2; lvp_relation -= 5; pro_republic -= 3; nationalism += 5; justice_minister_party = ddp_name if justice_minister_party == "DDP"; agriculture_minister_party = ddp_name if agriculture_minister_party == "DDP"; economic_minister_party = ddp_name if economic_minister_party == "DDP"; finance_minister_party = ddp_name if finance_minister_party == "DDP"
+on-arrival: dstp_formed = 1; ddp_name = "DStP"; liberal_cooperation -= 5; bourgeois_cooperation -= 3; new_middle_ddvp -= 2; old_middle_ddp += 4; rural_ddvp += 2; ddvp_right += 2; ddvp_relation -= 5; pro_republic -= 3; nationalism += 5; justice_minister_party = ddp_name if justice_minister_party == "DDP"; agriculture_minister_party = ddp_name if agriculture_minister_party == "DDP"; economic_minister_party = ddp_name if economic_minister_party == "DDP"; finance_minister_party = ddp_name if finance_minister_party == "DDP"
 face-image: img/dstp.jpg
 achievement: dstp_dilemma
 go-to: recalculate

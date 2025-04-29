@@ -1,22 +1,22 @@
 title: <span style="color: #C0A054;">**DVP**</span> & <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
 subtitle: The future of the liberal movement will be decided here.
-view-if: lvp_merger_1_timer == 1
+view-if: ddvp_merger_1_timer == 1
 on-arrival: {!
-Q.lvp_formation_points = 0;
+Q.ddvp_formation_points = 0;
 if (Q.wp_relation >= 40) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.liberal_vote < 14) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.wp_ideology == "Left") {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
 if (Q.ddp_ideology == "Right") {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.pro_republic >= 65) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 !}
 max-visits: 1
@@ -34,7 +34,7 @@ Meanwhile, the Liberal Association has made significant progress in preparing fo
 - @wp_fail: The party votes...
 
 @wp_success
-view-if: lvp_formation_points >= 3
+view-if: ddvp_formation_points >= 3
 on-arrival: wp_relation += 3; wp_left += 3
 face-image: img/weimar_coalition_3.jpg
 
@@ -42,10 +42,10 @@ The momentum towards liberal unity has proven too great for the holdouts within 
 
 The aftermath of the congress has significantly diminished the influence of the <span style="color: #C0A054;">**DVP**</span>'s right wing, and will shape the ideology of the <span style="color: #FFCC00;">Liberal People's Party</span> if it is to form.
 
-- @lvp_merger_1929_2
+- @ddvp_merger_1929_2
 
 @wp_fail
-view-if: lvp_formation_points < 3
+view-if: ddvp_formation_points < 3
 on-arrival: wp_relation -= 3; wp_right += 5; new_middle_wp -= 2; old_middle_wp -= 2; pro_republic -= 3; liberal_cooperation -= 10
 face-image: img/portraits/ernst_scholz.jpg
 

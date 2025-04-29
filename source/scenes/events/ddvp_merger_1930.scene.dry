@@ -1,42 +1,42 @@
 title: <span style="color: #C0A054;">**DVP**</span> & <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
 subtitle: The future of the liberal movement will be decided here.
-view-if: lvp_merger_2_timer == 1 and lvp_timer_2_trigger
+view-if: ddvp_merger_2_timer == 1 and ddvp_timer_2_trigger
 on-arrival: {!
-Q.lvp_formation_points = 0;
+Q.ddvp_formation_points = 0;
 if (Q.wp_relation >= 35) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.wp_relation < 20) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
-if (Q.lvp_relation < 40) {
-    Q.lvp_formation_points += 1;
+if (Q.ddvp_relation < 40) {
+    Q.ddvp_formation_points += 1;
 }
-if (Q.lvp_relation + Q.wp_relation >= 100) {
-    Q.lvp_formation_points += 1;
+if (Q.ddvp_relation + Q.wp_relation >= 100) {
+    Q.ddvp_formation_points += 1;
 }
 if (Q.liberal_vote < 7) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.wp_ideology == "Left") {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
 if (Q.ddp_ideology == "Right") {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
 if (Q.ddp_leader == "Lemmer") {
-    Q.lvp_formation_points -= 2;
+    Q.ddvp_formation_points -= 2;
 }
 if (Q.wp_leader == "Luther") {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
 if (Q.pro_republic >= 50) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.uspd_votes >= 32) {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
-Q.lvp_timer_2_trigger = 0;
+Q.ddvp_timer_2_trigger = 0;
 !}
 max-visits: 1
 tags: event
@@ -54,7 +54,7 @@ Meanwhile, the Liberal Association has made significant progress in preparing fo
 - @wp_fail: The party votes...
 
 @wp_success
-view-if: lvp_formation_points >= 4
+view-if: ddvp_formation_points >= 4
 on-arrival: wp_relation += 2; wp_left += 2
 face-image: img/weimar_coalition_3.jpg
 
@@ -62,10 +62,10 @@ The momentum towards liberal unity has proven too great for the holdouts within 
 
 Despite this victory, many are halfhearted in their support of liberal unity, only viewing it as an alliance of necessity, which could spark some problems in the proposed wider party.
 
-- @lvp_merger_1930_2
+- @ddvp_merger_1930_2
 
 @wp_fail
-view-if: lvp_formation_points < 4
+view-if: ddvp_formation_points < 4
 on-arrival: wp_relation -= 3; wp_right += 5; new_middle_wp -= 2; old_middle_wp -= 2; pro_republic -= 3; liberal_cooperation -= 10
 face-image: img/portraits/hitler.jpg
 

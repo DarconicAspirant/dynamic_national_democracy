@@ -3,7 +3,7 @@ subtitle: A petition for the dissolution of the Landtag is launched.
 new-page: true
 tags: event
 view-if: year = 1931 and month >= 3 and next_election_time_prussia - time >= 6 and dnvp_prussia
-on-arrival: landtag_ref_wp = 1 if wp_ideology == "Right" and wp_leader == "Dingeldey" and not in_grand_coalition_prussia and not lvp_formed; liberal_cooperation -= 3 if landtag_ref_wp; strife += 1; pro_republic += wp_votes if not landtag_ref_wp; PLR_launched = 1
+on-arrival: landtag_ref_wp = 1 if wp_ideology == "Right" and wp_leader == "Dingeldey" and not in_grand_coalition_prussia and not ddvp_formed; liberal_cooperation -= 3 if landtag_ref_wp; strife += 1; pro_republic += wp_votes if not landtag_ref_wp; PLR_launched = 1
 max-visits: 1
 on-display: {!  
     var cardEl = document.createElement('div');  

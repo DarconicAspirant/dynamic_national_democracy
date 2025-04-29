@@ -1,6 +1,6 @@
 title: <span style="color: #C0A054;">**DVP**</span> Executive Committee Meeting
 subtitle: Ernst Scholz has resigned!
-view-if: year = 1930 and month = 12 and wp_leader == "Scholz" and not lvp_formed
+view-if: year = 1930 and month = 12 and wp_leader == "Scholz" and not ddvp_formed
 on-arrival: wp_left += 2 if wp_relation >= 35; wp_left += 2 if in_grand_coalition
 max-visits: 1
 tags: event

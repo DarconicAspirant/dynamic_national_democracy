@@ -140,7 +140,7 @@ go-to: endorsements_braun
 
 [? if ddp_support_spd == 1 and spd_campaign: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
 
-[? if lvp_support_spd == 1 and spd_campaign: - <span style="color: #FFCC00;">**LVP**</span> ?]
+[? if ddvp_support_spd == 1 and spd_campaign: - <span style="color: #FFCC00;">**DDVP**</span> ?]
 
 [? if reactionary_candidate_1932: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> - supported by: ?]
 
@@ -150,11 +150,11 @@ go-to: endorsements_braun
 
 [? if reactionary_candidate_1932: - <span style="color: #A2D8E0;">**BVP**</span> ?]
 
-[? if lvp_support_spd != 1 and lvp_formed and reactionary_candidate_1932: - <span style="color: #FFCC00;">**LVP**</span> ?]
+[? if ddvp_support_spd != 1 and ddvp_formed and reactionary_candidate_1932: - <span style="color: #FFCC00;">**DDVP**</span> ?]
 
-[? if ddp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if ddp_support_spd != 1 and not ddvp_formed and reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
 
-[? if not lvp_formed and reactionary_candidate_1932: - <span style="color: #C0A054;">**DVP**</span> ?]
+[? if not ddvp_formed and reactionary_candidate_1932: - <span style="color: #C0A054;">**DVP**</span> ?]
 
 [? if kvp_formed and reactionary_candidate_1932: - <span style="color: #0087DC;">**KVP**</span> ?]
 
@@ -212,7 +212,7 @@ if (Q.nsdap_candidate_1932 == "Hitler") {
 
 if (Q.industrial_total_backing) {
     Q.hindenburg_funds += Q.industrial_ddp_backing;
-    Q.hindenburg_funds += Q.industrial_lvp_backing;
+    Q.hindenburg_funds += Q.industrial_ddvp_backing;
     Q.hindenburg_funds += Q.industrial_wp_backing;
     Q.hindenburg_funds += Q.industrial_dnvp_backing;
     Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
@@ -266,7 +266,7 @@ if (Q.hindenburg_support) {
         Q.old_middle_dnvp += Q.hindenburg_support;
         Q.rural_dnvp += Q.hindenburg_support;
     }
-    Q.new_middle_lvp += Q.hindenburg_support / 3; 
+    Q.new_middle_ddvp += Q.hindenburg_support / 3; 
     Q.old_middle_ddp += Q.hindenburg_support / 3;
     Q.new_middle_other += Q.hindenburg_support / 1.5;
     Q.old_middle_other += Q.hindenburg_support / 1.5;
@@ -302,11 +302,11 @@ None of the candidates are worthy of our support, and we are either unable or un
 subtitle: This will cost us 2 resources.
 choose-if: resources >= 2 and not schleicher_spd
 unavailable-subtitle: [? if resources < 2: Not enough resources. ?][? if schleicher_spd: As part of our deal with Schleicher, we are now obligated to support Hindenburg’s re-election. ?]
-on-arrival: resources -= 2; spd_campaign = 1; braun_campaign = 1; popcon_dissent -= 10; popcon_strength += 10; ddp_support_spd = 0; lvp_support_spd = 0
+on-arrival: resources -= 2; spd_campaign = 1; braun_campaign = 1; popcon_dissent -= 10; popcon_strength += 10; ddp_support_spd = 0; ddvp_support_spd = 0
 
 It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
 
-[? if not lvp_formed: The [? if lvp_votes < 2: miniscule remnants of the?] [? if ddp_name == "DDP": <span style="color: #D3C24D;">**Democratic Party**</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">**State Party**</span>?] aren't guaranteed to support us, [? if lvp_relation < 40: with a deterioration in our relationship?][? if lvp_relation >= 40: but are open to it due to their reluctance in supporting Hindenburg?]?][? if lvp_formed: The <span style="color: #FFCC00;">**LVP**</span> aren't exactly the biggest fans of <span style="color: #c00000;">socialism</span>, [? if lvp_old_relation < 40: with the deterioration in relations making their support a near impossibility.?][? if lvp_old_relation >= 40: but are at least open to it due to their reluctance in supporting Hindenburg?]?]. Who else will? Can we convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to support Braun? What about the <span style="color: #830000;">**Communists**</span>?
+[? if not ddvp_formed: The [? if ddvp_votes < 2: miniscule remnants of the?] [? if ddp_name == "DDP": <span style="color: #D3C24D;">**Democratic Party**</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">**State Party**</span>?] aren't guaranteed to support us, [? if ddvp_relation < 40: with a deterioration in our relationship?][? if ddvp_relation >= 40: but are open to it due to their reluctance in supporting Hindenburg?]?][? if ddvp_formed: The <span style="color: #FFCC00;">**DDVP**</span> aren't exactly the biggest fans of <span style="color: #c00000;">socialism</span>, [? if ddvp_old_relation < 40: with the deterioration in relations making their support a near impossibility.?][? if ddvp_old_relation >= 40: but are at least open to it due to their reluctance in supporting Hindenburg?]?]. Who else will? Can we convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to support Braun? What about the <span style="color: #830000;">**Communists**</span>?
 
 - @endorsements_braun: Scout out potential endorsements. 
 
@@ -327,7 +327,7 @@ Supporting [+ communist_candidate_1932 +] is rather unpopular in our party, even
 - @support_hindenburg: Support <span style="color: #808080;">**Hindenburg**</span> instead.
 
 @support_thalmann_2
-on-arrival: spd_support_thalmann = 1; popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; lvp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_support_thalmann = 1; popcon_dissent += 15; center_dissent += 10; christsoc_dissent += 5; paramilitarist_dissent += 10; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; z_relation -= 15; wp_relation -= 15; ddvp_relation -= 10; wp_right += 10; ddvp_right += 6; ddp_cohesion -= 6; ddvp_right += 10
 
 Fine. We have thrown our support to Chairman [+ communist_candidate_1932 +] of the <span style="color: #830000;">**KPD**</span> to the dismay of our bourgeois allies.
 
@@ -338,7 +338,7 @@ We can't win this election alone, we need support from other parties. [? if uspd
 - @convince_z: Convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to back <span style="color: #c00000;">**Braun**</span>.
 - @convince_kpd: Convince the <span style="color: #830000;">**Communists**</span> to back <span style="color: #c00000;">**Braun**</span>.
 - @convince_ddp: Convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to back <span style="color: #c00000;">**Braun**</span>.
-- @convince_lvp: Convince the <span style="color: #FFCC00;">**LVP**</span> to back <span style="color: #c00000;">**Braun**</span>.
+- @convince_ddvp: Convince the <span style="color: #FFCC00;">**DDVP**</span> to back <span style="color: #c00000;">**Braun**</span>.
 - @view_candidates: View party endorsements.
 - @hope: We have concluded negotiations with other parties.
 
@@ -347,42 +347,42 @@ We can't win this election alone, we need support from other parties. [? if uspd
 Hopefully, the <span style="color: #c00000;">**Braun**</span> coalition is strong enough to rival [+ reactionary_candidate_1932 +].
 
 @convince_ddp
-view-if: not lvp_formed
+view-if: not ddvp_formed
 max-visits: 1
-go-to: convince_ddp_success if (lvp_relation >= 60 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 50 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 40 and ddp_ideology == "Left" and not dstp_maintained); convince_ddp_fail if not ((lvp_relation >= 60 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 50 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 40 and ddp_ideology == "Left" and not dstp_maintained))
+go-to: convince_ddp_success if (ddvp_relation >= 60 and ddp_ideology == "Right" or dstp_maintained) or (ddvp_relation >= 50 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddvp_relation >= 40 and ddp_ideology == "Left" and not dstp_maintained); convince_ddp_fail if not ((ddvp_relation >= 60 and ddp_ideology == "Right" or dstp_maintained) or (ddvp_relation >= 50 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddvp_relation >= 40 and ddp_ideology == "Left" and not dstp_maintained))
 
 The <span style="color: #FFCC00;">liberal</span> vote has been falling over time, especially during the current economic depression, so they will probably be of minimal help to us. Still, every little bit counts.
 
 @convince_ddp_success
-on-arrival: ddp_support_spd = 1; ddp_left += 3; ddp_cohesion -= 2; lvp_relation += 5
+on-arrival: ddp_support_spd = 1; ddp_left += 3; ddp_cohesion -= 2; ddvp_relation += 5
 go-to: endorsements_braun
 
 Thanks to our friendly relations and connections with their left wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is now campaigning for Braun in the election.
 
 @convince_ddp_fail
-on-arrival: ddp_support_spd = 0; lvp_right += 3; ddp_cohesion -= 2; lvp_relation -= 5
+on-arrival: ddp_support_spd = 0; ddvp_right += 3; ddp_cohesion -= 2; ddvp_relation -= 5
 go-to: endorsements_braun
 
 Unfortunately, under the influence of their business wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has refused to support a <span style="color: #c00000;">socialist</span> for the presidency. 
 
-@convince_lvp
-view-if: lvp_formed
+@convince_ddvp
+view-if: ddvp_formed
 max-visits: 1
-go-to: convince_lvp_success if ((lvp_old_relation >= 70 and lvp_ideology == "Right") or (lvp_old_relation >= 60 and lvp_ideology == "Moderate") or (lvp_old_relation >= 50 and lvp_ideology == "Left")) and lvp_leader != "Dingeldey"; convince_lvp_fail if not (((lvp_old_relation >= 70 and lvp_ideology == "Right") or (lvp_old_relation >= 60 and lvp_ideology == "Moderate") or (lvp_old_relation >= 50 and lvp_ideology == "Left")) and lvp_leader != "Dingeldey")
+go-to: convince_ddvp_success if ((ddvp_old_relation >= 70 and ddvp_ideology == "Right") or (ddvp_old_relation >= 60 and ddvp_ideology == "Moderate") or (ddvp_old_relation >= 50 and ddvp_ideology == "Left")) and ddvp_leader != "Dingeldey"; convince_ddvp_fail if not (((ddvp_old_relation >= 70 and ddvp_ideology == "Right") or (ddvp_old_relation >= 60 and ddvp_ideology == "Moderate") or (ddvp_old_relation >= 50 and ddvp_ideology == "Left")) and ddvp_leader != "Dingeldey")
 
 The <span style="color: #FFCC00;">liberal</span> vote has been falling over time, especially during the current economic depression, so they will probably be of minimal help to us. Still, every little bit counts. They will certainly be a hard party to convince, with vehemently anti-<span style="color: #c00000;">socialist</span> industrialists influencing the party.
 
-@convince_lvp_success
-on-arrival: lvp_support_spd = 1; lvp_left += 6; lvp_old_relation += 5; new_middle_dnvp += new_middle_lvp*0.1 if not kvp_formed; old_middle_dnvp += old_middle_lvp*0.2 if not kvp_formed; rural_dnvp += rural_lvp*0.2 if not kvp_formed; new_middle_kvp += new_middle_lvp*0.1 if not kvp_formed; old_middle_kvp += old_middle_lvp*0.2 if not kvp_formed; rural_kvp += rural_lvp*0.2 if not kvp_formed; new_middle_lvp *= 0.9; old_middle_lvp *= 0.8; rural_lvp *= 0.8
+@convince_ddvp_success
+on-arrival: ddvp_support_spd = 1; ddvp_left += 6; ddvp_old_relation += 5; new_middle_dnvp += new_middle_ddvp*0.1 if not kvp_formed; old_middle_dnvp += old_middle_ddvp*0.2 if not kvp_formed; rural_dnvp += rural_ddvp*0.2 if not kvp_formed; new_middle_kvp += new_middle_ddvp*0.1 if not kvp_formed; old_middle_kvp += old_middle_ddvp*0.2 if not kvp_formed; rural_kvp += rural_ddvp*0.2 if not kvp_formed; new_middle_ddvp *= 0.9; old_middle_ddvp *= 0.8; rural_ddvp *= 0.8
 go-to: endorsements_braun
 
-Surprisingly, we have convinced the <span style="color: #FFCC00;">**LVP**</span> to give <span style="color: #c00000;">Braun</span> an official endorsement, to the shock of the party's industrial backers. In response, they begin to withdraw their support from the party en masse, and a significant portion of right-wing voters are refusing to support us.
+Surprisingly, we have convinced the <span style="color: #FFCC00;">**DDVP**</span> to give <span style="color: #c00000;">Braun</span> an official endorsement, to the shock of the party's industrial backers. In response, they begin to withdraw their support from the party en masse, and a significant portion of right-wing voters are refusing to support us.
 
-@convince_lvp_fail
-on-arrival: lvp_support_spd = 0; lvp_right += 3; lvp_old_relation -= 5
+@convince_ddvp_fail
+on-arrival: ddvp_support_spd = 0; ddvp_right += 3; ddvp_old_relation -= 5
 go-to: endorsements_braun
 
-Perhaps expectedly, we have failed to persuade the <span style="color: #FFCC00;">**LVP**</span> to back <span style="color: #c00000;">Braun</span>, owing to their strong antipathy toward <span style="color: #c00000;">socialism</span> in general.
+Perhaps expectedly, we have failed to persuade the <span style="color: #FFCC00;">**DDVP**</span> to back <span style="color: #c00000;">Braun</span>, owing to their strong antipathy toward <span style="color: #c00000;">socialism</span> in general.
 
 @convince_z
 choose-if: uspd_votes >= z_votes
@@ -455,7 +455,7 @@ view-if: nsdap_relation >= 60 or nsdap_relation >= 45 and spd_leader == "Concili
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddvp_right += 2; wp_right += 4; ddp_cohesion -= 2; ddvp_right += 3
 go-to: endorsements_braun
 
 The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -463,7 +463,7 @@ The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presi
 @spd_relations
 view-if: nsdap_relation >= 75 or (spd_leader == "Conciliators" and nsdap_relation >= 55)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; ddvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddvp_right += 2; wp_right += 4; ddp_cohesion -= 2; ddvp_right += 3
 go-to: endorsements_braun
 
 The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.

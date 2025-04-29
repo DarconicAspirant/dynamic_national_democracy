@@ -2,7 +2,7 @@ title: Right coalition collapses
 subtitle: The right-wing coalition has collapsed...
 new-page: true
 tags: event
-view-if: dnf_formed and year = 1928 and month = 11 and conservative_coalition < 50 and in_conservative_coalition and not lvp_formed
+view-if: dnf_formed and year = 1928 and month = 11 and conservative_coalition < 50 and in_conservative_coalition and not ddvp_formed
 max-visits: 1
 
 = Hugenberg's exit from the coalition
@@ -22,7 +22,7 @@ The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has indicated their 
 title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> shall enter government.
 subtitle: The coalition will live for another day.
 view-if: center_right_coalition >= 50
-on-arrival: dnvp_in_government = 0; in_center_right_coalition = 1; in_conservative_coalition = 0; old_middle_dnf -= 2; rural_dnf -= 2; lvp_right += 2; ddp_cohesion -= 1.5; liberal_cooperation += 1; bourgeois_cooperation += 2
+on-arrival: dnvp_in_government = 0; in_center_right_coalition = 1; in_conservative_coalition = 0; old_middle_dnf -= 2; rural_dnf -= 2; ddvp_right += 2; ddp_cohesion -= 1.5; liberal_cooperation += 1; bourgeois_cooperation += 2
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_conservative_coalition_prussia)
 
 The bourgeois has survived without our toleration, but it's unlikely that this governing arrangement will last much longer.
@@ -31,7 +31,7 @@ The bourgeois has survived without our toleration, but it's unlikely that this g
 title: Support the vote of no confidence, voting against the government.
 subtitle: The government will collapse, and there will be new elections.
 view-if: cordon_sanitaire >= 50 and center_right_coalition < 50
-on-arrival: time_to_election = 3; dnvp_in_government = 0; in_conservative_coalition = 0; in_grand_coalition = 0; dnvp_toleration = 0; dnvp_toleration_uspd = 0; pro_republic -= 2; wp_relation -= 4; z_relation -= 4; dnvp_old_relation -= 4; lvp_relation -= 4; ddp_cohesion -= 1; lvp_right += 1; old_middle_dnf += 3; rural_dnf += 3
+on-arrival: time_to_election = 3; dnvp_in_government = 0; in_conservative_coalition = 0; in_grand_coalition = 0; dnvp_toleration = 0; dnvp_toleration_uspd = 0; pro_republic -= 2; wp_relation -= 4; z_relation -= 4; dnvp_old_relation -= 4; ddvp_relation -= 4; ddp_cohesion -= 1; ddvp_right += 1; old_middle_dnf += 3; rural_dnf += 3
 call: set_next_election_time
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_conservative_coalition_prussia)
 

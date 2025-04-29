@@ -89,21 +89,21 @@ if (Q.spd_campaign) {
             Q.thalmann_votes += Q.sapd_normalized;
         }
     }
-    if (Q.lvp_support_spd) {
-        if (Q.lvp_ideology == "Left") {
-            Q.spd_president_votes += Q.lvp_normalized*0.8;
-            Q.hindenburg_votes += Q.lvp_normalized*0.2;
+    if (Q.ddvp_support_spd) {
+        if (Q.ddvp_ideology == "Left") {
+            Q.spd_president_votes += Q.ddvp_normalized*0.8;
+            Q.hindenburg_votes += Q.ddvp_normalized*0.2;
         }
-        if (Q.lvp_ideology == "Moderate") {
-            Q.spd_president_votes += Q.lvp_normalized*0.6;
-            Q.hindenburg_votes += Q.lvp_normalized*0.4;
+        if (Q.ddvp_ideology == "Moderate") {
+            Q.spd_president_votes += Q.ddvp_normalized*0.6;
+            Q.hindenburg_votes += Q.ddvp_normalized*0.4;
         }
-        if (Q.lvp_ideology == "Right") {
-            Q.spd_president_votes += Q.lvp_normalized*0.4;
-            Q.hindenburg_votes += Q.lvp_normalized*0.6;
+        if (Q.ddvp_ideology == "Right") {
+            Q.spd_president_votes += Q.ddvp_normalized*0.4;
+            Q.hindenburg_votes += Q.ddvp_normalized*0.6;
         }
     } else {
-        Q.hindenburg_votes += Q.lvp_normalized;
+        Q.hindenburg_votes += Q.ddvp_normalized;
     }
     Q.hindenburg_votes += Q.wp_normalized;
 } else if (Q.spd_support_thalmann) {
@@ -125,14 +125,14 @@ if (Q.spd_campaign) {
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.ddp_normalized;
     Q.hindenburg_votes += Q.wp_normalized;
-    Q.hindenburg_votes += Q.lvp_normalized;
+    Q.hindenburg_votes += Q.ddvp_normalized;
 } else {
     if (!Q.hindenburg_democracy_bonus && !Q.spd_abstain_1932) Q.hindenburg_votes += Q.spd_normalized*0.9;
     if (Q.hindenburg_democracy_bonus && !Q.spd_abstain_1932) Q.hindenburg_votes += Q.spd_normalized;
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.ddp_normalized;
     Q.hindenburg_votes += Q.wp_normalized;
-    Q.hindenburg_votes += Q.lvp_normalized;
+    Q.hindenburg_votes += Q.ddvp_normalized;
     Q.thalmann_votes += Q.kpd_normalized;
     if (Q.thalmann_joever) Q.thalmann_votes -= Q.kpd_normalized*0.1;
     if (!Q.hindenburg_democracy_bonus) Q.thalmann_votes += Q.spd_normalized*0.05;

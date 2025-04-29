@@ -36,7 +36,7 @@ go-to: menu
 
 = Timeline of the events (until 1928)
 
-# TODO: This is supposed to be mostly about the DNVP :sob:
+# TODO: This is supposed to be mostly about the DNVP :sob: Also do colors
 
 **1875**: The SPD is formed as a merger of the General German Workers' Association, founded by Ferdinand Lassalle, and the Social Democratic Workers' Party of Germany, led by Wilhelm Liebknecht and August Bebel. Eventually, the SPD grows to become the largest party in the German Empire.
 
@@ -52,19 +52,21 @@ go-to: menu
 
 **1919**: The far left of the SPD is expelled from the party. It forms the SAPD, which follows the line of Russian Bolshevik leader Vladimir Lenin in favor of a revolutionary uprising to achieve a council republic. The Treaty of Versailles is signed under protest from most political factions in Germany, officially ending the Great War. The participation of revolutionary Russia at the Paris Conference helped soften the terms of the treaty somewhat. The Weimar Constitution is signed and proclaims Germany a parliamentary republic, with however special roles for elected councils and various socialist provisions enshrined. The constitution represents a compromise between the USPD, left-leaning liberals and catholics as well as the SPD, now operating under the marxist "Theory of Two Stages" that the present revolution represents the first stage of historical development and is a prelude to the second revolution, that would do way with bourgeois power and capitalism entirely. In the meantime, the SPD would work to empower the working class within the Weimar order as much as possible. The first parliamentary elections lead to the formation of a nearly all-socialist government, with a left-liberal splinter of the DDP as the only non-socialist participant.
 
-**1920**: The Kapp Putsch, an attempt by reactionary actors within the military to take power, is launched, and is defeated by the workers with a general strike. This is followed by far-left uprisings and factory occupations in the Ruhr. The government is split on how to react to the decisions, but USPD ministers hold the relevant positions and manage to quell the uprising by use of the Reichswehr, with some assistance from paramitary units of demobilized right-wing soldiers known as the Freikorps. The SPD, finding themselves increasingly unable to pursue further socialist policies with the participation of the USPD and left-liberals in the government, use this opportunity to resign their posts. The new elections however result in a gain for the parties of the center and right. The parties of the new coalition (USPD, DDP and Zentrum) proclaim themselves defenders of the constitutional order against both left and right, and so are often referred to as the "Weimar Coalition". Elected governments in this period are very unstable, often only lasting a matter of months.
+**1920**: The Kapp Putsch, an attempt by reactionary actors within the military to take power, is launched, and is defeated by the workers with a general strike. This is followed by far-left uprisings and factory occupations in the Ruhr. The government is split on how to react to the decisions, but USPD ministers hold the relevant positions and manage to quell the uprising by use of the Reichswehr, with some assistance from paramitary units of demobilized right-wing soldiers known as the Freikorps. The SPD, finding themselves increasingly unable to pursue further socialist policies with the participation of the USPD and left-liberals in the government, use this opportunity to resign their posts. The new elections however result in a gain for the parties of the center and right. The parties of the new coalition, excepting the BVP, (USPD, DDP and Zentrum) proclaim themselves defenders of the constitutional order against both left and right, and so are often referred to as the "Weimar Coalition". Elected governments in this period are very unstable, often only lasting a matter of months. 
 
 **1921**: Communist uprisings in Saxony and Hamburg are defeated. Matthias Erzberger, the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] leader who signed the Versailles Treaty, is assassinated.
 
-**1922**: Walther Rathenau, the DDP Foreign Minister, is assassinated. The SPD reunites with most of the remaining USPD.
+**1922**: Walther Rathenau, the DDP Foreign Minister, is assassinated. The first presidential election in the German Republic is finally held. The Reichstag had postponed it for th past 3 years, citing the Republic's instability as cause. Acting President Phillip Scheidemann of the USPD hands over his post over to Konstantin Fehrenbach of the Center Party, now elected for a five-year term. He was supported by the parties of the Weimar Coalition against a divided right and the SPD's Hugo Haase. Our party in this period is very strongly on the right and it decides to support the candidacy of far-right economist, financier and politician Karl Helfferich, a bitter opponent of Versailles and the coalition parties that signed it, as well as an organizer and financier of armed counter-revolution. The failure to coax more moderate rightists behind his candidacy causes internal blowback against the powerful right faction, and the beginning of a process of gradual moderation.
 
-**1923**: Hyperinflation begins, largely due to the economic policy of "passive resistance" against the French occupation of the Ruhr and the Versailles reparations. The currency is rapidly devalued as prices for necessities rise to billions of Reichsmarks. The government launches a *Reichsexekution* against Saxony, which was led by a joint SPD-KPD government. The Nazi "Beer Hall Putsch" is launched in Munich, and fails, with the arrest of Hitler. Eventually, new policies manage to stabilize the currency, and the French occupation ends.
+**1923**: Hyperinflation begins, largely due to the economic policy of "passive resistance" against the French occupation of the Ruhr and the Versailles reparations. The currency is rapidly devalued as prices for necessities rise to billions of Reichsmarks. The government launches a *Reichsexekution* against Saxony, which was led by a joint SPD-KPD government. The Nazi "Beer Hall Putsch" is launched in Munich, and fails, with the arrest of Hitler. Hitler will stay in prison for the for the next 5 years and subsequently be subject to a speaking ban. The NSDAP is banned and will not be legalized again until 1927. Eventually, new policies manage to stabilize the currency, and the French occupation ends. The far-right, racialist wing of our party resigns and forms a splinter party that would collaborate with former NSDAP members and run in the next elections in a common list. 
 
-**1924**: Parliamentary elections are held in May and December, the latter leading to the bourgeois-right governments that last until 1928. Germany begins to enter a period of relative stability, with the end of the hyperinflation crisis. Hitler is released from prison.
+**1924**: Parliamentary elections are held in May, with our party and the right making some gains at the governing parties' expense. Accordingly, the Weimar Coalition is extended to the right, to include the DVP and often some minor conservative parties. Although, governments occasionally fall over various concerns, they tend to eventually be reformed across similar political lines after compromises are found and personnel is shuffled. Germany begins to enter a period of relative stability.
 
-**1925**:  President Friedrich Ebert dies, and new presidential elections are held, leading to the narrow election of Paul von Hindenburg in the second round. Hindenburg is a war hero and a right-wing reactionary. The SPD adopts the Heidelberg Program as its party platform. 
+**1925**: Liberal parties see their vote shares start to decline. Their future is uncertain, and they fear the possiility of being driven to political oblivion between a USPD open to non-working class demographics and a moderating and growing DNVP. With cooperation between them expanding due to mutual participation in a national and various state governments, they begin the year by forming a liberal parliamentary group and end it by merging together.
 
-**1926**: A referendum on the expropriation of the princes, supported by the SPD and KPD, fails.
+**1926**: A referendum against the expropriation of the princes and in defense of property rights, spearheaded by our party and supported by most right-wing forces in the country, fails.
+
+**1927**: President Fehrenbach dies in February and a new presidential election is held in March and April. With no party-affiliated candidate on the right securing a large lead, the entirety of the right-wing unites under the candidacy of Hindenburg, a committed monarchist and popular former general. He decides to stand after securing the personal blessing of the deposed Kaiser. On the left, the parties of the Weimar Coalition strike a deal to unite behind USPD candidate Otto Braun, and the SPD, under the influence of the moderate "Centrist Marxist" faction which finds it important to defend the bourgeois republic against reaction and dictatorship, withdraws its candidate in favor of Braun. Braun is elected president with a five point margin. The ban on the NSDAP is lifted. 
 
 @curr_gov
 go-to: cabinet if dnvp_in_government; menu if not dnvp_in_government
@@ -75,7 +77,7 @@ President: [? if president == "Hindenburg": <span style="color: #808080;">Hinden
 
 Chancellor: [? if chancellor_party == "USPD": <span style="color: #c00000;">[+ chancellor +]</span>?][? if chancellor_party == "Z": <span style="color: #000000;">[+ chancellor +]</span>?][? if chancellor_party == "NSDAP": <span style="color: #7A3C00;">Hitler</span>?][? if chancellor_party == "SPD": <span style="color: #830000;">[+ chancellor +]</span>?][? if chancellor == "Schleicher" or chancellor == "Papen": <span style="color: #808080;">[+ chancellor +]</span>?] [? if chancellor_party == "Z":(<span style="color: #000000;">**[+ z_party_name +]**</span>) ?][? if chancellor_party == "SPD":(<span style="color: #c00000;">**USPD**</span>) ?][? if chancellor_party == "SPD":(<span style="color: #830000;">**SPD**</span>) ?][? if chancellor_party == "NSDAP":(<span style="color: #7A3C00;">**NSDAP**</span>) ?][? if chancellor_party == "I":(<span style="color: #808080;">I</span>) ?]
 
-Prussian Minister-President: [? if prussia_leader = "Braun" and not chancellor == "Hitler": <span style="color: #c00000;">Braun</span> (<span style="color: #c00000;">**USPD**</span>)?][? if prussia_leader = "Rosenfeld" and not sapd_formed and not chancellor == "Hitler": <span style="color: #c00000;">Rosenfeld</span> (<span style="color: #c00000;">**USPD**</span>)?][? if prussia_leader = "Rosenfeld" and sapd_formed and not chancellor == "Hitler": <span style="color: #9B0000;">Rosenfeld</span> (<span style="color: #580000;">**SAPD**</span>)?][? if prussia_leader = "Stegerwald" and not chancellor == "Hitler": <span style="color: #000000;">Stegerwald</span> (<span style="color: #000000;">**[+ z_party_name +]**</span>)?][? if prussia_leader = "Brüning" and not chancellor == "Hitler": <span style="color: #000000;">Brüning</span> (<span style="color: #000000;">**[+ z_party_name +]**</span>)?][? if prussia_leader = "Luther" and not chancellor == "Hitler" and not lvp_formed and wp_exist: <span style="color: #CCAA7A;">Luther</span> (<span style="color: #CCAA7A;">**WP**</span>)?][? if prussia_leader = "Luther" and not chancellor == "Hitler" and not lvp_formed and not wp_exist: <span style="color: #FFCC00;">Luther</span> (<span style="color: #FFCC00;">**WP**</span>)?][? if prussia_leader = "Luther" and not chancellor == "Hitler": <span style="color: #FFCC00;">Luther</span> (<span style="color: #FFCC00;">**LVP**</span>)?][? if prussia_leader = "Goring": <span style="color: #7A3C00;">Göring</span> (<span style="color: #7A3C00;">**NSDAP**</span>)?][? if prussia_leader = "Papen" or chancellor == "Hitler" and not prussia_leader == "Goring": <span style="color: #808080;">Papen</span> (<span style="color: #808080;">I</span>)?][? if prussia_leader = "Schleicher" and not chancellor == "Hitler": <span style="color: #808080;">Schleicher</span> (<span style="color: #808080;">I</span>)?]
+Prussian Minister-President: [? if prussia_leader = "Braun" and not chancellor == "Hitler": <span style="color: #c00000;">Braun</span> (<span style="color: #c00000;">**USPD**</span>)?][? if prussia_leader = "Rosenfeld" and not sapd_formed and not chancellor == "Hitler": <span style="color: #c00000;">Rosenfeld</span> (<span style="color: #c00000;">**USPD**</span>)?][? if prussia_leader = "Rosenfeld" and sapd_formed and not chancellor == "Hitler": <span style="color: #9B0000;">Rosenfeld</span> (<span style="color: #580000;">**SAPD**</span>)?][? if prussia_leader = "Stegerwald" and not chancellor == "Hitler": <span style="color: #000000;">Stegerwald</span> (<span style="color: #000000;">**[+ z_party_name +]**</span>)?][? if prussia_leader = "Brüning" and not chancellor == "Hitler": <span style="color: #000000;">Brüning</span> (<span style="color: #000000;">**[+ z_party_name +]**</span>)?][? if prussia_leader = "Luther" and not chancellor == "Hitler" and not ddvp_formed and wp_exist: <span style="color: #CCAA7A;">Luther</span> (<span style="color: #CCAA7A;">**WP**</span>)?][? if prussia_leader = "Luther" and not chancellor == "Hitler" and not ddvp_formed and not wp_exist: <span style="color: #FFCC00;">Luther</span> (<span style="color: #FFCC00;">**WP**</span>)?][? if prussia_leader = "Luther" and not chancellor == "Hitler": <span style="color: #FFCC00;">Luther</span> (<span style="color: #FFCC00;">**DDVP**</span>)?][? if prussia_leader = "Goring": <span style="color: #7A3C00;">Göring</span> (<span style="color: #7A3C00;">**NSDAP**</span>)?][? if prussia_leader = "Papen" or chancellor == "Hitler" and not prussia_leader == "Goring": <span style="color: #808080;">Papen</span> (<span style="color: #808080;">I</span>)?][? if prussia_leader = "Schleicher" and not chancellor == "Hitler": <span style="color: #808080;">Schleicher</span> (<span style="color: #808080;">I</span>)?]
 
 Reichstag composition:
 
@@ -85,16 +87,16 @@ Reichstag composition:
 <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_r +]%
 [? if dnf_formed: <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_r +]% ?]
 [? if kvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_r +]% ?]
-[? if not lvp_formed and wp_exist: <span class="tooltip-text" title="Economic Party of the German Middle Class" style="color: #CCAA7A;">**WP**</span>: [+ wp_r +]% ?]
+[? if not ddvp_formed and wp_exist: <span class="tooltip-text" title="Economic Party of the German Middle Class" style="color: #CCAA7A;">**WP**</span>: [+ wp_r +]% ?]
 <span class="tooltip-text" title="Center Party" style="color: #000000;">**Z**</span> + <span class="tooltip-text" title="Bavarian People's Party" style="color: #A2D8E0;">**BVP**</span>: [+ z_r +]%
-<span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]%
+<span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**DDVP**</span>: [+ ddvp_r +]%
 <span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #c00000;">**USPD**</span>: [+ uspd_r +]%
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #830000;">**SPD**</span>: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #580000;">**SAPD**</span>: [+ sapd_r +]% ?]
 **Others**: [+ other_r +]%
 
 <span style="color: #3e88b3;">**DNVP**</span> position: [? if dnvp_toleration : toleration ?][? if dnvp_in_government : in government - ?][? if dnvp_toleration == 0 and dnvp_in_government == 0 and dnvp_caretaker == 0 : opposition ?][? if dnvp_caretaker : caretaker government ?]
-[? if in_weimar_coalition and not in_social_catholic_coalition and not in_social_liberal_coalition and dnvp_in_government: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ?][? if in_social_catholic_coalition and dnvp_in_government: <span style="color: #c00000;">Social</span>-[? if not stegerwald_path: <span style="color: #000000;">Catholic</span>?][? if stegerwald_path: <span style="color: #000000;">Christian</span>?] Coalition ?][? if in_social_liberal_coalition and dnvp_in_government: <span style="color: #c00000;">Ketchup</span> and [? if not lvp_formed: <span style="color: #FFCC00;">Mustard</span>?][? if lvp_formed: <span style="color: #FFCC00;">Mustard</span>?] Coalition ?][? if in_grand_coalition and dnvp_in_government: <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> ?][? if in_popular_front and dnvp_in_government: Popular Front ?][? if in_left_front and dnvp_in_government: Left Front ?][? if in_dnvp_majority and dnvp_in_government: <span style="color: #c00000;">**USPD**</span> majority ?][? if in_minority_government and dnvp_in_government: minority government ?][? if in_emergency_government and dnvp_in_government: emergency government ?]
+[? if in_weimar_coalition and not in_social_catholic_coalition and not in_social_liberal_coalition and dnvp_in_government: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ?][? if in_social_catholic_coalition and dnvp_in_government: <span style="color: #c00000;">Social</span>-[? if not stegerwald_path: <span style="color: #000000;">Catholic</span>?][? if stegerwald_path: <span style="color: #000000;">Christian</span>?] Coalition ?][? if in_social_liberal_coalition and dnvp_in_government: <span style="color: #c00000;">Ketchup</span> and [? if not ddvp_formed: <span style="color: #FFCC00;">Mustard</span>?][? if ddvp_formed: <span style="color: #FFCC00;">Mustard</span>?] Coalition ?][? if in_grand_coalition and dnvp_in_government: <span style="color: #e3000f;">Grand</span> <span style="color: #000000;">Coa</span><span style="color: #ffcc00;">lit</span><span style="color: #A2D8E0;">ion</span> ?][? if in_popular_front and dnvp_in_government: Popular Front ?][? if in_left_front and dnvp_in_government: Left Front ?][? if in_dnvp_majority and dnvp_in_government: <span style="color: #c00000;">**USPD**</span> majority ?][? if in_minority_government and dnvp_in_government: minority government ?][? if in_emergency_government and dnvp_in_government: emergency government ?]
 
 [? if bruning_time and dnvp_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
 
@@ -118,7 +120,7 @@ Current cabinet:
 Labor: 
 [? if labor_minister_party == "USPD": <span style="color: #c00000;">[+ labor_minister_party +]</span> ?]
 [? if labor_minister_party == "SPD": <span style="color: #830000;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "LVP": <span style="color: #FFCC00;">[+ labor_minister_party +]</span> ?]
+[? if labor_minister_party == "DDVP": <span style="color: #FFCC00;">[+ labor_minister_party +]</span> ?]
 [? if labor_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if labor_minister_party == "BVP": <span style="color: #A2D8E0;">[+ labor_minister_party +]</span> ?]
 [? if labor_minister_party == "WP": <span style="color: #CCAA7A;">[+ labor_minister_party +]</span> ?]
@@ -132,7 +134,7 @@ Labor:
 Interior: 
 [? if interior_minister_party == "USPD": <span style="color: #c00000;">[+ interior_minister_party +]</span> ?]
 [? if interior_minister_party == "SPD": <span style="color: #830000;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "LVP": <span style="color: #FFCC00;">[+ interior_minister_party +]</span> ?]
+[? if interior_minister_party == "DDVP": <span style="color: #FFCC00;">[+ interior_minister_party +]</span> ?]
 [? if interior_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if interior_minister_party == "BVP": <span style="color: #A2D8E0;">[+ interior_minister_party +]</span> ?]
 [? if interior_minister_party == "WP": <span style="color: #CCAA7A;">[+ interior_minister_party +]</span> ?]
@@ -146,7 +148,7 @@ Interior:
 Finance: 
 [? if finance_minister_party == "USPD": <span style="color: #c00000;">[+ finance_minister_party +]</span> ?]
 [? if finance_minister_party == "SPD": <span style="color: #830000;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "LVP": <span style="color: #FFCC00;">[+ finance_minister_party +]</span> ?]
+[? if finance_minister_party == "DDVP": <span style="color: #FFCC00;">[+ finance_minister_party +]</span> ?]
 [? if finance_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if finance_minister_party == "BVP": <span style="color: #A2D8E0;">[+ finance_minister_party +]</span> ?]
 [? if finance_minister_party == "WP": <span style="color: #CCAA7A;">[+ finance_minister_party +]</span> ?]
@@ -160,7 +162,7 @@ Finance:
 Economic: 
 [? if economic_minister_party == "USPD": <span style="color: #c00000;">[+ economic_minister_party +]</span> ?]
 [? if economic_minister_party == "SPD": <span style="color: #830000;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "LVP": <span style="color: #FFCC00;">[+ economic_minister_party +]</span> ?]
+[? if economic_minister_party == "DDVP": <span style="color: #FFCC00;">[+ economic_minister_party +]</span> ?]
 [? if economic_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if economic_minister_party == "BVP": <span style="color: #A2D8E0;">[+ economic_minister_party +]</span> ?]
 [? if economic_minister_party == "WP": <span style="color: #CCAA7A;">[+ economic_minister_party +]</span> ?]
@@ -174,7 +176,7 @@ Economic:
 Justice: 
 [? if justice_minister_party == "USPD": <span style="color: #c00000;">[+ justice_minister_party +]</span> ?]
 [? if justice_minister_party == "SPD": <span style="color: #830000;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "LVP": <span style="color: #FFCC00;">[+ justice_minister_party +]</span> ?]
+[? if justice_minister_party == "DDVP": <span style="color: #FFCC00;">[+ justice_minister_party +]</span> ?]
 [? if justice_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if justice_minister_party == "BVP": <span style="color: #A2D8E0;">[+ justice_minister_party +]</span> ?]
 [? if justice_minister_party == "WP": <span style="color: #CCAA7A;">[+ justice_minister_party +]</span> ?]
@@ -188,7 +190,7 @@ Justice:
 Foreign: 
 [? if foreign_minister_party == "USPD": <span style="color: #c00000;">[+ foreign_minister_party +]</span> ?]
 [? if foreign_minister_party == "SPD": <span style="color: #830000;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "LVP": <span style="color: #FFCC00;">[+ foreign_minister_party +]</span> ?]
+[? if foreign_minister_party == "DDVP": <span style="color: #FFCC00;">[+ foreign_minister_party +]</span> ?]
 [? if foreign_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if foreign_minister_party == "BVP": <span style="color: #A2D8E0;">[+ foreign_minister_party +]</span> ?]
 [? if foreign_minister_party == "WP": <span style="color: #CCAA7A;">[+ foreign_minister_party +]</span> ?]
@@ -202,7 +204,7 @@ Foreign:
 Reichswehr: 
 [? if reichswehr_minister_party == "USPD": <span style="color: #c00000;">[+ reichswehr_minister_party +]</span> ?]
 [? if reichswehr_minister_party == "SPD": <span style="color: #830000;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "LVP": <span style="color: #FFCC00;">[+ reichswehr_minister_party +]</span> ?]
+[? if reichswehr_minister_party == "DDVP": <span style="color: #FFCC00;">[+ reichswehr_minister_party +]</span> ?]
 [? if reichswehr_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if reichswehr_minister_party == "BVP": <span style="color: #A2D8E0;">[+ reichswehr_minister_party +]</span> ?]
 [? if reichswehr_minister_party == "WP": <span style="color: #CCAA7A;">[+ reichswehr_minister_party +]</span> ?]
@@ -216,7 +218,7 @@ Reichswehr:
 Agriculture: 
 [? if agriculture_minister_party == "USPD": <span style="color: #c00000;">[+ agriculture_minister_party +]</span> ?]
 [? if agriculture_minister_party == "SPD": <span style="color: #830000;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "LVP": <span style="color: #FFCC00;">[+ agriculture_minister_party +]</span> ?]
+[? if agriculture_minister_party == "DDVP": <span style="color: #FFCC00;">[+ agriculture_minister_party +]</span> ?]
 [? if agriculture_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
 [? if agriculture_minister_party == "BVP": <span style="color: #A2D8E0;">[+ agriculture_minister_party +]</span> ?]
 [? if agriculture_minister_party == "WP": <span style="color: #CCAA7A;">[+ agriculture_minister_party +]</span> ?]
@@ -282,7 +284,7 @@ go-to: menu
 
 <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
 
-<span style="color: #FFCC00;">**LVP**</span>: [+ lvp_votes +]%
+<span style="color: #FFCC00;">**DDVP**</span>: [+ ddvp_votes +]%
 
 <span style="color: #c00000;">**USPD**</span>: [+ uspd_votes +]%
 
@@ -360,13 +362,13 @@ go-to: menu
             <td style="background-color: rgba(0, 0, 0, 0.2);">[+ catholics_z_display +]%</td>
         </tr>
         <tr>
-            <td><span style="color: #FFCC00;">**LVP**</span></td>
-            <td style="background-color: rgba(255, 204, 0, 0.2); padding: 10px;">[+ workers_lvp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ new_middle_lvp_display +]%</td>
+            <td><span style="color: #FFCC00;">**DDVP**</span></td>
+            <td style="background-color: rgba(255, 204, 0, 0.2); padding: 10px;">[+ workers_ddvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ new_middle_ddvp_display +]%</td>
             <td style="background-color: rgba(255, 204, 0, 0.2);">[+ old_middle_ddp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ rural_lvp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ unemployed_lvp_display +]%</td>
-            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ catholics_lvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ rural_ddvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ unemployed_ddvp_display +]%</td>
+            <td style="background-color: rgba(255, 204, 0, 0.2);">[+ catholics_ddvp_display +]%</td>
         </tr>
         <tr>
             <td><span style="color: #c00000;">**USPD**</span></td>
@@ -425,9 +427,9 @@ go-to: menu
 
 Current relations: [+ z_relation : relationships +]
 
-[? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span> - <i>Liberale Volkspartei</i> (Liberal People's Party) - a liberal party, popular among the bourgeois and the middle class. Formed from a merger of the two former liberal parties, the left-liberal <span style="color: #FFCC00;">**[+ ddp_name +]**</span> and conservative-liberal <span style="color: #CCAA7A;">**WP**</span>. Its predecessors have often been in coalitions with us. ?]
+[? if ddvp_formed: <span style="color: #FFCC00;">**DDVP**</span> - <i>Liberale Volkspartei</i> (Liberal People's Party) - a liberal party, popular among the bourgeois and the middle class. Formed from a merger of the two former liberal parties, the left-liberal <span style="color: #FFCC00;">**[+ ddp_name +]**</span> and conservative-liberal <span style="color: #CCAA7A;">**WP**</span>. Its predecessors have often been in coalitions with us. ?]
 
-Current relations: [+ lvp_relation : relationships +]
+Current relations: [+ ddvp_relation : relationships +]
 
 [? if kvp_formed: <span style="color: #0087DC;">**KVP**</span> - <i>Konservative Volkspartei</i> (Conservative People's Party) - a moderate right-wing conservative nationalist party, supported by rural workers, former aristocracy, landowners and conservative Lutherans. The party seeks to emulate the <span style="color: #0087DC;">Tory</span> conservatives in <span style="color: #C8102E;">Great Britain</span>. ?]
 
@@ -476,7 +478,7 @@ Strength: [+ sa_strength +] thousand
 
 Militarization: [+ sa_militancy : militancy +]
 
-<span style="color: #DD0000;">**Volksbanner** </span><span style="color: #000000;"><b>Schwarz</b></span>-<span style="color: #DD0000;"><b>Rot</b></span>-<span style="color: #FFCC00;"><b>Gold</b></span>: The Volksbanner is a militant popular organization for defending what its supporters perceive to be the gains of the September Revolution and republicanism. It is affiliated with the socialists and the democratic parties, but it is in effect accepted only by the left-wing of republicanism - the <span style="color: #830000;">**SPD**</span> and <span style="color: #c00000;">**USPD**</span> fully participate, while the <span style="color: #000000;">**[+ z_party_name +]**</span>, and <span style="color: #FFCC00;">**LVP**</span> are not affiliated but have no restrictions on member participation. [? if vb_ideology = Far-Left: Dangerously, the <span style="color: #DD0000;">**Volksbanner**</span> seems to now be a fellow carrier of <span style="color: #830000;">**SPD**</span>'s vision of uncompromising opposition to the bourgeois republic and a believer that only a socialist republic can attain the "dreams of September". This has made the organization far more militant thatn before. Thankfully, membership seems to be affected by this tendency, as moderates are excluded or resign voluntarily.?][? if vb_ideology = Left: Worryingly, <span style="color: #DD0000;">**Volksbanner**</span> membership seems to have moved left recently, and the organization now seems to be more a proponent of socialism than mere republicanism. On the positive side, this has somewhat weakened it membership-wise, not only because of the exodus of centrist republicans, but because the inter-party conflict between the <span style="color: #830000;">SPD</span> and <span style="color: #DD0000;">**USPD**</span> has a greater impact within the organization?][? if vb_ideology = Center: Recently, the <span style="color: #DD0000;">Volksbanner</span> has shown an unexpected positive trend of de-radicalization and rejection of <span style="color:#830000;">radical socialism</span> and militancy. While it absolutely remains a political opponent due to its staunch <span style="color: #000000;">Repub</span><span style="color: #DD0000;">lic</span><span style="color: #FFCC00;">anism</span>, its potential as an enabler of socialist takeover has been neutered.?] Historically, this organization is mostly unarmed.
+<span style="color: #DD0000;">**Volksbanner** </span><span style="color: #000000;"><b>Schwarz</b></span>-<span style="color: #DD0000;"><b>Rot</b></span>-<span style="color: #FFCC00;"><b>Gold</b></span>: The Volksbanner is a militant popular organization for defending what its supporters perceive to be the gains of the September Revolution and republicanism. It is affiliated with the socialists and the democratic parties, but it is in effect accepted only by the left-wing of republicanism - the <span style="color: #830000;">**SPD**</span> and <span style="color: #c00000;">**USPD**</span> fully participate, while the <span style="color: #000000;">**[+ z_party_name +]**</span>, and <span style="color: #FFCC00;">**DDVP**</span> are not affiliated but have no restrictions on member participation. [? if vb_ideology = Far-Left: Dangerously, the <span style="color: #DD0000;">**Volksbanner**</span> seems to now be a fellow carrier of <span style="color: #830000;">**SPD**</span>'s vision of uncompromising opposition to the bourgeois republic and a believer that only a socialist republic can attain the "dreams of September". This has made the organization far more militant thatn before. Thankfully, membership seems to be affected by this tendency, as moderates are excluded or resign voluntarily.?][? if vb_ideology = Left: Worryingly, <span style="color: #DD0000;">**Volksbanner**</span> membership seems to have moved left recently, and the organization now seems to be more a proponent of socialism than mere republicanism. On the positive side, this has somewhat weakened it membership-wise, not only because of the exodus of centrist republicans, but because the inter-party conflict between the <span style="color: #830000;">SPD</span> and <span style="color: #DD0000;">**USPD**</span> has a greater impact within the organization?][? if vb_ideology = Center: Recently, the <span style="color: #DD0000;">Volksbanner</span> has shown an unexpected positive trend of de-radicalization and rejection of <span style="color:#830000;">radical socialism</span> and militancy. While it absolutely remains a political opponent due to its staunch <span style="color: #000000;">Repub</span><span style="color: #DD0000;">lic</span><span style="color: #FFCC00;">anism</span>, its potential as an enabler of socialist takeover has been neutered.?] Historically, this organization is mostly unarmed.
 
 Strength: [+ vb_strength +] thousand
 
@@ -585,12 +587,12 @@ data = data.concat([{
     "seats": Math.round(Q.uspd_r * 5),
 }]);
 
-if (Q.lvp_r) {
+if (Q.ddvp_r) {
     data.push({
-        "id": "lvp",
-        "legend": "LVP",
-        "name": "LVP",
-        "seats": Math.round(Q.lvp_r * 5),
+        "id": "ddvp",
+        "legend": "DDVP",
+        "name": "DDVP",
+        "seats": Math.round(Q.ddvp_r * 5),
     });
 }
 
@@ -679,8 +681,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
-            {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
+            {'uspd': '#E3000F', 'spd': '#830000', 'ddvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': 'USPD', 'spd': 'SPD', 'ddvp': 'DDVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -692,8 +694,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'uspd': '#E3000F', 'spd': '#830000', 'lvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
-            {'uspd': 'USPD', 'spd': 'SPD', 'lvp': 'LVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
+            {'uspd': '#E3000F', 'spd': '#830000', 'ddvp': '#FFCC00', 'z': '#000', 'wp': '#CCAA7A', 'dnvp': '#3E88B3', 'nsdap': '#7A3C00', 'other': '#a0a0a0', 'sapd': '#580000', 'dnf': '#003755', 'kvp': '#0087DC'},
+            {'uspd': 'USPD', 'spd': 'SPD', 'ddvp': 'DDVP', 'z': Q.z_party_name + ' + BVP', 'wp': 'WP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD', 'dnf': 'DNF', 'kvp': 'KVP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -731,7 +733,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} LVP: {!</td><td>!} [+ lvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div></td><td>!} DDVP: {!</td><td>!} [+ ddvp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#E3000F'> </div></td><td>!} USPD: {!</td><td>!} [+ uspd_r +]% {!</td></tr>!}
 

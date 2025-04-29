@@ -1,0 +1,183 @@
+title: <span style="color: #FFCC00;">**DDVP**</span> Party Vote
+subtitle: Hermann Dietrich has resigned!
+view-if: time >= dietrich_ddvp_explode_time and (ddvp_votes_start - ddvp_votes > 4 or (change_ddvp_votes < -3 and (last_election_time >= dietrich_election_time))) and ddvp_leader == "Dietrich" and ddvp_formed
+on-arrival: {!
+
+Q.dietrich_resign_ddvp = 1;
+
+Q.ddvp_right += 4;
+
+Q.heuss_points = 0;
+Q.maier_points = 0;
+Q.dingeldey_points = 1;
+
+if (Q.in_grand_coalition || Q.in_weimar_coalition) {
+    Q.ddvp_old_relation += 5;
+    Q.ddvp_left += 3;
+} else if (Q.in_popular_front || Q.in_left_front) {
+    Q.ddvp_right += 4;
+    Q.ddvp_old_relation -= 10;
+}
+
+if (Q.uspd_votes >= 30) {
+    Q.dingeldey_points += 2;
+}
+
+if (Q.chancellor == "Brüning" && Q.dnvp_toleration) {
+    Q.dingeldey_points += 2;
+    Q.ddvp_right += 3;
+} else if (Q.in_conservative_coalition || Q.in_center_right_coalition) {
+    Q.maier_points += 2;
+    Q.ddvp_right += 1;
+}
+
+if (Q.ddvp_old_relation >= 50) {
+    Q.ddvp_left += 3;
+    Q.heuss_points += 2;
+    Q.dingeldey_points -= 2;
+} else if (Q.ddvp_old_relation < 40) {
+    Q.ddvp_right += 3;
+    Q.dingeldey_points += 2;
+    Q.heuss_points -= 1;
+}
+
+if (Q.nationalism >= 50) {
+    Q.ddvp_right += 2;
+}
+
+if (Q.pro_republic >= 60) {
+    Q.heuss_points += 2;
+    Q.ddvp_left += 2;
+} else if (Q.pro_republic < 50) {
+    Q.dingeldey_points += 1;
+    Q.ddvp_right += 1;
+}
+
+if (Q.ddvp_votes >= 8) {
+    if (Q.ddvp_ideology == "Right") {
+        Q.ddvp_left += 3;
+    } else if (Q.ddvp_ideology == "Left") {
+        Q.ddvp_right += 3;
+    }
+} else if (Q.ddvp_votes < 8 && Q.nsdap_votes >= (Q.ddvp_votes + 5)) {
+    Q.ddvp_right += 5;
+    Q.pro_republic -= 3;
+    Q.dingeldey_points += 2;
+}
+
+if (Q.ddvp_right > (Q.ddvp_left*1.5) || (Q.ddvp_right > (Q.ddvp_left + 5))) {
+    Q.ddvp_ideology = "Right"
+} else if (Q.ddvp_left > (Q.ddvp_right*1.5) || (Q.ddvp_left > (Q.ddvp_right + 5))) {
+    Q.ddvp_ideology = "Left"
+} else {
+    Q.ddvp_ideology = "Moderate"
+}
+
+if (Q.ddvp_ideology == "Right") {
+   Q.dingeldey_points += 2;
+}
+if (Q.ddvp_ideology == "Moderate") {
+    Q.maier_points += 2;
+}
+if (Q.ddvp_ideology == "Left") {
+    Q.heuss_points += 2;
+}
+
+if (Q.heuss_points >= Q.maier_points && Q.heuss_points >= Q.dingeldey_points) {
+    Q.heuss_lead = 1;
+} else {
+    Q.heuss_lead = 0;
+}
+
+if (Q.maier_points >= Q.heuss_points && Q.maier_points >= Q.dingeldey_points) {
+    Q.maier_lead = 1;
+} else {
+    Q.maier_lead = 0;
+}
+
+if (Q.dingeldey_points >= Q.heuss_points && Q.dingeldey_points >= Q.maier_points) {
+    Q.dingeldey_lead = 1;
+} else {
+    Q.dingeldey_lead = 0;
+}
+
+if (!Q.maier_lead && !Q.heuss_lead && !Q.dingeldey_lead) {
+    Q.ddvp_deadlock = 1;
+} else {
+    Q.ddvp_deadlock = 0;
+}
+
+!}
+max-visits: 1
+tags: event
+face-image: img/weimar_coalition_3.jpg
+new-page: true
+
+= <span style="color: #FFCC00;">**DDVP**</span> Party Vote
+
+Hermann Dietrich has failed to meet the expectations of many within the party, with the <span style="color: #FFCC00;">**DDVP**</span> experiencing a sharp decline in recent local elections. His focus on governance has left him unable to personally manage party affairs, prompting the need for a more active leader.
+
+Dietrich has endorsed Reinhold Maier, a former <span style="color: #D3C24D;">**[+ ddp_name +]**</span> member and rising star. Like Dietrich, Maier was part of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s business wing and now enjoys the support of the <span style="color: #FFCC00;">**DDVP**</span>'s Pragmatic Center. Meanwhile, Heuss and Dingeldey have once again entered the race, representing the party’s left and right factions, respectively.
+
+With all candidates relatively young, this leadership contest is expected to inject a sense of <span class="tooltip-text" title="good mod">dynamism</span> into the party.
+
+- @heuss
+- @maier
+- @dingeldey
+- @deadlock
+
+@heuss
+title: Theodor Heuss is elected!
+subtitle: Heuss is a <span style="color: #c00000;">Social</span> <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span>, and a member of the former <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
+unavailable-subtitle: The wider <span style="color: #FFCC00;">DDVP</span> perceive him as too left-wing, despite his previous affiliation with the <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing.
+choose-if: heuss_lead
+on-arrival: ddvp_old_relation += 15; ddvp_left += 8; ddvp_leader = "Heuss"; pro_republic += (ddvp_votes / 2); workers_ddvp += 2; workers_uspd -= 2; new_middle_ddvp += 8; old_middle_ddvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Radical"); old_middle_dnvp += 5 if dnvp_ideology == "Moderate"; old_middle_kvp += 5; rural_ddvp -= 5; rural_other += 5 if (dnvp_ideology == "Radical" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Moderate"; rural_kvp += 5; catholics_ddvp += 3; catholics_uspd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
+face-image: img/portraits/heuss.jpg
+
+Theodor Heuss, a rising star and former member of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, has been elected chairman of the <span style="color: #FFCC00;">Liberal People's Party</span>. Backed primarily by the 'Social Republican Circle,' composed of former <span style="color: #D3C24D;">**[+ ddp_name +]**</span> members and liberal intellectuals and newspapers, Heuss has also garnered support from the broader party due to his decently conservative stances on economic and national issues.
+
+Heuss's victory empowers the '<span style="color: #c00000;">Social</span> <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span>' wing, strengthening our cooperation. Despite his personal leanings toward the right, Heuss remains one of the most committed and genuine supporters for <span style="color: #FFCC00;">liberal</span> <span style="color: #586593;">democracy</span> within the <span style="color: #FFCC00;">**DDVP**</span>.
+
+@maier
+title: Reinhold Maier is elected!
+subtitle: A major player in Württemberg politics, he is now due for a promotion.
+unavailable-subtitle: [? if not heuss_lead: The wider <span style="color: #FFCC00;">DDVP</span> perceive him as too left-wing, despite his previous affiliation with the <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing. ?][? if heuss_lead: The Social Republicans prefer to elect Heuss instead. ?]
+choose-if: maier_lead
+on-arrival: ddvp_old_relation += 5; ddvp_left += 3; ddvp_leader = "Maier"; pro_republic += 3; new_middle_ddvp += 2; old_middle_ddvp += 2; rural_ddvp += 4; catholics_ddvp += 6
+face-image: img/portraits/maier.jpg
+
+Reinhold Maier, a major figure in Württemberg politics and a rising star in the struggling party, has been elected chairman of the <span style="color: #FFCC00;">**DDVP**</span>. Youthful and energetic, he is less bound by dogma than many veteran members, making him a strong choice for a party plagued by defeatism and internal strife.
+
+For us, however, his closeness to Dietrich means cooperation has yet to improve significantly compared to his predecessor’s tenure. Perhaps this is for the best, as the <span style="color: #FFCC00;">**DDVP**</span>'s decline was expected to push it further to the right.
+
+@dingeldey
+title: Eduard Dingeldey is elected.
+subtitle: Dingeldey was a member of the former <span style="color: #C0A054;">**DVP**</span>, and commonly associated with the industrial-right of the party.
+unavailable-subtitle: The right-industrial faction of the <span style="color: #FFCC00;">DDVP</span> lack the power necessary to install their candidate.
+choose-if: dingeldey_lead
+on-arrival: ddvp_old_relation -= 12; ddvp_right += 6; ddvp_leader = "Dingeldey"; new_middle_ddvp -= 4; workers_ddvp -= 4; old_middle_ddvp += 2; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
+face-image: img/portraits/dingeldey.jpg
+
+Eduard Dingeldey, previously part of the movement for bourgeois unity, has now been elected chairman of the <span style="color: #FFCC00;">**DDVP**</span>. Dingeldey is backed by the industrial forces on the right of the party, alongside former <span style="color: #C0A054;">**DVP**</span> members. He appears to be focused on fostering closer cooperation with the array of parties between the <span style="color: #FFCC00;">**DDVP**</span> and the <span style="color: #3E88B3;">**DNVP**</span>.
+
+However, Dingeldey has thus far proven to be an ineffectual leader, often capitulating to the right wing of the <span style="color: #FFCC00;">**DDVP**</span>. Recently, we’ve observed a deterioration in relations with his party, alongside a noticeable rightward shift in the <span style="color: #FFCC00;">**DDVP**</span>'s internal politics.
+
+@deadlock
+title: The vote has been deadlocked!
+subtitle: No candidate is able to gather a sufficient amount of votes.
+view-if: ddvp_deadlock
+
+The vote has been deadlocked, with no candidate ahead by enough to constitute a majority. A new secret candidate has been unlocked.
+
+- @baumer
+
+
+@baumer
+title: Gertrud Bäumer is elected!
+subtitle: Leader of the <span style="color: #FFCC00;">**DDVP**</span>'s women's wing, and a moderate feminist. Has questionable views on the "national questions".
+on-arrival: ddvp_leader = "Bäumer"; ddvp_old_relation += 5; nationalism += ddvp_votes; workers_ddvp += 6; workers_other -= 2; workers_uspd -= 4; new_middle_ddvp += 20; new_middle_uspd -= 15; new_middle_spd -= 5; old_middle_ddvp -= 20; old_middle_dnvp += 5; old_middle_dnvp += 10 if dnvp_ideology == "Moderate"; old_middle_nsdap += 5; old_middle_kvp += 10; old_middle_other += 5; rural_ddvp *= 0.5; rural_nsdap += 5; rural_dnvp += 5 if not kvp_formed; rural_kvp += 5; pro_republic -= 5
+face-image: img/portraits/baumer.jpg
+
+Somehow, Gertrud Bäumer, long-time deputy leader of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and now the leader of the <span style="color: #FFCC00;">**DDVP**</span>'s women's wing, has been elected to the leadership of the <span style="color: #FFCC00;">**DDVP**</span>. This is quite a bizarre development, but her victory can be attributed to her passionate nationalism and romanticism, as well as her questionable views on <span style="color: #005EB8;">Jews</span> and race, which have garnered the support of nationalists within the party. Additionally, some within the party cynically believe that by electing a woman, they can appeal to a broader female electorate.
+
+For us, Bäumer's background as a former <span style="color: #D3C24D;">**[+ ddp_name +]**</span> member may work in our favor, improving our relationship with the <span style="color: #FFCC00;">**DDVP**</span>. However, it remains to be seen whether she will gain more votes than she loses due to her moderate feminist stance, as many refuse to support her purely out of misogyny.

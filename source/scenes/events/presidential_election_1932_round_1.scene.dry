@@ -103,21 +103,21 @@ if (Q.spd_campaign) {
             Q.thalmann_votes += Q.sapd_normalized;
         }
     }
-    if (Q.lvp_support_spd) {
-        if (Q.lvp_ideology == "Left") {
-            Q.spd_president_votes += Q.lvp_normalized*0.8;
-            Q.hindenburg_votes += Q.lvp_normalized*0.2;
+    if (Q.ddvp_support_spd) {
+        if (Q.ddvp_ideology == "Left") {
+            Q.spd_president_votes += Q.ddvp_normalized*0.8;
+            Q.hindenburg_votes += Q.ddvp_normalized*0.2;
         }
-        if (Q.lvp_ideology == "Moderate") {
-            Q.spd_president_votes += Q.lvp_normalized*0.6;
-            Q.hindenburg_votes += Q.lvp_normalized*0.4;
+        if (Q.ddvp_ideology == "Moderate") {
+            Q.spd_president_votes += Q.ddvp_normalized*0.6;
+            Q.hindenburg_votes += Q.ddvp_normalized*0.4;
         }
-        if (Q.lvp_ideology == "Right") {
-            Q.spd_president_votes += Q.lvp_normalized*0.4;
-            Q.hindenburg_votes += Q.lvp_normalized*0.6;
+        if (Q.ddvp_ideology == "Right") {
+            Q.spd_president_votes += Q.ddvp_normalized*0.4;
+            Q.hindenburg_votes += Q.ddvp_normalized*0.6;
         }
     } else {
-        Q.hindenburg_votes += Q.lvp_normalized;
+        Q.hindenburg_votes += Q.ddvp_normalized;
     }
     Q.hindenburg_votes += Q.wp_normalized;
 } else if (Q.spd_support_thalmann) {
@@ -139,14 +139,14 @@ if (Q.spd_campaign) {
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.ddp_normalized;
     Q.hindenburg_votes += Q.wp_normalized;
-    Q.hindenburg_votes += Q.lvp_normalized;
+    Q.hindenburg_votes += Q.ddvp_normalized;
 } else {
     if (!Q.hindenburg_democracy_bonus && !Q.spd_abstain_1932) Q.hindenburg_votes += Q.spd_normalized*0.9;
     if (Q.hindenburg_democracy_bonus && !Q.spd_abstain_1932) Q.hindenburg_votes += Q.spd_normalized;
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.ddp_normalized;
     Q.hindenburg_votes += Q.wp_normalized;
-    Q.hindenburg_votes += Q.lvp_normalized;
+    Q.hindenburg_votes += Q.ddvp_normalized;
     Q.thalmann_votes += Q.kpd_normalized;
     if (!Q.hindenburg_democracy_bonus) Q.thalmann_votes += Q.spd_normalized*0.05;
     if (Q.spd_abstain_1932) Q.thalmann_votes += Q.spd_normalized*0.3;
@@ -281,7 +281,7 @@ There is no majority in this round. In the second round, any candidate who wins 
 - @round2_convince_z: Convince the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] to switch their support to us.
 - @round2_convince_kpd: Convince the <span style="color: #830000;">**KPD**</span> to switch their support to us. 
 - @round2_convince_ddp: Convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to switch their support to us.
-- @round2_convince_lvp: Convince the <span style="color: #FFCC00;">**LVP**</span> to switch their support to us.
+- @round2_convince_ddvp: Convince the <span style="color: #FFCC00;">**DDVP**</span> to switch their support to us.
 - @round2_hindenburg: Switch our support to Hindenburg.
 - @round2_thalmann: Switch our support to <span style="color: #830000;">**Thälmann**</span> of the <span style="color: #830000;">**KPD**</span>.
 - @round2_organizational_endorsement
@@ -367,11 +367,11 @@ max-visits: 1
 
 @z_success
 go-to: round2_menu
-on-departure: hitler_support_hindenburg = 1 if spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1
+on-departure: hitler_support_hindenburg = 1 if spd_president_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + ddvp_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd == 1
 
 [? if hitler_support_hindenburg : The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s opinion is affected by the <span style="color: #7A3C00;">Nazis</span>' support of Hindenburg, and is willing to turn away from him. ?] The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are convinced! They will be part of the Braun coalition.
 
-[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1) or (spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1)): With the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
+[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd != 1) or (spd_president_votes + ddvp_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd == 1)): With the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
 
 @z_partial
 
@@ -397,12 +397,12 @@ choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3)
 on-arrival: resources -= 3; z_support_spd = 1
-on-departure: hitler_support_hindenburg = 1 if spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1
+on-departure: hitler_support_hindenburg = 1 if spd_president_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + ddvp_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd == 1
 go-to: round2_menu
 
 With our resources, the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] are convinced to support Braun over Hindenburg.
 
-[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and lvp_support_spd != 1) or (spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and lvp_support_spd == 1)): With the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
+[? if not hitler_support_hindenburg and ((spd_president_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd != 1) or (spd_president_votes + ddvp_votes + z_votes > nsdap_presidential_votes and ddvp_support_spd == 1)): With the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
 
 @z_failed
 go-to: round2_menu
@@ -426,7 +426,7 @@ view-if: nsdap_relation >= 55 or nsdap_relation >= 40 and spd_leader == "Concili
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: resources -= 3; kpd_support_spd = 1; z_relation -= 4; ddvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddvp_right += 2; wp_right += 4; ddp_cohesion -= 2; ddvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -434,20 +434,20 @@ The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presi
 @r2_spd_relations
 view-if: nsdap_relation >= 70 or (spd_leader == "Conciliators" and nsdap_relation >= 50)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: kpd_support_spd = 1; z_relation -= 4; lvp_relation -= 4; wp_relation -= 4; braun_angry += 25; lvp_right += 2; wp_right += 4; ddp_cohesion -= 2; lvp_right += 3
+on-arrival: kpd_support_spd = 1; z_relation -= 4; ddvp_relation -= 4; wp_relation -= 4; braun_angry += 25; ddvp_right += 2; wp_right += 4; ddp_cohesion -= 2; ddvp_right += 3
 go-to: round2_menu
 
 The <span style="color: #830000;">**KPD**</span> now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
 
 @round2_convince_ddp
-view-if: not lvp_formed and spd_campaign > 0 and ddp_support_spd != 1 
+view-if: not ddvp_formed and spd_campaign > 0 and ddp_support_spd != 1 
 max-visits: 1
-go-to: convince_ddp_success if (((lvp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((lvp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg); convince_ddp_fail if not ((((lvp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((lvp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (lvp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (lvp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg))
+go-to: convince_ddp_success if (((ddvp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (ddvp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddvp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((ddvp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (ddvp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddvp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg); convince_ddp_fail if not ((((ddvp_relation >= 55 and ddp_ideology == "Right" or dstp_maintained) or (ddvp_relation >= 45 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddvp_relation >= 35 and ddp_ideology == "Left" and not dstp_maintained)) and not hitler_support_hindenburg) or (((ddvp_relation >= 50 and ddp_ideology == "Right" or dstp_maintained) or (ddvp_relation >= 40 and ddp_ideology == "Moderate" and not dstp_maintained) or (ddvp_relation >= 30 and ddp_ideology == "Left" and not dstp_maintained)) and hitler_support_hindenburg))
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has always been the most friendly of the bourgeois parties, hopefully reminding them of our successes in <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalitions will help convince them. [? if hitler_support_hindenburg: Furthermore, the withdrawal of [+ nsdap_candidate_1932 +] in favor of Hindenburg has led them to distance themselves from him. ?]
 
 @convince_ddp_success
-on-arrival: ddp_support_spd = 1; ddp_left += 2; ddp_cohesion -= 1; lvp_relation += 4
+on-arrival: ddp_support_spd = 1; ddp_left += 2; ddp_cohesion -= 1; ddvp_relation += 4
 go-to: round2_menu
 
 Thanks to our friendly relations and connections with their left wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is now campaigning for Braun in the election.
@@ -458,52 +458,52 @@ go-to: round2_menu
 
 Unfortunately, under the influence of their business wing, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has refused to support a <span style="color: #c00000;">socialist</span> for the presidency. 
 
-@round2_convince_lvp
-view-if: lvp_formed and spd_campaign > 0 and lvp_support_spd != 1 
+@round2_convince_ddvp
+view-if: ddvp_formed and spd_campaign > 0 and ddvp_support_spd != 1 
 max-visits: 1
 on-arrival: {!
-if ((Q.lvp_old_relation >= 65 && Q.lvp_ideology == "Right" || Q.lvp_old_relation >= 55 && Q.lvp_ideology == "Moderate" || Q.lvp_old_relation >= 40 && Q.lvp_ideology == "Left") && Q.lvp_leader != "Dingeldey") {
-    Q.convince_lvp_success = 1;
-} else if ((Q.lvp_old_relation >= 55 && Q.lvp_ideology == "Right" || Q.lvp_old_relation >= 45 && Q.lvp_ideology == "Moderate" || Q.lvp_old_relation >= 30 && Q.lvp_ideology == "Left") && Q.lvp_leader != "Dingeldey") {
-    Q.convince_lvp_success = 2;
+if ((Q.ddvp_old_relation >= 65 && Q.ddvp_ideology == "Right" || Q.ddvp_old_relation >= 55 && Q.ddvp_ideology == "Moderate" || Q.ddvp_old_relation >= 40 && Q.ddvp_ideology == "Left") && Q.ddvp_leader != "Dingeldey") {
+    Q.convince_ddvp_success = 1;
+} else if ((Q.ddvp_old_relation >= 55 && Q.ddvp_ideology == "Right" || Q.ddvp_old_relation >= 45 && Q.ddvp_ideology == "Moderate" || Q.ddvp_old_relation >= 30 && Q.ddvp_ideology == "Left") && Q.ddvp_leader != "Dingeldey") {
+    Q.convince_ddvp_success = 2;
 } else {
-    Q.convince_lvp_success = 0;
+    Q.convince_ddvp_success = 0;
 }
 !}
-go-to: round2_convince_lvp_success if convince_lvp_success == 1; round2_convince_lvp_fail if convince_lvp_success == 0; round2_convince_lvp_partial if convince_lvp_success == 2
+go-to: round2_convince_ddvp_success if convince_ddvp_success == 1; round2_convince_ddvp_fail if convince_ddvp_success == 0; round2_convince_ddvp_partial if convince_ddvp_success == 2
 
 [? if hitler_support_hindenburg: The <span style="color: #7A3C00;">Nazis</span>'s support of Hindenburg has dampened their enthusiasm, perhaps we can convince them to turn away from him? ?] They will certainly be a hard party to convince, with vehemently anti-<span style="color: #c00000;">socialist</span> industrialists influencing the party.
 
-@round2_convince_lvp_success
-on-arrival: lvp_support_spd = 1; lvp_left += 4; lvp_old_relation += 3; new_middle_dnvp += new_middle_lvp*0.05 if not kvp_formed; old_middle_dnvp += old_middle_lvp*0.15 if not kvp_formed; rural_dnvp += rural_lvp*0.15 if not kvp_formed; new_middle_kvp += new_middle_lvp*0.05 if not kvp_formed; old_middle_kvp += old_middle_lvp*0.15 if not kvp_formed; rural_kvp += rural_lvp*0.15 if not kvp_formed; new_middle_lvp *= 0.95; old_middle_lvp *= 0.85; rural_lvp *= 0.85
+@round2_convince_ddvp_success
+on-arrival: ddvp_support_spd = 1; ddvp_left += 4; ddvp_old_relation += 3; new_middle_dnvp += new_middle_ddvp*0.05 if not kvp_formed; old_middle_dnvp += old_middle_ddvp*0.15 if not kvp_formed; rural_dnvp += rural_ddvp*0.15 if not kvp_formed; new_middle_kvp += new_middle_ddvp*0.05 if not kvp_formed; old_middle_kvp += old_middle_ddvp*0.15 if not kvp_formed; rural_kvp += rural_ddvp*0.15 if not kvp_formed; new_middle_ddvp *= 0.95; old_middle_ddvp *= 0.85; rural_ddvp *= 0.85
 go-to: round2_menu
 
-Surprisingly, we have convinced the <span style="color: #FFCC00;">**LVP**</span> to give <span style="color: #c00000;">Braun</span> an official endorsement, to the shock of the party's industrial backers. In response, some die-hard Hindenburg supporters begin withdrawing from the party.
+Surprisingly, we have convinced the <span style="color: #FFCC00;">**DDVP**</span> to give <span style="color: #c00000;">Braun</span> an official endorsement, to the shock of the party's industrial backers. In response, some die-hard Hindenburg supporters begin withdrawing from the party.
 
-@round2_convince_lvp_fail
-on-arrival: lvp_support_spd = 0
+@round2_convince_ddvp_fail
+on-arrival: ddvp_support_spd = 0
 go-to: round2_menu
 
-Perhaps expectedly, we have failed to persuade the <span style="color: #FFCC00;">**LVP**</span> to back <span style="color: #c00000;">Braun</span>, owing to their strong antipathy toward <span style="color: #c00000;">socialism</span> in general.
+Perhaps expectedly, we have failed to persuade the <span style="color: #FFCC00;">**DDVP**</span> to back <span style="color: #c00000;">Braun</span>, owing to their strong antipathy toward <span style="color: #c00000;">socialism</span> in general.
 
-@round2_convince_lvp_partial
+@round2_convince_ddvp_partial
 
-The <span style="color: #FFCC00;">**LVP**</span> is not satisfied with our arguments, but they are open to being convinced[? if hitler_support_hindenburg: , especially given the <span style="color: #7A3C00;">Nazis</span>' support for Hindenburg?]. They are demanding a hefty amount of resources, and there is no guarantee that they will outright endorse us. Instead, they may simply withdraw their endorsement from Hindenburg.
+The <span style="color: #FFCC00;">**DDVP**</span> is not satisfied with our arguments, but they are open to being convinced[? if hitler_support_hindenburg: , especially given the <span style="color: #7A3C00;">Nazis</span>' support for Hindenburg?]. They are demanding a hefty amount of resources, and there is no guarantee that they will outright endorse us. Instead, they may simply withdraw their endorsement from Hindenburg.
 
-- @pay_lvp: Give them the resources they need.
-- @round2_menu: Forget about the <span style="color: #FFCC00;">**LVP**</span>.
+- @pay_ddvp: Give them the resources they need.
+- @round2_menu: Forget about the <span style="color: #FFCC00;">**DDVP**</span>.
 
-@pay_lvp
+@pay_ddvp
 choose-if: resources >= 4
 subtitle: -4 resources
 unavailable-subtitle: Not enough resources (need 4)
-on-arrival: resources -= 4; lvp_support_spd = 1; lvp_partial = 1
-on-departure: hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + lvp_votes + z_votes > nsdap_presidential_votes and z_support_spd == 1; 
+on-arrival: resources -= 4; ddvp_support_spd = 1; ddvp_partial = 1
+on-departure: hitler_support_hindenburg = 1 if spd_president_votes + ddvp_votes > nsdap_presidential_votes and z_support_spd != 1; hitler_support_hindenburg = 1 if spd_president_votes + ddvp_votes + z_votes > nsdap_presidential_votes and z_support_spd == 1; 
 go-to: round2_menu
 
-With our resources, the <span style="color: #FFCC00;">**LVP**</span> are convinced to drop their endorsement of Hindenburg. [? if lvp_ideology == "Left": Through our friendly relations with their left wing, we are able to get them to endorse Braun! ?][? if lvp_ideology != "Left": The business and industrial influences within their party prevent any shows of explicit support toward Braun however. ?]
+With our resources, the <span style="color: #FFCC00;">**DDVP**</span> are convinced to drop their endorsement of Hindenburg. [? if ddvp_ideology == "Left": Through our friendly relations with their left wing, we are able to get them to endorse Braun! ?][? if ddvp_ideology != "Left": The business and industrial influences within their party prevent any shows of explicit support toward Braun however. ?]
 
-[? if not hitler_support_hindenburg and ((spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd != 1) or spd_president_votes + lvp_votes > nsdap_presidential_votes and z_support_spd == 1): With the <span style="color: #FFCC00;">liberals</span> supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
+[? if not hitler_support_hindenburg and ((spd_president_votes + ddvp_votes > nsdap_presidential_votes and z_support_spd != 1) or spd_president_votes + ddvp_votes > nsdap_presidential_votes and z_support_spd == 1): With the <span style="color: #FFCC00;">liberals</span> supporting Braun, [+ nsdap_candidate_1932 +] has dropped out of the race, and the <span style="color: #7A3C00;">Nazis</span> have endorsed Hindenburg to prevent a <span style="color: #c00000;">socialist</span> from becoming president. ?]
 
 @round2_thalmann
 view-if: spd_support_thalmann == 0 and kpd_support_spd == 0
@@ -517,7 +517,7 @@ Supporting Thälmann is rather unpopular in our party, even if the <span style="
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; lvp_relation -= 10; wp_right += 10; lvp_right += 6; ddp_cohesion -= 6; lvp_right += 10
+on-arrival: spd_campaign = 0; spd_support_thalmann = 1; popcon_dissent += 20; center_dissent += 15; christsoc_dissent += 10; paramilitarist_dissent += 15; catholics_uspd -= 5; workers_uspd -= 3; workers_spd += 5; nsdap_relation += 10; bernburg_coalition += 2; wp_relation -= 15; ddvp_relation -= 10; wp_right += 10; ddvp_right += 6; ddp_cohesion -= 6; ddvp_right += 10
 on-departure: z_support_spd = 0; kpd_support_spd = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the <span style="color: #830000;">**KPD**</span> to the dismay of our bourgeois allies.

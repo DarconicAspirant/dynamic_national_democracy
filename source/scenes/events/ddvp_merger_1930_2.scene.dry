@@ -1,35 +1,35 @@
 title:  <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Congress
 subtitle: The future of the liberal movement will be decided here.
 on-arrival: {!
-Q.lvp_formation_points = 0;
-if (Q.lvp_relation < 50) {
-    Q.lvp_formation_points += 1;
+Q.ddvp_formation_points = 0;
+if (Q.ddvp_relation < 50) {
+    Q.ddvp_formation_points += 1;
 }
 if (Q.liberal_vote < 7) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.wp_ideology == "Left") {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 } else if (Q.wp_ideology == "Moderate") {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.ddp_ideology == "Right") {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
 if (Q.wp_leader == "Scholz" || Q.wp_leader == "Dingeldey") {
-    Q.lvp_formation_points -= 2;
+    Q.ddvp_formation_points -= 2;
 }
 if (Q.ddp_leader == "Lemmer") {
-    Q.lvp_formation_points -= 2;
+    Q.ddvp_formation_points -= 2;
 }
 if (Q.ddp_cohesion >= 10) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.pro_republic >= 50) {
-    Q.lvp_formation_points += 1;
+    Q.ddvp_formation_points += 1;
 }
 if (Q.uspd_votes >= 32) {
-    Q.lvp_formation_points += 2;
+    Q.ddvp_formation_points += 2;
 }
 !}
 max-visits: 1
@@ -46,8 +46,8 @@ On the other hand, leftists within the <span style="color: #D3C24D;">**[+ ddp_na
 - @ddp_fail: The party votes...
 
 @ddp_success
-view-if: lvp_formation_points >= 3
-on-arrival: lvp_relation -= 5; lvp_right += 2; lvp_trigger_2_time = time + 1
+view-if: ddvp_formation_points >= 3
+on-arrival: ddvp_relation -= 5; ddvp_right += 2; ddvp_trigger_2_time = time + 1
 face-image: img/weimar_coalition_3.jpg
 
 Perhaps surprisingly, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has followed the <span style="color: #C0A054;">**DVP**</span>'s decision and affirmed their support for a united <span style="color: #FFCC00;">Liberal People's Party</span>. It seems that the leftists within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> have finally lost their battle to maintain the position of a '<span style="color: #c00000;">Social</span> and <span style="color: #000000;">Rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> party in the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> party system.
@@ -55,8 +55,8 @@ Perhaps surprisingly, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span
 However, the leftists within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will wield little influence in the wider party, which will consist of twice as many <span style="color: #C0A054;">**DVP**</span> members as <span style="color: #D3C24D;">**[+ ddp_name +]**</span> members.
 
 @ddp_fail
-view-if: lvp_formation_points < 3
-on-arrival: wp_right += 5; new_middle_lvp -= 4; old_middle_ddp -= 4; pro_republic -= 5; liberal_cooperation -= 10
+view-if: ddvp_formation_points < 3
+on-arrival: wp_right += 5; new_middle_ddvp -= 4; old_middle_ddp -= 4; pro_republic -= 5; liberal_cooperation -= 10
 face-image: img/portraits/hitler.jpg
 
 As always, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s left wing have rejected the plans to create a united <span style="color: #FFCC00;">Liberal People's Party</span>. It seems that the infighting that plagues the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> remains alive and well. This outcome has greatly demoralized the German middle and has forced the disbandment of the Liberal Association. 

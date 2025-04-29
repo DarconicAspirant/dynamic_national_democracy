@@ -1,12 +1,12 @@
 title: The Second Brüning cabinet
 subtitle: Chancellor [+ chancellor +] has reorganized his cabinet!
 new-page: true
-view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_conservative_coalition and banking_crisis_seen and emergency_decree_seen and not emergency_decree_mitigated and wp_leader == "Dingeldey" and not lvp_formed and flavour_24_trigger and time == flavour_24_trigger_time + 3 and not second_bruning_cabinet_seen and wp_exist
+view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_conservative_coalition and banking_crisis_seen and emergency_decree_seen and not emergency_decree_mitigated and wp_leader == "Dingeldey" and not ddvp_formed and flavour_24_trigger and time == flavour_24_trigger_time + 3 and not second_bruning_cabinet_seen and wp_exist
 on-arrival: {!
 Q.second_bruning_cabinet_seen = 1;
-Q.lvp_right += 1;
+Q.ddvp_right += 1;
 Q.wp_right += 3;
-Q.lvp_right += 3;
+Q.ddvp_right += 3;
 Q.pro_republic -= 3;
 Q.braun_angry_bruning += 10;
 Q.wp_defect = 1;
@@ -14,7 +14,7 @@ Q.bruning_coalition = Q.neo_weimar_coalition;
 Q.bruning_coalition_loss += (Q.wp_r*0.7);
 Q.bruning_coalition = Math.round((Q.bruning_coalition - Q.bruning_coalition_loss) * 10) / 10;
 Q.new_middle_wp -= 2;
-Q.new_middle_lvp -= 1;
+Q.new_middle_ddvp -= 1;
 !}
 tags: event
 face-image: img/bruningetcurtius.jpg
