@@ -2274,19 +2274,19 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5 and christsoc_strength > (popcon_strength + agrarian_strength + right_strength) * 0.8 or leverage >= 10
 view-if: labor_minister_party != "DNVP"
-on-arrival: leverage -= 5 if christsoc_strength <= (popcon_strength + agrarian_strength + right_strength) * 0.8; leverage -= 5; labor_minister_party = "DNVP"; labor_minister = "Lambach" if christsoc_split = 0; labor_minister = "Bechly " if christsoc_split = 1;
+on-arrival: leverage -= 5 if christsoc_strength <= (popcon_strength + agrarian_strength + right_strength) * 0.8; leverage -= 5; labor_minister_party = "DNVP"; labor_minister = "Lambach" if christsoc_split = 0; labor_minister = "Bechly" if christsoc_split = 1;
 go-to: ministries
 
 [? if christsoc_split = 0: Walther Lambach of the <span style="color: #3E88B3;">**DNVP**</span> has been appointed labor minister. ?][? if christsoc_split = 1: Hans Bechly (probably not, research more) of the <span style="color: #3E88B3;">**DNVP**</span> has been appointed labor minister. ?]
 
 @interior
 title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+subtitle: The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 5
-view-if: interior_minister_party != "SPD"
-on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = "Severing"
+choose-if: leverage >= 10
+view-if: interior_minister_party != "DNVP"
+on-arrival: leverage -= 10; interior_minister_party = "DNVP"; interior_minister = "von Gayl" if right_strength > (popcon_strength + agrarian_strength + christsoc_strength) * 0.75; interior_minister = "von Keudell" if right_strength < (popcon_strength + agrarian_strength + right_strength) * 0.75 and dnvp_leader != "Hugenberg"; interior_minister = "libtard" if christsoc_strength + popcon_strength > (agrarian_strength + right_strength) * 1.5 and dnvp_leader != "Hugenberg";
 go-to: ministries
 
 Carl Severing of the <span style="color: #3E88B3;">**SPD**</span> has been appointed Interior Minister.
