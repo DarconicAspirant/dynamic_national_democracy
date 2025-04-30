@@ -2274,7 +2274,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5 and christsoc_strength > (popcon_strength + agrarian_strength + right_strength) * 0.8 or leverage >= 10
 view-if: labor_minister_party != "DNVP"
-on-arrival: leverage -= 5; labor_minister_party = "DNVP"; labor_minister = "Lambach"
+on-arrival: [? if christsoc_strength > (popcon_strength + agrarian_strength + right_strength) * 0.8: leverage -= 5 ?][? if christsoc_strength <= (popcon_strength + agrarian_strength + right_strength) * 0.8: leverage -= 10 ?]; labor_minister_party = "DNVP"; labor_minister = "Lambach"
 go-to: ministries
 
 Rudolf Wissell of the <span style="color: #3E88B3;">**DNVP**</span> has been appointed labor minister.
