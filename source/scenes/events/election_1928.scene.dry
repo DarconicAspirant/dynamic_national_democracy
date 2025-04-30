@@ -2313,7 +2313,7 @@ view-if: economic_minister_party != "DNVP"
 on-arrival: leverage -= 10; economic_minister_party = "DNVP"; economic_minister = "Paul-Lejeune Jung" if popcon_strength > (right_strength + agrarian_strength); economic_minister = "non-Libtard" if popcon_strength <= (right_strength + agrarian_strength);
 go-to: ministries
 
-[? if popcon_strength > (right_strength + agrarian_strength) * 0.75: Paul-Lejeune Jung?][? if popcon_strength <= (right_strength + agrarian_strength) * 0.75?: Non-Libtard?] of the <span style="color: #3E88B3;">**DNVP**</span> has been appointed Economic Minister.
+[? if popcon_strength > (right_strength + agrarian_strength) * 0.75: Paul-Lejeune Jung?][? if popcon_strength <= (right_strength + agrarian_strength) * 0.75: Non-Libtard?] of the <span style="color: #3E88B3;">**DNVP**</span> has been appointed Economic Minister.
 
 @justice
 title: Justice Ministry
